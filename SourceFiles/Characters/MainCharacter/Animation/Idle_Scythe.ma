@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Idle_Scythe.ma
-//Last modified: Thu, Apr 23, 2020 08:41:02 PM
+//Last modified: Tue, Apr 28, 2020 03:19:08 PM
 //Codeset: 1252
 file -rdi 1 -ns "AZRI" -rfn "AZRIRN" -op "v=0;" -typ "mayaAscii" "D:/Projects/COVID/SourceFiles/Characters/MainCharacter/Rig/AZRI.ma";
 file -rdi 1 -ns "AxeToScythe" -rfn "AxeToScytheRN" -op "v=0;" -typ "mayaAscii"
@@ -22,13 +22,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "CDE68AC2-413A-3720-7EED-B4B222DBA69C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -31.240078027226502 109.20222224510185 413.0785520451783 ;
-	setAttr ".r" -type "double3" -3.9383527367323738 355.39999999949754 -2.4928380793375671e-17 ;
+	setAttr ".t" -type "double3" 96.572665309024046 127.5853955223342 402.95031060678656 ;
+	setAttr ".r" -type "double3" -6.3383527367324461 372.1999999994963 1.0168888635491458e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6B18480F-48B7-853F-D819-76A1EF10AAEF";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 440.6689202664557;
+	setAttr ".coi" 440.66892026612328;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -98,7 +98,7 @@ createNode locator -n "locatorShape2" -p "locator2";
 	rename -uid "05D3F0F7-47E8-72C4-5CA1-8BB797726F82";
 	setAttr -k off ".v";
 createNode fosterParent -n "AZRIRNfosterParent1";
-	rename -uid "C5000747-42EA-E00E-7CD1-BCB694DE81C3";
+	rename -uid "35DDF66E-4447-3B31-6C45-9DB6A00026C8";
 createNode parentConstraint -n "CTL_R_HandIk1_parentConstraint1" -p "AZRIRNfosterParent1";
 	rename -uid "C751F474-46A0-CDBF-E5AF-7493DBED9D92";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "locator2W0" -dv 1 -min 0 -at "double";
@@ -114,7 +114,7 @@ createNode parentConstraint -n "CTL_R_HandIk1_parentConstraint1" -p "AZRIRNfoste
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -211.87812974146078 37.151914719395918 -196.90943015776614 ;
+	setAttr ".lr" -type "double3" -211.6632272291358 37.205106939916782 -197.32101488164346 ;
 	setAttr ".rst" -type "double3" 66.825316426278306 -14.86051873188913 20.170133682375688 ;
 	setAttr ".rsrr" -type "double3" -212.20478702562968 37.070173182929707 -197.51981704608627 ;
 	setAttr -k on ".w0";
@@ -136,12 +136,12 @@ createNode parentConstraint -n "CTL_L_HandIk1_parentConstraint1" -p "AZRIRNfoste
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 7.4231357636071849 -37.903303178112935 3.4427514638678645 ;
 	setAttr ".tg[0].tor" -type "double3" 111.026003499388 -17.411877525331597 169.05705090420452 ;
-	setAttr ".lr" -type "double3" 45.577146303073633 -153.68595075886438 83.551665380751004 ;
+	setAttr ".lr" -type "double3" 45.590242232423442 -153.58777651355066 83.053196341670287 ;
 	setAttr ".rst" -type "double3" -19.020015629818985 -43.786599448328815 -13.763896010226718 ;
 	setAttr ".rsrr" -type "double3" 40.390583849688689 -156.86682737930749 85.884652909801858 ;
 	setAttr -k on ".w0";
 createNode fosterParent -n "AxeToScytheRNfosterParent1";
-	rename -uid "2CDC31CE-4BB6-02D7-E88A-6CA538D464E0";
+	rename -uid "4779EA63-4D58-0428-DF29-6782F7F70E8D";
 createNode parentConstraint -n "Axe_Main_ctrl_parentConstraint1" -p "AxeToScytheRNfosterParent1";
 	rename -uid "12D67081-4649-7138-B18A-B697B73324B5";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "CTL_C_WeaponGrip1W0" -dv 1 -min 0 
@@ -161,30 +161,30 @@ createNode parentConstraint -n "Axe_Main_ctrl_parentConstraint1" -p "AxeToScythe
 	setAttr ".tg[0].tot" -type "double3" -5.9414279052205643e-16 0.0081780929208434827 
 		0 ;
 	setAttr ".tg[0].tor" -type "double3" 48.883399090793453 90.001600361415115 48.882636084333043 ;
-	setAttr ".lr" -type "double3" -134.10850730314064 -372.89910709853729 20.675329839813323 ;
+	setAttr ".lr" -type "double3" -134.2810208443754 -372.83695759412404 20.172299218811862 ;
 	setAttr ".rst" -type "double3" 23.576097795900438 -78.058752959004437 -0.0017066776972006841 ;
 	setAttr ".rsrr" -type "double3" -6.6909428501962876e-15 89.999999999999986 0 ;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "E84A82B4-4C10-01F3-C62C-FCAE16DCDDDB";
+	rename -uid "78C81232-4DAB-1CDE-885E-E190D239C4C8";
 	setAttr -s 11 ".lnk";
 	setAttr -s 11 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "B100FC55-49CF-67EE-C3A6-33A8C7171653";
+	rename -uid "B910C7D6-47F4-9F69-E35E-A6AA27031102";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 2 0 1 ;
 	setAttr -s 2 ".bspr";
 	setAttr -s 2 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "9B2F8E27-40BF-2526-5C63-2D812BF1EDC3";
+	rename -uid "ADCD640A-42BC-5C3A-C422-D88913C865F5";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "5671B7C1-4597-566D-66EB-A49898ABCBB0";
+	rename -uid "8514C0F2-4B05-3141-CB91-358498E6955D";
 	setAttr ".cdl" 1;
 	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 3 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "A24812DE-4F5B-1D00-6D24-529467029944";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "558B1CF6-401D-EEA7-5129-AE8CF2B6C20E";
+	rename -uid "AE0E069C-40D4-BE3B-3654-5DB48EE00C47";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "AA48515F-469D-85C4-A514-03B7F7B77D75";
 	setAttr ".g" yes;
@@ -2593,7 +2593,7 @@ createNode reference -n "AZRIRN";
 		1 |AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_HandIk1Zero1|AZRI:CTL_R_HandIk1 
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1" 
-		"translate" " -type \"double3\" -1.73419555629605138 -20.05360128451447821 -9.23996742530831838"
+		"translate" " -type \"double3\" -2.01644896465513357 -19.072713021922997 -9.60200978302685826"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1" 
 		"translateX" " -av"
@@ -2602,7 +2602,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1" 
-		"rotate" " -type \"double3\" 3.49948014066469559 20.80860862897469943 -6.11876991346994892"
+		"rotate" " -type \"double3\" 3.44758148629509531 20.80860862897469943 -6.17264087895157054"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1" 
 		"rotateX" " -av"
@@ -2611,7 +2611,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1" 
-		"rotate" " -type \"double3\" -15.66090206583668731 -24.06166342097649036 -10.87393051197362048"
+		"rotate" " -type \"double3\" -15.66090206583668731 -24.06166342097649036 -9.2523700021719133"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1" 
 		"rotateX" " -av"
@@ -2620,7 +2620,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2" 
-		"rotate" " -type \"double3\" -1.40707286700989287 -2.52772258206196154 -23.94562375085507355"
+		"rotate" " -type \"double3\" -1.40707286700989287 -2.52772258206196154 -28.93148034765236787"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2" 
 		"rotateX" " -av"
@@ -2629,11 +2629,11 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2|AZRI:NLL_L_Index3Zero1|AZRI:CTL_L_Index3" 
-		"rotate" " -type \"double3\" 0 0 -85.01601908192006363"
+		"rotate" " -type \"double3\" 0 0 -84.86601639610687187"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2|AZRI:NLL_L_Index3Zero1|AZRI:CTL_L_Index3" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2|AZRI:NLL_L_Index3Zero1|AZRI:CTL_L_Index3|AZRI:NLL_L_Index4Zero1|AZRI:CTL_L_Index4" 
-		"rotate" " -type \"double3\" 0 0 -44.78390389649447911"
+		"rotate" " -type \"double3\" 0 0 -44.63390121068130867"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2|AZRI:NLL_L_Index3Zero1|AZRI:CTL_L_Index3|AZRI:NLL_L_Index4Zero1|AZRI:CTL_L_Index4" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1" 
@@ -2641,7 +2641,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1" 
 		"rotateY" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2" 
-		"rotate" " -type \"double3\" 1.28478122735134592 2.26075945646606735 -36.89652914540771178"
+		"rotate" " -type \"double3\" 1.28478122735134592 2.26075945646606735 -41.52534230304816987"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2" 
 		"rotateX" " -av"
@@ -2650,11 +2650,11 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2|AZRI:NLL_L_Middle3Zero1|AZRI:CTL_L_Middle3" 
-		"rotate" " -type \"double3\" 0 0 -82.81678677189903226"
+		"rotate" " -type \"double3\" 0 0 -84.89267879912432591"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2|AZRI:NLL_L_Middle3Zero1|AZRI:CTL_L_Middle3" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2|AZRI:NLL_L_Middle3Zero1|AZRI:CTL_L_Middle3|AZRI:NLL_L_Middle4Zero1|AZRI:CTL_L_Middle4" 
-		"rotate" " -type \"double3\" 0 0 -57.14501819586361364"
+		"rotate" " -type \"double3\" 0 0 -59.2209102230889215"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2|AZRI:NLL_L_Middle3Zero1|AZRI:CTL_L_Middle3|AZRI:NLL_L_Middle4Zero1|AZRI:CTL_L_Middle4" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1" 
@@ -2667,7 +2667,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2" 
-		"rotate" " -type \"double3\" 5.02405514254589303 11.0981920504228988 -45.55822732348614323"
+		"rotate" " -type \"double3\" 5.02405514254589303 11.0981920504228988 -49.16691636924991116"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2" 
 		"rotateX" " -av"
@@ -2676,11 +2676,11 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2|AZRI:NLL_L_Ring3Zero1|AZRI:CTL_L_Ring3" 
-		"rotate" " -type \"double3\" 0 0 -88.83321606901533585"
+		"rotate" " -type \"double3\" 0 0 -89.94690555259808207"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2|AZRI:NLL_L_Ring3Zero1|AZRI:CTL_L_Ring3" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2|AZRI:NLL_L_Ring3Zero1|AZRI:CTL_L_Ring3|AZRI:NLL_L_Ring4Zero1|AZRI:CTL_L_Ring4" 
-		"rotate" " -type \"double3\" 0 0 -52.71426348295059938"
+		"rotate" " -type \"double3\" 0 0 -53.82795296653335271"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2|AZRI:NLL_L_Ring3Zero1|AZRI:CTL_L_Ring3|AZRI:NLL_L_Ring4Zero1|AZRI:CTL_L_Ring4" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1" 
@@ -2693,7 +2693,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1|AZRI:NLL_L_Pinky2Zero1|AZRI:CTL_L_Pinky2" 
-		"rotate" " -type \"double3\" -6.35255624538229124 10.11510701247594035 -64.56413401488880766"
+		"rotate" " -type \"double3\" -6.35255624538229124 10.11510701247594035 -66.79151304614249796"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1|AZRI:NLL_L_Pinky2Zero1|AZRI:CTL_L_Pinky2" 
 		"rotateX" " -av"
@@ -2702,7 +2702,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1|AZRI:NLL_L_Pinky2Zero1|AZRI:CTL_L_Pinky2" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1|AZRI:NLL_L_Pinky2Zero1|AZRI:CTL_L_Pinky2|AZRI:NLL_L_Pinky3Zero1|AZRI:CTL_L_Pinky3" 
-		"rotate" " -type \"double3\" 0 0 -83.30737352830175269"
+		"rotate" " -type \"double3\" 0 0 -83.95399125902814319"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1|AZRI:NLL_L_Pinky2Zero1|AZRI:CTL_L_Pinky2|AZRI:NLL_L_Pinky3Zero1|AZRI:CTL_L_Pinky3" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Thumb1Zero1|AZRI:CTL_L_Thumb1" 
@@ -2730,7 +2730,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:CTL_L_ArmIkFk1" 
 		"ikFk" " -k 1 1"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmIK1|AZRI:NLL_L_HandIk1Zero1|AZRI:CTL_L_HandIk1" 
-		"translate" " -type \"double3\" -19.37012896760001368 -41.52480874074214512 -11.67850991954861861"
+		"translate" " -type \"double3\" -18.74202791681496194 -41.46818128052973407 -11.80457705159791715"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmIK1|AZRI:NLL_L_HandIk1Zero1|AZRI:CTL_L_HandIk1" 
 		"translateX" " -av"
@@ -2739,7 +2739,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmIK1|AZRI:NLL_L_HandIk1Zero1|AZRI:CTL_L_HandIk1" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmIK1|AZRI:NLL_L_HandIk1Zero1|AZRI:CTL_L_HandIk1" 
-		"rotate" " -type \"double3\" 45.57714630307363279 -153.6859507588643794 83.55166538075100391"
+		"rotate" " -type \"double3\" 45.5902422324234422 -153.60876415326208644 83.05605411977529684"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmIK1|AZRI:NLL_L_HandIk1Zero1|AZRI:CTL_L_HandIk1" 
 		"rotateX" " -av"
@@ -2758,7 +2758,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmIK1|AZRI:NLL_L_ArmPV1Zero1|AZRI:CTL_L_ArmPV1" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmFK1|AZRI:NLL_L_ShoulderFk1Zero1|AZRI:CTL_L_ShoulderFk1" 
-		"rotate" " -type \"double3\" -19.25061261603348228 -28.12727094184592147 -18.47683964199753603"
+		"rotate" " -type \"double3\" -19.25061261603348228 -28.12727094184592147 -19.25324666249837691"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmFK1|AZRI:NLL_L_ShoulderFk1Zero1|AZRI:CTL_L_ShoulderFk1" 
 		"rotateX" " -av"
@@ -2767,11 +2767,11 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmFK1|AZRI:NLL_L_ShoulderFk1Zero1|AZRI:CTL_L_ShoulderFk1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmFK1|AZRI:NLL_L_ShoulderFk1Zero1|AZRI:CTL_L_ShoulderFk1|AZRI:NLL_L_ElbowFk1Zero1|AZRI:CTL_L_ElbowFk1" 
-		"rotate" " -type \"double3\" 0 -103.48723583984387631 0"
+		"rotate" " -type \"double3\" 0 -104.91615983032386339 0"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmFK1|AZRI:NLL_L_ShoulderFk1Zero1|AZRI:CTL_L_ShoulderFk1|AZRI:NLL_L_ElbowFk1Zero1|AZRI:CTL_L_ElbowFk1" 
 		"rotateY" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1" 
-		"rotate" " -type \"double3\" 15.41461390790775354 -12.17672779917574566 14.8642237751640689"
+		"rotate" " -type \"double3\" 15.41461390790775354 -12.17672779917574566 15.11734430852720834"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1" 
 		"rotateX" " -av"
@@ -2790,7 +2790,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_ArmPV1Zero1|AZRI:CTL_R_ArmPV1|AZRI:CTL_R_ArmIkFk1" 
 		"ikFk" " -k 1 1"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_HandIk1Zero1|AZRI:CTL_R_HandIk1" 
-		"translate" " -type \"double3\" 66.10283930046061585 -14.44163836966686176 19.6938639713133945"
+		"translate" " -type \"double3\" 67.0501277079630853 -14.05465162619819353 19.37985786743758254"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_HandIk1Zero1|AZRI:CTL_R_HandIk1" 
 		"translateX" " -av"
@@ -2799,7 +2799,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_HandIk1Zero1|AZRI:CTL_R_HandIk1" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_HandIk1Zero1|AZRI:CTL_R_HandIk1" 
-		"rotate" " -type \"double3\" -211.87812974146078204 37.1519147193959185 -196.90943015776613834"
+		"rotate" " -type \"double3\" -211.66322722913579923 37.20510693991678153 -197.32101488164346392"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_HandIk1Zero1|AZRI:CTL_R_HandIk1" 
 		"rotateX" " -av"
@@ -2812,7 +2812,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_HandIk1Zero1|AZRI:CTL_R_HandIk1" 
 		"blendParent1" " -k 1 1"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmFK1|AZRI:NLL_R_ShoulderFk1Zero1|AZRI:CTL_R_ShoulderFk1" 
-		"rotate" " -type \"double3\" 15.00595222474204604 -48.83415651962787507 -29.89192240946022494"
+		"rotate" " -type \"double3\" 15.00595222474204604 -39.83158469988552497 -29.89192240946022494"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmFK1|AZRI:NLL_R_ShoulderFk1Zero1|AZRI:CTL_R_ShoulderFk1" 
 		"rotateX" " -av"
@@ -2821,7 +2821,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmFK1|AZRI:NLL_R_ShoulderFk1Zero1|AZRI:CTL_R_ShoulderFk1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmFK1|AZRI:NLL_R_ShoulderFk1Zero1|AZRI:CTL_R_ShoulderFk1|AZRI:NLL_R_ElbowFk1Zero1|AZRI:CTL_R_ElbowFk1" 
-		"rotate" " -type \"double3\" 0 -59.94586386123924626 0"
+		"rotate" " -type \"double3\" 0 -63.79019438827009481 0"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmFK1|AZRI:NLL_R_ShoulderFk1Zero1|AZRI:CTL_R_ShoulderFk1|AZRI:NLL_R_ElbowFk1Zero1|AZRI:CTL_R_ElbowFk1" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmFK1|AZRI:NLL_R_ShoulderFk1Zero1|AZRI:CTL_R_ShoulderFk1|AZRI:NLL_R_ElbowFk1Zero1|AZRI:CTL_R_ElbowFk1" 
@@ -2852,7 +2852,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2" 
-		"rotate" " -type \"double3\" 3.37059393702400056 7.33201768033037737 -5.67764257067185873"
+		"rotate" " -type \"double3\" 2.33327789585418754 7.33201768033037737 -6.75437986427158599"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2" 
 		"rotateX" " -av"
@@ -2861,7 +2861,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2|AZRI:NLL_C_SpineFK3Zero1|AZRI:CTL_C_SpineFK3" 
-		"rotate" " -type \"double3\" 5.94800763377918429 12.89929823346353821 -4.72075591218104673"
+		"rotate" " -type \"double3\" 5.14415402642764086 12.89929823346353821 -5.55515846962533644"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2|AZRI:NLL_C_SpineFK3Zero1|AZRI:CTL_C_SpineFK3" 
 		"rotateX" " -av"
@@ -2870,7 +2870,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2|AZRI:NLL_C_SpineFK3Zero1|AZRI:CTL_C_SpineFK3" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2|AZRI:NLL_C_SpineFK3Zero1|AZRI:CTL_C_SpineFK3|AZRI:NLL_C_SpineFK4Zero|AZRI:CTL_C_SpineFK4" 
-		"rotate" " -type \"double3\" 4.27974282881160839 12.89929823346353821 -6.45241999507977582"
+		"rotate" " -type \"double3\" 5.14415402642764086 12.89929823346353821 -5.55515846962533644"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2|AZRI:NLL_C_SpineFK3Zero1|AZRI:CTL_C_SpineFK3|AZRI:NLL_C_SpineFK4Zero|AZRI:CTL_C_SpineFK4" 
 		"rotateX" " -av"
@@ -2940,7 +2940,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1" 
-		"rotate" " -type \"double3\" -21.65423961069052439 -5.40770063867641149 12.20561421563656168"
+		"rotate" " -type \"double3\" -21.65423961069052439 -5.40770063867641149 12.35851545139444596"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1" 
 		"rotateX" " -av"
@@ -3035,7 +3035,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1" 
-		"rotate" " -type \"double3\" 3.2556651349931065 -11.58942219517367533 11.28963203005520732"
+		"rotate" " -type \"double3\" 3.2556651349931065 -11.58942219517367533 9.12165956384755106"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1" 
 		"rotateX" " -av"
@@ -8039,7 +8039,7 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_Pinky4_rotate_Loop";
 	setAttr ".o" -type "double3" 0 0 -65.078416710665849 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Ring4_rotate_Loop";
 	rename -uid "9D33013F-46C1-451F-EF7F-218349E84F27";
-	setAttr ".o" -type "double3" 0 0 -52.714263482950599 ;
+	setAttr ".o" -type "double3" 0 0 -53.827952966533353 ;
 createNode animBlendNodeAdditiveDL -n "CTL_R_MouthCorner1_translateX_Loop";
 	rename -uid "E66148E5-417E-27C5-F762-13AF272159F2";
 createNode animBlendNodeAdditiveDL -n "CTL_R_MouthCorner1_translateY_Loop";
@@ -8122,16 +8122,16 @@ createNode animBlendNodeEnum -n "CTL_R_HandIk1_parent_Loop";
 	rename -uid "F3A5367A-418F-394A-FBD6-2F87C7E24AE1";
 createNode animBlendNodeAdditiveDL -n "CTL_C_Root1_translateX_Loop";
 	rename -uid "4A0CEBFB-458D-4381-6BF6-D2A8038CDF77";
-	setAttr ".o" -1.7341955562960514;
+	setAttr ".o" -2.0164489646551336;
 createNode animBlendNodeAdditiveDL -n "CTL_C_Root1_translateY_Loop";
 	rename -uid "ECC747A4-4244-707C-031C-3589B5996D9F";
-	setAttr ".o" -20.053601284514478;
+	setAttr ".o" -19.072713021922997;
 createNode animBlendNodeAdditiveDL -n "CTL_C_Root1_translateZ_Loop";
 	rename -uid "EA7CF17F-40B8-6A7A-5526-5C8F40802DE7";
-	setAttr ".o" -9.2399674253083184;
+	setAttr ".o" -9.6020097830268583;
 createNode animBlendNodeAdditiveRotation -n "CTL_C_Root1_rotate_Loop";
 	rename -uid "F2279C3E-4092-4D48-B19C-BA88C0B813E1";
-	setAttr ".o" -type "double3" 3.4994801406646956 20.808608628974699 -6.1187699134699489 ;
+	setAttr ".o" -type "double3" 3.4475814862950953 20.808608628974699 -6.1726408789515705 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Index4_rotate_Loop";
 	rename -uid "848507D7-4412-BA06-E17D-D98616360982";
 	setAttr ".o" -type "double3" 0 0 -62.508411509867564 ;
@@ -8346,7 +8346,7 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_Ring4_rotate_Loop";
 	setAttr ".o" -type "double3" 0 0 -65.554831732781807 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Pinky3_rotate_Loop";
 	rename -uid "D6A676E9-4055-57E6-FC20-BE8ACB31EFC2";
-	setAttr ".o" -type "double3" 0 0 -83.307373528301753 ;
+	setAttr ".o" -type "double3" 0 0 -83.953991259028143 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Ring2_rotate_Loop";
 	rename -uid "45C65104-4961-8E70-0AB8-2C9906AA52F1";
 	setAttr ".o" -type "double3" 7.5011805658176076 3.3304120195633438 -56.41332340700081 ;
@@ -8372,13 +8372,13 @@ createNode animBlendNodeAdditiveRotation -n "CTL_C_Tongue1_rotate_Loop";
 	setAttr ".o" -type "double3" 0 0 35.626525207140588 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_C_SpineFK3_rotate_Loop";
 	rename -uid "C9083D4D-4A1C-9B1B-EF5B-888917E505D8";
-	setAttr ".o" -type "double3" 5.9480076337791843 12.899298233463538 -4.7207559121810467 ;
+	setAttr ".o" -type "double3" 5.1441540264276409 12.899298233463538 -5.5551584696253364 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_C_SpineFK2_rotate_Loop";
 	rename -uid "D59E2E81-4B59-01D6-F76F-D1B41197FB88";
-	setAttr ".o" -type "double3" 3.3705939370240006 7.3320176803303774 -5.6776425706718587 ;
+	setAttr ".o" -type "double3" 2.3332778958541875 7.3320176803303774 -6.754379864271586 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_C_SpineFK4_rotate_Loop";
 	rename -uid "60A637ED-4057-69F5-C2C0-1EA5B1E22C7A";
-	setAttr ".o" -type "double3" 4.2797428288116084 12.899298233463538 -6.4524199950797758 ;
+	setAttr ".o" -type "double3" 5.1441540264276409 12.899298233463538 -5.5551584696253364 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Thumb2_rotate_Loop";
 	rename -uid "9117B17D-426C-DC6E-6FD7-E391772334C3";
 	setAttr ".o" -type "double3" 0 0 -6.0345555304400529 ;
@@ -8390,7 +8390,7 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_Thumb1_rotate_Loop";
 	setAttr ".o" -type "double3" 22.277010745318947 -19.809193500271814 -0.17737349085264559 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Clav1_rotate_Loop";
 	rename -uid "33AC0B90-40CE-37F5-2C82-89ADE5A87A91";
-	setAttr ".o" -type "double3" 15.414613907907754 -12.176727799175746 14.864223775164069 ;
+	setAttr ".o" -type "double3" 15.414613907907754 -12.176727799175746 15.117344308527208 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Ball1_rotate_Loop";
 	rename -uid "E9F3A807-4EBE-F849-2442-83A401C29410";
 createNode animBlendNodeAdditiveDL -n "CTL_L_FootIK1_translateX_Loop";
@@ -8424,16 +8424,16 @@ createNode animBlendNodeAdditiveRotation -n "CTL_L_KneeFk1_rotate_Loop";
 	rename -uid "19C34658-49D1-5343-99D4-E091DD2C1247";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Index2_rotate_Loop";
 	rename -uid "B962E4F3-461B-EEF9-4662-568A7042DE42";
-	setAttr ".o" -type "double3" -1.4070728670098929 -2.5277225820619615 -23.945623750855074 ;
+	setAttr ".o" -type "double3" -1.4070728670098929 -2.5277225820619615 -28.931480347652368 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Pinky4_rotate_Loop";
 	rename -uid "CCBD37E5-44C2-2C89-DC92-E5A22E5B8963";
-	setAttr ".o" -type "double3" 0 0 -49.211404962621323 ;
+	setAttr ".o" -type "double3" 0 0 -49.858022693347721 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Index4_rotate_Loop";
 	rename -uid "09B01D2E-460C-E3A5-CFE3-4BB3D9969EFC";
-	setAttr ".o" -type "double3" 0 0 -44.783903896494479 ;
+	setAttr ".o" -type "double3" 0 0 -44.633901210681309 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Pinky2_rotate_Loop";
 	rename -uid "DA398434-4727-3E41-B760-9A81D4695923";
-	setAttr ".o" -type "double3" -6.3525562453822912 10.11510701247594 -64.564134014888808 ;
+	setAttr ".o" -type "double3" -6.3525562453822912 10.11510701247594 -66.791513046142498 ;
 createNode animBlendNodeBoolean -n "CTL_L_HandGrip1_visibility_Loop";
 	rename -uid "FC62E17E-4B3A-FA45-643F-E190156F0394";
 	setAttr ".o" yes;
@@ -8467,10 +8467,10 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_HairSide1_1_rotate_Loop";
 	rename -uid "47AD82B7-4F71-150B-0286-6CBD9891D0F5";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Ring3_rotate_Loop";
 	rename -uid "5EC32070-4795-3460-42DC-43834C162F0C";
-	setAttr ".o" -type "double3" 0 0 -88.833216069015336 ;
+	setAttr ".o" -type "double3" 0 0 -89.946905552598082 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Ring2_rotate_Loop";
 	rename -uid "B5831074-4764-A470-06F4-9984841A6FFD";
-	setAttr ".o" -type "double3" 5.024055142545893 11.098192050422899 -45.558227323486143 ;
+	setAttr ".o" -type "double3" 5.024055142545893 11.098192050422899 -49.166916369249911 ;
 createNode animBlendNodeAdditiveDL -n "CTL_L_EyeLookAt1_translateX_Loop";
 	rename -uid "FE3089F9-4072-6C9D-EDFC-F4BCF0B021C6";
 createNode animBlendNodeAdditiveDL -n "CTL_L_EyeLookAt1_translateY_Loop";
@@ -8538,7 +8538,7 @@ createNode animBlendNodeAdditiveScale -n "CTL_C_Collision1_scaleZ_Loop";
 	setAttr ".o" 1;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_ShoulderFk1_rotate_Loop";
 	rename -uid "3396D860-48F9-E72A-A844-C0BE07E642F9";
-	setAttr ".o" -type "double3" 15.005952224742046 -48.834156519627875 -29.891922409460225 ;
+	setAttr ".o" -type "double3" 15.005952224742046 -39.831584699885525 -29.891922409460225 ;
 createNode animBlendNodeEnum -n "CTL_R_ShoulderFk1_parent_Loop";
 	rename -uid "C657BB8D-4915-4E09-9EC1-8F84D12D0CFA";
 	setAttr ".o" 1;
@@ -8572,7 +8572,7 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_HairFront3_1_rotate_Loop";
 	rename -uid "64A8084A-4393-4B71-63BA-6483CBC7F605";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Index3_rotate_Loop";
 	rename -uid "D967A9C0-445C-8E23-832D-9D8FFA58A0C3";
-	setAttr ".o" -type "double3" 0 0 -85.016019081920064 ;
+	setAttr ".o" -type "double3" 0 0 -84.866016396106872 ;
 createNode animBlendNodeAdditiveDL -n "CTL_R_HairFront3_2_translateX_Loop";
 	rename -uid "7AB8DA52-4ABF-6576-1161-5F887E0095B7";
 createNode animBlendNodeAdditiveDL -n "CTL_R_HairFront3_2_translateY_Loop";
@@ -8583,7 +8583,7 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_HairFront3_2_rotate_Loop";
 	rename -uid "03B335B9-4F3C-4870-253C-86800EEAD090";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Middle4_rotate_Loop";
 	rename -uid "D87D4099-43FA-4462-014F-7C9BCD0BE107";
-	setAttr ".o" -type "double3" 0 0 -57.145018195863614 ;
+	setAttr ".o" -type "double3" 0 0 -59.220910223088921 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Thumb1_rotate_Loop";
 	rename -uid "F04411CA-4C9C-4EEF-BE55-D1AB4007E13A";
 	setAttr ".o" -type "double3" 7.7522418120741898 -0.38235313053653941 -1.9198373873318844 ;
@@ -8598,13 +8598,13 @@ createNode animBlendNodeAdditiveRotation -n "CTL_L_Middle1_rotate_Loop";
 	setAttr ".o" -type "double3" 0 -1.3690054544181258 0 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Middle2_rotate_Loop";
 	rename -uid "94111E4F-47E6-9DE6-C6CE-47B4E6953FE9";
-	setAttr ".o" -type "double3" 1.2847812273513459 2.2607594564660674 -36.896529145407712 ;
+	setAttr ".o" -type "double3" 1.2847812273513459 2.2607594564660674 -41.52534230304817 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Middle3_rotate_Loop";
 	rename -uid "D5237DA2-40B0-18F3-3E87-39B459B72730";
-	setAttr ".o" -type "double3" 0 0 -82.816786771899032 ;
+	setAttr ".o" -type "double3" 0 0 -84.892678799124326 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Clav1_rotate_Loop";
 	rename -uid "0CDEFDB9-464E-9FBB-C971-4C8454107731";
-	setAttr ".o" -type "double3" -15.660902065836687 -24.06166342097649 -10.87393051197362 ;
+	setAttr ".o" -type "double3" -15.660902065836687 -24.06166342097649 -9.2523700021719133 ;
 createNode animBlendNodeAdditiveDL -n "CTL_C_MouthLower1_translateX_Loop";
 	rename -uid "FDE12A21-4B14-4EA7-E643-8BB2821B0FD5";
 createNode animBlendNodeAdditiveDL -n "CTL_C_MouthLower1_translateY_Loop";
@@ -8615,7 +8615,7 @@ createNode animBlendNodeAdditiveRotation -n "CTL_C_MouthLower1_rotate_Loop";
 	rename -uid "81340D34-41EB-F7DA-EF15-2481B5C96A80";
 createNode animBlendNodeAdditiveRotation -n "CTL_C_Head1_rotate_Loop";
 	rename -uid "E515D845-474E-E30D-4450-32B563829D7F";
-	setAttr ".o" -type "double3" -21.654239610690524 -5.4077006386764115 12.205614215636562 ;
+	setAttr ".o" -type "double3" -21.654239610690524 -5.4077006386764115 12.358515451394446 ;
 createNode animBlendNodeEnum -n "CTL_C_Head1_parent_Loop";
 	rename -uid "2F9AE2CF-4412-881A-0FB2-328F92F3D916";
 	setAttr ".o" 1;
@@ -8642,7 +8642,7 @@ createNode animBlendNodeEnum -n "CTL_R_HipFk1_parent_Loop";
 	setAttr ".o" 1;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_ShoulderFk1_rotate_Loop";
 	rename -uid "B3B021F6-42FB-FCEF-2E55-33975923D217";
-	setAttr ".o" -type "double3" -19.250612616033482 -28.127270941845921 -18.476839641997536 ;
+	setAttr ".o" -type "double3" -19.250612616033482 -28.127270941845921 -19.253246662498377 ;
 createNode animBlendNodeEnum -n "CTL_L_ShoulderFk1_parent_Loop";
 	rename -uid "4D200FF0-49EB-7825-13ED-2282DA3F572B";
 	setAttr ".o" 1;
@@ -8693,10 +8693,10 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_HairFront1_1_rotate_Loop";
 	rename -uid "E368FD83-4DCA-8DFF-2F4F-57B5A009F13A";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_ElbowFk1_rotate_Loop";
 	rename -uid "508FB482-4CA4-AC80-846E-2FA58437C3EC";
-	setAttr ".o" -type "double3" 0 -103.48723583984388 0 ;
+	setAttr ".o" -type "double3" 0 -104.91615983032386 0 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_ElbowFk1_rotate_Loop";
 	rename -uid "2E1BC397-41CB-B433-340D-64B1F120980D";
-	setAttr ".o" -type "double3" 0 -59.945863861239246 0 ;
+	setAttr ".o" -type "double3" 0 -63.790194388270095 0 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Ring3_rotate_Loop";
 	rename -uid "40E7C6E3-4E19-82C3-3777-DA9FCB41051B";
 	setAttr ".o" -type "double3" 0 0 -58.702591008433629 ;
@@ -11767,7 +11767,7 @@ createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtFront_2_translateZ_Loop";
 	rename -uid "576A128E-4E6A-3A88-AE94-49AC4FA9F79A";
 createNode animBlendNodeAdditiveRotation -n "AZRI:CTL_L_SkirtFront_2_rotate_Loop";
 	rename -uid "7AFB1760-4DD5-DE48-688F-5BB62FB47574";
-	setAttr ".o" -type "double3" 0 0 1.9845570663062295 ;
+	setAttr ".o" -type "double3" 0 0 0.54364359157085496 ;
 createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtFront_1_translateX_Loop";
 	rename -uid "BEB1B55B-4B8C-7EFA-F041-189C800726A0";
 	setAttr ".o" 0.022760394105815394;
@@ -11779,7 +11779,7 @@ createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtFront_1_translateZ_Loop";
 	setAttr ".o" 0.38105780303645037;
 createNode animBlendNodeAdditiveRotation -n "AZRI:CTL_L_SkirtFront_1_rotate_Loop";
 	rename -uid "7FF40696-40F1-DAEE-C05B-6584DF79D515";
-	setAttr ".o" -type "double3" 3.2556651349931065 -11.589422195173675 11.289632030055207 ;
+	setAttr ".o" -type "double3" 3.2556651349931065 -11.589422195173675 9.1216595638475511 ;
 createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtSide_2_translateX_Loop";
 	rename -uid "2CA3D1FE-48B6-70A8-A121-829AEB395518";
 createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtSide_2_translateY_Loop";
@@ -19011,7 +19011,7 @@ createNode gameFbxExporter -n "gameExporterPreset2";
 	setAttr ".ils" yes;
 	setAttr ".ilu" yes;
 	setAttr ".eti" 2;
-	setAttr ".esi" 2;
+	setAttr ".esi" 3;
 	setAttr ".ssn" -type "string" "ExportBones";
 	setAttr ".ac[0].acn" -type "string" "Scythe_idle";
 	setAttr ".ac[0].ace" 140;
@@ -19106,7 +19106,7 @@ createNode animBlendNodeAdditiveDL -n "locator1_translateZ_Loop";
 	setAttr ".o" -81.628545822757374;
 createNode animBlendNodeAdditiveRotation -n "locator1_rotate_Loop";
 	rename -uid "CE826AE5-4DB9-52AE-6CD2-408DAD8A1C01";
-	setAttr ".o" -type "double3" 0.14027182348568326 0 0.41329399996683114 ;
+	setAttr ".o" -type "double3" -0.039025121574393293 0 -0.12815649332434723 ;
 createNode animBlendNodeAdditiveScale -n "locator1_scaleX_Loop";
 	rename -uid "CFE9DD27-4F3A-10AD-DCB4-4AB1C4929D86";
 	setAttr ".o" 29.976122160930952;
@@ -19196,8 +19196,8 @@ select -ne :time1;
 	setAttr -av -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" 88;
-	setAttr -av ".unw" 88;
+	setAttr -k on ".o" 140;
+	setAttr -av ".unw" 140;
 	setAttr -k on ".etw";
 	setAttr -k on ".tps";
 	setAttr -av -k on ".tms";

@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Idle_axe.ma
-//Last modified: Thu, Apr 23, 2020 08:43:28 PM
+//Last modified: Tue, Apr 28, 2020 02:10:42 PM
 //Codeset: 1252
 file -rdi 1 -ns "AZRI" -rfn "AZRIRN" -op "v=0;" -typ "mayaAscii" "D:/Projects/COVID/SourceFiles/Characters/MainCharacter/Rig/AZRI.ma";
 file -rdi 1 -ns "AxeToScythe" -rfn "AxeToScytheRN" -op "v=0;" -typ "mayaAscii"
@@ -86,7 +86,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode fosterParent -n "AxeToScytheRNfosterParent1";
-	rename -uid "19DA21A8-4357-1379-DC8E-5FA4849FC567";
+	rename -uid "57262197-4AB1-0A12-E0E9-1E8E82E07FD7";
 createNode parentConstraint -n "Axe_Main_ctrl_parentConstraint1" -p "AxeToScytheRNfosterParent1";
 	rename -uid "12D67081-4649-7138-B18A-B697B73324B5";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "CTL_C_WeaponGrip1W0" -dv 1 -min 0 
@@ -106,29 +106,29 @@ createNode parentConstraint -n "Axe_Main_ctrl_parentConstraint1" -p "AxeToScythe
 	setAttr ".tg[0].tot" -type "double3" -5.9414279052205643e-16 0.0081780929208434827 
 		0 ;
 	setAttr ".tg[0].tor" -type "double3" 48.883399090793453 90.001600361415115 48.882636084333043 ;
-	setAttr ".lr" -type "double3" -31.616618608246768 32.742498669600053 -93.419769942823422 ;
+	setAttr ".lr" -type "double3" -31.299423377182521 32.794124614757095 -93.299619766254864 ;
 	setAttr ".rst" -type "double3" 23.576097795900438 -78.058752959004437 -0.0017066776972006841 ;
 	setAttr ".rsrr" -type "double3" -6.6909428501962876e-15 89.999999999999986 0 ;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "EB362F4C-457A-3129-E19D-2BB6F3F1AD4C";
+	rename -uid "7459B7D3-42A4-2678-5DE1-AB970D185AAC";
 	setAttr -s 11 ".lnk";
 	setAttr -s 11 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "627974FC-49FA-37DA-D76C-419C0664B23A";
+	rename -uid "FE956BB9-4E8C-2911-09F3-40A12E4B97F3";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 2 0 1 ;
 	setAttr -s 2 ".bspr";
 	setAttr -s 2 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "B96F2A0F-4D49-D8D6-6214-1CA965F8A4E6";
+	rename -uid "6E5BE84E-4958-025C-BD53-16AC23EC1E52";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7AFFB35B-43D7-CEBB-816A-A6AE2BDC824E";
+	rename -uid "13CE75DD-463E-DED8-6A5A-2DBDF75E85A0";
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "A24812DE-4F5B-1D00-6D24-529467029944";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "5CBE1A5E-49C2-78AD-EF62-B6A1BD1668DE";
+	rename -uid "0327EC3D-44DD-D448-5E97-39AD49AD2758";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "AA48515F-469D-85C4-A514-03B7F7B77D75";
 	setAttr ".g" yes;
@@ -2517,7 +2517,7 @@ createNode reference -n "AZRIRN";
 		"AZRIRN" 0
 		"AZRIRN" 2417
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1" 
-		"translate" " -type \"double3\" -6.7478883549744122 -10.91168984588890289 -15.36243503690414514"
+		"translate" " -type \"double3\" -6.77111395771041202 -10.91461021797246467 -15.38482950475098399"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1" 
 		"translateY" " -av"
@@ -2526,7 +2526,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_ArmPV1Zero1|AZRI:CTL_R_ArmPV1|AZRI:CTL_R_ArmIkFk1" 
 		"ikFk" " -k 1 0"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmFK1|AZRI:NLL_R_ShoulderFk1Zero1|AZRI:CTL_R_ShoulderFk1" 
-		"rotate" " -type \"double3\" -35.05089300331962932 -16.94604470126959939 -15.78956616672199154"
+		"rotate" " -type \"double3\" -35.05089300331962932 -16.52269143612122093 -15.78956616672199154"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmFK1|AZRI:NLL_R_ShoulderFk1Zero1|AZRI:CTL_R_ShoulderFk1" 
 		"rotateX" " -av"
@@ -2539,7 +2539,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2" 
-		"rotate" " -type \"double3\" 2.03371985547770517 -5.53977413827966902 -7.54236389574094623"
+		"rotate" " -type \"double3\" 1.98962630868648072 -5.53977413827966902 -7.58813313515582699"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2" 
 		"rotateX" " -av"
@@ -2548,7 +2548,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2|AZRI:NLL_C_SpineFK3Zero1|AZRI:CTL_C_SpineFK3|AZRI:NLL_C_SpineFK4Zero|AZRI:CTL_C_SpineFK4" 
-		"rotate" " -type \"double3\" -4.74010488641163086 0.59474543471822183 -9.70877703963878069"
+		"rotate" " -type \"double3\" -4.65298608668584368 0.59474543471822183 -9.61834745317194439"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2|AZRI:NLL_C_SpineFK3Zero1|AZRI:CTL_C_SpineFK3|AZRI:NLL_C_SpineFK4Zero|AZRI:CTL_C_SpineFK4" 
 		"rotateX" " -av"
@@ -2569,7 +2569,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Collision1|AZRI:CTL_C_Collision1" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1" 
-		"rotate" " -type \"double3\" 2.15669155095959741 -11.83993936440293737 14.53043690838564928"
+		"rotate" " -type \"double3\" 2.15669155095959741 -11.83993936440293737 14.40283630473709309"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1" 
 		"rotateX" " -av"
@@ -7521,7 +7521,7 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_Pinky4_rotate_Loop";
 	setAttr ".o" -type "double3" 0 0 -65.078416710665849 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Ring4_rotate_Loop";
 	rename -uid "9D33013F-46C1-451F-EF7F-218349E84F27";
-	setAttr ".o" -type "double3" 0 0 -47.083620941311487 ;
+	setAttr ".o" -type "double3" 0 0 -46.994368393861876 ;
 createNode animBlendNodeAdditiveDL -n "CTL_R_MouthCorner1_translateX_Loop";
 	rename -uid "E66148E5-417E-27C5-F762-13AF272159F2";
 createNode animBlendNodeAdditiveDL -n "CTL_R_MouthCorner1_translateY_Loop";
@@ -7599,16 +7599,16 @@ createNode animBlendNodeEnum -n "CTL_R_HandIk1_parent_Loop";
 	rename -uid "F3A5367A-418F-394A-FBD6-2F87C7E24AE1";
 createNode animBlendNodeAdditiveDL -n "CTL_C_Root1_translateX_Loop";
 	rename -uid "4A0CEBFB-458D-4381-6BF6-D2A8038CDF77";
-	setAttr ".o" -6.7478883549744122;
+	setAttr ".o" -6.771113957710412;
 createNode animBlendNodeAdditiveDL -n "CTL_C_Root1_translateY_Loop";
 	rename -uid "ECC747A4-4244-707C-031C-3589B5996D9F";
-	setAttr ".o" -10.911689845888903;
+	setAttr ".o" -10.914610217972465;
 createNode animBlendNodeAdditiveDL -n "CTL_C_Root1_translateZ_Loop";
 	rename -uid "EA7CF17F-40B8-6A7A-5526-5C8F40802DE7";
-	setAttr ".o" -15.362435036904145;
+	setAttr ".o" -15.384829504750984;
 createNode animBlendNodeAdditiveRotation -n "CTL_C_Root1_rotate_Loop";
 	rename -uid "F2279C3E-4092-4D48-B19C-BA88C0B813E1";
-	setAttr ".o" -type "double3" 5.4556625450088507 -11.635358884811755 8.7785968796655887 ;
+	setAttr ".o" -type "double3" 5.405673482212114 -11.635358884811755 8.7267080762063802 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Index4_rotate_Loop";
 	rename -uid "848507D7-4412-BA06-E17D-D98616360982";
 	setAttr ".o" -type "double3" 0 0 -62.508411509867564 ;
@@ -7813,7 +7813,7 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_Ring4_rotate_Loop";
 	setAttr ".o" -type "double3" 0 0 -65.554831732781807 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Pinky3_rotate_Loop";
 	rename -uid "D6A676E9-4055-57E6-FC20-BE8ACB31EFC2";
-	setAttr ".o" -type "double3" 0 0 -24.279094641792515 ;
+	setAttr ".o" -type "double3" 0 0 -24.149803568384201 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Ring2_rotate_Loop";
 	rename -uid "45C65104-4961-8E70-0AB8-2C9906AA52F1";
 	setAttr ".o" -type "double3" 7.5011805658176076 3.3304120195633438 -56.41332340700081 ;
@@ -7838,13 +7838,13 @@ createNode animBlendNodeAdditiveRotation -n "CTL_C_Tongue1_rotate_Loop";
 	setAttr ".o" -type "double3" 0 0 35.626525207140588 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_C_SpineFK3_rotate_Loop";
 	rename -uid "C9083D4D-4A1C-9B1B-EF5B-888917E505D8";
-	setAttr ".o" -type "double3" -1.0039108092185525 -15.12462002150928 -4.1222174689415718 ;
+	setAttr ".o" -type "double3" -1.0126312599767056 -15.12462002150928 -4.131269324090475 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_C_SpineFK2_rotate_Loop";
 	rename -uid "D59E2E81-4B59-01D6-F76F-D1B41197FB88";
-	setAttr ".o" -type "double3" 2.0337198554777052 -5.539774138279669 -7.5423638957409462 ;
+	setAttr ".o" -type "double3" 1.9896263086864807 -5.539774138279669 -7.588133135155827 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_C_SpineFK4_rotate_Loop";
 	rename -uid "60A637ED-4057-69F5-C2C0-1EA5B1E22C7A";
-	setAttr ".o" -type "double3" -4.7401048864116309 0.59474543471822183 -9.7087770396387807 ;
+	setAttr ".o" -type "double3" -4.6529860866858437 0.59474543471822183 -9.6183474531719444 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Thumb2_rotate_Loop";
 	rename -uid "9117B17D-426C-DC6E-6FD7-E391772334C3";
 	setAttr ".o" -type "double3" 0 0 -6.0345555304400529 ;
@@ -7856,7 +7856,7 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_Thumb1_rotate_Loop";
 	setAttr ".o" -type "double3" 22.277010745318947 -19.809193500271814 -0.17737349085264559 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Clav1_rotate_Loop";
 	rename -uid "33AC0B90-40CE-37F5-2C82-89ADE5A87A91";
-	setAttr ".o" -type "double3" 5.2609446825842108 13.940451712032969 16.218188838667498 ;
+	setAttr ".o" -type "double3" 5.2609446825842108 13.940451712032969 16.155854859788537 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Ball1_rotate_Loop";
 	rename -uid "E9F3A807-4EBE-F849-2442-83A401C29410";
 createNode animBlendNodeAdditiveDL -n "CTL_L_FootIK1_translateX_Loop";
@@ -7890,16 +7890,16 @@ createNode animBlendNodeAdditiveRotation -n "CTL_L_KneeFk1_rotate_Loop";
 	rename -uid "19C34658-49D1-5343-99D4-E091DD2C1247";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Index2_rotate_Loop";
 	rename -uid "B962E4F3-461B-EEF9-4662-568A7042DE42";
-	setAttr ".o" -type "double3" 11.051908052603158 -4.6520075648677688 11.274305851628734 ;
+	setAttr ".o" -type "double3" 11.051908052603158 -4.6520075648677688 11.062370344589537 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Pinky4_rotate_Loop";
 	rename -uid "CCBD37E5-44C2-2C89-DC92-E5A22E5B8963";
-	setAttr ".o" -type "double3" 0 0 -49.858022693347721 ;
+	setAttr ".o" -type "double3" 0 0 -49.72873161993941 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Index4_rotate_Loop";
 	rename -uid "09B01D2E-460C-E3A5-CFE3-4BB3D9969EFC";
-	setAttr ".o" -type "double3" 0 0 -28.794807154375242 ;
+	setAttr ".o" -type "double3" 0 0 -28.908213309614247 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Pinky2_rotate_Loop";
 	rename -uid "DA398434-4727-3E41-B760-9A81D4695923";
-	setAttr ".o" -type "double3" -2.6077865174284334 6.6965670045480579 5.9461223761954498 ;
+	setAttr ".o" -type "double3" -2.6077865174284334 6.6965670045480579 6.1246274762307751 ;
 createNode animBlendNodeBoolean -n "CTL_L_HandGrip1_visibility_Loop";
 	rename -uid "FC62E17E-4B3A-FA45-643F-E190156F0394";
 	setAttr ".o" yes;
@@ -7933,10 +7933,10 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_HairSide1_1_rotate_Loop";
 	rename -uid "47AD82B7-4F71-150B-0286-6CBD9891D0F5";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Ring3_rotate_Loop";
 	rename -uid "5EC32070-4795-3460-42DC-43834C162F0C";
-	setAttr ".o" -type "double3" 0 0 -35.606067229904099 ;
+	setAttr ".o" -type "double3" 0 0 -35.516814682454495 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Ring2_rotate_Loop";
 	rename -uid "B5831074-4764-A470-06F4-9984841A6FFD";
-	setAttr ".o" -type "double3" 4.9367644845612393 2.1359569282693851 17.81801427036795 ;
+	setAttr ".o" -type "double3" 4.9367644845612393 2.1359569282693851 17.803727810004862 ;
 createNode animBlendNodeAdditiveDL -n "CTL_L_EyeLookAt1_translateX_Loop";
 	rename -uid "FE3089F9-4072-6C9D-EDFC-F4BCF0B021C6";
 createNode animBlendNodeAdditiveDL -n "CTL_L_EyeLookAt1_translateY_Loop";
@@ -8004,7 +8004,7 @@ createNode animBlendNodeAdditiveScale -n "CTL_C_Collision1_scaleZ_Loop";
 	setAttr ".o" 1;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_ShoulderFk1_rotate_Loop";
 	rename -uid "3396D860-48F9-E72A-A844-C0BE07E642F9";
-	setAttr ".o" -type "double3" -35.050893003319629 -16.946044701269599 -15.789566166721992 ;
+	setAttr ".o" -type "double3" -35.050893003319629 -16.522691436121221 -15.789566166721992 ;
 createNode animBlendNodeEnum -n "CTL_R_ShoulderFk1_parent_Loop";
 	rename -uid "C657BB8D-4915-4E09-9EC1-8F84D12D0CFA";
 	setAttr ".o" 1;
@@ -8038,7 +8038,7 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_HairFront3_1_rotate_Loop";
 	rename -uid "64A8084A-4393-4B71-63BA-6483CBC7F605";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Index3_rotate_Loop";
 	rename -uid "D967A9C0-445C-8E23-832D-9D8FFA58A0C3";
-	setAttr ".o" -type "double3" 0 0 -23.403039581982195 ;
+	setAttr ".o" -type "double3" 0 0 -23.516445737221204 ;
 createNode animBlendNodeAdditiveDL -n "CTL_R_HairFront3_2_translateX_Loop";
 	rename -uid "7AB8DA52-4ABF-6576-1161-5F887E0095B7";
 createNode animBlendNodeAdditiveDL -n "CTL_R_HairFront3_2_translateY_Loop";
@@ -8049,7 +8049,7 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_HairFront3_2_rotate_Loop";
 	rename -uid "03B335B9-4F3C-4870-253C-86800EEAD090";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Middle4_rotate_Loop";
 	rename -uid "D87D4099-43FA-4462-014F-7C9BCD0BE107";
-	setAttr ".o" -type "double3" 0 0 -54.880933450587321 ;
+	setAttr ".o" -type "double3" 0 0 -54.925307015613726 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Thumb1_rotate_Loop";
 	rename -uid "F04411CA-4C9C-4EEF-BE55-D1AB4007E13A";
 	setAttr ".o" -type "double3" 4.6056716665675514 5.9857035398943941 6.0117049328024432 ;
@@ -8062,13 +8062,13 @@ createNode animBlendNodeAdditiveRotation -n "CTL_L_Middle1_rotate_Loop";
 	rename -uid "0C7771D6-4DCE-D17B-9F05-159C13F46A10";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Middle2_rotate_Loop";
 	rename -uid "94111E4F-47E6-9DE6-C6CE-47B4E6953FE9";
-	setAttr ".o" -type "double3" 2.5993939952806855 0.063189851603195041 17.463135674255692 ;
+	setAttr ".o" -type "double3" 2.5993939952806855 0.063189851603195041 17.324875797518697 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Middle3_rotate_Loop";
 	rename -uid "D5237DA2-40B0-18F3-3E87-39B459B72730";
-	setAttr ".o" -type "double3" 0 0 -27.907890221491822 ;
+	setAttr ".o" -type "double3" 0 0 -27.952263786518223 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Clav1_rotate_Loop";
 	rename -uid "0CDEFDB9-464E-9FBB-C971-4C8454107731";
-	setAttr ".o" -type "double3" 4.0190327229768501 -8.3614853224381118 15.539908603176139 ;
+	setAttr ".o" -type "double3" 4.0190327229768501 -8.3614853224381118 15.535706702650035 ;
 createNode animBlendNodeAdditiveDL -n "CTL_C_MouthLower1_translateX_Loop";
 	rename -uid "FDE12A21-4B14-4EA7-E643-8BB2821B0FD5";
 createNode animBlendNodeAdditiveDL -n "CTL_C_MouthLower1_translateY_Loop";
@@ -8102,7 +8102,7 @@ createNode animBlendNodeEnum -n "CTL_R_HipFk1_parent_Loop";
 	setAttr ".o" 1;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_ShoulderFk1_rotate_Loop";
 	rename -uid "B3B021F6-42FB-FCEF-2E55-33975923D217";
-	setAttr ".o" -type "double3" 22.053679561220864 -16.843945502428056 -5.5323474419667171 ;
+	setAttr ".o" -type "double3" 22.053679561220864 -16.843945502428056 -5.6165590847419171 ;
 createNode animBlendNodeEnum -n "CTL_L_ShoulderFk1_parent_Loop";
 	rename -uid "4D200FF0-49EB-7825-13ED-2282DA3F572B";
 	setAttr ".o" 1;
@@ -8153,19 +8153,19 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_HairFront1_1_rotate_Loop";
 	rename -uid "E368FD83-4DCA-8DFF-2F4F-57B5A009F13A";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_ElbowFk1_rotate_Loop";
 	rename -uid "508FB482-4CA4-AC80-846E-2FA58437C3EC";
-	setAttr ".o" -type "double3" 0 -29.132103478434711 0 ;
+	setAttr ".o" -type "double3" 0 -29.212147947134433 0 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Hand1_rotate_Loop";
 	rename -uid "F0109278-46BD-2A7D-8F9C-A3BC2D30E21D";
 	setAttr ".o" -type "double3" -14.298281619828906 1.7903707389645331 20.105951002554853 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_ElbowFk1_rotate_Loop";
 	rename -uid "2E1BC397-41CB-B433-340D-64B1F120980D";
-	setAttr ".o" -type "double3" 0 -106.07632837927838 0 ;
+	setAttr ".o" -type "double3" 0 -106.27670586022661 0 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Ring3_rotate_Loop";
 	rename -uid "40E7C6E3-4E19-82C3-3777-DA9FCB41051B";
 	setAttr ".o" -type "double3" 0 0 -58.702591008433629 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Hand1_rotate_Loop";
 	rename -uid "E32795C6-422D-8ADF-14E3-C5B4025A589B";
-	setAttr ".o" -type "double3" -39.794293952719592 -5.7600309317591964 29.949157824698478 ;
+	setAttr ".o" -type "double3" -39.794293952719592 -5.8361089075112851 29.949157824698478 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_LowerEyelid1_rotate_Loop";
 	rename -uid "15AAEE57-44A2-7D06-1525-A0A4C50106A2";
 createNode animCurveTL -n "CTL_L_HairSide1_1_translateX_Loop_inputB";
@@ -11262,7 +11262,7 @@ createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtFront_2_translateZ_Loop";
 	rename -uid "576A128E-4E6A-3A88-AE94-49AC4FA9F79A";
 createNode animBlendNodeAdditiveRotation -n "AZRI:CTL_L_SkirtFront_2_rotate_Loop";
 	rename -uid "7AFB1760-4DD5-DE48-688F-5BB62FB47574";
-	setAttr ".o" -type "double3" 0 0 0.54364359157085496 ;
+	setAttr ".o" -type "double3" 0 0 0.47218586118535932 ;
 createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtFront_1_translateX_Loop";
 	rename -uid "BEB1B55B-4B8C-7EFA-F041-189C800726A0";
 createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtFront_1_translateY_Loop";
@@ -11271,7 +11271,7 @@ createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtFront_1_translateZ_Loop";
 	rename -uid "D02F16A0-4FD9-7A65-9621-718577AB93DE";
 createNode animBlendNodeAdditiveRotation -n "AZRI:CTL_L_SkirtFront_1_rotate_Loop";
 	rename -uid "7FF40696-40F1-DAEE-C05B-6584DF79D515";
-	setAttr ".o" -type "double3" 2.1566915509595974 -11.839939364402937 14.530436908385649 ;
+	setAttr ".o" -type "double3" 2.1566915509595974 -11.839939364402937 14.402836304737093 ;
 createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtSide_2_translateX_Loop";
 	rename -uid "2CA3D1FE-48B6-70A8-A121-829AEB395518";
 createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtSide_2_translateY_Loop";
@@ -18531,8 +18531,8 @@ select -ne :time1;
 	setAttr -av -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" 140;
-	setAttr -av ".unw" 140;
+	setAttr -k on ".o" 139;
+	setAttr -av ".unw" 139;
 	setAttr -k on ".etw";
 	setAttr -k on ".tps";
 	setAttr -av -k on ".tms";
