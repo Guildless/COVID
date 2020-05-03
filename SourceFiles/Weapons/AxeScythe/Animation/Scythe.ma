@@ -1,11 +1,11 @@
 //Maya ASCII 2019 scene
 //Name: Scythe.ma
-//Last modified: Tue, Apr 28, 2020 03:39:11 PM
+//Last modified: Sun, May 03, 2020 08:20:46 AM
 //Codeset: 1252
-file -rdi 1 -ns "AxeToScythe" -rfn "AxeToScytheRN" -op "v=0;" -typ "mayaAscii"
-		 "D:/Projects/COVID/SourceFiles/Weapons/AxeScythe/Rig/AxeToScythe.ma";
-file -r -ns "AxeToScythe" -dr 1 -rfn "AxeToScytheRN" -op "v=0;" -typ "mayaAscii"
-		 "D:/Projects/COVID/SourceFiles/Weapons/AxeScythe/Rig/AxeToScythe.ma";
+file -rdi 1 -ns "AxeToScythe" -rfn "AxeToScytheRN" -op "VERS|2019|UVER|undef|MADE|undef|CHNG|Sun, May 03, 2020 08:00:13 AM|ICON|undef|INFO|undef|OBJN|387|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|TDUR|141120000|"
+		 -typ "mayaBinary" "D:/Projects/COVID/SourceFiles/Weapons/AxeScythe/Rig/AxeToScythe01.mb";
+file -r -ns "AxeToScythe" -dr 1 -rfn "AxeToScytheRN" -op "VERS|2019|UVER|undef|MADE|undef|CHNG|Sun, May 03, 2020 08:00:13 AM|ICON|undef|INFO|undef|OBJN|387|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|TDUR|141120000|"
+		 -typ "mayaBinary" "D:/Projects/COVID/SourceFiles/Weapons/AxeScythe/Rig/AxeToScythe01.mb";
 requires maya "2019";
 requires "stereoCamera" "10.0";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
@@ -20,13 +20,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "CDE68AC2-413A-3720-7EED-B4B222DBA69C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -63.880034810164744 164.1645003943587 357.84760523655325 ;
-	setAttr ".r" -type "double3" -6.9383527730813732 -6837.7999999980657 7.4599236219695547e-17 ;
+	setAttr ".t" -type "double3" -48.1829155884218 36.754561486203045 443.77685235672368 ;
+	setAttr ".r" -type "double3" -1.5383527730814477 -6844.1999999980117 -1.2457496615321888e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6B18480F-48B7-853F-D819-76A1EF10AAEF";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 379.0531151008343;
+	setAttr ".coi" 454.32300785829602;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -268,56 +268,50 @@ createNode locator -n "locatorShape1" -p "locator1";
 	rename -uid "08D8DED6-475B-469D-17CC-B281B7CC8202";
 	setAttr -k off ".v";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "6F08D16C-4790-0408-F8E7-C6AEA70911F0";
+	rename -uid "C10C090C-47A8-4C36-FC7D-F8B45266FA81";
 	setAttr -s 11 ".lnk";
 	setAttr -s 11 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D8E4BF22-4FDF-3FDD-3D1D-8DA36B669424";
+	rename -uid "8896C7D1-4489-52B7-4D07-B69024B7600B";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 1 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "63A006BC-49EB-4CED-2385-F59A4FEE2427";
+	rename -uid "9E5CB936-4FC7-DFCF-84E7-F482DDFCD343";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "1228C607-42ED-F7C2-8AFD-82B8AC0612A3";
+	rename -uid "9411DEC0-4B64-4414-A97E-FEB7E385906A";
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "A24812DE-4F5B-1D00-6D24-529467029944";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "6DF154BA-40D7-426F-4AEE-64B0CBC5920C";
+	rename -uid "37ED2ED8-4F2C-1A77-41FD-51AA70A9E261";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "AA48515F-469D-85C4-A514-03B7F7B77D75";
 	setAttr ".g" yes;
 createNode reference -n "AxeToScytheRN";
 	rename -uid "7A890753-40EB-6866-418B-CDB8F6612E9B";
-	setAttr ".fn[0]" -type "string" "D:/Projects/COVID/SourceFiles/Characters/MainCharacter/Animation/AxeToScythe.ma";
-	setAttr -s 24 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
+	setAttr -s 2 ".fn";
+	setAttr ".fn[0]" -type "string" "D:/Projects/COVID/SourceFiles/Weapons/AxeScythe/Rig/AxeToScythe.ma";
+	setAttr ".fn[1]" -type "string" "D:/Projects/COVID/SourceFiles/Characters/MainCharacter/Animation/AxeToScythe.ma";
+	setAttr -s 35 ".phl";
+	setAttr ".phl[1]" -type "TdataCompound" ;
+	setAttr ".phl[2]" -type "TdataCompound" ;
+	setAttr ".phl[3]" -type "TdataCompound" ;
+	setAttr ".phl[4]" -type "TdataCompound" ;
+	setAttr ".phl[5]" -type "TdataCompound" ;
+	setAttr ".phl[6]" -type "TdataCompound" ;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"AxeToScytheRN"
-		"AxeToScytheRN" 0
 		"AxeToScytheRN" 56
 		2 "|AxeToScythe:polySurfaceShape7|AxeToScythe:polySurface10|AxeToScythe:polySurfaceShape12" 
 		"visibility" " -k 0 1"
@@ -411,7 +405,44 @@ createNode reference -n "AxeToScytheRN";
 		5 4 "AxeToScytheRN" "|AxeToScythe:Axe_Main_ctrl.drawOverride" "AxeToScytheRN.placeHolderList[23]" 
 		""
 		5 4 "AxeToScytheRN" "|AxeToScythe:Axe_Main_ctrl|AxeToScythe:Axe_Bottom_ctrl.drawOverride" 
-		"AxeToScytheRN.placeHolderList[24]" "";
+		"AxeToScytheRN.placeHolderList[24]" ""
+		"AxeToScytheRN" 18
+		2 "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R" 
+		"Ice_Start" " -k 1 10"
+		2 "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R" 
+		"Ice_01" " -k 1 10"
+		2 "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R" 
+		"Ice_02" " -k 1 10"
+		2 "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R" 
+		"Ice_03" " -k 1 10"
+		2 "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R" 
+		"Ice_End" " -k 1 10"
+		2 "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R" 
+		"Axe_Extend" " -k 1 10"
+		2 "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M|AxeToScythe:joint2_R" 
+		"translate" " -type \"double3\" 45.34211809608700605 0 0"
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[25]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[26]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[27]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[28]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M|AxeToScythe:joint2_R.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[29]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M|AxeToScythe:joint4_R.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[30]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M|AxeToScythe:joint4_R|AxeToScythe:joint5_R.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[31]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M|AxeToScythe:joint4_R|AxeToScythe:joint5_R|AxeToScythe:joint6_R.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[32]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M|AxeToScythe:joint4_R|AxeToScythe:joint5_R|AxeToScythe:joint6_R|AxeToScythe:joint7_R.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[33]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M|AxeToScythe:joint4_R|AxeToScythe:joint5_R|AxeToScythe:joint6_R|AxeToScythe:joint7_R|AxeToScythe:joint8_R.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[34]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M|AxeToScythe:joint4_R|AxeToScythe:joint5_R|AxeToScythe:joint6_R|AxeToScythe:joint7_R|AxeToScythe:joint8_R|AxeToScythe:joint28_R.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[35]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "sceneConfigurationScriptNode";
@@ -490,8 +521,8 @@ createNode gameFbxExporter -n "gameExporterPreset2";
 	setAttr ".ils" yes;
 	setAttr ".ilu" yes;
 	setAttr ".eti" 2;
-	setAttr ".esi" 2;
-	setAttr ".ssn" -type "string" "AxeScythe";
+	setAttr ".esi" 3;
+	setAttr ".ssn" -type "string" "AxeScythe1";
 	setAttr ".ac[0].acn" -type "string" "Scythe";
 	setAttr ".ac[0].ace" 1;
 	setAttr ".spt" 2;
@@ -698,6 +729,11 @@ createNode animCurveTU -n "Axe_Main_ctrl_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  0 1;
+createNode objectSet -n "AxeScythe1";
+	rename -uid "DB84331C-491E-240C-87A4-D99CAE8811F7";
+	setAttr ".ihi" 0;
+	setAttr -s 11 ".dsm";
+	setAttr ".an" -type "string" "gCharacterSet";
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -av -cb on ".ihi";
@@ -719,7 +755,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 7 ".st";
+	setAttr -s 6 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -732,21 +768,26 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 9 ".s";
+	setAttr -s 8 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
 	setAttr -s 2 ".p";
+select -ne :defaultRenderUtilityList1;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 select -ne :defaultRenderingList1;
-	setAttr -s 2 ".r";
+	setAttr -s 3 ".r";
 select -ne :initialShadingGroup;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 3 ".dsm";
+	setAttr -s 7 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -755,7 +796,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr -k on ".ro" yes;
-	setAttr -s 2 ".gn";
+	setAttr -s 6 ".gn";
 select -ne :initialParticleSE;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -892,30 +933,17 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".hwcc";
 	setAttr -k on ".hwdp";
 	setAttr -k on ".hwql";
-connectAttr "AxeToScytheRN.phl[1]" "AxeScythe.dsm" -na;
-connectAttr "AxeToScytheRN.phl[2]" "AxeScythe.dsm" -na;
-connectAttr "AxeToScytheRN.phl[3]" "AxeScythe.dsm" -na;
-connectAttr "AxeToScytheRN.phl[4]" "AxeScythe.dsm" -na;
-connectAttr "AxeToScytheRN.phl[5]" "AxeScythe.dsm" -na;
-connectAttr "AxeToScytheRN.phl[6]" "AxeScythe.dsm" -na;
-connectAttr "Axe_Main_ctrl_Extend_Bottom.o" "AxeToScytheRN.phl[7]";
-connectAttr "Axe_Main_ctrl_BaseIce.o" "AxeToScytheRN.phl[8]";
-connectAttr "Axe_Main_ctrl_IceFirst.o" "AxeToScytheRN.phl[9]";
-connectAttr "Axe_Main_ctrl_IceSecond.o" "AxeToScytheRN.phl[10]";
-connectAttr "Axe_Main_ctrl_IceThird.o" "AxeToScytheRN.phl[11]";
-connectAttr "Axe_Main_ctrl_IceEnd.o" "AxeToScytheRN.phl[12]";
-connectAttr "Axe_Main_ctrl_translateX.o" "AxeToScytheRN.phl[13]";
-connectAttr "Axe_Main_ctrl_translateY.o" "AxeToScytheRN.phl[14]";
-connectAttr "Axe_Main_ctrl_translateZ.o" "AxeToScytheRN.phl[15]";
-connectAttr "Axe_Main_ctrl_rotateX.o" "AxeToScytheRN.phl[16]";
-connectAttr "Axe_Main_ctrl_rotateY.o" "AxeToScytheRN.phl[17]";
-connectAttr "Axe_Main_ctrl_rotateZ.o" "AxeToScytheRN.phl[18]";
-connectAttr "Axe_Main_ctrl_scaleX.o" "AxeToScytheRN.phl[19]";
-connectAttr "Axe_Main_ctrl_scaleY.o" "AxeToScytheRN.phl[20]";
-connectAttr "Axe_Main_ctrl_scaleZ.o" "AxeToScytheRN.phl[21]";
-connectAttr "Axe_Main_ctrl_visibility.o" "AxeToScytheRN.phl[22]";
-connectAttr "layer1.di" "AxeToScytheRN.phl[23]";
-connectAttr "layer1.di" "AxeToScytheRN.phl[24]";
+connectAttr "AxeToScytheRN.phl[25]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[26]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[27]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[28]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[29]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[30]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[31]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[32]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[33]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[34]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[35]" "AxeScythe1.dsm" -na;
 connectAttr "pCylinder1_parentConstraint1.ctx" "pCylinder1.tx";
 connectAttr "pCylinder1_parentConstraint1.cty" "pCylinder1.ty";
 connectAttr "pCylinder1_parentConstraint1.ctz" "pCylinder1.tz";
@@ -952,8 +980,32 @@ relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defau
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "Axe_Main_ctrl_Extend_Bottom.o" "AxeToScytheRN.phl[7]";
+connectAttr "Axe_Main_ctrl_BaseIce.o" "AxeToScytheRN.phl[8]";
+connectAttr "Axe_Main_ctrl_IceFirst.o" "AxeToScytheRN.phl[9]";
+connectAttr "Axe_Main_ctrl_IceSecond.o" "AxeToScytheRN.phl[10]";
+connectAttr "Axe_Main_ctrl_IceThird.o" "AxeToScytheRN.phl[11]";
+connectAttr "Axe_Main_ctrl_IceEnd.o" "AxeToScytheRN.phl[12]";
+connectAttr "Axe_Main_ctrl_translateX.o" "AxeToScytheRN.phl[13]";
+connectAttr "Axe_Main_ctrl_translateY.o" "AxeToScytheRN.phl[14]";
+connectAttr "Axe_Main_ctrl_translateZ.o" "AxeToScytheRN.phl[15]";
+connectAttr "Axe_Main_ctrl_rotateX.o" "AxeToScytheRN.phl[16]";
+connectAttr "Axe_Main_ctrl_rotateY.o" "AxeToScytheRN.phl[17]";
+connectAttr "Axe_Main_ctrl_rotateZ.o" "AxeToScytheRN.phl[18]";
+connectAttr "Axe_Main_ctrl_scaleX.o" "AxeToScytheRN.phl[19]";
+connectAttr "Axe_Main_ctrl_scaleY.o" "AxeToScytheRN.phl[20]";
+connectAttr "Axe_Main_ctrl_scaleZ.o" "AxeToScytheRN.phl[21]";
+connectAttr "Axe_Main_ctrl_visibility.o" "AxeToScytheRN.phl[22]";
+connectAttr "layer1.di" "AxeToScytheRN.phl[23]";
+connectAttr "layer1.di" "AxeToScytheRN.phl[24]";
 connectAttr "sharedReferenceNode.sr" "AxeToScytheRN.sr";
 connectAttr "layerManager.dli[1]" "layer1.id";
+connectAttr "AxeToScytheRN.phl[1]" "AxeScythe.dsm" -na;
+connectAttr "AxeToScytheRN.phl[2]" "AxeScythe.dsm" -na;
+connectAttr "AxeToScytheRN.phl[3]" "AxeScythe.dsm" -na;
+connectAttr "AxeToScytheRN.phl[4]" "AxeScythe.dsm" -na;
+connectAttr "AxeToScytheRN.phl[5]" "AxeScythe.dsm" -na;
+connectAttr "AxeToScytheRN.phl[6]" "AxeScythe.dsm" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCylinderShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of Scythe.ma

@@ -1,13 +1,13 @@
 //Maya ASCII 2019 scene
 //Name: AxeToScythe.ma
-//Last modified: Tue, Apr 28, 2020 03:27:15 PM
+//Last modified: Sun, May 03, 2020 08:08:53 AM
 //Codeset: 1252
 file -rdi 1 -ns "AZRI" -rfn "AZRIRN" -op "v=0;" -typ "mayaAscii" "D:/Projects/COVID/SourceFiles/Characters/MainCharacter/Rig/AZRI.ma";
-file -rdi 1 -ns "AxeToScythe" -rfn "AxeToScytheRN" -op "v=0;" -typ "mayaAscii"
-		 "D:/Projects/COVID/SourceFiles/Weapons/AxeScythe/Rig/AxeToScythe.ma";
+file -rdi 1 -ns "AxeToScythe" -rfn "AxeToScytheRN" -op "VERS|2019|UVER|undef|MADE|undef|CHNG|Sun, May 03, 2020 08:00:13 AM|ICON|undef|INFO|undef|OBJN|387|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|TDUR|141120000|"
+		 -typ "mayaBinary" "D:/Projects/COVID/SourceFiles/Weapons/AxeScythe/Rig/AxeToScythe01.mb";
 file -r -ns "AZRI" -dr 1 -rfn "AZRIRN" -op "v=0;" -typ "mayaAscii" "D:/Projects/COVID/SourceFiles/Characters/MainCharacter/Rig/AZRI.ma";
-file -r -ns "AxeToScythe" -dr 1 -rfn "AxeToScytheRN" -op "v=0;" -typ "mayaAscii"
-		 "D:/Projects/COVID/SourceFiles/Weapons/AxeScythe/Rig/AxeToScythe.ma";
+file -r -ns "AxeToScythe" -dr 1 -rfn "AxeToScytheRN" -op "VERS|2019|UVER|undef|MADE|undef|CHNG|Sun, May 03, 2020 08:00:13 AM|ICON|undef|INFO|undef|OBJN|387|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|TDUR|141120000|"
+		 -typ "mayaBinary" "D:/Projects/COVID/SourceFiles/Weapons/AxeScythe/Rig/AxeToScythe01.mb";
 requires maya "2019";
 requires "stereoCamera" "10.0";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
@@ -22,13 +22,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "CDE68AC2-413A-3720-7EED-B4B222DBA69C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -62.502812056072713 142.87250276099516 379.95846490669339 ;
-	setAttr ".r" -type "double3" -7.5383523746664514 -11160.99999999642 1.1183340828983967e-16 ;
+	setAttr ".t" -type "double3" 191.19098331965529 203.69100723428494 317.31749444046386 ;
+	setAttr ".r" -type "double3" -21.338352408304946 -11490.600000005334 1.8253582764070321e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6B18480F-48B7-853F-D819-76A1EF10AAEF";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 487.64537228084703;
+	setAttr ".coi" 406.85480204689901;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -228,7 +228,7 @@ createNode transform -n "tmGroups1" -p "tmXML1";
 	addAttr -ci true -sn "type" -ln "type" -dt "string";
 	setAttr ".type" -type "string" "tmGroups";
 createNode fosterParent -n "AxeToScytheRNfosterParent1";
-	rename -uid "AB02D120-47D1-6B9E-BD33-989D41BDBBD0";
+	rename -uid "A11B57AD-4564-3ABB-DFB9-EDB38FE2A921";
 createNode parentConstraint -n "Axe_Main_ctrl_parentConstraint1" -p "AxeToScytheRNfosterParent1";
 	rename -uid "12D67081-4649-7138-B18A-B697B73324B5";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "CTL_C_WeaponGrip1W0" -dv 1 -min 0 
@@ -252,32 +252,50 @@ createNode parentConstraint -n "Axe_Main_ctrl_parentConstraint1" -p "AxeToScythe
 	setAttr ".rst" -type "double3" 23.576097795900438 -78.058752959004437 -0.0017066776972006841 ;
 	setAttr ".rsrr" -type "double3" -6.6909428501962876e-15 89.999999999999986 0 ;
 	setAttr -k on ".w0";
+createNode parentConstraint -n "Main_parentConstraint1" -p "AxeToScytheRNfosterParent1";
+	rename -uid "0F5D88F0-47E9-EB70-B73F-CA8C4123BB2C";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "CTL_C_WeaponGrip1W0" -dv 1 -min 0 
+		-at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" -31.555318349500048 17.344101460097832 -91.007599941258121 ;
+	setAttr ".rst" -type "double3" -30.962119002397767 150.48371939772736 -13.419261561521919 ;
+	setAttr ".rsrr" -type "double3" -39.213313077590477 -46.026850761368152 -49.631897129508417 ;
+	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "E8062A09-466B-385F-89EE-DF98918DE158";
-	setAttr -s 11 ".lnk";
-	setAttr -s 11 ".slnk";
+	rename -uid "06055D6F-40BC-B341-15CA-35BB872B6900";
+	setAttr -s 15 ".lnk";
+	setAttr -s 15 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D2F21CA3-4CD7-6E25-DBEC-7BA46E49232A";
-	setAttr ".bsdt[0].bscd" -type "Int32Array" 2 0 1 ;
-	setAttr -s 2 ".bspr";
-	setAttr -s 2 ".obsv";
+	rename -uid "D6628356-4C12-A20A-D609-48AB324CC0FC";
+	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "ABF45126-4399-77D6-02B5-DD888578C4D5";
+	rename -uid "35F09613-43CD-4B74-9D3E-6297AFBE473C";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "743F547C-4BF6-F092-209D-E48CC09C40D7";
+	rename -uid "4964F988-4A92-0B93-5BC4-88A6FA0F5A35";
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "A24812DE-4F5B-1D00-6D24-529467029944";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "AE298959-4BEE-DD7C-DFB5-68AF7BE7CB98";
+	rename -uid "F69E662F-4696-46BF-3D73-2DB9454F3C18";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "AA48515F-469D-85C4-A514-03B7F7B77D75";
 	setAttr ".g" yes;
 createNode reference -n "AZRIRN";
 	rename -uid "41A39920-4A9D-382E-C12C-9A87BBAB3292";
 	setAttr ".fn[0]" -type "string" "D:/Projects/COVID/SourceFiles/Characters/MainCharacter/Rig/AZRI.ma";
-	setAttr -s 2380 ".phl";
+	setAttr -s 2387 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -2658,10 +2676,17 @@ createNode reference -n "AZRIRN";
 	setAttr ".phl[2378]" 0;
 	setAttr ".phl[2379]" 0;
 	setAttr ".phl[2380]" 0;
+	setAttr ".phl[2381]" 0;
+	setAttr ".phl[2382]" 0;
+	setAttr ".phl[2383]" 0;
+	setAttr ".phl[2384]" 0;
+	setAttr ".phl[2385]" 0;
+	setAttr ".phl[2386]" 0;
+	setAttr ".phl[2387]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"AZRIRN"
 		"AZRIRN" 0
-		"AZRIRN" 3670
+		"AZRIRN" 3677
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1" "translateX" 
@@ -2679,7 +2704,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1" "rotateZ" 
 		" -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1" 
-		"translate" " -type \"double3\" -6.7478883549744122 -10.91168984588890289 -15.36243503690414514"
+		"translate" " -type \"double3\" -23.57260813182299586 -18.1434212495884637 17.1216610541018035"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1" 
 		"translateX" " -av"
@@ -2688,7 +2713,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1" 
-		"rotate" " -type \"double3\" 5.45566254500885073 -11.63535888481175462 8.77859687966558866"
+		"rotate" " -type \"double3\" 3.93002696185226164 26.18693578366434593 -6.64597191954790656"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1" 
 		"rotateX" " -av"
@@ -2697,7 +2722,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1" 
-		"rotate" " -type \"double3\" 4.0190327229768501 -8.36148532243811182 15.53990860317613887"
+		"rotate" " -type \"double3\" -15.71710787841971424 -22.99323429374235772 -7.72692570808775692"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1" 
 		"rotateX" " -av"
@@ -2706,7 +2731,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1" 
-		"rotate" " -type \"double3\" -14.29828161982890578 1.79037073896453314 20.10595100255485335"
+		"rotate" " -type \"double3\" -95.37396838621347683 21.12316032530588217 -29.40601984100815969"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1" 
 		"rotateX" " -av"
@@ -2723,7 +2748,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2" 
-		"rotate" " -type \"double3\" 11.05190805260315834 -4.65200756486776879 11.27430585162873378"
+		"rotate" " -type \"double3\" -1.40707286700989287 -2.52772258206196154 -26.94938915296111404"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2" 
 		"rotateX" " -av"
@@ -2732,7 +2757,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2|AZRI:NLL_L_Index3Zero1|AZRI:CTL_L_Index3" 
-		"rotate" " -type \"double3\" 0 0 -23.40303958198219547"
+		"rotate" " -type \"double3\" 0 0 -81.53291456159958273"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2|AZRI:NLL_L_Index3Zero1|AZRI:CTL_L_Index3" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2|AZRI:NLL_L_Index3Zero1|AZRI:CTL_L_Index3" 
@@ -2740,7 +2765,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2|AZRI:NLL_L_Index3Zero1|AZRI:CTL_L_Index3" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2|AZRI:NLL_L_Index3Zero1|AZRI:CTL_L_Index3|AZRI:NLL_L_Index4Zero1|AZRI:CTL_L_Index4" 
-		"rotate" " -type \"double3\" 0 0 -28.79480715437524196"
+		"rotate" " -type \"double3\" 0 0 -41.30079937617402663"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2|AZRI:NLL_L_Index3Zero1|AZRI:CTL_L_Index3|AZRI:NLL_L_Index4Zero1|AZRI:CTL_L_Index4" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2|AZRI:NLL_L_Index3Zero1|AZRI:CTL_L_Index3|AZRI:NLL_L_Index4Zero1|AZRI:CTL_L_Index4" 
@@ -2748,7 +2773,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Index1Zero1|AZRI:CTL_L_Index1|AZRI:NLL_L_Index2Zero1|AZRI:CTL_L_Index2|AZRI:NLL_L_Index3Zero1|AZRI:CTL_L_Index3|AZRI:NLL_L_Index4Zero1|AZRI:CTL_L_Index4" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 -1.36900545441812582 0"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1" 
@@ -2756,7 +2781,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2" 
-		"rotate" " -type \"double3\" 2.59939399528068549 0.063189851603195041 17.46313567425569246"
+		"rotate" " -type \"double3\" 1.28478122735134592 2.26075945646606735 -42.34684527747268135"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2" 
 		"rotateX" " -av"
@@ -2765,7 +2790,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2|AZRI:NLL_L_Middle3Zero1|AZRI:CTL_L_Middle3" 
-		"rotate" " -type \"double3\" 0 0 -27.9078902214918223"
+		"rotate" " -type \"double3\" 0 0 -86.17380073592623546"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2|AZRI:NLL_L_Middle3Zero1|AZRI:CTL_L_Middle3" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2|AZRI:NLL_L_Middle3Zero1|AZRI:CTL_L_Middle3" 
@@ -2773,7 +2798,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2|AZRI:NLL_L_Middle3Zero1|AZRI:CTL_L_Middle3" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2|AZRI:NLL_L_Middle3Zero1|AZRI:CTL_L_Middle3|AZRI:NLL_L_Middle4Zero1|AZRI:CTL_L_Middle4" 
-		"rotate" " -type \"double3\" 0 0 -54.88093345058732098"
+		"rotate" " -type \"double3\" 0 0 -60.50203215989081684"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2|AZRI:NLL_L_Middle3Zero1|AZRI:CTL_L_Middle3|AZRI:NLL_L_Middle4Zero1|AZRI:CTL_L_Middle4" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2|AZRI:NLL_L_Middle3Zero1|AZRI:CTL_L_Middle3|AZRI:NLL_L_Middle4Zero1|AZRI:CTL_L_Middle4" 
@@ -2781,7 +2806,8 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Middle1Zero1|AZRI:CTL_L_Middle1|AZRI:NLL_L_Middle2Zero1|AZRI:CTL_L_Middle2|AZRI:NLL_L_Middle3Zero1|AZRI:CTL_L_Middle3|AZRI:NLL_L_Middle4Zero1|AZRI:CTL_L_Middle4" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" -1.95518463169111389 -3.14192607726339945 2.91202094316798243"
+		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1" 
@@ -2789,7 +2815,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2" 
-		"rotate" " -type \"double3\" 4.93676448456123929 2.1359569282693851 17.81801427036795005"
+		"rotate" " -type \"double3\" 5.02405514254589303 11.0981920504228988 -53.38572413516708792"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2" 
 		"rotateX" " -av"
@@ -2798,7 +2824,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2|AZRI:NLL_L_Ring3Zero1|AZRI:CTL_L_Ring3" 
-		"rotate" " -type \"double3\" 0 0 -35.60606722990409878"
+		"rotate" " -type \"double3\" 0 0 -93.16094911325706107"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2|AZRI:NLL_L_Ring3Zero1|AZRI:CTL_L_Ring3" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2|AZRI:NLL_L_Ring3Zero1|AZRI:CTL_L_Ring3" 
@@ -2806,7 +2832,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2|AZRI:NLL_L_Ring3Zero1|AZRI:CTL_L_Ring3" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2|AZRI:NLL_L_Ring3Zero1|AZRI:CTL_L_Ring3|AZRI:NLL_L_Ring4Zero1|AZRI:CTL_L_Ring4" 
-		"rotate" " -type \"double3\" 0 0 -47.08362094131148723"
+		"rotate" " -type \"double3\" 0 0 -57.04199652719233171"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2|AZRI:NLL_L_Ring3Zero1|AZRI:CTL_L_Ring3|AZRI:NLL_L_Ring4Zero1|AZRI:CTL_L_Ring4" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2|AZRI:NLL_L_Ring3Zero1|AZRI:CTL_L_Ring3|AZRI:NLL_L_Ring4Zero1|AZRI:CTL_L_Ring4" 
@@ -2814,7 +2840,8 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Ring1Zero1|AZRI:CTL_L_Ring1|AZRI:NLL_L_Ring2Zero1|AZRI:CTL_L_Ring2|AZRI:NLL_L_Ring3Zero1|AZRI:CTL_L_Ring3|AZRI:NLL_L_Ring4Zero1|AZRI:CTL_L_Ring4" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" -2.76554746871288293 -6.36300101667697859 5.7146695060691215"
+		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1" 
@@ -2822,7 +2849,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1|AZRI:NLL_L_Pinky2Zero1|AZRI:CTL_L_Pinky2" 
-		"rotate" " -type \"double3\" -2.60778651742843337 6.69656700454805787 5.94612237619544981"
+		"rotate" " -type \"double3\" -6.35255624538229124 10.11510701247594035 -73.21960035241519904"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1|AZRI:NLL_L_Pinky2Zero1|AZRI:CTL_L_Pinky2" 
 		"rotateX" " -av"
@@ -2831,7 +2858,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1|AZRI:NLL_L_Pinky2Zero1|AZRI:CTL_L_Pinky2" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1|AZRI:NLL_L_Pinky2Zero1|AZRI:CTL_L_Pinky2|AZRI:NLL_L_Pinky3Zero1|AZRI:CTL_L_Pinky3" 
-		"rotate" " -type \"double3\" 0 0 -24.27909464179251486"
+		"rotate" " -type \"double3\" 0 0 -87.5759663682567151"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1|AZRI:NLL_L_Pinky2Zero1|AZRI:CTL_L_Pinky2|AZRI:NLL_L_Pinky3Zero1|AZRI:CTL_L_Pinky3" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1|AZRI:NLL_L_Pinky2Zero1|AZRI:CTL_L_Pinky2|AZRI:NLL_L_Pinky3Zero1|AZRI:CTL_L_Pinky3" 
@@ -2839,7 +2866,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1|AZRI:NLL_L_Pinky2Zero1|AZRI:CTL_L_Pinky2|AZRI:NLL_L_Pinky3Zero1|AZRI:CTL_L_Pinky3" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1|AZRI:NLL_L_Pinky2Zero1|AZRI:CTL_L_Pinky2|AZRI:NLL_L_Pinky3Zero1|AZRI:CTL_L_Pinky3|AZRI:NLL_L_Pinky4Zero1|AZRI:CTL_L_Pinky4" 
-		"rotate" " -type \"double3\" 0 0 -49.85802269334772063"
+		"rotate" " -type \"double3\" 0 0 -53.47999780257629254"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1|AZRI:NLL_L_Pinky2Zero1|AZRI:CTL_L_Pinky2|AZRI:NLL_L_Pinky3Zero1|AZRI:CTL_L_Pinky3|AZRI:NLL_L_Pinky4Zero1|AZRI:CTL_L_Pinky4" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1|AZRI:NLL_L_Pinky2Zero1|AZRI:CTL_L_Pinky2|AZRI:NLL_L_Pinky3Zero1|AZRI:CTL_L_Pinky3|AZRI:NLL_L_Pinky4Zero1|AZRI:CTL_L_Pinky4" 
@@ -2847,7 +2874,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Pinky1Zero1|AZRI:CTL_L_Pinky1|AZRI:NLL_L_Pinky2Zero1|AZRI:CTL_L_Pinky2|AZRI:NLL_L_Pinky3Zero1|AZRI:CTL_L_Pinky3|AZRI:NLL_L_Pinky4Zero1|AZRI:CTL_L_Pinky4" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Thumb1Zero1|AZRI:CTL_L_Thumb1" 
-		"rotate" " -type \"double3\" 4.60567166656755145 5.98570353989439408 6.01170493280244322"
+		"rotate" " -type \"double3\" 7.75224181207418983 -0.38235313053653908 -1.91983738733188414"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Thumb1Zero1|AZRI:CTL_L_Thumb1" 
 		"rotateX" " -av"
@@ -2856,7 +2883,8 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Thumb1Zero1|AZRI:CTL_L_Thumb1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Thumb1Zero1|AZRI:CTL_L_Thumb1|AZRI:NLL_L_Thumb2Zero1|AZRI:CTL_L_Thumb2" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 9.01267977613769844 -1.7917035074232246 -1.0027048742176663"
+		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Thumb1Zero1|AZRI:CTL_L_Thumb1|AZRI:NLL_L_Thumb2Zero1|AZRI:CTL_L_Thumb2" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Thumb1Zero1|AZRI:CTL_L_Thumb1|AZRI:NLL_L_Thumb2Zero1|AZRI:CTL_L_Thumb2" 
@@ -2864,7 +2892,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Thumb1Zero1|AZRI:CTL_L_Thumb1|AZRI:NLL_L_Thumb2Zero1|AZRI:CTL_L_Thumb2" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Thumb1Zero1|AZRI:CTL_L_Thumb1|AZRI:NLL_L_Thumb2Zero1|AZRI:CTL_L_Thumb2|AZRI:NLL_L_Thumb3Zero1|AZRI:CTL_L_Thumb3" 
-		"rotate" " -type \"double3\" 0 14.31504798689291391 0"
+		"rotate" " -type \"double3\" 0 9.83871823419535119 0"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Thumb1Zero1|AZRI:CTL_L_Thumb1|AZRI:NLL_L_Thumb2Zero1|AZRI:CTL_L_Thumb2|AZRI:NLL_L_Thumb3Zero1|AZRI:CTL_L_Thumb3" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:GRP_L_Hand1|AZRI:NLL_L_Thumb1Zero1|AZRI:CTL_L_Thumb1|AZRI:NLL_L_Thumb2Zero1|AZRI:CTL_L_Thumb2|AZRI:NLL_L_Thumb3Zero1|AZRI:CTL_L_Thumb3" 
@@ -2900,7 +2928,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmBind1|AZRI:JNT_L_ArmBind1|AZRI:JNT_L_ArmBind2|AZRI:JNT_L_ArmBind3|AZRI:NLL_L_Hand1Zero1|AZRI:CTL_L_Hand1|AZRI:CTL_L_ArmIkFk1" 
 		"ikFk" " -av -k 1 1"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmIK1|AZRI:NLL_L_HandIk1Zero1|AZRI:CTL_L_HandIk1" 
-		"translate" " -type \"double3\" -35.44032528462420117 -13.91592890211594025 28.55843460649436594"
+		"translate" " -type \"double3\" -47.36745450556097126 -39.66004736580866563 7.68027233831519229"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmIK1|AZRI:NLL_L_HandIk1Zero1|AZRI:CTL_L_HandIk1" 
 		"translateX" " -av"
@@ -2909,7 +2937,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmIK1|AZRI:NLL_L_HandIk1Zero1|AZRI:CTL_L_HandIk1" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmIK1|AZRI:NLL_L_HandIk1Zero1|AZRI:CTL_L_HandIk1" 
-		"rotate" " -type \"double3\" 102.19858343023119573 -81.85933744235627785 -106.55219666102094322"
+		"rotate" " -type \"double3\" 95.71031809302918703 -220.19036279095124087 118.57268783877913165"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmIK1|AZRI:NLL_L_HandIk1Zero1|AZRI:CTL_L_HandIk1" 
 		"rotateX" " -av"
@@ -2920,7 +2948,8 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmIK1|AZRI:NLL_L_HandIk1Zero1|AZRI:CTL_L_HandIk1" 
 		"parent" " -av -k 1 0"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmIK1|AZRI:NLL_L_ArmPV1Zero1|AZRI:CTL_L_ArmPV1" 
-		"translate" " -type \"double3\" 11.47571330198386086 17.91273536340399986 0"
+		"translate" " -type \"double3\" -61.20342252925729554 -39.63342834190896724 18.79800975948248265"
+		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmIK1|AZRI:NLL_L_ArmPV1Zero1|AZRI:CTL_L_ArmPV1" 
 		"translateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmIK1|AZRI:NLL_L_ArmPV1Zero1|AZRI:CTL_L_ArmPV1" 
@@ -2930,7 +2959,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmIK1|AZRI:NLL_L_ArmPV1Zero1|AZRI:CTL_L_ArmPV1" 
 		"parent" " -av -k 1 0"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmFK1|AZRI:NLL_L_ShoulderFk1Zero1|AZRI:CTL_L_ShoulderFk1" 
-		"rotate" " -type \"double3\" 22.05367956122086426 -16.84394550242805622 -5.53234744196671713"
+		"rotate" " -type \"double3\" -40.4932111504922716 -16.13674876273073977 -0.95986416733097546"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmFK1|AZRI:NLL_L_ShoulderFk1Zero1|AZRI:CTL_L_ShoulderFk1" 
 		"rotateX" " -av"
@@ -2941,7 +2970,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmFK1|AZRI:NLL_L_ShoulderFk1Zero1|AZRI:CTL_L_ShoulderFk1" 
 		"parent" " -av -k 1 1"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmFK1|AZRI:NLL_L_ShoulderFk1Zero1|AZRI:CTL_L_ShoulderFk1|AZRI:NLL_L_ElbowFk1Zero1|AZRI:CTL_L_ElbowFk1" 
-		"rotate" " -type \"double3\" 0 -29.13210347843471126 0"
+		"rotate" " -type \"double3\" 0 8.37195293181572886 0"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmFK1|AZRI:NLL_L_ShoulderFk1Zero1|AZRI:CTL_L_ShoulderFk1|AZRI:NLL_L_ElbowFk1Zero1|AZRI:CTL_L_ElbowFk1" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmFK1|AZRI:NLL_L_ShoulderFk1Zero1|AZRI:CTL_L_ShoulderFk1|AZRI:NLL_L_ElbowFk1Zero1|AZRI:CTL_L_ElbowFk1" 
@@ -2949,7 +2978,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_L_Arm1|AZRI:NLL_L_Clav1Zero1|AZRI:CTL_L_Clav1|AZRI:GRP_L_ArmFK1|AZRI:NLL_L_ShoulderFk1Zero1|AZRI:CTL_L_ShoulderFk1|AZRI:NLL_L_ElbowFk1Zero1|AZRI:CTL_L_ElbowFk1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1" 
-		"rotate" " -type \"double3\" 5.26094468258421077 13.94045171203296896 16.21818883866749772"
+		"rotate" " -type \"double3\" 9.50982678569941875 -12.78765860537494703 17.73592524908959689"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1" 
 		"rotateX" " -av"
@@ -2958,7 +2987,8 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_ArmPV1Zero1|AZRI:CTL_R_ArmPV1" 
-		"translate" " -type \"double3\" 0 -25.56415810635216701 -14.77892901206189435"
+		"translate" " -type \"double3\" 1.71386764017141502 11.84802406332947022 76.06453392896050048"
+		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_ArmPV1Zero1|AZRI:CTL_R_ArmPV1" 
 		"translateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_ArmPV1Zero1|AZRI:CTL_R_ArmPV1" 
@@ -2970,7 +3000,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_ArmPV1Zero1|AZRI:CTL_R_ArmPV1|AZRI:CTL_R_ArmIkFk1" 
 		"ikFk" " -av -k 1 1"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_HandIk1Zero1|AZRI:CTL_R_HandIk1" 
-		"translate" " -type \"double3\" 16.85699315533868514 30.60902073134837664 -16.87915577032878289"
+		"translate" " -type \"double3\" 47.99493446649365325 -12.99680154292104284 36.39528219966192069"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_HandIk1Zero1|AZRI:CTL_R_HandIk1" 
 		"translateX" " -av"
@@ -2979,7 +3009,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_HandIk1Zero1|AZRI:CTL_R_HandIk1" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_HandIk1Zero1|AZRI:CTL_R_HandIk1" 
-		"rotate" " -type \"double3\" -71.66612104273623629 5.45611745080861876 -86.04718115566409153"
+		"rotate" " -type \"double3\" -210.4930549651622016 34.35362092848481552 -201.10710840035693536"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_HandIk1Zero1|AZRI:CTL_R_HandIk1" 
 		"rotateX" " -av"
@@ -2990,7 +3020,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmIK1|AZRI:NLL_R_HandIk1Zero1|AZRI:CTL_R_HandIk1" 
 		"parent" " -av -k 1 0"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmFK1|AZRI:NLL_R_ShoulderFk1Zero1|AZRI:CTL_R_ShoulderFk1" 
-		"rotate" " -type \"double3\" -35.05089300331962932 -16.94604470126959939 -15.78956616672199154"
+		"rotate" " -type \"double3\" 15.20748001948364703 -44.55041020753446901 -33.89204193482144234"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmFK1|AZRI:NLL_R_ShoulderFk1Zero1|AZRI:CTL_R_ShoulderFk1" 
 		"rotateX" " -av"
@@ -3001,7 +3031,8 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmFK1|AZRI:NLL_R_ShoulderFk1Zero1|AZRI:CTL_R_ShoulderFk1" 
 		"parent" " -av -k 1 1"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmFK1|AZRI:NLL_R_ShoulderFk1Zero1|AZRI:CTL_R_ShoulderFk1|AZRI:NLL_R_ElbowFk1Zero1|AZRI:CTL_R_ElbowFk1" 
-		"rotate" " -type \"double3\" 0 -106.07632837927837954 0"
+		"rotate" " -type \"double3\" -9.71166755035061335 -69.317087835485097 22.72130345112418226"
+		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmFK1|AZRI:NLL_R_ShoulderFk1Zero1|AZRI:CTL_R_ShoulderFk1|AZRI:NLL_R_ElbowFk1Zero1|AZRI:CTL_R_ElbowFk1" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmFK1|AZRI:NLL_R_ShoulderFk1Zero1|AZRI:CTL_R_ShoulderFk1|AZRI:NLL_R_ElbowFk1Zero1|AZRI:CTL_R_ElbowFk1" 
@@ -3009,7 +3040,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmFK1|AZRI:NLL_R_ShoulderFk1Zero1|AZRI:CTL_R_ShoulderFk1|AZRI:NLL_R_ElbowFk1Zero1|AZRI:CTL_R_ElbowFk1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmBind1|AZRI:JNT_R_ArmBind1|AZRI:JNT_R_ArmBind2|AZRI:JNT_R_ArmBind3|AZRI:NLL_R_Hand1Zero1|AZRI:CTL_R_Hand1" 
-		"rotate" " -type \"double3\" -39.7942939527195918 -5.76003093175919645 29.94915782469847798"
+		"rotate" " -type \"double3\" 49.68989518788685444 34.73378606941663804 3.05160153309688909"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_R_Arm1|AZRI:NLL_R_Clav1Zero1|AZRI:CTL_R_Clav1|AZRI:GRP_R_ArmBind1|AZRI:JNT_R_ArmBind1|AZRI:JNT_R_ArmBind2|AZRI:JNT_R_ArmBind3|AZRI:NLL_R_Hand1Zero1|AZRI:CTL_R_Hand1" 
 		"rotateX" " -av"
@@ -3214,7 +3245,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1" 
 		"ikFk" " -av -k 1 0"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2" 
-		"rotate" " -type \"double3\" 2.03371985547770517 -5.53977413827966902 -7.54236389574094623"
+		"rotate" " -type \"double3\" 2.74565537831836615 7.33201768033037649 -6.32633074829608066"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2" 
 		"rotateX" " -av"
@@ -3223,7 +3254,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2|AZRI:NLL_C_SpineFK3Zero1|AZRI:CTL_C_SpineFK3" 
-		"rotate" " -type \"double3\" -1.00391080921855247 -15.12462002150927987 -4.12221746894157182"
+		"rotate" " -type \"double3\" 3.01210171881727717 15.27800206688999474 -7.39792910956414573"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2|AZRI:NLL_C_SpineFK3Zero1|AZRI:CTL_C_SpineFK3" 
 		"rotateX" " -av"
@@ -3232,7 +3263,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2|AZRI:NLL_C_SpineFK3Zero1|AZRI:CTL_C_SpineFK3" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2|AZRI:NLL_C_SpineFK3Zero1|AZRI:CTL_C_SpineFK3|AZRI:NLL_C_SpineFK4Zero|AZRI:CTL_C_SpineFK4" 
-		"rotate" " -type \"double3\" -4.74010488641163086 0.59474543471822183 -9.70877703963878069"
+		"rotate" " -type \"double3\" 2.35257473123277805 14.93680505817576076 -8.11045426710085415"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_C_SpineFK2Zero1|AZRI:CTL_C_SpineFK2|AZRI:NLL_C_SpineFK3Zero1|AZRI:CTL_C_SpineFK3|AZRI:NLL_C_SpineFK4Zero|AZRI:CTL_C_SpineFK4" 
 		"rotateX" " -av"
@@ -3369,7 +3400,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Spine1|AZRI:GRP_C_SpineFK1|AZRI:NLL_C_Spine1Zero1|AZRI:CTL_C_Spine1|AZRI:NLL_R_BeltSide1Zero1|AZRI:CTL_R_BeltSide1|AZRI:NLL_R_BeltFront1Zero1|AZRI:NLL_L_BeltFront1Zero1|AZRI:CTL_L_BeltFront1|AZRI:NLL_L_BeltSide1Zero1|AZRI:CTL_L_BeltSide1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_L_Leg1|AZRI:GRP_L_LegIK1|AZRI:NLL_L_FootIK1|AZRI:CTL_L_FootIK1" 
-		"translate" " -type \"double3\" 1.86617416536978276 0 23.28757697446112473"
+		"translate" " -type \"double3\" -21.11400849384527589 0 -1.93614421709192763"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_L_Leg1|AZRI:GRP_L_LegIK1|AZRI:NLL_L_FootIK1|AZRI:CTL_L_FootIK1" 
 		"translateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_L_Leg1|AZRI:GRP_L_LegIK1|AZRI:NLL_L_FootIK1|AZRI:CTL_L_FootIK1" 
@@ -3377,7 +3408,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_L_Leg1|AZRI:GRP_L_LegIK1|AZRI:NLL_L_FootIK1|AZRI:CTL_L_FootIK1" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_L_Leg1|AZRI:GRP_L_LegIK1|AZRI:NLL_L_FootIK1|AZRI:CTL_L_FootIK1" 
-		"rotate" " -type \"double3\" 0 -2.15648417881884003 0"
+		"rotate" " -type \"double3\" 0 38.22220152860404596 0"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_L_Leg1|AZRI:GRP_L_LegIK1|AZRI:NLL_L_FootIK1|AZRI:CTL_L_FootIK1" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_L_Leg1|AZRI:GRP_L_LegIK1|AZRI:NLL_L_FootIK1|AZRI:CTL_L_FootIK1" 
@@ -3403,7 +3434,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_L_Leg1|AZRI:GRP_L_LegIK1|AZRI:NLL_L_FootIK1|AZRI:CTL_L_FootIK1|AZRI:NLL_L_Heel1|AZRI:NLL_L_Tip1|AZRI:NLL_L_ToeIk1Zero1|AZRI:CTL_L_ToeIk1|AZRI:CTL_L_LegIkFk1" 
 		"ikFk" " -av -k 1 1"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_L_Leg1|AZRI:GRP_L_LegIK1|AZRI:NLL_L_FootIK1|AZRI:CTL_L_FootIK1|AZRI:NLL_L_Heel1|AZRI:NLL_L_Tip1|AZRI:NLL_L_Ball1|AZRI:CTL_L_Ball1" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 29.3462666734125186 0 0"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_L_Leg1|AZRI:GRP_L_LegIK1|AZRI:NLL_L_FootIK1|AZRI:CTL_L_FootIK1|AZRI:NLL_L_Heel1|AZRI:NLL_L_Tip1|AZRI:NLL_L_Ball1|AZRI:CTL_L_Ball1" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_L_Leg1|AZRI:GRP_L_LegIK1|AZRI:NLL_L_FootIK1|AZRI:CTL_L_FootIK1|AZRI:NLL_L_Heel1|AZRI:NLL_L_Tip1|AZRI:NLL_L_Ball1|AZRI:CTL_L_Ball1" 
@@ -3411,7 +3442,8 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_L_Leg1|AZRI:GRP_L_LegIK1|AZRI:NLL_L_FootIK1|AZRI:CTL_L_FootIK1|AZRI:NLL_L_Heel1|AZRI:NLL_L_Tip1|AZRI:NLL_L_Ball1|AZRI:CTL_L_Ball1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_L_Leg1|AZRI:GRP_L_LegIK1|AZRI:NLL_L_LegPV1|AZRI:CTL_L_LegPV1" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" -9.18359629239622066 6.18325670609788691 40.94970173177050299"
+		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_L_Leg1|AZRI:GRP_L_LegIK1|AZRI:NLL_L_LegPV1|AZRI:CTL_L_LegPV1" 
 		"translateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_L_Leg1|AZRI:GRP_L_LegIK1|AZRI:NLL_L_LegPV1|AZRI:CTL_L_LegPV1" 
@@ -3455,7 +3487,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_L_Leg1|AZRI:GRP_L_LegFK1|AZRI:NLL_L_HipFk1Zero1|AZRI:CTL_L_HipFk1|AZRI:NLL_L_KneeFk1Zero1|AZRI:CTL_L_KneeFk1|AZRI:NLL_L_FootFk1Zero1|AZRI:CTL_L_FootFk1|AZRI:NLL_L_ToeFk1Zero1|AZRI:CTL_L_ToeFk1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_R_Leg1|AZRI:GRP_R_LegIK1|AZRI:NLL_R_FootIK1|AZRI:CTL_R_FootIK1" 
-		"translate" " -type \"double3\" 1.85801289373667622 0 -24.57909504299126624"
+		"translate" " -type \"double3\" -25.29572231929320125 0 38.12624909858107003"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_R_Leg1|AZRI:GRP_R_LegIK1|AZRI:NLL_R_FootIK1|AZRI:CTL_R_FootIK1" 
 		"translateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_R_Leg1|AZRI:GRP_R_LegIK1|AZRI:NLL_R_FootIK1|AZRI:CTL_R_FootIK1" 
@@ -3463,7 +3495,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_R_Leg1|AZRI:GRP_R_LegIK1|AZRI:NLL_R_FootIK1|AZRI:CTL_R_FootIK1" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_R_Leg1|AZRI:GRP_R_LegIK1|AZRI:NLL_R_FootIK1|AZRI:CTL_R_FootIK1" 
-		"rotate" " -type \"double3\" 0 -57.47847739083614726 0"
+		"rotate" " -type \"double3\" 0 -1.08245059731602566 0"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_R_Leg1|AZRI:GRP_R_LegIK1|AZRI:NLL_R_FootIK1|AZRI:CTL_R_FootIK1" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_R_Leg1|AZRI:GRP_R_LegIK1|AZRI:NLL_R_FootIK1|AZRI:CTL_R_FootIK1" 
@@ -3497,7 +3529,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_R_Leg1|AZRI:GRP_R_LegIK1|AZRI:NLL_R_FootIK1|AZRI:CTL_R_FootIK1|AZRI:NLL_R_Heel1|AZRI:NLL_R_Tip1|AZRI:NLL_R_Ball1|AZRI:CTL_R_Ball1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_R_Leg1|AZRI:GRP_R_LegIK1|AZRI:NLL_R_LegPV1|AZRI:CTL_R_LegPV1" 
-		"translate" " -type \"double3\" 8.08223223189310147 -0.46045103082614963 0"
+		"translate" " -type \"double3\" 9.52450673477724408 5.9292034485282139 0"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_R_Leg1|AZRI:GRP_R_LegIK1|AZRI:NLL_R_LegPV1|AZRI:CTL_R_LegPV1" 
 		"translateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_R_Leg1|AZRI:GRP_R_LegIK1|AZRI:NLL_R_LegPV1|AZRI:CTL_R_LegPV1" 
@@ -3541,7 +3573,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Pelvis1|AZRI:NLL_C_Pelvis1Zero1|AZRI:CTL_C_Pelvis1|AZRI:GRP_R_Leg1|AZRI:GRP_R_LegFK1|AZRI:NLL_R_HipFk1Zero1|AZRI:CTL_R_HipFk1|AZRI:NLL_R_KneeFk1Zero1|AZRI:CTL_R_KneeFk1|AZRI:NLL_R_FootFk1Zero1|AZRI:CTL_R_FootFk1|AZRI:NLL_R_ToeFk1Zero1|AZRI:CTL_R_ToeFk1" 
 		"rotateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1" 
-		"rotate" " -type \"double3\" 10.2659928072249258 3.88673773870014161 11.46523346143323963"
+		"rotate" " -type \"double3\" -17.33146269871085465 14.51451270419716444 4.6325182541199279"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1" 
 		"rotateX" " -av"
@@ -3562,7 +3594,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2" 
 		"parent" " -av -k 1 1"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1" 
-		"rotate" " -type \"double3\" 9.80561002146138527 -6.31212444952635376 0.83359624105514551"
+		"rotate" " -type \"double3\" -21.56288074687474321 -5.19529961825634867 12.42132852115553199"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1" 
 		"rotateX" " -av"
@@ -4140,7 +4172,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 -10.70658470215436786"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2" 
@@ -4156,7 +4188,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2|AZRI:NLL_C_Hair3Zero1|AZRI:CTL_C_Hair3" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2|AZRI:NLL_C_Hair3Zero1|AZRI:CTL_C_Hair3" 
-		"rotate" " -type \"double3\" 13.62527774136987446 -3.01854637335750953 -0.40711243847820427"
+		"rotate" " -type \"double3\" -9.66131645988155441 3.47216861443622582 1.27056520356239133"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2|AZRI:NLL_C_Hair3Zero1|AZRI:CTL_C_Hair3" 
 		"rotateX" " -av"
@@ -4173,7 +4205,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2|AZRI:NLL_C_Hair3Zero1|AZRI:CTL_C_Hair3|AZRI:NLL_C_Hair4Zero1|AZRI:CTL_C_Hair4" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2|AZRI:NLL_C_Hair3Zero1|AZRI:CTL_C_Hair3|AZRI:NLL_C_Hair4Zero1|AZRI:CTL_C_Hair4" 
-		"rotate" " -type \"double3\" 10.07334063723240902 -5.90034945451537407 -9.52365287024758977"
+		"rotate" " -type \"double3\" 14.53482425407351819 -8.32485950840898781 -6.18469291804223786"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2|AZRI:NLL_C_Hair3Zero1|AZRI:CTL_C_Hair3|AZRI:NLL_C_Hair4Zero1|AZRI:CTL_C_Hair4" 
 		"rotateX" " -av"
@@ -4206,7 +4238,8 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2|AZRI:NLL_C_Hair3Zero1|AZRI:CTL_C_Hair3|AZRI:NLL_C_Hair4Zero1|AZRI:CTL_C_Hair4|AZRI:NLL_C_Hair5Zero1|AZRI:CTL_C_Hair5|AZRI:NLL_C_Hair6Zero1|AZRI:CTL_C_Hair6" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2|AZRI:NLL_C_Hair3Zero1|AZRI:CTL_C_Hair3|AZRI:NLL_C_Hair4Zero1|AZRI:CTL_C_Hair4|AZRI:NLL_C_Hair5Zero1|AZRI:CTL_C_Hair5|AZRI:NLL_C_Hair6Zero1|AZRI:CTL_C_Hair6" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" -2.90708226252358637 -1.64702645606693232 4.75125440602183868"
+		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2|AZRI:NLL_C_Hair3Zero1|AZRI:CTL_C_Hair3|AZRI:NLL_C_Hair4Zero1|AZRI:CTL_C_Hair4|AZRI:NLL_C_Hair5Zero1|AZRI:CTL_C_Hair5|AZRI:NLL_C_Hair6Zero1|AZRI:CTL_C_Hair6" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2|AZRI:NLL_C_Hair3Zero1|AZRI:CTL_C_Hair3|AZRI:NLL_C_Hair4Zero1|AZRI:CTL_C_Hair4|AZRI:NLL_C_Hair5Zero1|AZRI:CTL_C_Hair5|AZRI:NLL_C_Hair6Zero1|AZRI:CTL_C_Hair6" 
@@ -4222,7 +4255,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2|AZRI:NLL_C_Hair3Zero1|AZRI:CTL_C_Hair3|AZRI:NLL_C_Hair4Zero1|AZRI:CTL_C_Hair4|AZRI:NLL_C_Hair5Zero1|AZRI:CTL_C_Hair5|AZRI:NLL_C_Hair6Zero1|AZRI:CTL_C_Hair6|AZRI:NLL_C_Hair7Zero1|AZRI:CTL_C_Hair7" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2|AZRI:NLL_C_Hair3Zero1|AZRI:CTL_C_Hair3|AZRI:NLL_C_Hair4Zero1|AZRI:CTL_C_Hair4|AZRI:NLL_C_Hair5Zero1|AZRI:CTL_C_Hair5|AZRI:NLL_C_Hair6Zero1|AZRI:CTL_C_Hair6|AZRI:NLL_C_Hair7Zero1|AZRI:CTL_C_Hair7" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 6.74136567332877945"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2|AZRI:NLL_C_Hair3Zero1|AZRI:CTL_C_Hair3|AZRI:NLL_C_Hair4Zero1|AZRI:CTL_C_Hair4|AZRI:NLL_C_Hair5Zero1|AZRI:CTL_C_Hair5|AZRI:NLL_C_Hair6Zero1|AZRI:CTL_C_Hair6|AZRI:NLL_C_Hair7Zero1|AZRI:CTL_C_Hair7" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Root1Zero1|AZRI:CTL_C_Root1|AZRI:GRP_C_Head1|AZRI:NLL_C_Neck1Zero1|AZRI:CTL_C_Neck1|AZRI:NLL_C_Neck2Zero1|AZRI:CTL_C_Neck2|AZRI:NLL_C_Head1Zero1|AZRI:CTL_C_Head1|AZRI:NLL_C_Hair1Zero1|AZRI:CTL_C_Hair1|AZRI:NLL_C_Hair2Zero1|AZRI:CTL_C_Hair2|AZRI:NLL_C_Hair3Zero1|AZRI:CTL_C_Hair3|AZRI:NLL_C_Hair4Zero1|AZRI:CTL_C_Hair4|AZRI:NLL_C_Hair5Zero1|AZRI:CTL_C_Hair5|AZRI:NLL_C_Hair6Zero1|AZRI:CTL_C_Hair6|AZRI:NLL_C_Hair7Zero1|AZRI:CTL_C_Hair7" 
@@ -4275,7 +4308,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1" 
 		"parent" " -av -k 1 4"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1" 
-		"translate" " -type \"double3\" 1.05521821572368735 0.047278933695145138 -1.89232048547392284"
+		"translate" " -type \"double3\" -0.61961788984229482 81.23995470924673157 -1.60285105274490403"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1" 
 		"translateX" " -av"
@@ -4284,7 +4317,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1" 
-		"rotate" " -type \"double3\" 1.52573533430113373 1.46911969407981102 1.45771802656406657"
+		"rotate" " -type \"double3\" -1.14846805761590387 533.56434074217827401 -1.45771802656406657"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1" 
 		"rotateX" " -av"
@@ -4317,7 +4350,8 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_L_EyeLookAt1Zero1|AZRI:CTL_L_EyeLookAt1" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 0.022760394105815394 1.29823207024142473 0.38105780303645037"
+		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1" 
 		"translateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1" 
@@ -4325,7 +4359,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1" 
-		"rotate" " -type \"double3\" 2.15669155095959741 -11.83993936440293737 14.53043690838564928"
+		"rotate" " -type \"double3\" 3.2556651349931065 -11.58942219517367533 11.63648695490339513"
 		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1" 
 		"rotateX" " -av"
@@ -4342,7 +4376,7 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2" 
-		"rotate" " -type \"double3\" 0 0 0.54364359157085496"
+		"rotate" " -type \"double3\" 0 0 1.62105785892368326"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2" 
@@ -4695,7 +4729,8 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" -7.90778416491898639 -8.02973343419722241 9.57502197798591581"
+		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1" 
@@ -5031,7 +5066,8 @@ createNode reference -n "AZRIRN";
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2" 
 		"translateZ" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 5.86139048239845817 0.25740893773850293 10.616596487624129"
+		
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2" 
 		"rotateX" " -av"
 		2 "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2" 
@@ -7919,2172 +7955,2212 @@ createNode reference -n "AZRIRN";
 		"AZRIRN.placeHolderList[1323]" ""
 		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.scale" 
 		"AZRIRN.placeHolderList[1324]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.translate" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.scale" 
 		"AZRIRN.placeHolderList[1325]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.translate" 
 		"AZRIRN.placeHolderList[1326]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.translate" 
 		"AZRIRN.placeHolderList[1327]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.translateX" 
 		"AZRIRN.placeHolderList[1328]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.translateX" 
 		"AZRIRN.placeHolderList[1329]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.translateY" 
 		"AZRIRN.placeHolderList[1330]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.translateY" 
 		"AZRIRN.placeHolderList[1331]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotatePivot" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.translateZ" 
 		"AZRIRN.placeHolderList[1332]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotatePivotTranslate" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.translateZ" 
 		"AZRIRN.placeHolderList[1333]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotate" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotatePivot" 
 		"AZRIRN.placeHolderList[1334]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotatePivot" 
 		"AZRIRN.placeHolderList[1335]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotatePivotTranslate" 
 		"AZRIRN.placeHolderList[1336]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotatePivotTranslate" 
 		"AZRIRN.placeHolderList[1337]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotate" 
 		"AZRIRN.placeHolderList[1338]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotate" 
 		"AZRIRN.placeHolderList[1339]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateX" 
 		"AZRIRN.placeHolderList[1340]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateX" 
 		"AZRIRN.placeHolderList[1341]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateOrder" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateY" 
 		"AZRIRN.placeHolderList[1342]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.parentMatrix" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateY" 
 		"AZRIRN.placeHolderList[1343]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateZ" 
 		"AZRIRN.placeHolderList[1344]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateZ" 
 		"AZRIRN.placeHolderList[1345]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateOrder" 
 		"AZRIRN.placeHolderList[1346]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateOrder" 
 		"AZRIRN.placeHolderList[1347]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.rotateOrder" 
 		"AZRIRN.placeHolderList[1348]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.parentMatrix" 
 		"AZRIRN.placeHolderList[1349]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_R_EyeLookAt1Zero1|AZRI:CTL_R_EyeLookAt1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_Weapon1|AZRI:CTL_C_Weapon1|AZRI:NLL_C_WeaponGrip1|AZRI:CTL_C_WeaponGrip1.parentMatrix" 
 		"AZRIRN.placeHolderList[1350]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_R_EyeLookAt1Zero1|AZRI:CTL_R_EyeLookAt1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1.translateX" 
 		"AZRIRN.placeHolderList[1351]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_R_EyeLookAt1Zero1|AZRI:CTL_R_EyeLookAt1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1.translateX" 
 		"AZRIRN.placeHolderList[1352]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_R_EyeLookAt1Zero1|AZRI:CTL_R_EyeLookAt1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1.translateY" 
 		"AZRIRN.placeHolderList[1353]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_R_EyeLookAt1Zero1|AZRI:CTL_R_EyeLookAt1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1.translateY" 
 		"AZRIRN.placeHolderList[1354]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_R_EyeLookAt1Zero1|AZRI:CTL_R_EyeLookAt1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1.translateZ" 
 		"AZRIRN.placeHolderList[1355]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_L_EyeLookAt1Zero1|AZRI:CTL_L_EyeLookAt1.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1.translateZ" 
 		"AZRIRN.placeHolderList[1356]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_L_EyeLookAt1Zero1|AZRI:CTL_L_EyeLookAt1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_R_EyeLookAt1Zero1|AZRI:CTL_R_EyeLookAt1.translateX" 
 		"AZRIRN.placeHolderList[1357]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_L_EyeLookAt1Zero1|AZRI:CTL_L_EyeLookAt1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_R_EyeLookAt1Zero1|AZRI:CTL_R_EyeLookAt1.translateX" 
 		"AZRIRN.placeHolderList[1358]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_L_EyeLookAt1Zero1|AZRI:CTL_L_EyeLookAt1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_R_EyeLookAt1Zero1|AZRI:CTL_R_EyeLookAt1.translateY" 
 		"AZRIRN.placeHolderList[1359]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_L_EyeLookAt1Zero1|AZRI:CTL_L_EyeLookAt1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_R_EyeLookAt1Zero1|AZRI:CTL_R_EyeLookAt1.translateY" 
 		"AZRIRN.placeHolderList[1360]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_L_EyeLookAt1Zero1|AZRI:CTL_L_EyeLookAt1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_R_EyeLookAt1Zero1|AZRI:CTL_R_EyeLookAt1.translateZ" 
 		"AZRIRN.placeHolderList[1361]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_R_EyeLookAt1Zero1|AZRI:CTL_R_EyeLookAt1.translateZ" 
 		"AZRIRN.placeHolderList[1362]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_L_EyeLookAt1Zero1|AZRI:CTL_L_EyeLookAt1.translateX" 
 		"AZRIRN.placeHolderList[1363]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_L_EyeLookAt1Zero1|AZRI:CTL_L_EyeLookAt1.translateX" 
 		"AZRIRN.placeHolderList[1364]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_L_EyeLookAt1Zero1|AZRI:CTL_L_EyeLookAt1.translateY" 
 		"AZRIRN.placeHolderList[1365]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_L_EyeLookAt1Zero1|AZRI:CTL_L_EyeLookAt1.translateY" 
 		"AZRIRN.placeHolderList[1366]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_L_EyeLookAt1Zero1|AZRI:CTL_L_EyeLookAt1.translateZ" 
 		"AZRIRN.placeHolderList[1367]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.rotateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_World1Zero1|AZRI:CTL_C_World1|AZRI:NLL_C_EyeLookAt1Zero1|AZRI:CTL_C_EyeLookAt1|AZRI:NLL_L_EyeLookAt1Zero1|AZRI:CTL_L_EyeLookAt1.translateZ" 
 		"AZRIRN.placeHolderList[1368]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.translateX" 
 		"AZRIRN.placeHolderList[1369]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.translateX" 
 		"AZRIRN.placeHolderList[1370]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.translateY" 
 		"AZRIRN.placeHolderList[1371]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.translateY" 
 		"AZRIRN.placeHolderList[1372]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.translateZ" 
 		"AZRIRN.placeHolderList[1373]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.translateZ" 
 		"AZRIRN.placeHolderList[1374]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.rotateX" 
 		"AZRIRN.placeHolderList[1375]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.rotateX" 
 		"AZRIRN.placeHolderList[1376]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.rotateY" 
 		"AZRIRN.placeHolderList[1377]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.rotateY" 
 		"AZRIRN.placeHolderList[1378]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.rotateZ" 
 		"AZRIRN.placeHolderList[1379]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.rotateZ" 
 		"AZRIRN.placeHolderList[1380]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1.rotateOrder" 
 		"AZRIRN.placeHolderList[1381]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.translateX" 
 		"AZRIRN.placeHolderList[1382]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.translateX" 
 		"AZRIRN.placeHolderList[1383]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.translateY" 
 		"AZRIRN.placeHolderList[1384]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.translateY" 
 		"AZRIRN.placeHolderList[1385]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.translateZ" 
 		"AZRIRN.placeHolderList[1386]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.translateZ" 
 		"AZRIRN.placeHolderList[1387]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.rotateX" 
 		"AZRIRN.placeHolderList[1388]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.rotateX" 
 		"AZRIRN.placeHolderList[1389]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.rotateY" 
 		"AZRIRN.placeHolderList[1390]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.rotateY" 
 		"AZRIRN.placeHolderList[1391]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.rotateZ" 
 		"AZRIRN.placeHolderList[1392]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.rotateZ" 
 		"AZRIRN.placeHolderList[1393]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2.rotateOrder" 
 		"AZRIRN.placeHolderList[1394]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.translateX" 
 		"AZRIRN.placeHolderList[1395]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.translateX" 
 		"AZRIRN.placeHolderList[1396]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.translateY" 
 		"AZRIRN.placeHolderList[1397]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.translateY" 
 		"AZRIRN.placeHolderList[1398]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.translateZ" 
 		"AZRIRN.placeHolderList[1399]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.translateZ" 
 		"AZRIRN.placeHolderList[1400]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.rotateX" 
 		"AZRIRN.placeHolderList[1401]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.rotateX" 
 		"AZRIRN.placeHolderList[1402]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.rotateY" 
 		"AZRIRN.placeHolderList[1403]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.rotateY" 
 		"AZRIRN.placeHolderList[1404]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.rotateZ" 
 		"AZRIRN.placeHolderList[1405]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.rotateZ" 
 		"AZRIRN.placeHolderList[1406]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3.rotateOrder" 
 		"AZRIRN.placeHolderList[1407]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.translateX" 
 		"AZRIRN.placeHolderList[1408]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.translateX" 
 		"AZRIRN.placeHolderList[1409]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.translateY" 
 		"AZRIRN.placeHolderList[1410]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.translateY" 
 		"AZRIRN.placeHolderList[1411]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.translateZ" 
 		"AZRIRN.placeHolderList[1412]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.translateZ" 
 		"AZRIRN.placeHolderList[1413]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.rotateX" 
 		"AZRIRN.placeHolderList[1414]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.rotateX" 
 		"AZRIRN.placeHolderList[1415]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.rotateY" 
 		"AZRIRN.placeHolderList[1416]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.rotateY" 
 		"AZRIRN.placeHolderList[1417]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.rotateZ" 
 		"AZRIRN.placeHolderList[1418]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.rotateZ" 
 		"AZRIRN.placeHolderList[1419]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtFront_1Zero1|AZRI:CTL_L_SkirtFront_1|AZRI:NLL_L_SkirtFront_2Zero1|AZRI:CTL_L_SkirtFront_2|AZRI:NLL_L_SkirtFront_3Zero1|AZRI:CTL_L_SkirtFront_3|AZRI:NLL_L_SkirtFront_4Zero1|AZRI:CTL_L_SkirtFront_4.rotateOrder" 
 		"AZRIRN.placeHolderList[1420]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.translateX" 
 		"AZRIRN.placeHolderList[1421]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.translateX" 
 		"AZRIRN.placeHolderList[1422]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.translateY" 
 		"AZRIRN.placeHolderList[1423]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.translateY" 
 		"AZRIRN.placeHolderList[1424]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.translateZ" 
 		"AZRIRN.placeHolderList[1425]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.translateZ" 
 		"AZRIRN.placeHolderList[1426]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.rotateX" 
 		"AZRIRN.placeHolderList[1427]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.rotateX" 
 		"AZRIRN.placeHolderList[1428]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.rotateY" 
 		"AZRIRN.placeHolderList[1429]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.rotateY" 
 		"AZRIRN.placeHolderList[1430]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.rotateZ" 
 		"AZRIRN.placeHolderList[1431]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.rotateZ" 
 		"AZRIRN.placeHolderList[1432]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1.rotateOrder" 
 		"AZRIRN.placeHolderList[1433]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.translateX" 
 		"AZRIRN.placeHolderList[1434]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.translateX" 
 		"AZRIRN.placeHolderList[1435]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.translateY" 
 		"AZRIRN.placeHolderList[1436]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.translateY" 
 		"AZRIRN.placeHolderList[1437]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.translateZ" 
 		"AZRIRN.placeHolderList[1438]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.translateZ" 
 		"AZRIRN.placeHolderList[1439]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.rotateX" 
 		"AZRIRN.placeHolderList[1440]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.rotateX" 
 		"AZRIRN.placeHolderList[1441]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.rotateY" 
 		"AZRIRN.placeHolderList[1442]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.rotateY" 
 		"AZRIRN.placeHolderList[1443]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.rotateZ" 
 		"AZRIRN.placeHolderList[1444]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.rotateZ" 
 		"AZRIRN.placeHolderList[1445]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2.rotateOrder" 
 		"AZRIRN.placeHolderList[1446]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.translateX" 
 		"AZRIRN.placeHolderList[1447]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.translateX" 
 		"AZRIRN.placeHolderList[1448]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.translateY" 
 		"AZRIRN.placeHolderList[1449]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.translateY" 
 		"AZRIRN.placeHolderList[1450]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.translateZ" 
 		"AZRIRN.placeHolderList[1451]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.translateZ" 
 		"AZRIRN.placeHolderList[1452]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.rotateX" 
 		"AZRIRN.placeHolderList[1453]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.rotateX" 
 		"AZRIRN.placeHolderList[1454]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.rotateY" 
 		"AZRIRN.placeHolderList[1455]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.rotateY" 
 		"AZRIRN.placeHolderList[1456]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.rotateZ" 
 		"AZRIRN.placeHolderList[1457]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.rotateZ" 
 		"AZRIRN.placeHolderList[1458]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3.rotateOrder" 
 		"AZRIRN.placeHolderList[1459]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.translateX" 
 		"AZRIRN.placeHolderList[1460]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.translateX" 
 		"AZRIRN.placeHolderList[1461]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.translateY" 
 		"AZRIRN.placeHolderList[1462]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.translateY" 
 		"AZRIRN.placeHolderList[1463]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.translateZ" 
 		"AZRIRN.placeHolderList[1464]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.translateZ" 
 		"AZRIRN.placeHolderList[1465]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.rotateX" 
 		"AZRIRN.placeHolderList[1466]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.rotateX" 
 		"AZRIRN.placeHolderList[1467]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.rotateY" 
 		"AZRIRN.placeHolderList[1468]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.rotateY" 
 		"AZRIRN.placeHolderList[1469]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.rotateZ" 
 		"AZRIRN.placeHolderList[1470]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.rotateZ" 
 		"AZRIRN.placeHolderList[1471]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtSide_1Zero1|AZRI:CTL_L_SkirtSide_1|AZRI:NLL_L_SkirtSide_2Zero1|AZRI:CTL_L_SkirtSide_2|AZRI:NLL_L_SkirtSide_3Zero1|AZRI:CTL_L_SkirtSide_3|AZRI:NLL_L_SkirtSide_4Zero1|AZRI:CTL_L_SkirtSide_4.rotateOrder" 
 		"AZRIRN.placeHolderList[1472]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.translateX" 
 		"AZRIRN.placeHolderList[1473]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.translateX" 
 		"AZRIRN.placeHolderList[1474]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.translateY" 
 		"AZRIRN.placeHolderList[1475]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.translateY" 
 		"AZRIRN.placeHolderList[1476]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.translateZ" 
 		"AZRIRN.placeHolderList[1477]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.translateZ" 
 		"AZRIRN.placeHolderList[1478]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.rotateX" 
 		"AZRIRN.placeHolderList[1479]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.rotateX" 
 		"AZRIRN.placeHolderList[1480]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.rotateY" 
 		"AZRIRN.placeHolderList[1481]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.rotateY" 
 		"AZRIRN.placeHolderList[1482]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.rotateZ" 
 		"AZRIRN.placeHolderList[1483]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.rotateZ" 
 		"AZRIRN.placeHolderList[1484]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1.rotateOrder" 
 		"AZRIRN.placeHolderList[1485]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.translateX" 
 		"AZRIRN.placeHolderList[1486]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.translateX" 
 		"AZRIRN.placeHolderList[1487]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.translateY" 
 		"AZRIRN.placeHolderList[1488]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.translateY" 
 		"AZRIRN.placeHolderList[1489]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.translateZ" 
 		"AZRIRN.placeHolderList[1490]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.translateZ" 
 		"AZRIRN.placeHolderList[1491]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.rotateX" 
 		"AZRIRN.placeHolderList[1492]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.rotateX" 
 		"AZRIRN.placeHolderList[1493]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.rotateY" 
 		"AZRIRN.placeHolderList[1494]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.rotateY" 
 		"AZRIRN.placeHolderList[1495]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.rotateZ" 
 		"AZRIRN.placeHolderList[1496]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.rotateZ" 
 		"AZRIRN.placeHolderList[1497]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2.rotateOrder" 
 		"AZRIRN.placeHolderList[1498]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.translateX" 
 		"AZRIRN.placeHolderList[1499]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.translateX" 
 		"AZRIRN.placeHolderList[1500]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.translateY" 
 		"AZRIRN.placeHolderList[1501]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.translateY" 
 		"AZRIRN.placeHolderList[1502]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.translateZ" 
 		"AZRIRN.placeHolderList[1503]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.translateZ" 
 		"AZRIRN.placeHolderList[1504]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.rotateX" 
 		"AZRIRN.placeHolderList[1505]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.rotateX" 
 		"AZRIRN.placeHolderList[1506]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.rotateY" 
 		"AZRIRN.placeHolderList[1507]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.rotateY" 
 		"AZRIRN.placeHolderList[1508]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.rotateZ" 
 		"AZRIRN.placeHolderList[1509]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.rotateZ" 
 		"AZRIRN.placeHolderList[1510]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3.rotateOrder" 
 		"AZRIRN.placeHolderList[1511]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.translateX" 
 		"AZRIRN.placeHolderList[1512]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.translateX" 
 		"AZRIRN.placeHolderList[1513]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.translateY" 
 		"AZRIRN.placeHolderList[1514]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.translateY" 
 		"AZRIRN.placeHolderList[1515]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.translateZ" 
 		"AZRIRN.placeHolderList[1516]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.translateZ" 
 		"AZRIRN.placeHolderList[1517]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.rotateX" 
 		"AZRIRN.placeHolderList[1518]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.rotateX" 
 		"AZRIRN.placeHolderList[1519]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.rotateY" 
 		"AZRIRN.placeHolderList[1520]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.rotateY" 
 		"AZRIRN.placeHolderList[1521]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.rotateZ" 
 		"AZRIRN.placeHolderList[1522]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.rotateZ" 
 		"AZRIRN.placeHolderList[1523]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_L_SkirtBack_1Zero1|AZRI:CTL_L_SkirtBack_1|AZRI:NLL_L_SkirtBack_2Zero1|AZRI:CTL_L_SkirtBack_2|AZRI:NLL_L_SkirtBack_3Zero1|AZRI:CTL_L_SkirtBack_3|AZRI:NLL_L_SkirtBack_4Zero1|AZRI:CTL_L_SkirtBack_4.rotateOrder" 
 		"AZRIRN.placeHolderList[1524]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.translateX" 
 		"AZRIRN.placeHolderList[1525]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.translateX" 
 		"AZRIRN.placeHolderList[1526]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.translateY" 
 		"AZRIRN.placeHolderList[1527]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.translateY" 
 		"AZRIRN.placeHolderList[1528]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.translateZ" 
 		"AZRIRN.placeHolderList[1529]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.translateZ" 
 		"AZRIRN.placeHolderList[1530]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.rotateX" 
 		"AZRIRN.placeHolderList[1531]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.rotateX" 
 		"AZRIRN.placeHolderList[1532]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.rotateY" 
 		"AZRIRN.placeHolderList[1533]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.rotateY" 
 		"AZRIRN.placeHolderList[1534]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.rotateZ" 
 		"AZRIRN.placeHolderList[1535]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.rotateZ" 
 		"AZRIRN.placeHolderList[1536]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2.rotateOrder" 
 		"AZRIRN.placeHolderList[1537]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.translateX" 
 		"AZRIRN.placeHolderList[1538]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.translateX" 
 		"AZRIRN.placeHolderList[1539]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.translateY" 
 		"AZRIRN.placeHolderList[1540]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.translateY" 
 		"AZRIRN.placeHolderList[1541]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.translateZ" 
 		"AZRIRN.placeHolderList[1542]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.translateZ" 
 		"AZRIRN.placeHolderList[1543]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.rotateX" 
 		"AZRIRN.placeHolderList[1544]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.rotateX" 
 		"AZRIRN.placeHolderList[1545]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.rotateY" 
 		"AZRIRN.placeHolderList[1546]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.rotateY" 
 		"AZRIRN.placeHolderList[1547]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.rotateZ" 
 		"AZRIRN.placeHolderList[1548]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.rotateZ" 
 		"AZRIRN.placeHolderList[1549]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3.rotateOrder" 
 		"AZRIRN.placeHolderList[1550]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.translateX" 
 		"AZRIRN.placeHolderList[1551]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.translateX" 
 		"AZRIRN.placeHolderList[1552]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.translateY" 
 		"AZRIRN.placeHolderList[1553]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.translateY" 
 		"AZRIRN.placeHolderList[1554]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.translateZ" 
 		"AZRIRN.placeHolderList[1555]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.translateZ" 
 		"AZRIRN.placeHolderList[1556]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.rotateX" 
 		"AZRIRN.placeHolderList[1557]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.rotateX" 
 		"AZRIRN.placeHolderList[1558]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.rotateY" 
 		"AZRIRN.placeHolderList[1559]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.rotateY" 
 		"AZRIRN.placeHolderList[1560]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.rotateZ" 
 		"AZRIRN.placeHolderList[1561]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.rotateZ" 
 		"AZRIRN.placeHolderList[1562]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtFront_1Zero1|AZRI:CTL_R_SkirtFront_1|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_2|AZRI:NLL_R_SkirtFront_2Zero1|AZRI:CTL_R_SkirtFront_3|AZRI:NLL_R_SkirtFront_4Zero1|AZRI:CTL_R_SkirtFront_4.rotateOrder" 
 		"AZRIRN.placeHolderList[1563]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.translateX" 
 		"AZRIRN.placeHolderList[1564]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.translateX" 
 		"AZRIRN.placeHolderList[1565]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.translateY" 
 		"AZRIRN.placeHolderList[1566]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.translateY" 
 		"AZRIRN.placeHolderList[1567]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.translateZ" 
 		"AZRIRN.placeHolderList[1568]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.translateZ" 
 		"AZRIRN.placeHolderList[1569]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.rotateX" 
 		"AZRIRN.placeHolderList[1570]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.rotateX" 
 		"AZRIRN.placeHolderList[1571]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.rotateY" 
 		"AZRIRN.placeHolderList[1572]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.rotateY" 
 		"AZRIRN.placeHolderList[1573]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.rotateZ" 
 		"AZRIRN.placeHolderList[1574]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.rotateZ" 
 		"AZRIRN.placeHolderList[1575]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1.rotateOrder" 
 		"AZRIRN.placeHolderList[1576]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.translateX" 
 		"AZRIRN.placeHolderList[1577]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.translateX" 
 		"AZRIRN.placeHolderList[1578]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.translateY" 
 		"AZRIRN.placeHolderList[1579]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.translateY" 
 		"AZRIRN.placeHolderList[1580]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.translateZ" 
 		"AZRIRN.placeHolderList[1581]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.translateZ" 
 		"AZRIRN.placeHolderList[1582]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.rotateX" 
 		"AZRIRN.placeHolderList[1583]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.rotateX" 
 		"AZRIRN.placeHolderList[1584]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.rotateY" 
 		"AZRIRN.placeHolderList[1585]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.rotateY" 
 		"AZRIRN.placeHolderList[1586]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.rotateZ" 
 		"AZRIRN.placeHolderList[1587]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.rotateZ" 
 		"AZRIRN.placeHolderList[1588]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2.rotateOrder" 
 		"AZRIRN.placeHolderList[1589]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.translateX" 
 		"AZRIRN.placeHolderList[1590]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.translateX" 
 		"AZRIRN.placeHolderList[1591]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.translateY" 
 		"AZRIRN.placeHolderList[1592]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.translateY" 
 		"AZRIRN.placeHolderList[1593]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.translateZ" 
 		"AZRIRN.placeHolderList[1594]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.translateZ" 
 		"AZRIRN.placeHolderList[1595]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.rotateX" 
 		"AZRIRN.placeHolderList[1596]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.rotateX" 
 		"AZRIRN.placeHolderList[1597]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.rotateY" 
 		"AZRIRN.placeHolderList[1598]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.rotateY" 
 		"AZRIRN.placeHolderList[1599]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.rotateZ" 
 		"AZRIRN.placeHolderList[1600]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.rotateZ" 
 		"AZRIRN.placeHolderList[1601]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3.rotateOrder" 
 		"AZRIRN.placeHolderList[1602]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.translateX" 
 		"AZRIRN.placeHolderList[1603]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.translateX" 
 		"AZRIRN.placeHolderList[1604]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.translateY" 
 		"AZRIRN.placeHolderList[1605]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.translateY" 
 		"AZRIRN.placeHolderList[1606]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.translateZ" 
 		"AZRIRN.placeHolderList[1607]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.translateZ" 
 		"AZRIRN.placeHolderList[1608]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.rotateX" 
 		"AZRIRN.placeHolderList[1609]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.rotateX" 
 		"AZRIRN.placeHolderList[1610]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.rotateY" 
 		"AZRIRN.placeHolderList[1611]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.rotateY" 
 		"AZRIRN.placeHolderList[1612]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.rotateZ" 
 		"AZRIRN.placeHolderList[1613]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.rotateZ" 
 		"AZRIRN.placeHolderList[1614]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtSide_1Zero1|AZRI:CTL_R_SkirtSide_1|AZRI:NLL_R_SkirtSide_2Zero1|AZRI:CTL_R_SkirtSide_2|AZRI:NLL_R_SkirtSide_3Zero1|AZRI:CTL_R_SkirtSide_3|AZRI:NLL_R_SkirtSide_4Zero1|AZRI:CTL_R_SkirtSide_4.rotateOrder" 
 		"AZRIRN.placeHolderList[1615]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.translateX" 
 		"AZRIRN.placeHolderList[1616]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.translateX" 
 		"AZRIRN.placeHolderList[1617]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.translateY" 
 		"AZRIRN.placeHolderList[1618]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.translateY" 
 		"AZRIRN.placeHolderList[1619]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.translateZ" 
 		"AZRIRN.placeHolderList[1620]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.translateZ" 
 		"AZRIRN.placeHolderList[1621]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.rotateX" 
 		"AZRIRN.placeHolderList[1622]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.rotateX" 
 		"AZRIRN.placeHolderList[1623]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.rotateY" 
 		"AZRIRN.placeHolderList[1624]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.rotateY" 
 		"AZRIRN.placeHolderList[1625]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.rotateZ" 
 		"AZRIRN.placeHolderList[1626]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.rotateZ" 
 		"AZRIRN.placeHolderList[1627]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1.rotateOrder" 
 		"AZRIRN.placeHolderList[1628]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.translateX" 
 		"AZRIRN.placeHolderList[1629]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.translateX" 
 		"AZRIRN.placeHolderList[1630]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.translateY" 
 		"AZRIRN.placeHolderList[1631]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.translateY" 
 		"AZRIRN.placeHolderList[1632]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.translateZ" 
 		"AZRIRN.placeHolderList[1633]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.translateZ" 
 		"AZRIRN.placeHolderList[1634]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.rotateX" 
 		"AZRIRN.placeHolderList[1635]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.rotateX" 
 		"AZRIRN.placeHolderList[1636]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.rotateY" 
 		"AZRIRN.placeHolderList[1637]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.rotateY" 
 		"AZRIRN.placeHolderList[1638]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.rotateZ" 
 		"AZRIRN.placeHolderList[1639]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.rotateZ" 
 		"AZRIRN.placeHolderList[1640]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2.rotateOrder" 
 		"AZRIRN.placeHolderList[1641]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.translateX" 
 		"AZRIRN.placeHolderList[1642]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.translateX" 
 		"AZRIRN.placeHolderList[1643]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.translateY" 
 		"AZRIRN.placeHolderList[1644]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.translateY" 
 		"AZRIRN.placeHolderList[1645]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.translateZ" 
 		"AZRIRN.placeHolderList[1646]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.translateZ" 
 		"AZRIRN.placeHolderList[1647]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.rotateX" 
 		"AZRIRN.placeHolderList[1648]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.rotateX" 
 		"AZRIRN.placeHolderList[1649]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.rotateY" 
 		"AZRIRN.placeHolderList[1650]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.rotateY" 
 		"AZRIRN.placeHolderList[1651]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.rotateZ" 
 		"AZRIRN.placeHolderList[1652]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.rotateZ" 
 		"AZRIRN.placeHolderList[1653]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3.rotateOrder" 
 		"AZRIRN.placeHolderList[1654]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.translateX" 
 		"AZRIRN.placeHolderList[1655]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.translateX" 
 		"AZRIRN.placeHolderList[1656]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.translateY" 
 		"AZRIRN.placeHolderList[1657]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.translateY" 
 		"AZRIRN.placeHolderList[1658]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.translateZ" 
 		"AZRIRN.placeHolderList[1659]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.translateZ" 
 		"AZRIRN.placeHolderList[1660]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.rotateX" 
 		"AZRIRN.placeHolderList[1661]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.rotateX" 
 		"AZRIRN.placeHolderList[1662]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.rotateY" 
 		"AZRIRN.placeHolderList[1663]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.rotateY" 
 		"AZRIRN.placeHolderList[1664]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.rotateZ" 
 		"AZRIRN.placeHolderList[1665]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.rotateZ" 
 		"AZRIRN.placeHolderList[1666]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_R_SkirtBack_1|AZRI:CTL_R_SkirtBack_1|AZRI:NLL_R_SkirtBack_2|AZRI:CTL_R_SkirtBack_2|AZRI:NLL_R_SkirtBack_3|AZRI:CTL_R_SkirtBack_3|AZRI:NLL_R_SkirtBack_4|AZRI:CTL_R_SkirtBack_4.rotateOrder" 
 		"AZRIRN.placeHolderList[1667]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.translateX" 
 		"AZRIRN.placeHolderList[1668]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.translateX" 
 		"AZRIRN.placeHolderList[1669]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.translateY" 
 		"AZRIRN.placeHolderList[1670]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.translateY" 
 		"AZRIRN.placeHolderList[1671]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.translateZ" 
 		"AZRIRN.placeHolderList[1672]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.translateZ" 
 		"AZRIRN.placeHolderList[1673]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.rotateX" 
 		"AZRIRN.placeHolderList[1674]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.rotateX" 
 		"AZRIRN.placeHolderList[1675]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.rotateY" 
 		"AZRIRN.placeHolderList[1676]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.rotateY" 
 		"AZRIRN.placeHolderList[1677]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.rotateZ" 
 		"AZRIRN.placeHolderList[1678]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.rotateZ" 
 		"AZRIRN.placeHolderList[1679]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1.rotateOrder" 
 		"AZRIRN.placeHolderList[1680]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.translateX" 
 		"AZRIRN.placeHolderList[1681]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.translateX" 
 		"AZRIRN.placeHolderList[1682]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.translateY" 
 		"AZRIRN.placeHolderList[1683]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.translateY" 
 		"AZRIRN.placeHolderList[1684]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.translateZ" 
 		"AZRIRN.placeHolderList[1685]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.translateZ" 
 		"AZRIRN.placeHolderList[1686]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.rotateX" 
 		"AZRIRN.placeHolderList[1687]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.rotateX" 
 		"AZRIRN.placeHolderList[1688]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.rotateY" 
 		"AZRIRN.placeHolderList[1689]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.rotateY" 
 		"AZRIRN.placeHolderList[1690]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.rotateZ" 
 		"AZRIRN.placeHolderList[1691]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.rotateZ" 
 		"AZRIRN.placeHolderList[1692]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2.rotateOrder" 
 		"AZRIRN.placeHolderList[1693]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.translateX" 
 		"AZRIRN.placeHolderList[1694]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.translateX" 
 		"AZRIRN.placeHolderList[1695]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.translateY" 
 		"AZRIRN.placeHolderList[1696]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.translateY" 
 		"AZRIRN.placeHolderList[1697]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.translateZ" 
 		"AZRIRN.placeHolderList[1698]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.translateZ" 
 		"AZRIRN.placeHolderList[1699]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.rotateX" 
 		"AZRIRN.placeHolderList[1700]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.rotateX" 
 		"AZRIRN.placeHolderList[1701]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.rotateY" 
 		"AZRIRN.placeHolderList[1702]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.rotateY" 
 		"AZRIRN.placeHolderList[1703]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.rotateZ" 
 		"AZRIRN.placeHolderList[1704]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.rotateZ" 
 		"AZRIRN.placeHolderList[1705]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3.rotateOrder" 
 		"AZRIRN.placeHolderList[1706]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.translateX" 
 		"AZRIRN.placeHolderList[1707]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.translateX" 
 		"AZRIRN.placeHolderList[1708]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.translateY" 
 		"AZRIRN.placeHolderList[1709]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.translateY" 
 		"AZRIRN.placeHolderList[1710]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.translateZ" 
 		"AZRIRN.placeHolderList[1711]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.translateZ" 
 		"AZRIRN.placeHolderList[1712]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.rotateX" 
 		"AZRIRN.placeHolderList[1713]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.rotateX" 
 		"AZRIRN.placeHolderList[1714]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.rotateY" 
 		"AZRIRN.placeHolderList[1715]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.rotateY" 
 		"AZRIRN.placeHolderList[1716]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.rotateZ" 
 		"AZRIRN.placeHolderList[1717]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.rotateZ" 
 		"AZRIRN.placeHolderList[1718]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtFront_1Zero1|AZRI:CTL_C_SkirtFront_1|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_2|AZRI:NLL_C_SkirtFront_2Zero1|AZRI:CTL_C_SkirtFront_3|AZRI:NLL_C_SkirtFront_4Zero1|AZRI:CTL_C_SkirtFront_4.rotateOrder" 
 		"AZRIRN.placeHolderList[1719]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.translateX" 
 		"AZRIRN.placeHolderList[1720]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.translateX" 
 		"AZRIRN.placeHolderList[1721]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.translateY" 
 		"AZRIRN.placeHolderList[1722]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.translateY" 
 		"AZRIRN.placeHolderList[1723]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.translateZ" 
 		"AZRIRN.placeHolderList[1724]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.translateZ" 
 		"AZRIRN.placeHolderList[1725]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.rotateX" 
 		"AZRIRN.placeHolderList[1726]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.rotateX" 
 		"AZRIRN.placeHolderList[1727]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.rotateY" 
 		"AZRIRN.placeHolderList[1728]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.rotateY" 
 		"AZRIRN.placeHolderList[1729]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.rotateZ" 
 		"AZRIRN.placeHolderList[1730]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.rotateZ" 
 		"AZRIRN.placeHolderList[1731]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1.rotateOrder" 
 		"AZRIRN.placeHolderList[1732]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.translateX" 
 		"AZRIRN.placeHolderList[1733]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.translateX" 
 		"AZRIRN.placeHolderList[1734]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.translateY" 
 		"AZRIRN.placeHolderList[1735]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.translateY" 
 		"AZRIRN.placeHolderList[1736]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.translateZ" 
 		"AZRIRN.placeHolderList[1737]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.translateZ" 
 		"AZRIRN.placeHolderList[1738]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.rotateX" 
 		"AZRIRN.placeHolderList[1739]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.rotateX" 
 		"AZRIRN.placeHolderList[1740]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.rotateY" 
 		"AZRIRN.placeHolderList[1741]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.rotateY" 
 		"AZRIRN.placeHolderList[1742]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.rotateZ" 
 		"AZRIRN.placeHolderList[1743]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.rotateZ" 
 		"AZRIRN.placeHolderList[1744]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2.rotateOrder" 
 		"AZRIRN.placeHolderList[1745]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.translateX" 
 		"AZRIRN.placeHolderList[1746]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.translateX" 
 		"AZRIRN.placeHolderList[1747]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.translateY" 
 		"AZRIRN.placeHolderList[1748]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.translateY" 
 		"AZRIRN.placeHolderList[1749]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.translateZ" 
 		"AZRIRN.placeHolderList[1750]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.translateZ" 
 		"AZRIRN.placeHolderList[1751]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.rotateX" 
 		"AZRIRN.placeHolderList[1752]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.rotateX" 
 		"AZRIRN.placeHolderList[1753]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.rotateY" 
 		"AZRIRN.placeHolderList[1754]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.rotateY" 
 		"AZRIRN.placeHolderList[1755]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.rotateZ" 
 		"AZRIRN.placeHolderList[1756]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.rotateZ" 
 		"AZRIRN.placeHolderList[1757]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3.rotateOrder" 
 		"AZRIRN.placeHolderList[1758]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.translateX" 
 		"AZRIRN.placeHolderList[1759]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.translateX" 
 		"AZRIRN.placeHolderList[1760]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.translateY" 
 		"AZRIRN.placeHolderList[1761]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.translateY" 
 		"AZRIRN.placeHolderList[1762]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.translateZ" 
 		"AZRIRN.placeHolderList[1763]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.translateZ" 
 		"AZRIRN.placeHolderList[1764]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.rotateX" 
 		"AZRIRN.placeHolderList[1765]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.rotateX" 
 		"AZRIRN.placeHolderList[1766]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.rotateY" 
 		"AZRIRN.placeHolderList[1767]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.rotateY" 
 		"AZRIRN.placeHolderList[1768]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.rotateZ" 
 		"AZRIRN.placeHolderList[1769]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.rotateZ" 
 		"AZRIRN.placeHolderList[1770]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_SkirtControls1|AZRI:NLL_C_SkirtBack_1Zero1|AZRI:CTL_C_SkirtBack_1|AZRI:NLL_C_SkirtBack_2Zero1|AZRI:CTL_C_SkirtBack_2|AZRI:NLL_C_SkirtBack_3Zero1|AZRI:CTL_C_SkirtBack_3|AZRI:NLL_C_SkirtBack_4Zero1|AZRI:CTL_C_SkirtBack_4.rotateOrder" 
 		"AZRIRN.placeHolderList[1771]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.translateX" 
 		"AZRIRN.placeHolderList[1772]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.translateX" 
 		"AZRIRN.placeHolderList[1773]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.translateY" 
 		"AZRIRN.placeHolderList[1774]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.translateY" 
 		"AZRIRN.placeHolderList[1775]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.translateZ" 
 		"AZRIRN.placeHolderList[1776]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.translateZ" 
 		"AZRIRN.placeHolderList[1777]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.rotateX" 
 		"AZRIRN.placeHolderList[1778]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.rotateX" 
 		"AZRIRN.placeHolderList[1779]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.rotateY" 
 		"AZRIRN.placeHolderList[1780]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.rotateY" 
 		"AZRIRN.placeHolderList[1781]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.rotateZ" 
 		"AZRIRN.placeHolderList[1782]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.rotateZ" 
 		"AZRIRN.placeHolderList[1783]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1.rotateOrder" 
 		"AZRIRN.placeHolderList[1784]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.translateX" 
 		"AZRIRN.placeHolderList[1785]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.translateX" 
 		"AZRIRN.placeHolderList[1786]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.translateY" 
 		"AZRIRN.placeHolderList[1787]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.translateY" 
 		"AZRIRN.placeHolderList[1788]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.translateZ" 
 		"AZRIRN.placeHolderList[1789]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.translateZ" 
 		"AZRIRN.placeHolderList[1790]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.rotateX" 
 		"AZRIRN.placeHolderList[1791]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.rotateX" 
 		"AZRIRN.placeHolderList[1792]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.rotateY" 
 		"AZRIRN.placeHolderList[1793]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.rotateY" 
 		"AZRIRN.placeHolderList[1794]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.rotateZ" 
 		"AZRIRN.placeHolderList[1795]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.rotateZ" 
 		"AZRIRN.placeHolderList[1796]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2.rotateOrder" 
 		"AZRIRN.placeHolderList[1797]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.translateX" 
 		"AZRIRN.placeHolderList[1798]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.translateX" 
 		"AZRIRN.placeHolderList[1799]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.translateY" 
 		"AZRIRN.placeHolderList[1800]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.translateY" 
 		"AZRIRN.placeHolderList[1801]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.translateZ" 
 		"AZRIRN.placeHolderList[1802]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.translateZ" 
 		"AZRIRN.placeHolderList[1803]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.rotateX" 
 		"AZRIRN.placeHolderList[1804]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.rotateX" 
 		"AZRIRN.placeHolderList[1805]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.rotateY" 
 		"AZRIRN.placeHolderList[1806]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.rotateY" 
 		"AZRIRN.placeHolderList[1807]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.rotateZ" 
 		"AZRIRN.placeHolderList[1808]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.rotateZ" 
 		"AZRIRN.placeHolderList[1809]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3.rotateOrder" 
 		"AZRIRN.placeHolderList[1810]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.translateX" 
 		"AZRIRN.placeHolderList[1811]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.translateX" 
 		"AZRIRN.placeHolderList[1812]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.translateY" 
 		"AZRIRN.placeHolderList[1813]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.translateY" 
 		"AZRIRN.placeHolderList[1814]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.translateZ" 
 		"AZRIRN.placeHolderList[1815]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.translateZ" 
 		"AZRIRN.placeHolderList[1816]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.rotateX" 
 		"AZRIRN.placeHolderList[1817]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.rotateX" 
 		"AZRIRN.placeHolderList[1818]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.rotateY" 
 		"AZRIRN.placeHolderList[1819]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.rotateY" 
 		"AZRIRN.placeHolderList[1820]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.rotateZ" 
 		"AZRIRN.placeHolderList[1821]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.rotateZ" 
 		"AZRIRN.placeHolderList[1822]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoFront_1Zero1|AZRI:CTL_L_PonchoFront_1|AZRI:NLL_L_PonchoFront_2Zero1|AZRI:CTL_L_PonchoFront_2|AZRI:NLL_L_PonchoFront_3Zero1|AZRI:CTL_L_PonchoFront_3|AZRI:NLL_L_PonchoFront_4Zero1|AZRI:CTL_L_PonchoFront_4.rotateOrder" 
 		"AZRIRN.placeHolderList[1823]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.translateX" 
 		"AZRIRN.placeHolderList[1824]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.translateX" 
 		"AZRIRN.placeHolderList[1825]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.translateY" 
 		"AZRIRN.placeHolderList[1826]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.translateY" 
 		"AZRIRN.placeHolderList[1827]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.translateZ" 
 		"AZRIRN.placeHolderList[1828]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.translateZ" 
 		"AZRIRN.placeHolderList[1829]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.rotateX" 
 		"AZRIRN.placeHolderList[1830]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.rotateX" 
 		"AZRIRN.placeHolderList[1831]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.rotateY" 
 		"AZRIRN.placeHolderList[1832]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.rotateY" 
 		"AZRIRN.placeHolderList[1833]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.rotateZ" 
 		"AZRIRN.placeHolderList[1834]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.rotateZ" 
 		"AZRIRN.placeHolderList[1835]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1.rotateOrder" 
 		"AZRIRN.placeHolderList[1836]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.translateX" 
 		"AZRIRN.placeHolderList[1837]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.translateX" 
 		"AZRIRN.placeHolderList[1838]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.translateY" 
 		"AZRIRN.placeHolderList[1839]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.translateY" 
 		"AZRIRN.placeHolderList[1840]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.translateZ" 
 		"AZRIRN.placeHolderList[1841]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.translateZ" 
 		"AZRIRN.placeHolderList[1842]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.rotateX" 
 		"AZRIRN.placeHolderList[1843]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.rotateX" 
 		"AZRIRN.placeHolderList[1844]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.rotateY" 
 		"AZRIRN.placeHolderList[1845]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.rotateY" 
 		"AZRIRN.placeHolderList[1846]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.rotateZ" 
 		"AZRIRN.placeHolderList[1847]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.rotateZ" 
 		"AZRIRN.placeHolderList[1848]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2.rotateOrder" 
 		"AZRIRN.placeHolderList[1849]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.translateX" 
 		"AZRIRN.placeHolderList[1850]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.translateX" 
 		"AZRIRN.placeHolderList[1851]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.translateY" 
 		"AZRIRN.placeHolderList[1852]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.translateY" 
 		"AZRIRN.placeHolderList[1853]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.translateZ" 
 		"AZRIRN.placeHolderList[1854]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.translateZ" 
 		"AZRIRN.placeHolderList[1855]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.rotateX" 
 		"AZRIRN.placeHolderList[1856]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.rotateX" 
 		"AZRIRN.placeHolderList[1857]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.rotateY" 
 		"AZRIRN.placeHolderList[1858]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.rotateY" 
 		"AZRIRN.placeHolderList[1859]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.rotateZ" 
 		"AZRIRN.placeHolderList[1860]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.rotateZ" 
 		"AZRIRN.placeHolderList[1861]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3.rotateOrder" 
 		"AZRIRN.placeHolderList[1862]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.translateX" 
 		"AZRIRN.placeHolderList[1863]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.translateX" 
 		"AZRIRN.placeHolderList[1864]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.translateY" 
 		"AZRIRN.placeHolderList[1865]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.translateY" 
 		"AZRIRN.placeHolderList[1866]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.translateZ" 
 		"AZRIRN.placeHolderList[1867]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.translateZ" 
 		"AZRIRN.placeHolderList[1868]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.rotateX" 
 		"AZRIRN.placeHolderList[1869]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.rotateX" 
 		"AZRIRN.placeHolderList[1870]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.rotateY" 
 		"AZRIRN.placeHolderList[1871]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.rotateY" 
 		"AZRIRN.placeHolderList[1872]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.rotateZ" 
 		"AZRIRN.placeHolderList[1873]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.rotateZ" 
 		"AZRIRN.placeHolderList[1874]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoSide_1Zero1|AZRI:CTL_L_PonchoSide_1|AZRI:NLL_L_PonchoSide_2Zero1|AZRI:CTL_L_PonchoSide_2|AZRI:NLL_L_PonchoSide_3Zero1|AZRI:CTL_L_PonchoSide_3|AZRI:NLL_L_PonchoSide_4Zero1|AZRI:CTL_L_PonchoSide_4.rotateOrder" 
 		"AZRIRN.placeHolderList[1875]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.translateX" 
 		"AZRIRN.placeHolderList[1876]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.translateX" 
 		"AZRIRN.placeHolderList[1877]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.translateY" 
 		"AZRIRN.placeHolderList[1878]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.translateY" 
 		"AZRIRN.placeHolderList[1879]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.translateZ" 
 		"AZRIRN.placeHolderList[1880]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.translateZ" 
 		"AZRIRN.placeHolderList[1881]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.rotateX" 
 		"AZRIRN.placeHolderList[1882]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.rotateX" 
 		"AZRIRN.placeHolderList[1883]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.rotateY" 
 		"AZRIRN.placeHolderList[1884]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.rotateY" 
 		"AZRIRN.placeHolderList[1885]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.rotateZ" 
 		"AZRIRN.placeHolderList[1886]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.rotateZ" 
 		"AZRIRN.placeHolderList[1887]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1.rotateOrder" 
 		"AZRIRN.placeHolderList[1888]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.translateX" 
 		"AZRIRN.placeHolderList[1889]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.translateX" 
 		"AZRIRN.placeHolderList[1890]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.translateY" 
 		"AZRIRN.placeHolderList[1891]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.translateY" 
 		"AZRIRN.placeHolderList[1892]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.translateZ" 
 		"AZRIRN.placeHolderList[1893]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.translateZ" 
 		"AZRIRN.placeHolderList[1894]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.rotateX" 
 		"AZRIRN.placeHolderList[1895]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.rotateX" 
 		"AZRIRN.placeHolderList[1896]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.rotateY" 
 		"AZRIRN.placeHolderList[1897]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.rotateY" 
 		"AZRIRN.placeHolderList[1898]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.rotateZ" 
 		"AZRIRN.placeHolderList[1899]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.rotateZ" 
 		"AZRIRN.placeHolderList[1900]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2.rotateOrder" 
 		"AZRIRN.placeHolderList[1901]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.translateX" 
 		"AZRIRN.placeHolderList[1902]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.translateX" 
 		"AZRIRN.placeHolderList[1903]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.translateY" 
 		"AZRIRN.placeHolderList[1904]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.translateY" 
 		"AZRIRN.placeHolderList[1905]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.translateZ" 
 		"AZRIRN.placeHolderList[1906]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.translateZ" 
 		"AZRIRN.placeHolderList[1907]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.rotateX" 
 		"AZRIRN.placeHolderList[1908]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.rotateX" 
 		"AZRIRN.placeHolderList[1909]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.rotateY" 
 		"AZRIRN.placeHolderList[1910]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.rotateY" 
 		"AZRIRN.placeHolderList[1911]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.rotateZ" 
 		"AZRIRN.placeHolderList[1912]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.rotateZ" 
 		"AZRIRN.placeHolderList[1913]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3.rotateOrder" 
 		"AZRIRN.placeHolderList[1914]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.translateX" 
 		"AZRIRN.placeHolderList[1915]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.translateX" 
 		"AZRIRN.placeHolderList[1916]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.translateY" 
 		"AZRIRN.placeHolderList[1917]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.translateY" 
 		"AZRIRN.placeHolderList[1918]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.translateZ" 
 		"AZRIRN.placeHolderList[1919]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.translateZ" 
 		"AZRIRN.placeHolderList[1920]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.rotateX" 
 		"AZRIRN.placeHolderList[1921]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.rotateX" 
 		"AZRIRN.placeHolderList[1922]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.rotateY" 
 		"AZRIRN.placeHolderList[1923]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.rotateY" 
 		"AZRIRN.placeHolderList[1924]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.rotateZ" 
 		"AZRIRN.placeHolderList[1925]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.rotateZ" 
 		"AZRIRN.placeHolderList[1926]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_L_PonchoBack_1Zero1|AZRI:CTL_L_PonchoBack_1|AZRI:NLL_L_PonchoBack_2Zero1|AZRI:CTL_L_PonchoBack_2|AZRI:NLL_L_PonchoBack_3Zero1|AZRI:CTL_L_PonchoBack_3|AZRI:NLL_L_PonchoBack_4Zero1|AZRI:CTL_L_PonchoBack_4.rotateOrder" 
 		"AZRIRN.placeHolderList[1927]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.translateX" 
 		"AZRIRN.placeHolderList[1928]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.translateX" 
 		"AZRIRN.placeHolderList[1929]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.translateY" 
 		"AZRIRN.placeHolderList[1930]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.translateY" 
 		"AZRIRN.placeHolderList[1931]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.translateZ" 
 		"AZRIRN.placeHolderList[1932]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.translateZ" 
 		"AZRIRN.placeHolderList[1933]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.rotateX" 
 		"AZRIRN.placeHolderList[1934]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.rotateX" 
 		"AZRIRN.placeHolderList[1935]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.rotateY" 
 		"AZRIRN.placeHolderList[1936]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.rotateY" 
 		"AZRIRN.placeHolderList[1937]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.rotateZ" 
 		"AZRIRN.placeHolderList[1938]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.rotateZ" 
 		"AZRIRN.placeHolderList[1939]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1.rotateOrder" 
 		"AZRIRN.placeHolderList[1940]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.translateX" 
 		"AZRIRN.placeHolderList[1941]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.translateX" 
 		"AZRIRN.placeHolderList[1942]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.translateY" 
 		"AZRIRN.placeHolderList[1943]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.translateY" 
 		"AZRIRN.placeHolderList[1944]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.translateZ" 
 		"AZRIRN.placeHolderList[1945]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.translateZ" 
 		"AZRIRN.placeHolderList[1946]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.rotateX" 
 		"AZRIRN.placeHolderList[1947]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.rotateX" 
 		"AZRIRN.placeHolderList[1948]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.rotateY" 
 		"AZRIRN.placeHolderList[1949]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.rotateY" 
 		"AZRIRN.placeHolderList[1950]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.rotateZ" 
 		"AZRIRN.placeHolderList[1951]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.rotateZ" 
 		"AZRIRN.placeHolderList[1952]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2.rotateOrder" 
 		"AZRIRN.placeHolderList[1953]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.translateX" 
 		"AZRIRN.placeHolderList[1954]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.translateX" 
 		"AZRIRN.placeHolderList[1955]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.translateY" 
 		"AZRIRN.placeHolderList[1956]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.translateY" 
 		"AZRIRN.placeHolderList[1957]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.translateZ" 
 		"AZRIRN.placeHolderList[1958]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.translateZ" 
 		"AZRIRN.placeHolderList[1959]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.rotateX" 
 		"AZRIRN.placeHolderList[1960]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.rotateX" 
 		"AZRIRN.placeHolderList[1961]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.rotateY" 
 		"AZRIRN.placeHolderList[1962]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.rotateY" 
 		"AZRIRN.placeHolderList[1963]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.rotateZ" 
 		"AZRIRN.placeHolderList[1964]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.rotateZ" 
 		"AZRIRN.placeHolderList[1965]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3.rotateOrder" 
 		"AZRIRN.placeHolderList[1966]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.translateX" 
 		"AZRIRN.placeHolderList[1967]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.translateX" 
 		"AZRIRN.placeHolderList[1968]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.translateY" 
 		"AZRIRN.placeHolderList[1969]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.translateY" 
 		"AZRIRN.placeHolderList[1970]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.translateZ" 
 		"AZRIRN.placeHolderList[1971]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.translateZ" 
 		"AZRIRN.placeHolderList[1972]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.rotateX" 
 		"AZRIRN.placeHolderList[1973]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.rotateX" 
 		"AZRIRN.placeHolderList[1974]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.rotateY" 
 		"AZRIRN.placeHolderList[1975]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.rotateY" 
 		"AZRIRN.placeHolderList[1976]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.rotateZ" 
 		"AZRIRN.placeHolderList[1977]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.rotateZ" 
 		"AZRIRN.placeHolderList[1978]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoFront_1Zero1|AZRI:CTL_R_PonchoFront_1|AZRI:NLL_R_PonchoFront_2Zero1|AZRI:CTL_R_PonchoFront_2|AZRI:NLL_R_PonchoFront_3Zero1|AZRI:CTL_R_PonchoFront_3|AZRI:NLL_R_PonchoFront_4Zero1|AZRI:CTL_R_PonchoFront_4.rotateOrder" 
 		"AZRIRN.placeHolderList[1979]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.translateX" 
 		"AZRIRN.placeHolderList[1980]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.translateX" 
 		"AZRIRN.placeHolderList[1981]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.translateY" 
 		"AZRIRN.placeHolderList[1982]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.translateY" 
 		"AZRIRN.placeHolderList[1983]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.translateZ" 
 		"AZRIRN.placeHolderList[1984]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.translateZ" 
 		"AZRIRN.placeHolderList[1985]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.rotateX" 
 		"AZRIRN.placeHolderList[1986]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.rotateX" 
 		"AZRIRN.placeHolderList[1987]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.rotateY" 
 		"AZRIRN.placeHolderList[1988]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.rotateY" 
 		"AZRIRN.placeHolderList[1989]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.rotateZ" 
 		"AZRIRN.placeHolderList[1990]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.rotateZ" 
 		"AZRIRN.placeHolderList[1991]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1.rotateOrder" 
 		"AZRIRN.placeHolderList[1992]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.translateX" 
 		"AZRIRN.placeHolderList[1993]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.translateX" 
 		"AZRIRN.placeHolderList[1994]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.translateY" 
 		"AZRIRN.placeHolderList[1995]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.translateY" 
 		"AZRIRN.placeHolderList[1996]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.translateZ" 
 		"AZRIRN.placeHolderList[1997]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.translateZ" 
 		"AZRIRN.placeHolderList[1998]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.rotateX" 
 		"AZRIRN.placeHolderList[1999]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.rotateX" 
 		"AZRIRN.placeHolderList[2000]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.rotateY" 
 		"AZRIRN.placeHolderList[2001]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.rotateY" 
 		"AZRIRN.placeHolderList[2002]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.rotateZ" 
 		"AZRIRN.placeHolderList[2003]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.rotateZ" 
 		"AZRIRN.placeHolderList[2004]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2.rotateOrder" 
 		"AZRIRN.placeHolderList[2005]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.translateX" 
 		"AZRIRN.placeHolderList[2006]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.translateX" 
 		"AZRIRN.placeHolderList[2007]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.translateY" 
 		"AZRIRN.placeHolderList[2008]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.translateY" 
 		"AZRIRN.placeHolderList[2009]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.translateZ" 
 		"AZRIRN.placeHolderList[2010]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.translateZ" 
 		"AZRIRN.placeHolderList[2011]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.rotateX" 
 		"AZRIRN.placeHolderList[2012]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.rotateX" 
 		"AZRIRN.placeHolderList[2013]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.rotateY" 
 		"AZRIRN.placeHolderList[2014]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.rotateY" 
 		"AZRIRN.placeHolderList[2015]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.rotateZ" 
 		"AZRIRN.placeHolderList[2016]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.rotateZ" 
 		"AZRIRN.placeHolderList[2017]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3.rotateOrder" 
 		"AZRIRN.placeHolderList[2018]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.translateX" 
 		"AZRIRN.placeHolderList[2019]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.translateX" 
 		"AZRIRN.placeHolderList[2020]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.translateY" 
 		"AZRIRN.placeHolderList[2021]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.translateY" 
 		"AZRIRN.placeHolderList[2022]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.translateZ" 
 		"AZRIRN.placeHolderList[2023]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.translateZ" 
 		"AZRIRN.placeHolderList[2024]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.rotateX" 
 		"AZRIRN.placeHolderList[2025]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.rotateX" 
 		"AZRIRN.placeHolderList[2026]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.rotateY" 
 		"AZRIRN.placeHolderList[2027]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.rotateY" 
 		"AZRIRN.placeHolderList[2028]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.rotateZ" 
 		"AZRIRN.placeHolderList[2029]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.rotateZ" 
 		"AZRIRN.placeHolderList[2030]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_R_PonchoSide_1Zero1|AZRI:CTL_R_PonchoSide_1|AZRI:NLL_R_PonchoSide_2Zero1|AZRI:CTL_R_PonchoSide_2|AZRI:NLL_R_PonchoSide_3Zero1|AZRI:CTL_R_PonchoSide_3|AZRI:NLL_R_PonchoSide_4Zero1|AZRI:CTL_R_PonchoSide_4.rotateOrder" 
 		"AZRIRN.placeHolderList[2031]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.translateX" 
 		"AZRIRN.placeHolderList[2032]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.translateX" 
 		"AZRIRN.placeHolderList[2033]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.translateY" 
 		"AZRIRN.placeHolderList[2034]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.translateY" 
 		"AZRIRN.placeHolderList[2035]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.translateZ" 
 		"AZRIRN.placeHolderList[2036]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.translateZ" 
 		"AZRIRN.placeHolderList[2037]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.rotateX" 
 		"AZRIRN.placeHolderList[2038]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.rotateX" 
 		"AZRIRN.placeHolderList[2039]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.rotateY" 
 		"AZRIRN.placeHolderList[2040]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.rotateY" 
 		"AZRIRN.placeHolderList[2041]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.rotateZ" 
 		"AZRIRN.placeHolderList[2042]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.rotateZ" 
 		"AZRIRN.placeHolderList[2043]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1.rotateOrder" 
 		"AZRIRN.placeHolderList[2044]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.translateX" 
 		"AZRIRN.placeHolderList[2045]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.translateX" 
 		"AZRIRN.placeHolderList[2046]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.translateY" 
 		"AZRIRN.placeHolderList[2047]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.translateY" 
 		"AZRIRN.placeHolderList[2048]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.translateZ" 
 		"AZRIRN.placeHolderList[2049]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.translateZ" 
 		"AZRIRN.placeHolderList[2050]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.rotateX" 
 		"AZRIRN.placeHolderList[2051]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.rotateX" 
 		"AZRIRN.placeHolderList[2052]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.rotateY" 
 		"AZRIRN.placeHolderList[2053]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.rotateY" 
 		"AZRIRN.placeHolderList[2054]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.rotateZ" 
 		"AZRIRN.placeHolderList[2055]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.rotateZ" 
 		"AZRIRN.placeHolderList[2056]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2.rotateOrder" 
 		"AZRIRN.placeHolderList[2057]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.translateX" 
 		"AZRIRN.placeHolderList[2058]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.translateX" 
 		"AZRIRN.placeHolderList[2059]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.translateY" 
 		"AZRIRN.placeHolderList[2060]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.translateY" 
 		"AZRIRN.placeHolderList[2061]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.translateZ" 
 		"AZRIRN.placeHolderList[2062]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.translateZ" 
 		"AZRIRN.placeHolderList[2063]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.rotateX" 
 		"AZRIRN.placeHolderList[2064]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.rotateX" 
 		"AZRIRN.placeHolderList[2065]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.rotateY" 
 		"AZRIRN.placeHolderList[2066]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.rotateY" 
 		"AZRIRN.placeHolderList[2067]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.rotateZ" 
 		"AZRIRN.placeHolderList[2068]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.rotateZ" 
 		"AZRIRN.placeHolderList[2069]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3.rotateOrder" 
 		"AZRIRN.placeHolderList[2070]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.translateX" 
 		"AZRIRN.placeHolderList[2071]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.translateX" 
 		"AZRIRN.placeHolderList[2072]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.translateY" 
 		"AZRIRN.placeHolderList[2073]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.translateY" 
 		"AZRIRN.placeHolderList[2074]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.translateZ" 
 		"AZRIRN.placeHolderList[2075]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.translateZ" 
 		"AZRIRN.placeHolderList[2076]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.rotateX" 
 		"AZRIRN.placeHolderList[2077]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.rotateX" 
 		"AZRIRN.placeHolderList[2078]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.rotateY" 
 		"AZRIRN.placeHolderList[2079]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.rotateY" 
 		"AZRIRN.placeHolderList[2080]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.rotateZ" 
 		"AZRIRN.placeHolderList[2081]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.rotateZ" 
 		"AZRIRN.placeHolderList[2082]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoFront_1Zero1|AZRI:CTL_C_PonchoFront_1|AZRI:NLL_C_PonchoFront_2Zero1|AZRI:CTL_C_PonchoFront_2|AZRI:NLL_C_PonchoFront_3Zero1|AZRI:CTL_C_PonchoFront_3|AZRI:NLL_C_PonchoFront_4Zero1|AZRI:CTL_C_PonchoFront_4.rotateOrder" 
 		"AZRIRN.placeHolderList[2083]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.translateX" 
 		"AZRIRN.placeHolderList[2084]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.translateX" 
 		"AZRIRN.placeHolderList[2085]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.translateY" 
 		"AZRIRN.placeHolderList[2086]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.translateY" 
 		"AZRIRN.placeHolderList[2087]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.translateZ" 
 		"AZRIRN.placeHolderList[2088]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.translateZ" 
 		"AZRIRN.placeHolderList[2089]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.rotateX" 
 		"AZRIRN.placeHolderList[2090]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.rotateX" 
 		"AZRIRN.placeHolderList[2091]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.rotateY" 
 		"AZRIRN.placeHolderList[2092]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.rotateY" 
 		"AZRIRN.placeHolderList[2093]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.rotateZ" 
 		"AZRIRN.placeHolderList[2094]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.rotateZ" 
 		"AZRIRN.placeHolderList[2095]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1.rotateOrder" 
 		"AZRIRN.placeHolderList[2096]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.translateX" 
 		"AZRIRN.placeHolderList[2097]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.translateX" 
 		"AZRIRN.placeHolderList[2098]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.translateY" 
 		"AZRIRN.placeHolderList[2099]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.translateY" 
 		"AZRIRN.placeHolderList[2100]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.translateZ" 
 		"AZRIRN.placeHolderList[2101]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.translateZ" 
 		"AZRIRN.placeHolderList[2102]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.rotateX" 
 		"AZRIRN.placeHolderList[2103]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.rotateX" 
 		"AZRIRN.placeHolderList[2104]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.rotateY" 
 		"AZRIRN.placeHolderList[2105]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.rotateY" 
 		"AZRIRN.placeHolderList[2106]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.rotateZ" 
 		"AZRIRN.placeHolderList[2107]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.rotateZ" 
 		"AZRIRN.placeHolderList[2108]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2.rotateOrder" 
 		"AZRIRN.placeHolderList[2109]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.translateX" 
 		"AZRIRN.placeHolderList[2110]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.translateX" 
 		"AZRIRN.placeHolderList[2111]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.translateY" 
 		"AZRIRN.placeHolderList[2112]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.translateY" 
 		"AZRIRN.placeHolderList[2113]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.translateZ" 
 		"AZRIRN.placeHolderList[2114]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.translateZ" 
 		"AZRIRN.placeHolderList[2115]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.translateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.rotateX" 
 		"AZRIRN.placeHolderList[2116]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.translateX" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.rotateX" 
 		"AZRIRN.placeHolderList[2117]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.translateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.rotateY" 
 		"AZRIRN.placeHolderList[2118]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.translateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.rotateY" 
 		"AZRIRN.placeHolderList[2119]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.translateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.rotateZ" 
 		"AZRIRN.placeHolderList[2120]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.translateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.rotateZ" 
 		"AZRIRN.placeHolderList[2121]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3.rotateOrder" 
 		"AZRIRN.placeHolderList[2122]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.rotateX" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.translateX" 
 		"AZRIRN.placeHolderList[2123]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.rotateY" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.translateX" 
 		"AZRIRN.placeHolderList[2124]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.rotateY" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.translateY" 
 		"AZRIRN.placeHolderList[2125]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.rotateZ" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.translateY" 
 		"AZRIRN.placeHolderList[2126]" ""
-		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.rotateZ" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.translateZ" 
 		"AZRIRN.placeHolderList[2127]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.rotateOrder" 
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.translateZ" 
 		"AZRIRN.placeHolderList[2128]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root.instObjGroups" "AZRIRN.placeHolderList[2129]" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.rotateX" 
+		"AZRIRN.placeHolderList[2129]" ""
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.rotateX" 
+		"AZRIRN.placeHolderList[2130]" ""
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.rotateY" 
+		"AZRIRN.placeHolderList[2131]" ""
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.rotateY" 
+		"AZRIRN.placeHolderList[2132]" ""
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.rotateZ" 
+		"AZRIRN.placeHolderList[2133]" ""
+		5 4 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.rotateZ" 
+		"AZRIRN.placeHolderList[2134]" ""
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:rig|AZRI:NLL_C_WorldSpaceZero1|AZRI:NLL_C_PonchoControls1|AZRI:NLL_C_PonchoBack_1Zero1|AZRI:CTL_C_PonchoBack_1|AZRI:NLL_C_PonchoBack_2Zero1|AZRI:CTL_C_PonchoBack_2|AZRI:NLL_C_PonchoBack_3Zero1|AZRI:CTL_C_PonchoBack_3|AZRI:NLL_C_PonchoBack_4Zero1|AZRI:CTL_C_PonchoBack_4.rotateOrder" 
+		"AZRIRN.placeHolderList[2135]" ""
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root.instObjGroups" "AZRIRN.placeHolderList[2136]" 
 		""
 		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG.instObjGroups" 
-		"AZRIRN.placeHolderList[2130]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1.instObjGroups" 
-		"AZRIRN.placeHolderList[2131]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2.instObjGroups" 
-		"AZRIRN.placeHolderList[2132]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3.instObjGroups" 
-		"AZRIRN.placeHolderList[2133]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4.instObjGroups" 
-		"AZRIRN.placeHolderList[2134]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1.instObjGroups" 
-		"AZRIRN.placeHolderList[2135]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1.instObjGroups" 
-		"AZRIRN.placeHolderList[2136]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2.instObjGroups" 
 		"AZRIRN.placeHolderList[2137]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1.instObjGroups" 
 		"AZRIRN.placeHolderList[2138]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Thumb1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2.instObjGroups" 
 		"AZRIRN.placeHolderList[2139]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Thumb1|AZRI:MainCharacter_L_Thumb2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3.instObjGroups" 
 		"AZRIRN.placeHolderList[2140]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Thumb1|AZRI:MainCharacter_L_Thumb2|AZRI:MainCharacter_L_Thumb3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4.instObjGroups" 
 		"AZRIRN.placeHolderList[2141]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Thumb1|AZRI:MainCharacter_L_Thumb2|AZRI:MainCharacter_L_Thumb3|AZRI:MainCharacter_L_Thumb4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1.instObjGroups" 
 		"AZRIRN.placeHolderList[2142]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Index1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1.instObjGroups" 
 		"AZRIRN.placeHolderList[2143]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Index1|AZRI:MainCharacter_L_Index2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2.instObjGroups" 
 		"AZRIRN.placeHolderList[2144]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Index1|AZRI:MainCharacter_L_Index2|AZRI:MainCharacter_L_Index3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3.instObjGroups" 
 		"AZRIRN.placeHolderList[2145]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Index1|AZRI:MainCharacter_L_Index2|AZRI:MainCharacter_L_Index3|AZRI:MainCharacter_L_Index4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Thumb1.instObjGroups" 
 		"AZRIRN.placeHolderList[2146]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Index1|AZRI:MainCharacter_L_Index2|AZRI:MainCharacter_L_Index3|AZRI:MainCharacter_L_Index4|AZRI:MainCharacter_L_Index5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Thumb1|AZRI:MainCharacter_L_Thumb2.instObjGroups" 
 		"AZRIRN.placeHolderList[2147]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Middle1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Thumb1|AZRI:MainCharacter_L_Thumb2|AZRI:MainCharacter_L_Thumb3.instObjGroups" 
 		"AZRIRN.placeHolderList[2148]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Middle1|AZRI:MainCharacter_L_Middle2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Thumb1|AZRI:MainCharacter_L_Thumb2|AZRI:MainCharacter_L_Thumb3|AZRI:MainCharacter_L_Thumb4.instObjGroups" 
 		"AZRIRN.placeHolderList[2149]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Middle1|AZRI:MainCharacter_L_Middle2|AZRI:MainCharacter_L_Middle3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Index1.instObjGroups" 
 		"AZRIRN.placeHolderList[2150]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Middle1|AZRI:MainCharacter_L_Middle2|AZRI:MainCharacter_L_Middle3|AZRI:MainCharacter_L_Middle4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Index1|AZRI:MainCharacter_L_Index2.instObjGroups" 
 		"AZRIRN.placeHolderList[2151]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Middle1|AZRI:MainCharacter_L_Middle2|AZRI:MainCharacter_L_Middle3|AZRI:MainCharacter_L_Middle4|AZRI:MainCharacter_L_Middle5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Index1|AZRI:MainCharacter_L_Index2|AZRI:MainCharacter_L_Index3.instObjGroups" 
 		"AZRIRN.placeHolderList[2152]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Ring1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Index1|AZRI:MainCharacter_L_Index2|AZRI:MainCharacter_L_Index3|AZRI:MainCharacter_L_Index4.instObjGroups" 
 		"AZRIRN.placeHolderList[2153]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Ring1|AZRI:MainCharacter_L_Ring2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Index1|AZRI:MainCharacter_L_Index2|AZRI:MainCharacter_L_Index3|AZRI:MainCharacter_L_Index4|AZRI:MainCharacter_L_Index5.instObjGroups" 
 		"AZRIRN.placeHolderList[2154]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Ring1|AZRI:MainCharacter_L_Ring2|AZRI:MainCharacter_L_Ring3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Middle1.instObjGroups" 
 		"AZRIRN.placeHolderList[2155]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Ring1|AZRI:MainCharacter_L_Ring2|AZRI:MainCharacter_L_Ring3|AZRI:MainCharacter_L_Ring4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Middle1|AZRI:MainCharacter_L_Middle2.instObjGroups" 
 		"AZRIRN.placeHolderList[2156]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Ring1|AZRI:MainCharacter_L_Ring2|AZRI:MainCharacter_L_Ring3|AZRI:MainCharacter_L_Ring4|AZRI:MainCharacter_L_Ring5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Middle1|AZRI:MainCharacter_L_Middle2|AZRI:MainCharacter_L_Middle3.instObjGroups" 
 		"AZRIRN.placeHolderList[2157]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Pinky1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Middle1|AZRI:MainCharacter_L_Middle2|AZRI:MainCharacter_L_Middle3|AZRI:MainCharacter_L_Middle4.instObjGroups" 
 		"AZRIRN.placeHolderList[2158]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Pinky1|AZRI:MainCharacter_L_Pinky2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Middle1|AZRI:MainCharacter_L_Middle2|AZRI:MainCharacter_L_Middle3|AZRI:MainCharacter_L_Middle4|AZRI:MainCharacter_L_Middle5.instObjGroups" 
 		"AZRIRN.placeHolderList[2159]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Pinky1|AZRI:MainCharacter_L_Pinky2|AZRI:MainCharacter_L_Pinky3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Ring1.instObjGroups" 
 		"AZRIRN.placeHolderList[2160]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Pinky1|AZRI:MainCharacter_L_Pinky2|AZRI:MainCharacter_L_Pinky3|AZRI:MainCharacter_L_Pinky4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Ring1|AZRI:MainCharacter_L_Ring2.instObjGroups" 
 		"AZRIRN.placeHolderList[2161]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Pinky1|AZRI:MainCharacter_L_Pinky2|AZRI:MainCharacter_L_Pinky3|AZRI:MainCharacter_L_Pinky4|AZRI:MainCharacter_L_Pinky5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Ring1|AZRI:MainCharacter_L_Ring2|AZRI:MainCharacter_L_Ring3.instObjGroups" 
 		"AZRIRN.placeHolderList[2162]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm2Twist1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Ring1|AZRI:MainCharacter_L_Ring2|AZRI:MainCharacter_L_Ring3|AZRI:MainCharacter_L_Ring4.instObjGroups" 
 		"AZRIRN.placeHolderList[2163]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm2Twist2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Ring1|AZRI:MainCharacter_L_Ring2|AZRI:MainCharacter_L_Ring3|AZRI:MainCharacter_L_Ring4|AZRI:MainCharacter_L_Ring5.instObjGroups" 
 		"AZRIRN.placeHolderList[2164]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm2Twist3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Pinky1.instObjGroups" 
 		"AZRIRN.placeHolderList[2165]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm1Twist1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Pinky1|AZRI:MainCharacter_L_Pinky2.instObjGroups" 
 		"AZRIRN.placeHolderList[2166]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm1Twist2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Pinky1|AZRI:MainCharacter_L_Pinky2|AZRI:MainCharacter_L_Pinky3.instObjGroups" 
 		"AZRIRN.placeHolderList[2167]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm1Twist3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Pinky1|AZRI:MainCharacter_L_Pinky2|AZRI:MainCharacter_L_Pinky3|AZRI:MainCharacter_L_Pinky4.instObjGroups" 
 		"AZRIRN.placeHolderList[2168]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1_noTwist.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm3|AZRI:MainCharacter_L_Pinky1|AZRI:MainCharacter_L_Pinky2|AZRI:MainCharacter_L_Pinky3|AZRI:MainCharacter_L_Pinky4|AZRI:MainCharacter_L_Pinky5.instObjGroups" 
 		"AZRIRN.placeHolderList[2169]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm2Twist1.instObjGroups" 
 		"AZRIRN.placeHolderList[2170]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm2Twist2.instObjGroups" 
 		"AZRIRN.placeHolderList[2171]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm2|AZRI:MainCharacter_L_Arm2Twist3.instObjGroups" 
 		"AZRIRN.placeHolderList[2172]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Hair1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm1Twist1.instObjGroups" 
 		"AZRIRN.placeHolderList[2173]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Hair1|AZRI:MainCharacter_C_Hair2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm1Twist2.instObjGroups" 
 		"AZRIRN.placeHolderList[2174]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Hair1|AZRI:MainCharacter_C_Hair2|AZRI:MainCharacter_C_Hair3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1|AZRI:MainCharacter_L_Arm1Twist3.instObjGroups" 
 		"AZRIRN.placeHolderList[2175]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Hair1|AZRI:MainCharacter_C_Hair2|AZRI:MainCharacter_C_Hair3|AZRI:MainCharacter_C_Hair4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_Clav1|AZRI:MainCharacter_L_Arm1_noTwist.instObjGroups" 
 		"AZRIRN.placeHolderList[2176]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Hair1|AZRI:MainCharacter_C_Hair2|AZRI:MainCharacter_C_Hair3|AZRI:MainCharacter_C_Hair4|AZRI:MainCharacter_C_Hair5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1.instObjGroups" 
 		"AZRIRN.placeHolderList[2177]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Hair1|AZRI:MainCharacter_C_Hair2|AZRI:MainCharacter_C_Hair3|AZRI:MainCharacter_C_Hair4|AZRI:MainCharacter_C_Hair5|AZRI:MainCharacter_C_Hair6.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2.instObjGroups" 
 		"AZRIRN.placeHolderList[2178]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Hair1|AZRI:MainCharacter_C_Hair2|AZRI:MainCharacter_C_Hair3|AZRI:MainCharacter_C_Hair4|AZRI:MainCharacter_C_Hair5|AZRI:MainCharacter_C_Hair6|AZRI:MainCharacter_C_Hair7.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head.instObjGroups" 
 		"AZRIRN.placeHolderList[2179]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_Eye1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Hair1.instObjGroups" 
 		"AZRIRN.placeHolderList[2180]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_Eye1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Hair1|AZRI:MainCharacter_C_Hair2.instObjGroups" 
 		"AZRIRN.placeHolderList[2181]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Jaw1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Hair1|AZRI:MainCharacter_C_Hair2|AZRI:MainCharacter_C_Hair3.instObjGroups" 
 		"AZRIRN.placeHolderList[2182]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Jaw1|AZRI:MainCharacter_C_Tongue1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Hair1|AZRI:MainCharacter_C_Hair2|AZRI:MainCharacter_C_Hair3|AZRI:MainCharacter_C_Hair4.instObjGroups" 
 		"AZRIRN.placeHolderList[2183]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Jaw1|AZRI:MainCharacter_C_Tongue1|AZRI:MainCharacter_C_Tongue2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Hair1|AZRI:MainCharacter_C_Hair2|AZRI:MainCharacter_C_Hair3|AZRI:MainCharacter_C_Hair4|AZRI:MainCharacter_C_Hair5.instObjGroups" 
 		"AZRIRN.placeHolderList[2184]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_UpperEyelid1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Hair1|AZRI:MainCharacter_C_Hair2|AZRI:MainCharacter_C_Hair3|AZRI:MainCharacter_C_Hair4|AZRI:MainCharacter_C_Hair5|AZRI:MainCharacter_C_Hair6.instObjGroups" 
 		"AZRIRN.placeHolderList[2185]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_LowerEyelid1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Hair1|AZRI:MainCharacter_C_Hair2|AZRI:MainCharacter_C_Hair3|AZRI:MainCharacter_C_Hair4|AZRI:MainCharacter_C_Hair5|AZRI:MainCharacter_C_Hair6|AZRI:MainCharacter_C_Hair7.instObjGroups" 
 		"AZRIRN.placeHolderList[2186]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_UpperEyelid1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_Eye1.instObjGroups" 
 		"AZRIRN.placeHolderList[2187]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_LowerEyelid1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_Eye1.instObjGroups" 
 		"AZRIRN.placeHolderList[2188]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_BrowInner1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Jaw1.instObjGroups" 
 		"AZRIRN.placeHolderList[2189]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_BrowMid1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Jaw1|AZRI:MainCharacter_C_Tongue1.instObjGroups" 
 		"AZRIRN.placeHolderList[2190]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_BrowOuter1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_Jaw1|AZRI:MainCharacter_C_Tongue1|AZRI:MainCharacter_C_Tongue2.instObjGroups" 
 		"AZRIRN.placeHolderList[2191]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_BrowInner1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_UpperEyelid1.instObjGroups" 
 		"AZRIRN.placeHolderList[2192]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_BrowMid1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_LowerEyelid1.instObjGroups" 
 		"AZRIRN.placeHolderList[2193]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_BrowOuter1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_UpperEyelid1.instObjGroups" 
 		"AZRIRN.placeHolderList[2194]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_MouthUpper1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_LowerEyelid1.instObjGroups" 
 		"AZRIRN.placeHolderList[2195]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_MouthUpper1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_BrowInner1.instObjGroups" 
 		"AZRIRN.placeHolderList[2196]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_MouthUpper2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_BrowMid1.instObjGroups" 
 		"AZRIRN.placeHolderList[2197]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_MouthCorner1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_BrowOuter1.instObjGroups" 
 		"AZRIRN.placeHolderList[2198]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_MouthLower2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_BrowInner1.instObjGroups" 
 		"AZRIRN.placeHolderList[2199]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_MouthLower1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_BrowMid1.instObjGroups" 
 		"AZRIRN.placeHolderList[2200]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_MouthLower1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_BrowOuter1.instObjGroups" 
 		"AZRIRN.placeHolderList[2201]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_MouthLower1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_MouthUpper1.instObjGroups" 
 		"AZRIRN.placeHolderList[2202]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_MouthLower2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_MouthUpper1.instObjGroups" 
 		"AZRIRN.placeHolderList[2203]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_MouthCorner1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_MouthUpper2.instObjGroups" 
 		"AZRIRN.placeHolderList[2204]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_MouthUpper2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_MouthCorner1.instObjGroups" 
 		"AZRIRN.placeHolderList[2205]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_MouthUpper1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_MouthLower2.instObjGroups" 
 		"AZRIRN.placeHolderList[2206]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_HairFront2_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_MouthLower1.instObjGroups" 
 		"AZRIRN.placeHolderList[2207]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_HairFront2_1|AZRI:MainCharacter_R_HairFront2_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_C_MouthLower1.instObjGroups" 
 		"AZRIRN.placeHolderList[2208]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_HairFront1_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_MouthLower1.instObjGroups" 
 		"AZRIRN.placeHolderList[2209]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_HairFront1_1|AZRI:MainCharacter_R_HairFront1_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_MouthLower2.instObjGroups" 
 		"AZRIRN.placeHolderList[2210]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_HairFront1_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_MouthCorner1.instObjGroups" 
 		"AZRIRN.placeHolderList[2211]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_HairFront1_1|AZRI:MainCharacter_L_HairFront1_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_MouthUpper2.instObjGroups" 
 		"AZRIRN.placeHolderList[2212]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_HairSide1_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_MouthUpper1.instObjGroups" 
 		"AZRIRN.placeHolderList[2213]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_HairSide1_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_HairFront2_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2214]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_HairFront3_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_HairFront2_1|AZRI:MainCharacter_R_HairFront2_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2215]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_HairFront3_1|AZRI:MainCharacter_R_HairFront3_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_HairFront1_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2216]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_HairFront1_1|AZRI:MainCharacter_R_HairFront1_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2217]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_HairFront1_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2218]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_HairFront1_1|AZRI:MainCharacter_L_HairFront1_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2219]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_L_HairSide1_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2220]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Thumb1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_HairSide1_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2221]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Thumb1|AZRI:MainCharacter_R_Thumb2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_HairFront3_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2222]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Thumb1|AZRI:MainCharacter_R_Thumb2|AZRI:MainCharacter_R_Thumb3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_Neck1|AZRI:MainCharacter_C_Neck2|AZRI:MainCharacter_C_Head|AZRI:MainCharacter_R_HairFront3_1|AZRI:MainCharacter_R_HairFront3_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2223]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Thumb1|AZRI:MainCharacter_R_Thumb2|AZRI:MainCharacter_R_Thumb3|AZRI:MainCharacter_R_Thumb4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1.instObjGroups" 
 		"AZRIRN.placeHolderList[2224]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Index1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1.instObjGroups" 
 		"AZRIRN.placeHolderList[2225]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Index1|AZRI:MainCharacter_R_Index2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2.instObjGroups" 
 		"AZRIRN.placeHolderList[2226]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Index1|AZRI:MainCharacter_R_Index2|AZRI:MainCharacter_R_Index3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3.instObjGroups" 
 		"AZRIRN.placeHolderList[2227]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Index1|AZRI:MainCharacter_R_Index2|AZRI:MainCharacter_R_Index3|AZRI:MainCharacter_R_Index4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Thumb1.instObjGroups" 
 		"AZRIRN.placeHolderList[2228]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Index1|AZRI:MainCharacter_R_Index2|AZRI:MainCharacter_R_Index3|AZRI:MainCharacter_R_Index4|AZRI:MainCharacter_R_Index5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Thumb1|AZRI:MainCharacter_R_Thumb2.instObjGroups" 
 		"AZRIRN.placeHolderList[2229]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Middle1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Thumb1|AZRI:MainCharacter_R_Thumb2|AZRI:MainCharacter_R_Thumb3.instObjGroups" 
 		"AZRIRN.placeHolderList[2230]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Middle1|AZRI:MainCharacter_R_Middle2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Thumb1|AZRI:MainCharacter_R_Thumb2|AZRI:MainCharacter_R_Thumb3|AZRI:MainCharacter_R_Thumb4.instObjGroups" 
 		"AZRIRN.placeHolderList[2231]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Middle1|AZRI:MainCharacter_R_Middle2|AZRI:MainCharacter_R_Middle3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Index1.instObjGroups" 
 		"AZRIRN.placeHolderList[2232]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Middle1|AZRI:MainCharacter_R_Middle2|AZRI:MainCharacter_R_Middle3|AZRI:MainCharacter_R_Middle4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Index1|AZRI:MainCharacter_R_Index2.instObjGroups" 
 		"AZRIRN.placeHolderList[2233]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Middle1|AZRI:MainCharacter_R_Middle2|AZRI:MainCharacter_R_Middle3|AZRI:MainCharacter_R_Middle4|AZRI:MainCharacter_R_Middle5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Index1|AZRI:MainCharacter_R_Index2|AZRI:MainCharacter_R_Index3.instObjGroups" 
 		"AZRIRN.placeHolderList[2234]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Ring1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Index1|AZRI:MainCharacter_R_Index2|AZRI:MainCharacter_R_Index3|AZRI:MainCharacter_R_Index4.instObjGroups" 
 		"AZRIRN.placeHolderList[2235]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Ring1|AZRI:MainCharacter_R_Ring2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Index1|AZRI:MainCharacter_R_Index2|AZRI:MainCharacter_R_Index3|AZRI:MainCharacter_R_Index4|AZRI:MainCharacter_R_Index5.instObjGroups" 
 		"AZRIRN.placeHolderList[2236]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Ring1|AZRI:MainCharacter_R_Ring2|AZRI:MainCharacter_R_Ring3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Middle1.instObjGroups" 
 		"AZRIRN.placeHolderList[2237]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Ring1|AZRI:MainCharacter_R_Ring2|AZRI:MainCharacter_R_Ring3|AZRI:MainCharacter_R_Ring4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Middle1|AZRI:MainCharacter_R_Middle2.instObjGroups" 
 		"AZRIRN.placeHolderList[2238]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Ring1|AZRI:MainCharacter_R_Ring2|AZRI:MainCharacter_R_Ring3|AZRI:MainCharacter_R_Ring4|AZRI:MainCharacter_R_Ring5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Middle1|AZRI:MainCharacter_R_Middle2|AZRI:MainCharacter_R_Middle3.instObjGroups" 
 		"AZRIRN.placeHolderList[2239]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Pinky1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Middle1|AZRI:MainCharacter_R_Middle2|AZRI:MainCharacter_R_Middle3|AZRI:MainCharacter_R_Middle4.instObjGroups" 
 		"AZRIRN.placeHolderList[2240]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Pinky1|AZRI:MainCharacter_R_Pinky2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Middle1|AZRI:MainCharacter_R_Middle2|AZRI:MainCharacter_R_Middle3|AZRI:MainCharacter_R_Middle4|AZRI:MainCharacter_R_Middle5.instObjGroups" 
 		"AZRIRN.placeHolderList[2241]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Pinky1|AZRI:MainCharacter_R_Pinky2|AZRI:MainCharacter_R_Pinky3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Ring1.instObjGroups" 
 		"AZRIRN.placeHolderList[2242]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Pinky1|AZRI:MainCharacter_R_Pinky2|AZRI:MainCharacter_R_Pinky3|AZRI:MainCharacter_R_Pinky4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Ring1|AZRI:MainCharacter_R_Ring2.instObjGroups" 
 		"AZRIRN.placeHolderList[2243]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Pinky1|AZRI:MainCharacter_R_Pinky2|AZRI:MainCharacter_R_Pinky3|AZRI:MainCharacter_R_Pinky4|AZRI:MainCharacter_R_Pinky5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Ring1|AZRI:MainCharacter_R_Ring2|AZRI:MainCharacter_R_Ring3.instObjGroups" 
 		"AZRIRN.placeHolderList[2244]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm2Twist1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Ring1|AZRI:MainCharacter_R_Ring2|AZRI:MainCharacter_R_Ring3|AZRI:MainCharacter_R_Ring4.instObjGroups" 
 		"AZRIRN.placeHolderList[2245]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm2Twist2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Ring1|AZRI:MainCharacter_R_Ring2|AZRI:MainCharacter_R_Ring3|AZRI:MainCharacter_R_Ring4|AZRI:MainCharacter_R_Ring5.instObjGroups" 
 		"AZRIRN.placeHolderList[2246]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm2Twist3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Pinky1.instObjGroups" 
 		"AZRIRN.placeHolderList[2247]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm1Twist1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Pinky1|AZRI:MainCharacter_R_Pinky2.instObjGroups" 
 		"AZRIRN.placeHolderList[2248]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm1Twist2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Pinky1|AZRI:MainCharacter_R_Pinky2|AZRI:MainCharacter_R_Pinky3.instObjGroups" 
 		"AZRIRN.placeHolderList[2249]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm1Twist3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Pinky1|AZRI:MainCharacter_R_Pinky2|AZRI:MainCharacter_R_Pinky3|AZRI:MainCharacter_R_Pinky4.instObjGroups" 
 		"AZRIRN.placeHolderList[2250]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1_noTwist.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm3|AZRI:MainCharacter_R_Pinky1|AZRI:MainCharacter_R_Pinky2|AZRI:MainCharacter_R_Pinky3|AZRI:MainCharacter_R_Pinky4|AZRI:MainCharacter_R_Pinky5.instObjGroups" 
 		"AZRIRN.placeHolderList[2251]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoFront_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm2Twist1.instObjGroups" 
 		"AZRIRN.placeHolderList[2252]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoFront_1|AZRI:MainCharacter_L_PonchoFront_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm2Twist2.instObjGroups" 
 		"AZRIRN.placeHolderList[2253]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoFront_1|AZRI:MainCharacter_L_PonchoFront_2|AZRI:MainCharacter_L_PonchoFront_3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm2|AZRI:MainCharacter_R_Arm2Twist3.instObjGroups" 
 		"AZRIRN.placeHolderList[2254]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoFront_1|AZRI:MainCharacter_L_PonchoFront_2|AZRI:MainCharacter_L_PonchoFront_3|AZRI:MainCharacter_L_PonchoFront_4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm1Twist1.instObjGroups" 
 		"AZRIRN.placeHolderList[2255]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoFront_1|AZRI:MainCharacter_L_PonchoFront_2|AZRI:MainCharacter_L_PonchoFront_3|AZRI:MainCharacter_L_PonchoFront_4|AZRI:MainCharacter_L_PonchoFront_5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm1Twist2.instObjGroups" 
 		"AZRIRN.placeHolderList[2256]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoSide_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1|AZRI:MainCharacter_R_Arm1Twist3.instObjGroups" 
 		"AZRIRN.placeHolderList[2257]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoSide_1|AZRI:MainCharacter_L_PonchoSide_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_Clav1|AZRI:MainCharacter_R_Arm1_noTwist.instObjGroups" 
 		"AZRIRN.placeHolderList[2258]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoSide_1|AZRI:MainCharacter_L_PonchoSide_2|AZRI:MainCharacter_L_PonchoSide_3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoFront_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2259]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoSide_1|AZRI:MainCharacter_L_PonchoSide_2|AZRI:MainCharacter_L_PonchoSide_3|AZRI:MainCharacter_L_PonchoSide_4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoFront_1|AZRI:MainCharacter_L_PonchoFront_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2260]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoSide_1|AZRI:MainCharacter_L_PonchoSide_2|AZRI:MainCharacter_L_PonchoSide_3|AZRI:MainCharacter_L_PonchoSide_4|AZRI:MainCharacter_L_PonchoSide_5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoFront_1|AZRI:MainCharacter_L_PonchoFront_2|AZRI:MainCharacter_L_PonchoFront_3.instObjGroups" 
 		"AZRIRN.placeHolderList[2261]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoBack_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoFront_1|AZRI:MainCharacter_L_PonchoFront_2|AZRI:MainCharacter_L_PonchoFront_3|AZRI:MainCharacter_L_PonchoFront_4.instObjGroups" 
 		"AZRIRN.placeHolderList[2262]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoBack_1|AZRI:MainCharacter_L_PonchoBack_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoFront_1|AZRI:MainCharacter_L_PonchoFront_2|AZRI:MainCharacter_L_PonchoFront_3|AZRI:MainCharacter_L_PonchoFront_4|AZRI:MainCharacter_L_PonchoFront_5.instObjGroups" 
 		"AZRIRN.placeHolderList[2263]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoBack_1|AZRI:MainCharacter_L_PonchoBack_2|AZRI:MainCharacter_L_PonchoBack_3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoSide_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2264]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoBack_1|AZRI:MainCharacter_L_PonchoBack_2|AZRI:MainCharacter_L_PonchoBack_3|AZRI:MainCharacter_L_PonchoBack_4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoSide_1|AZRI:MainCharacter_L_PonchoSide_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2265]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoBack_1|AZRI:MainCharacter_L_PonchoBack_2|AZRI:MainCharacter_L_PonchoBack_3|AZRI:MainCharacter_L_PonchoBack_4|AZRI:MainCharacter_L_PonchoBack_5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoSide_1|AZRI:MainCharacter_L_PonchoSide_2|AZRI:MainCharacter_L_PonchoSide_3.instObjGroups" 
 		"AZRIRN.placeHolderList[2266]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoFront_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoSide_1|AZRI:MainCharacter_L_PonchoSide_2|AZRI:MainCharacter_L_PonchoSide_3|AZRI:MainCharacter_L_PonchoSide_4.instObjGroups" 
 		"AZRIRN.placeHolderList[2267]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoFront_1|AZRI:MainCharacter_R_PonchoFront_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoSide_1|AZRI:MainCharacter_L_PonchoSide_2|AZRI:MainCharacter_L_PonchoSide_3|AZRI:MainCharacter_L_PonchoSide_4|AZRI:MainCharacter_L_PonchoSide_5.instObjGroups" 
 		"AZRIRN.placeHolderList[2268]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoFront_1|AZRI:MainCharacter_R_PonchoFront_2|AZRI:MainCharacter_R_PonchoFront_3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoBack_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2269]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoFront_1|AZRI:MainCharacter_R_PonchoFront_2|AZRI:MainCharacter_R_PonchoFront_3|AZRI:MainCharacter_R_PonchoFront_4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoBack_1|AZRI:MainCharacter_L_PonchoBack_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2270]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoFront_1|AZRI:MainCharacter_R_PonchoFront_2|AZRI:MainCharacter_R_PonchoFront_3|AZRI:MainCharacter_R_PonchoFront_4|AZRI:MainCharacter_R_PonchoFront_5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoBack_1|AZRI:MainCharacter_L_PonchoBack_2|AZRI:MainCharacter_L_PonchoBack_3.instObjGroups" 
 		"AZRIRN.placeHolderList[2271]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoSide_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoBack_1|AZRI:MainCharacter_L_PonchoBack_2|AZRI:MainCharacter_L_PonchoBack_3|AZRI:MainCharacter_L_PonchoBack_4.instObjGroups" 
 		"AZRIRN.placeHolderList[2272]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoSide_1|AZRI:MainCharacter_R_PonchoSide_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_L_PonchoBack_1|AZRI:MainCharacter_L_PonchoBack_2|AZRI:MainCharacter_L_PonchoBack_3|AZRI:MainCharacter_L_PonchoBack_4|AZRI:MainCharacter_L_PonchoBack_5.instObjGroups" 
 		"AZRIRN.placeHolderList[2273]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoSide_1|AZRI:MainCharacter_R_PonchoSide_2|AZRI:MainCharacter_R_PonchoSide_3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoFront_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2274]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoSide_1|AZRI:MainCharacter_R_PonchoSide_2|AZRI:MainCharacter_R_PonchoSide_3|AZRI:MainCharacter_R_PonchoSide_4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoFront_1|AZRI:MainCharacter_R_PonchoFront_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2275]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoSide_1|AZRI:MainCharacter_R_PonchoSide_2|AZRI:MainCharacter_R_PonchoSide_3|AZRI:MainCharacter_R_PonchoSide_4|AZRI:MainCharacter_R_PonchoSide_5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoFront_1|AZRI:MainCharacter_R_PonchoFront_2|AZRI:MainCharacter_R_PonchoFront_3.instObjGroups" 
 		"AZRIRN.placeHolderList[2276]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoBack_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoFront_1|AZRI:MainCharacter_R_PonchoFront_2|AZRI:MainCharacter_R_PonchoFront_3|AZRI:MainCharacter_R_PonchoFront_4.instObjGroups" 
 		"AZRIRN.placeHolderList[2277]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoBack_1|AZRI:MainCharacter_R_PonchoBack_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoFront_1|AZRI:MainCharacter_R_PonchoFront_2|AZRI:MainCharacter_R_PonchoFront_3|AZRI:MainCharacter_R_PonchoFront_4|AZRI:MainCharacter_R_PonchoFront_5.instObjGroups" 
 		"AZRIRN.placeHolderList[2278]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoBack_1|AZRI:MainCharacter_R_PonchoBack_2|AZRI:MainCharacter_R_PonchoBack_3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoSide_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2279]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoBack_1|AZRI:MainCharacter_R_PonchoBack_2|AZRI:MainCharacter_R_PonchoBack_3|AZRI:MainCharacter_R_PonchoBack_4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoSide_1|AZRI:MainCharacter_R_PonchoSide_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2280]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoBack_1|AZRI:MainCharacter_R_PonchoBack_2|AZRI:MainCharacter_R_PonchoBack_3|AZRI:MainCharacter_R_PonchoBack_4|AZRI:MainCharacter_R_PonchoBack_5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoSide_1|AZRI:MainCharacter_R_PonchoSide_2|AZRI:MainCharacter_R_PonchoSide_3.instObjGroups" 
 		"AZRIRN.placeHolderList[2281]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoFront_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoSide_1|AZRI:MainCharacter_R_PonchoSide_2|AZRI:MainCharacter_R_PonchoSide_3|AZRI:MainCharacter_R_PonchoSide_4.instObjGroups" 
 		"AZRIRN.placeHolderList[2282]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoFront_1|AZRI:MainCharacter_C_PonchoFront_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoSide_1|AZRI:MainCharacter_R_PonchoSide_2|AZRI:MainCharacter_R_PonchoSide_3|AZRI:MainCharacter_R_PonchoSide_4|AZRI:MainCharacter_R_PonchoSide_5.instObjGroups" 
 		"AZRIRN.placeHolderList[2283]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoFront_1|AZRI:MainCharacter_C_PonchoFront_2|AZRI:MainCharacter_C_PonchoFront_3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoBack_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2284]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoFront_1|AZRI:MainCharacter_C_PonchoFront_2|AZRI:MainCharacter_C_PonchoFront_3|AZRI:MainCharacter_C_PonchoFront_4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoBack_1|AZRI:MainCharacter_R_PonchoBack_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2285]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoFront_1|AZRI:MainCharacter_C_PonchoFront_2|AZRI:MainCharacter_C_PonchoFront_3|AZRI:MainCharacter_C_PonchoFront_4|AZRI:MainCharacter_C_PonchoFront_5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoBack_1|AZRI:MainCharacter_R_PonchoBack_2|AZRI:MainCharacter_R_PonchoBack_3.instObjGroups" 
 		"AZRIRN.placeHolderList[2286]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoBack_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoBack_1|AZRI:MainCharacter_R_PonchoBack_2|AZRI:MainCharacter_R_PonchoBack_3|AZRI:MainCharacter_R_PonchoBack_4.instObjGroups" 
 		"AZRIRN.placeHolderList[2287]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoBack_1|AZRI:MainCharacter_C_PonchoBack_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_R_PonchoBack_1|AZRI:MainCharacter_R_PonchoBack_2|AZRI:MainCharacter_R_PonchoBack_3|AZRI:MainCharacter_R_PonchoBack_4|AZRI:MainCharacter_R_PonchoBack_5.instObjGroups" 
 		"AZRIRN.placeHolderList[2288]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoBack_1|AZRI:MainCharacter_C_PonchoBack_2|AZRI:MainCharacter_C_PonchoBack_3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoFront_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2289]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoBack_1|AZRI:MainCharacter_C_PonchoBack_2|AZRI:MainCharacter_C_PonchoBack_3|AZRI:MainCharacter_C_PonchoBack_4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoFront_1|AZRI:MainCharacter_C_PonchoFront_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2290]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoBack_1|AZRI:MainCharacter_C_PonchoBack_2|AZRI:MainCharacter_C_PonchoBack_3|AZRI:MainCharacter_C_PonchoBack_4|AZRI:MainCharacter_C_PonchoBack_5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoFront_1|AZRI:MainCharacter_C_PonchoFront_2|AZRI:MainCharacter_C_PonchoFront_3.instObjGroups" 
 		"AZRIRN.placeHolderList[2291]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoFront_1|AZRI:MainCharacter_C_PonchoFront_2|AZRI:MainCharacter_C_PonchoFront_3|AZRI:MainCharacter_C_PonchoFront_4.instObjGroups" 
 		"AZRIRN.placeHolderList[2292]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoFront_1|AZRI:MainCharacter_C_PonchoFront_2|AZRI:MainCharacter_C_PonchoFront_3|AZRI:MainCharacter_C_PonchoFront_4|AZRI:MainCharacter_C_PonchoFront_5.instObjGroups" 
 		"AZRIRN.placeHolderList[2293]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_Leg2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoBack_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2294]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_Leg2|AZRI:MainCharacter_L_Leg3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoBack_1|AZRI:MainCharacter_C_PonchoBack_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2295]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_Leg2|AZRI:MainCharacter_L_Leg3|AZRI:MainCharacter_L_Toe1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoBack_1|AZRI:MainCharacter_C_PonchoBack_2|AZRI:MainCharacter_C_PonchoBack_3.instObjGroups" 
 		"AZRIRN.placeHolderList[2296]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_Leg2|AZRI:MainCharacter_L_Leg2Twist1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoBack_1|AZRI:MainCharacter_C_PonchoBack_2|AZRI:MainCharacter_C_PonchoBack_3|AZRI:MainCharacter_C_PonchoBack_4.instObjGroups" 
 		"AZRIRN.placeHolderList[2297]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_Leg2|AZRI:MainCharacter_L_Leg2Twist2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Spine3|AZRI:MainCharacter_C_Spine4|AZRI:MainCharacter_C_PonchoBack_1|AZRI:MainCharacter_C_PonchoBack_2|AZRI:MainCharacter_C_PonchoBack_3|AZRI:MainCharacter_C_PonchoBack_4|AZRI:MainCharacter_C_PonchoBack_5.instObjGroups" 
 		"AZRIRN.placeHolderList[2298]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_Leg2|AZRI:MainCharacter_L_Leg2Twist3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1.instObjGroups" 
 		"AZRIRN.placeHolderList[2299]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_Leg1Twist1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1.instObjGroups" 
 		"AZRIRN.placeHolderList[2300]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_Leg1Twist2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_Leg2.instObjGroups" 
 		"AZRIRN.placeHolderList[2301]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:PRC_L_Leg1Twist3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_Leg2|AZRI:MainCharacter_L_Leg3.instObjGroups" 
 		"AZRIRN.placeHolderList[2302]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_BootFlap1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_Leg2|AZRI:MainCharacter_L_Leg3|AZRI:MainCharacter_L_Toe1.instObjGroups" 
 		"AZRIRN.placeHolderList[2303]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_BootFlap1|AZRI:MainCharacter_L_BootFlap2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_Leg2|AZRI:MainCharacter_L_Leg2Twist1.instObjGroups" 
 		"AZRIRN.placeHolderList[2304]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_Leg2|AZRI:MainCharacter_L_Leg2Twist2.instObjGroups" 
 		"AZRIRN.placeHolderList[2305]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_Leg2|AZRI:MainCharacter_L_Leg2Twist3.instObjGroups" 
 		"AZRIRN.placeHolderList[2306]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg2|AZRI:MainCharacter_R_Leg3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_Leg1Twist1.instObjGroups" 
 		"AZRIRN.placeHolderList[2307]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg2|AZRI:MainCharacter_R_Leg3|AZRI:MainCharacter_R_Toe1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_Leg1Twist2.instObjGroups" 
 		"AZRIRN.placeHolderList[2308]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg2|AZRI:MainCharacter_R_Leg2Twist1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:PRC_L_Leg1Twist3.instObjGroups" 
 		"AZRIRN.placeHolderList[2309]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg2|AZRI:MainCharacter_R_Leg2Twist2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_BootFlap1.instObjGroups" 
 		"AZRIRN.placeHolderList[2310]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg2|AZRI:MainCharacter_R_Leg2Twist3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_Leg1|AZRI:MainCharacter_L_BootFlap1|AZRI:MainCharacter_L_BootFlap2.instObjGroups" 
 		"AZRIRN.placeHolderList[2311]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg1Twist1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1.instObjGroups" 
 		"AZRIRN.placeHolderList[2312]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg1Twist2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg2.instObjGroups" 
 		"AZRIRN.placeHolderList[2313]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg1Twist3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg2|AZRI:MainCharacter_R_Leg3.instObjGroups" 
 		"AZRIRN.placeHolderList[2314]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_BootFlap1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg2|AZRI:MainCharacter_R_Leg3|AZRI:MainCharacter_R_Toe1.instObjGroups" 
 		"AZRIRN.placeHolderList[2315]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_BootFlap1|AZRI:MainCharacter_R_BootFlap2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg2|AZRI:MainCharacter_R_Leg2Twist1.instObjGroups" 
 		"AZRIRN.placeHolderList[2316]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_SkirtFlapFront1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg2|AZRI:MainCharacter_R_Leg2Twist2.instObjGroups" 
 		"AZRIRN.placeHolderList[2317]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_SkirtFlapFront1|AZRI:MainCharacter_L_SkirtFlapFront2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg2|AZRI:MainCharacter_R_Leg2Twist3.instObjGroups" 
 		"AZRIRN.placeHolderList[2318]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_SkirtFlapFront1|AZRI:MainCharacter_L_SkirtFlapFront2|AZRI:MainCharacter_L_SkirtFlapFront3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg1Twist1.instObjGroups" 
 		"AZRIRN.placeHolderList[2319]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_SkirtFlapFront1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg1Twist2.instObjGroups" 
 		"AZRIRN.placeHolderList[2320]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_SkirtFlapFront1|AZRI:MainCharacter_R_SkirtFlapFront2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_Leg1Twist3.instObjGroups" 
 		"AZRIRN.placeHolderList[2321]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_SkirtFlapFront1|AZRI:MainCharacter_R_SkirtFlapFront2|AZRI:MainCharacter_R_SkirtFlapFront3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_BootFlap1.instObjGroups" 
 		"AZRIRN.placeHolderList[2322]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_SkirtFlapBack1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_Leg1|AZRI:MainCharacter_R_BootFlap1|AZRI:MainCharacter_R_BootFlap2.instObjGroups" 
 		"AZRIRN.placeHolderList[2323]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_SkirtFlapBack1|AZRI:MainCharacter_L_SkirtFlapBack2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_SkirtFlapFront1.instObjGroups" 
 		"AZRIRN.placeHolderList[2324]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_SkirtFlapBack1|AZRI:MainCharacter_L_SkirtFlapBack2|AZRI:MainCharacter_L_SkirtFlapBack3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_SkirtFlapFront1|AZRI:MainCharacter_L_SkirtFlapFront2.instObjGroups" 
 		"AZRIRN.placeHolderList[2325]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_SkirtFlapBack1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_SkirtFlapFront1|AZRI:MainCharacter_L_SkirtFlapFront2|AZRI:MainCharacter_L_SkirtFlapFront3.instObjGroups" 
 		"AZRIRN.placeHolderList[2326]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_SkirtFlapBack1|AZRI:MainCharacter_R_SkirtFlapBack2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_SkirtFlapFront1.instObjGroups" 
 		"AZRIRN.placeHolderList[2327]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_SkirtFlapBack1|AZRI:MainCharacter_R_SkirtFlapBack2|AZRI:MainCharacter_R_SkirtFlapBack3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_SkirtFlapFront1|AZRI:MainCharacter_R_SkirtFlapFront2.instObjGroups" 
 		"AZRIRN.placeHolderList[2328]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_PouchFront1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_SkirtFlapFront1|AZRI:MainCharacter_R_SkirtFlapFront2|AZRI:MainCharacter_R_SkirtFlapFront3.instObjGroups" 
 		"AZRIRN.placeHolderList[2329]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_PouchBack1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_SkirtFlapBack1.instObjGroups" 
 		"AZRIRN.placeHolderList[2330]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_BeltFront1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_SkirtFlapBack1|AZRI:MainCharacter_L_SkirtFlapBack2.instObjGroups" 
 		"AZRIRN.placeHolderList[2331]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_BeltSide1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_SkirtFlapBack1|AZRI:MainCharacter_L_SkirtFlapBack2|AZRI:MainCharacter_L_SkirtFlapBack3.instObjGroups" 
 		"AZRIRN.placeHolderList[2332]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_BeltBack1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_SkirtFlapBack1.instObjGroups" 
 		"AZRIRN.placeHolderList[2333]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_BeltFront1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_SkirtFlapBack1|AZRI:MainCharacter_R_SkirtFlapBack2.instObjGroups" 
 		"AZRIRN.placeHolderList[2334]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_BeltSide1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_SkirtFlapBack1|AZRI:MainCharacter_R_SkirtFlapBack2|AZRI:MainCharacter_R_SkirtFlapBack3.instObjGroups" 
 		"AZRIRN.placeHolderList[2335]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_BeltBack1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_PouchFront1.instObjGroups" 
 		"AZRIRN.placeHolderList[2336]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtFront_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_PouchBack1.instObjGroups" 
 		"AZRIRN.placeHolderList[2337]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtFront_1|AZRI:MainCharacter_L_SkirtFront_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_BeltFront1.instObjGroups" 
 		"AZRIRN.placeHolderList[2338]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtFront_1|AZRI:MainCharacter_L_SkirtFront_2|AZRI:MainCharacter_L_SkirtFront_3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_BeltSide1.instObjGroups" 
 		"AZRIRN.placeHolderList[2339]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtFront_1|AZRI:MainCharacter_L_SkirtFront_2|AZRI:MainCharacter_L_SkirtFront_3|AZRI:MainCharacter_L_SkirtFront_4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_L_BeltBack1.instObjGroups" 
 		"AZRIRN.placeHolderList[2340]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtFront_1|AZRI:MainCharacter_L_SkirtFront_2|AZRI:MainCharacter_L_SkirtFront_3|AZRI:MainCharacter_L_SkirtFront_4|AZRI:MainCharacter_L_SkirtFront_5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_BeltFront1.instObjGroups" 
 		"AZRIRN.placeHolderList[2341]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtSide_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_BeltSide1.instObjGroups" 
 		"AZRIRN.placeHolderList[2342]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtSide_1|AZRI:MainCharacter_L_SkirtSide_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_Pelvis1|AZRI:MainCharacter_R_BeltBack1.instObjGroups" 
 		"AZRIRN.placeHolderList[2343]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtSide_1|AZRI:MainCharacter_L_SkirtSide_2|AZRI:MainCharacter_L_SkirtSide_3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtFront_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2344]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtSide_1|AZRI:MainCharacter_L_SkirtSide_2|AZRI:MainCharacter_L_SkirtSide_3|AZRI:MainCharacter_L_SkirtSide_4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtFront_1|AZRI:MainCharacter_L_SkirtFront_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2345]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtSide_1|AZRI:MainCharacter_L_SkirtSide_2|AZRI:MainCharacter_L_SkirtSide_3|AZRI:MainCharacter_L_SkirtSide_4|AZRI:MainCharacter_L_SkirtSide_5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtFront_1|AZRI:MainCharacter_L_SkirtFront_2|AZRI:MainCharacter_L_SkirtFront_3.instObjGroups" 
 		"AZRIRN.placeHolderList[2346]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtBack_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtFront_1|AZRI:MainCharacter_L_SkirtFront_2|AZRI:MainCharacter_L_SkirtFront_3|AZRI:MainCharacter_L_SkirtFront_4.instObjGroups" 
 		"AZRIRN.placeHolderList[2347]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtBack_1|AZRI:MainCharacter_L_SkirtBack_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtFront_1|AZRI:MainCharacter_L_SkirtFront_2|AZRI:MainCharacter_L_SkirtFront_3|AZRI:MainCharacter_L_SkirtFront_4|AZRI:MainCharacter_L_SkirtFront_5.instObjGroups" 
 		"AZRIRN.placeHolderList[2348]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtBack_1|AZRI:MainCharacter_L_SkirtBack_2|AZRI:MainCharacter_L_SkirtBack_3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtSide_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2349]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtBack_1|AZRI:MainCharacter_L_SkirtBack_2|AZRI:MainCharacter_L_SkirtBack_3|AZRI:MainCharacter_L_SkirtBack_4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtSide_1|AZRI:MainCharacter_L_SkirtSide_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2350]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtBack_1|AZRI:MainCharacter_L_SkirtBack_2|AZRI:MainCharacter_L_SkirtBack_3|AZRI:MainCharacter_L_SkirtBack_4|AZRI:MainCharacter_L_SkirtBack_5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtSide_1|AZRI:MainCharacter_L_SkirtSide_2|AZRI:MainCharacter_L_SkirtSide_3.instObjGroups" 
 		"AZRIRN.placeHolderList[2351]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtFront_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtSide_1|AZRI:MainCharacter_L_SkirtSide_2|AZRI:MainCharacter_L_SkirtSide_3|AZRI:MainCharacter_L_SkirtSide_4.instObjGroups" 
 		"AZRIRN.placeHolderList[2352]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtFront_1|AZRI:MainCharacter_R_SkirtFront_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtSide_1|AZRI:MainCharacter_L_SkirtSide_2|AZRI:MainCharacter_L_SkirtSide_3|AZRI:MainCharacter_L_SkirtSide_4|AZRI:MainCharacter_L_SkirtSide_5.instObjGroups" 
 		"AZRIRN.placeHolderList[2353]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtFront_1|AZRI:MainCharacter_R_SkirtFront_2|AZRI:MainCharacter_R_SkirtFront_3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtBack_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2354]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtFront_1|AZRI:MainCharacter_R_SkirtFront_2|AZRI:MainCharacter_R_SkirtFront_3|AZRI:MainCharacter_R_SkirtFront_4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtBack_1|AZRI:MainCharacter_L_SkirtBack_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2355]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtFront_1|AZRI:MainCharacter_R_SkirtFront_2|AZRI:MainCharacter_R_SkirtFront_3|AZRI:MainCharacter_R_SkirtFront_4|AZRI:MainCharacter_R_SkirtFront_5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtBack_1|AZRI:MainCharacter_L_SkirtBack_2|AZRI:MainCharacter_L_SkirtBack_3.instObjGroups" 
 		"AZRIRN.placeHolderList[2356]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtSide_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtBack_1|AZRI:MainCharacter_L_SkirtBack_2|AZRI:MainCharacter_L_SkirtBack_3|AZRI:MainCharacter_L_SkirtBack_4.instObjGroups" 
 		"AZRIRN.placeHolderList[2357]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtSide_1|AZRI:MainCharacter_R_SkirtSide_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_L_SkirtBack_1|AZRI:MainCharacter_L_SkirtBack_2|AZRI:MainCharacter_L_SkirtBack_3|AZRI:MainCharacter_L_SkirtBack_4|AZRI:MainCharacter_L_SkirtBack_5.instObjGroups" 
 		"AZRIRN.placeHolderList[2358]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtSide_1|AZRI:MainCharacter_R_SkirtSide_2|AZRI:MainCharacter_R_SkirtSide_3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtFront_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2359]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtSide_1|AZRI:MainCharacter_R_SkirtSide_2|AZRI:MainCharacter_R_SkirtSide_3|AZRI:MainCharacter_R_SkirtSide_4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtFront_1|AZRI:MainCharacter_R_SkirtFront_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2360]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtSide_1|AZRI:MainCharacter_R_SkirtSide_2|AZRI:MainCharacter_R_SkirtSide_3|AZRI:MainCharacter_R_SkirtSide_4|AZRI:MainCharacter_R_SkirtSide_5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtFront_1|AZRI:MainCharacter_R_SkirtFront_2|AZRI:MainCharacter_R_SkirtFront_3.instObjGroups" 
 		"AZRIRN.placeHolderList[2361]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtBack_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtFront_1|AZRI:MainCharacter_R_SkirtFront_2|AZRI:MainCharacter_R_SkirtFront_3|AZRI:MainCharacter_R_SkirtFront_4.instObjGroups" 
 		"AZRIRN.placeHolderList[2362]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtBack_1|AZRI:MainCharacter_R_SkirtBack_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtFront_1|AZRI:MainCharacter_R_SkirtFront_2|AZRI:MainCharacter_R_SkirtFront_3|AZRI:MainCharacter_R_SkirtFront_4|AZRI:MainCharacter_R_SkirtFront_5.instObjGroups" 
 		"AZRIRN.placeHolderList[2363]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtBack_1|AZRI:MainCharacter_R_SkirtBack_2|AZRI:MainCharacter_R_SkirtBack_3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtSide_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2364]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtBack_1|AZRI:MainCharacter_R_SkirtBack_2|AZRI:MainCharacter_R_SkirtBack_3|AZRI:MainCharacter_R_SkirtBack_4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtSide_1|AZRI:MainCharacter_R_SkirtSide_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2365]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtBack_1|AZRI:MainCharacter_R_SkirtBack_2|AZRI:MainCharacter_R_SkirtBack_3|AZRI:MainCharacter_R_SkirtBack_4|AZRI:MainCharacter_R_SkirtBack_5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtSide_1|AZRI:MainCharacter_R_SkirtSide_2|AZRI:MainCharacter_R_SkirtSide_3.instObjGroups" 
 		"AZRIRN.placeHolderList[2366]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtFront_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtSide_1|AZRI:MainCharacter_R_SkirtSide_2|AZRI:MainCharacter_R_SkirtSide_3|AZRI:MainCharacter_R_SkirtSide_4.instObjGroups" 
 		"AZRIRN.placeHolderList[2367]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtFront_1|AZRI:MainCharacter_C_SkirtFront_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtSide_1|AZRI:MainCharacter_R_SkirtSide_2|AZRI:MainCharacter_R_SkirtSide_3|AZRI:MainCharacter_R_SkirtSide_4|AZRI:MainCharacter_R_SkirtSide_5.instObjGroups" 
 		"AZRIRN.placeHolderList[2368]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtFront_1|AZRI:MainCharacter_C_SkirtFront_2|AZRI:MainCharacter_C_SkirtFront_3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtBack_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2369]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtFront_1|AZRI:MainCharacter_C_SkirtFront_2|AZRI:MainCharacter_C_SkirtFront_3|AZRI:MainCharacter_C_SkirtFront_4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtBack_1|AZRI:MainCharacter_R_SkirtBack_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2370]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtFront_1|AZRI:MainCharacter_C_SkirtFront_2|AZRI:MainCharacter_C_SkirtFront_3|AZRI:MainCharacter_C_SkirtFront_4|AZRI:MainCharacter_C_SkirtFront_5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtBack_1|AZRI:MainCharacter_R_SkirtBack_2|AZRI:MainCharacter_R_SkirtBack_3.instObjGroups" 
 		"AZRIRN.placeHolderList[2371]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtBack_1.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtBack_1|AZRI:MainCharacter_R_SkirtBack_2|AZRI:MainCharacter_R_SkirtBack_3|AZRI:MainCharacter_R_SkirtBack_4.instObjGroups" 
 		"AZRIRN.placeHolderList[2372]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtBack_1|AZRI:MainCharacter_C_SkirtBack_2.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_R_SkirtBack_1|AZRI:MainCharacter_R_SkirtBack_2|AZRI:MainCharacter_R_SkirtBack_3|AZRI:MainCharacter_R_SkirtBack_4|AZRI:MainCharacter_R_SkirtBack_5.instObjGroups" 
 		"AZRIRN.placeHolderList[2373]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtBack_1|AZRI:MainCharacter_C_SkirtBack_2|AZRI:MainCharacter_C_SkirtBack_3.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtFront_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2374]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtBack_1|AZRI:MainCharacter_C_SkirtBack_2|AZRI:MainCharacter_C_SkirtBack_3|AZRI:MainCharacter_C_SkirtBack_4.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtFront_1|AZRI:MainCharacter_C_SkirtFront_2.instObjGroups" 
 		"AZRIRN.placeHolderList[2375]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtBack_1|AZRI:MainCharacter_C_SkirtBack_2|AZRI:MainCharacter_C_SkirtBack_3|AZRI:MainCharacter_C_SkirtBack_4|AZRI:MainCharacter_C_SkirtBack_5.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtFront_1|AZRI:MainCharacter_C_SkirtFront_2|AZRI:MainCharacter_C_SkirtFront_3.instObjGroups" 
 		"AZRIRN.placeHolderList[2376]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_Collision.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtFront_1|AZRI:MainCharacter_C_SkirtFront_2|AZRI:MainCharacter_C_SkirtFront_3|AZRI:MainCharacter_C_SkirtFront_4.instObjGroups" 
 		"AZRIRN.placeHolderList[2377]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_R_HandGrip.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtFront_1|AZRI:MainCharacter_C_SkirtFront_2|AZRI:MainCharacter_C_SkirtFront_3|AZRI:MainCharacter_C_SkirtFront_4|AZRI:MainCharacter_C_SkirtFront_5.instObjGroups" 
 		"AZRIRN.placeHolderList[2378]" ""
-		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_L_HandGrip.instObjGroups" 
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtBack_1.instObjGroups" 
 		"AZRIRN.placeHolderList[2379]" ""
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtBack_1|AZRI:MainCharacter_C_SkirtBack_2.instObjGroups" 
+		"AZRIRN.placeHolderList[2380]" ""
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtBack_1|AZRI:MainCharacter_C_SkirtBack_2|AZRI:MainCharacter_C_SkirtBack_3.instObjGroups" 
+		"AZRIRN.placeHolderList[2381]" ""
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtBack_1|AZRI:MainCharacter_C_SkirtBack_2|AZRI:MainCharacter_C_SkirtBack_3|AZRI:MainCharacter_C_SkirtBack_4.instObjGroups" 
+		"AZRIRN.placeHolderList[2382]" ""
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_COG|AZRI:MainCharacter_C_Spine1|AZRI:MainCharacter_C_Spine2|AZRI:MainCharacter_C_SkirtBack_1|AZRI:MainCharacter_C_SkirtBack_2|AZRI:MainCharacter_C_SkirtBack_3|AZRI:MainCharacter_C_SkirtBack_4|AZRI:MainCharacter_C_SkirtBack_5.instObjGroups" 
+		"AZRIRN.placeHolderList[2383]" ""
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_Collision.instObjGroups" 
+		"AZRIRN.placeHolderList[2384]" ""
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_R_HandGrip.instObjGroups" 
+		"AZRIRN.placeHolderList[2385]" ""
+		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_L_HandGrip.instObjGroups" 
+		"AZRIRN.placeHolderList[2386]" ""
 		5 3 "AZRIRN" "|AZRI:azri|AZRI:joints|AZRI:Root|AZRI:MainCharacter_C_Weapon.instObjGroups" 
-		"AZRIRN.placeHolderList[2380]" "";
+		"AZRIRN.placeHolderList[2387]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "AxeToScytheRN";
 	rename -uid "7A890753-40EB-6866-418B-CDB8F6612E9B";
-	setAttr ".fn[0]" -type "string" "D:/Projects/COVID/SourceFiles/Characters/MainCharacter/Animation/AxeToScythe.ma";
-	setAttr -s 45 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
+	setAttr -s 2 ".fn";
+	setAttr ".fn[0]" -type "string" "D:/Projects/COVID/SourceFiles/Weapons/AxeScythe/Rig/AxeToScythe.ma";
+	setAttr ".fn[1]" -type "string" "D:/Projects/COVID/SourceFiles/Characters/MainCharacter/Animation/AxeToScythe.ma";
+	setAttr -s 88 ".phl";
+	setAttr ".phl[1]" -type "TdataCompound" ;
+	setAttr ".phl[2]" -type "TdataCompound" ;
+	setAttr ".phl[3]" -type "TdataCompound" ;
+	setAttr ".phl[4]" -type "TdataCompound" ;
+	setAttr ".phl[5]" -type "TdataCompound" ;
+	setAttr ".phl[6]" -type "TdataCompound" ;
 	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
 	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
 	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
 	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
 	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
 	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
 	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
 	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
 	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
-	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
+	setAttr ".phl[25]" -type "double3" -79.726341247558594 116.58185577392578 2.3665827156630354e-30 ;
+	setAttr ".phl[26]" -type "double3" 0 0 0 ;
 	setAttr ".phl[27]" 0;
-	setAttr ".phl[28]" 0;
 	setAttr ".phl[29]" 0;
-	setAttr ".phl[30]" 0;
 	setAttr ".phl[31]" 0;
-	setAttr ".phl[32]" 0;
 	setAttr ".phl[33]" 0;
 	setAttr ".phl[34]" 0;
-	setAttr ".phl[35]" 0;
-	setAttr ".phl[36]" 0;
-	setAttr ".phl[37]" 0;
-	setAttr ".phl[38]" 0;
-	setAttr ".phl[39]" 0;
-	setAttr ".phl[40]" 0;
-	setAttr ".phl[41]" 0;
-	setAttr ".phl[42]" 0;
-	setAttr ".phl[43]" 0;
-	setAttr ".phl[44]" 0;
-	setAttr ".phl[45]" 0;
+	setAttr ".phl[35]" 1;
+	setAttr ".phl[37]" 1;
+	setAttr ".phl[39]" 1;
+	setAttr ".phl[41]" 1;
+	setAttr ".phl[43]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
+	setAttr ".phl[56]" 0;
+	setAttr ".phl[57]" 0;
+	setAttr ".phl[58]" 0;
+	setAttr ".phl[59]" 0;
+	setAttr ".phl[60]" 0;
+	setAttr ".phl[61]" 0;
+	setAttr ".phl[62]" 0;
+	setAttr ".phl[63]" 0;
+	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".phl[70]" 0;
+	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
+	setAttr ".phl[80]" 0;
+	setAttr ".phl[81]" 0;
+	setAttr ".phl[82]" 0;
+	setAttr ".phl[83]" 0;
+	setAttr ".phl[84]" 0;
+	setAttr ".phl[85]" 0;
+	setAttr ".phl[86]" 0;
+	setAttr ".phl[87]" 0;
+	setAttr ".phl[88]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"AxeToScytheRN"
-		"AxeToScytheRN" 0
 		"AxeToScytheRN" 70
 		0 "|AxeToScytheRNfosterParent1|Axe_Main_ctrl_parentConstraint1" "|AxeToScythe:Axe_Main_ctrl" 
 		"-s -r "
@@ -10205,7 +10281,120 @@ createNode reference -n "AxeToScytheRN";
 		5 4 "AxeToScytheRN" "|AxeToScythe:Axe_Main_ctrl.drawOverride" "AxeToScytheRN.placeHolderList[44]" 
 		""
 		5 4 "AxeToScytheRN" "|AxeToScythe:Axe_Main_ctrl|AxeToScythe:Axe_Bottom_ctrl.drawOverride" 
-		"AxeToScytheRN.placeHolderList[45]" "";
+		"AxeToScytheRN.placeHolderList[45]" ""
+		"AxeToScytheRN" 59
+		0 "|AxeToScytheRNfosterParent1|Main_parentConstraint1" "|AxeToScythe:Group|AxeToScythe:Main" 
+		"-s -r "
+		2 "|AxeToScythe:Group|AxeToScythe:Main" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|AxeToScythe:Group|AxeToScythe:Main" "translateX" " -av"
+		2 "|AxeToScythe:Group|AxeToScythe:Main" "translateY" " -av"
+		2 "|AxeToScythe:Group|AxeToScythe:Main" "translateZ" " -av"
+		2 "|AxeToScythe:Group|AxeToScythe:Main" "rotate" " -type \"double3\" 0 0 0"
+		
+		2 "|AxeToScythe:Group|AxeToScythe:Main" "rotateX" " -av"
+		2 "|AxeToScythe:Group|AxeToScythe:Main" "rotateY" " -av"
+		2 "|AxeToScythe:Group|AxeToScythe:Main" "rotateZ" " -av"
+		2 "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R" 
+		"Ice_Start" " -av -k 1 10"
+		2 "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R" 
+		"Ice_01" " -av -k 1 10"
+		2 "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R" 
+		"Ice_02" " -av -k 1 10"
+		2 "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R" 
+		"Ice_03" " -av -k 1 10"
+		2 "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R" 
+		"Ice_End" " -av -k 1 10"
+		2 "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R" 
+		"Axe_Extend" " -av -k 1 10"
+		2 "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M|AxeToScythe:joint2_R" 
+		"translate" " -type \"double3\" 45.34211809608700605 0 0"
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.translateX" 
+		"AxeToScytheRN.placeHolderList[46]" ""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.translateX" 
+		"AxeToScytheRN.placeHolderList[47]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.translateY" 
+		"AxeToScytheRN.placeHolderList[48]" ""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.translateY" 
+		"AxeToScytheRN.placeHolderList[49]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.translateZ" 
+		"AxeToScytheRN.placeHolderList[50]" ""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.translateZ" 
+		"AxeToScytheRN.placeHolderList[51]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.rotatePivot" 
+		"AxeToScytheRN.placeHolderList[52]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.rotatePivotTranslate" 
+		"AxeToScytheRN.placeHolderList[53]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.rotateX" "AxeToScytheRN.placeHolderList[54]" 
+		""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.rotateX" "AxeToScytheRN.placeHolderList[55]" 
+		""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.rotateY" "AxeToScytheRN.placeHolderList[56]" 
+		""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.rotateY" "AxeToScytheRN.placeHolderList[57]" 
+		""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.rotateZ" "AxeToScytheRN.placeHolderList[58]" 
+		""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.rotateZ" "AxeToScytheRN.placeHolderList[59]" 
+		""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.rotateOrder" 
+		"AxeToScytheRN.placeHolderList[60]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.rotateOrder" 
+		"AxeToScytheRN.placeHolderList[61]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.scaleX" "AxeToScytheRN.placeHolderList[62]" 
+		""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.scaleX" "AxeToScytheRN.placeHolderList[63]" 
+		""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.scaleY" "AxeToScytheRN.placeHolderList[64]" 
+		""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.scaleY" "AxeToScytheRN.placeHolderList[65]" 
+		""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.scaleZ" "AxeToScytheRN.placeHolderList[66]" 
+		""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.scaleZ" "AxeToScytheRN.placeHolderList[67]" 
+		""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.parentInverseMatrix" 
+		"AxeToScytheRN.placeHolderList[68]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.visibility" 
+		"AxeToScytheRN.placeHolderList[69]" ""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main.visibility" 
+		"AxeToScytheRN.placeHolderList[70]" ""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R.Ice_Start" 
+		"AxeToScytheRN.placeHolderList[71]" ""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R.Ice_01" 
+		"AxeToScytheRN.placeHolderList[72]" ""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R.Ice_02" 
+		"AxeToScytheRN.placeHolderList[73]" ""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R.Ice_03" 
+		"AxeToScytheRN.placeHolderList[74]" ""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R.Ice_End" 
+		"AxeToScytheRN.placeHolderList[75]" ""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R.Axe_Extend" 
+		"AxeToScytheRN.placeHolderList[76]" ""
+		5 4 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:MotionSystem|AxeToScythe:DrivingSystem|AxeToScythe:Ice_R.Ice" 
+		"AxeToScytheRN.placeHolderList[77]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[78]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[79]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[80]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[81]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M|AxeToScythe:joint2_R.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[82]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M|AxeToScythe:joint4_R.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[83]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M|AxeToScythe:joint4_R|AxeToScythe:joint5_R.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[84]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M|AxeToScythe:joint4_R|AxeToScythe:joint5_R|AxeToScythe:joint6_R.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[85]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M|AxeToScythe:joint4_R|AxeToScythe:joint5_R|AxeToScythe:joint6_R|AxeToScythe:joint7_R.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[86]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M|AxeToScythe:joint4_R|AxeToScythe:joint5_R|AxeToScythe:joint6_R|AxeToScythe:joint7_R|AxeToScythe:joint8_R.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[87]" ""
+		5 3 "AxeToScytheRN" "|AxeToScythe:Group|AxeToScythe:Main|AxeToScythe:DeformationSystem|AxeToScythe:UnrealRoot|AxeToScythe:Root_M|AxeToScythe:joint3_R|AxeToScythe:joint01_M|AxeToScythe:joint4_R|AxeToScythe:joint5_R|AxeToScythe:joint6_R|AxeToScythe:joint7_R|AxeToScythe:joint8_R|AxeToScythe:joint28_R.instObjGroups" 
+		"AxeToScytheRN.placeHolderList[88]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "sceneConfigurationScriptNode";
@@ -10254,10 +10443,10 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_MouthUpper1_rotate_Loop";
 	rename -uid "2A98390B-4CF0-7773-F9CC-59B2576C156D";
 createNode animBlendNodeAdditiveDL -n "CTL_R_LegPV1_translateX_Loop";
 	rename -uid "C24BE393-4A75-B2D9-9FAE-8284C491A40A";
-	setAttr ".o" 8.0822322318931015;
+	setAttr ".o" 9.5245067347772441;
 createNode animBlendNodeAdditiveDL -n "CTL_R_LegPV1_translateY_Loop";
 	rename -uid "26CE1EDE-4FFE-07F7-220C-1FB54EE8ABA1";
-	setAttr ".o" -0.46045103082614963;
+	setAttr ".o" 5.9292034485282139;
 createNode animBlendNodeAdditiveDL -n "CTL_R_LegPV1_translateZ_Loop";
 	rename -uid "233ED319-4155-CE1D-177B-039CA68F5C5B";
 createNode animBlendNodeEnum -n "CTL_R_LegPV1_parent_Loop";
@@ -10316,7 +10505,7 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_Pinky4_rotate_Loop";
 	setAttr ".o" -type "double3" 0 0 -65.078416710665849 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Ring4_rotate_Loop";
 	rename -uid "9D33013F-46C1-451F-EF7F-218349E84F27";
-	setAttr ".o" -type "double3" 0 0 -47.083620941311487 ;
+	setAttr ".o" -type "double3" 0 0 -57.041996527192332 ;
 createNode animBlendNodeAdditiveDL -n "CTL_R_MouthCorner1_translateX_Loop";
 	rename -uid "E66148E5-417E-27C5-F762-13AF272159F2";
 createNode animBlendNodeAdditiveDL -n "CTL_R_MouthCorner1_translateY_Loop";
@@ -10327,17 +10516,18 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_MouthCorner1_rotate_Loop";
 	rename -uid "847E6D7D-450F-5183-4DEB-DB8A5C2608F7";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Ring1_rotate_Loop";
 	rename -uid "7B8DBDFB-411E-C9A8-3931-879E70B81005";
+	setAttr ".o" -type "double3" -1.9551846316911139 -3.1419260772633995 2.9120209431679824 ;
 createNode animBlendNodeAdditiveDL -n "CTL_R_FootIK1_translateX_Loop";
 	rename -uid "867A7626-4CAA-6553-11FC-6BA47988A593";
-	setAttr ".o" 1.8580128937366762;
+	setAttr ".o" -25.295722319293201;
 createNode animBlendNodeAdditiveDL -n "CTL_R_FootIK1_translateY_Loop";
 	rename -uid "83C4C0FE-4C9C-275A-A9C4-CE94BCDEDB8B";
 createNode animBlendNodeAdditiveDL -n "CTL_R_FootIK1_translateZ_Loop";
 	rename -uid "2E392E4D-4F03-592B-798B-6A822F12F460";
-	setAttr ".o" -24.579095042991266;
+	setAttr ".o" 38.12624909858107;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_FootIK1_rotate_Loop";
 	rename -uid "49682A04-4C61-9FA7-C6B4-33A61FCC8BA3";
-	setAttr ".o" -type "double3" 0 -57.478477390836147 0 ;
+	setAttr ".o" -type "double3" 0 -1.0824505973160257 0 ;
 createNode animBlendNodeEnum -n "CTL_R_FootIK1_parent_Loop";
 	rename -uid "A21DF5D0-405C-D817-C0AF-CAB808AB927A";
 createNode animBlendNodeAdditive -n "CTL_R_FootIK1_footRoll_Loop";
@@ -10384,30 +10574,30 @@ createNode animBlendNodeEnum -n "CTL_L_Eye1_parent_Loop";
 	setAttr ".o" 2;
 createNode animBlendNodeAdditiveDL -n "CTL_R_HandIk1_translateX_Loop";
 	rename -uid "36C32EB8-48A0-2043-F6DF-B086DA64656F";
-	setAttr ".o" 16.856993155338685;
+	setAttr ".o" 47.994934466493653;
 createNode animBlendNodeAdditiveDL -n "CTL_R_HandIk1_translateY_Loop";
 	rename -uid "1BF32FA7-4617-C23E-82DD-4284B4B5F42E";
-	setAttr ".o" 30.609020731348377;
+	setAttr ".o" -12.996801542921043;
 createNode animBlendNodeAdditiveDL -n "CTL_R_HandIk1_translateZ_Loop";
 	rename -uid "697C2625-4E1B-54D8-A394-0CB2EBCFCEAF";
-	setAttr ".o" -16.879155770328783;
+	setAttr ".o" 36.395282199661921;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_HandIk1_rotate_Loop";
 	rename -uid "C875D633-4538-B636-617D-ABAB4C151CF1";
-	setAttr ".o" -type "double3" -71.666121042736236 5.4561174508086188 -86.047181155664092 ;
+	setAttr ".o" -type "double3" -210.4930549651622 34.353620928484816 -201.10710840035694 ;
 createNode animBlendNodeEnum -n "CTL_R_HandIk1_parent_Loop";
 	rename -uid "F3A5367A-418F-394A-FBD6-2F87C7E24AE1";
 createNode animBlendNodeAdditiveDL -n "CTL_C_Root1_translateX_Loop";
 	rename -uid "4A0CEBFB-458D-4381-6BF6-D2A8038CDF77";
-	setAttr ".o" -6.7478883549744122;
+	setAttr ".o" -23.572608131822996;
 createNode animBlendNodeAdditiveDL -n "CTL_C_Root1_translateY_Loop";
 	rename -uid "ECC747A4-4244-707C-031C-3589B5996D9F";
-	setAttr ".o" -10.911689845888903;
+	setAttr ".o" -18.143421249588464;
 createNode animBlendNodeAdditiveDL -n "CTL_C_Root1_translateZ_Loop";
 	rename -uid "EA7CF17F-40B8-6A7A-5526-5C8F40802DE7";
-	setAttr ".o" -15.362435036904145;
+	setAttr ".o" 17.121661054101804;
 createNode animBlendNodeAdditiveRotation -n "CTL_C_Root1_rotate_Loop";
 	rename -uid "F2279C3E-4092-4D48-B19C-BA88C0B813E1";
-	setAttr ".o" -type "double3" 5.4556625450088507 -11.635358884811755 8.7785968796655887 ;
+	setAttr ".o" -type "double3" 3.9300269618522616 26.186935783664346 -6.6459719195479066 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Index4_rotate_Loop";
 	rename -uid "848507D7-4412-BA06-E17D-D98616360982";
 	setAttr ".o" -type "double3" 0 0 -62.508411509867564 ;
@@ -10464,22 +10654,24 @@ createNode animBlendNodeAdditiveRotation -n "CTL_L_UpperEyelid1_rotate_Loop";
 	rename -uid "AC1F2536-407F-2312-DEDE-EABC91FEEFA5";
 createNode animBlendNodeAdditiveDL -n "CTL_L_ArmPV1_translateX_Loop";
 	rename -uid "45E46621-4979-4393-D73C-3485F9C844B6";
-	setAttr ".o" 11.475713301983861;
+	setAttr ".o" -61.203422529257296;
 createNode animBlendNodeAdditiveDL -n "CTL_L_ArmPV1_translateY_Loop";
 	rename -uid "740D3C56-4539-0960-2D3E-6A88A2BF51AC";
-	setAttr ".o" 17.912735363404;
+	setAttr ".o" -39.633428341908967;
 createNode animBlendNodeAdditiveDL -n "CTL_L_ArmPV1_translateZ_Loop";
 	rename -uid "DE6D0D90-4201-6CD1-B6C5-DCB5F16291D6";
+	setAttr ".o" 18.798009759482483;
 createNode animBlendNodeEnum -n "CTL_L_ArmPV1_parent_Loop";
 	rename -uid "455D60D5-4558-2140-8C42-88941CADC90C";
 createNode animBlendNodeAdditiveDL -n "CTL_R_ArmPV1_translateX_Loop";
 	rename -uid "FA3B8B9D-43A5-308F-1DBF-11BE10183372";
+	setAttr ".o" 1.713867640171415;
 createNode animBlendNodeAdditiveDL -n "CTL_R_ArmPV1_translateY_Loop";
 	rename -uid "2EAE70A8-4D1B-8ACF-A39B-2C829A90A190";
-	setAttr ".o" -25.564158106352167;
+	setAttr ".o" 11.84802406332947;
 createNode animBlendNodeAdditiveDL -n "CTL_R_ArmPV1_translateZ_Loop";
 	rename -uid "52E5F944-4244-9CBD-978F-D4859E121353";
-	setAttr ".o" -14.778929012061894;
+	setAttr ".o" 76.0645339289605;
 createNode animBlendNodeEnum -n "CTL_R_ArmPV1_parent_Loop";
 	rename -uid "58B36516-4916-15C7-BF19-8584CD7CA71B";
 createNode animBlendNodeAdditiveDL -n "CTL_C_Hair4_translateX_Loop";
@@ -10490,7 +10682,7 @@ createNode animBlendNodeAdditiveDL -n "CTL_C_Hair4_translateZ_Loop";
 	rename -uid "8473B34B-4CED-F23A-BD20-67BD40D17339";
 createNode animBlendNodeAdditiveRotation -n "CTL_C_Hair4_rotate_Loop";
 	rename -uid "C0B83069-4E02-7275-C864-0B96A2A14A45";
-	setAttr ".o" -type "double3" 10.073340637232409 -5.9003494545153741 -9.5236528702475898 ;
+	setAttr ".o" -type "double3" 14.534824254073518 -8.3248595084089878 -6.1846929180422379 ;
 createNode animBlendNodeAdditiveDL -n "CTL_C_Hair5_translateX_Loop";
 	rename -uid "A1302C01-4EAF-F69E-7D64-8C87C9E4FE2B";
 createNode animBlendNodeAdditiveDL -n "CTL_C_Hair5_translateY_Loop";
@@ -10507,6 +10699,7 @@ createNode animBlendNodeAdditiveDL -n "CTL_C_Hair6_translateZ_Loop";
 	rename -uid "4CF9594A-4DC1-AE8E-AFD7-AC881CAA038E";
 createNode animBlendNodeAdditiveRotation -n "CTL_C_Hair6_rotate_Loop";
 	rename -uid "0424E4B0-4CA6-DA9A-50F0-8DA048D0EDBE";
+	setAttr ".o" -type "double3" -2.9070822625235864 -1.6470264560669323 4.7512544060218387 ;
 createNode animBlendNodeAdditiveDL -n "CTL_C_Hair7_translateX_Loop";
 	rename -uid "3C5ACDB5-42FA-5B92-98A1-818EC642B50E";
 createNode animBlendNodeAdditiveDL -n "CTL_C_Hair7_translateY_Loop";
@@ -10515,6 +10708,7 @@ createNode animBlendNodeAdditiveDL -n "CTL_C_Hair7_translateZ_Loop";
 	rename -uid "004845BC-4C13-FE5F-684F-599E0EE905AA";
 createNode animBlendNodeAdditiveRotation -n "CTL_C_Hair7_rotate_Loop";
 	rename -uid "1AEC2994-41E9-6D4F-3D0B-928BC520F77D";
+	setAttr ".o" -type "double3" 0 0 6.7413656733287795 ;
 createNode animBlendNodeAdditiveDL -n "CTL_C_Hair1_translateX_Loop";
 	rename -uid "1F0AC22C-4652-4A34-7373-FD8D047DF0FE";
 createNode animBlendNodeAdditiveDL -n "CTL_C_Hair1_translateY_Loop";
@@ -10535,6 +10729,7 @@ createNode animBlendNodeAdditiveDL -n "CTL_C_Hair2_translateZ_Loop";
 	rename -uid "DB1AF5E6-4967-B479-B0A5-F89FAAC36793";
 createNode animBlendNodeAdditiveRotation -n "CTL_C_Hair2_rotate_Loop";
 	rename -uid "769CE290-4BFD-5012-E02F-858F5E1857CD";
+	setAttr ".o" -type "double3" 0 0 -10.706584702154368 ;
 createNode animBlendNodeAdditiveDL -n "CTL_C_Hair3_translateX_Loop";
 	rename -uid "8EC43DB2-4DC8-F2F8-A8B0-FB94F9F67008";
 createNode animBlendNodeAdditiveDL -n "CTL_C_Hair3_translateY_Loop";
@@ -10543,7 +10738,7 @@ createNode animBlendNodeAdditiveDL -n "CTL_C_Hair3_translateZ_Loop";
 	rename -uid "3FC32B32-45CF-C215-5FF5-4D87D305D639";
 createNode animBlendNodeAdditiveRotation -n "CTL_C_Hair3_rotate_Loop";
 	rename -uid "256FE43C-4673-9711-F88E-4BAFC67EFD42";
-	setAttr ".o" -type "double3" 13.625277741369874 -3.0185463733575095 -0.40711243847820427 ;
+	setAttr ".o" -type "double3" -9.6613164598815544 3.4721686144362258 1.2705652035623913 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_C_Pelvis1_rotate_Loop";
 	rename -uid "434E5019-4642-77C5-6D80-78B547F22D5A";
 createNode animBlendNodeBoolean -n "CTL_R_HandGrip1_visibility_Loop";
@@ -10580,6 +10775,7 @@ createNode animBlendNodeAdditiveRotation -n "CTL_L_ToeFk1_rotate_Loop";
 	rename -uid "488E9A30-49B9-684D-EFFC-E79975F2EAC3";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Ball1_rotate_Loop";
 	rename -uid "0E41984C-4C23-545C-D9D9-21BBB0AECC6B";
+	setAttr ".o" -type "double3" 29.346266673412519 0 0 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_UpperEyelid1_rotate_Loop";
 	rename -uid "3AF9F48A-4BDF-04C9-AD68-2CB495B97AFD";
 createNode animBlendNodeAdditiveRotation -n "CTL_R_FootFk1_rotate_Loop";
@@ -10594,10 +10790,13 @@ createNode animBlendNodeAdditiveRotation -n "CTL_L_BrowMid1_rotate_Loop";
 	rename -uid "08C1032C-4798-9698-BDB2-198F1E3F4953";
 createNode animBlendNodeAdditiveDL -n "CTL_L_LegPV1_translateX_Loop";
 	rename -uid "D298851E-4007-EEDE-76C1-7FB3B1F79D53";
+	setAttr ".o" -9.1835962923962207;
 createNode animBlendNodeAdditiveDL -n "CTL_L_LegPV1_translateY_Loop";
 	rename -uid "D4FEC2AF-43B3-5ED0-53AF-A19F1B0FC4F1";
+	setAttr ".o" 6.1832567060978869;
 createNode animBlendNodeAdditiveDL -n "CTL_L_LegPV1_translateZ_Loop";
 	rename -uid "8802A891-4F60-4BE0-A099-25AF67C82178";
+	setAttr ".o" 40.949701731770503;
 createNode animBlendNodeEnum -n "CTL_L_LegPV1_parent_Loop";
 	rename -uid "66D8B8C1-4A64-E9A0-D418-93B69C5CF2DB";
 	setAttr ".o" 3;
@@ -10616,12 +10815,13 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_Ring4_rotate_Loop";
 	setAttr ".o" -type "double3" 0 0 -65.554831732781807 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Pinky3_rotate_Loop";
 	rename -uid "D6A676E9-4055-57E6-FC20-BE8ACB31EFC2";
-	setAttr ".o" -type "double3" 0 0 -24.279094641792515 ;
+	setAttr ".o" -type "double3" 0 0 -87.575966368256715 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Ring2_rotate_Loop";
 	rename -uid "45C65104-4961-8E70-0AB8-2C9906AA52F1";
 	setAttr ".o" -type "double3" 7.5011805658176076 3.3304120195633438 -56.41332340700081 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Pinky1_rotate_Loop";
 	rename -uid "E70792CD-443F-F7DA-299F-239FA4EAD7DD";
+	setAttr ".o" -type "double3" -2.7655474687128829 -6.3630010166769786 5.7146695060691215 ;
 createNode animBlendNodeAdditiveDL -n "CTL_C_Tongue2_translateX_Loop";
 	rename -uid "56532916-47EE-6B3A-0D41-7E917B9A3624";
 createNode animBlendNodeAdditiveDL -n "CTL_C_Tongue2_translateY_Loop";
@@ -10641,13 +10841,13 @@ createNode animBlendNodeAdditiveRotation -n "CTL_C_Tongue1_rotate_Loop";
 	setAttr ".o" -type "double3" 0 0 35.626525207140588 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_C_SpineFK3_rotate_Loop";
 	rename -uid "C9083D4D-4A1C-9B1B-EF5B-888917E505D8";
-	setAttr ".o" -type "double3" -1.0039108092185525 -15.12462002150928 -4.1222174689415718 ;
+	setAttr ".o" -type "double3" 3.0121017188172772 15.278002066889995 -7.3979291095641457 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_C_SpineFK2_rotate_Loop";
 	rename -uid "D59E2E81-4B59-01D6-F76F-D1B41197FB88";
-	setAttr ".o" -type "double3" 2.0337198554777052 -5.539774138279669 -7.5423638957409462 ;
+	setAttr ".o" -type "double3" 2.7456553783183661 7.3320176803303765 -6.3263307482960807 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_C_SpineFK4_rotate_Loop";
 	rename -uid "60A637ED-4057-69F5-C2C0-1EA5B1E22C7A";
-	setAttr ".o" -type "double3" -4.7401048864116309 0.59474543471822183 -9.7087770396387807 ;
+	setAttr ".o" -type "double3" 2.352574731232778 14.936805058175761 -8.1104542671008542 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Thumb2_rotate_Loop";
 	rename -uid "9117B17D-426C-DC6E-6FD7-E391772334C3";
 	setAttr ".o" -type "double3" 0 0 -6.0345555304400529 ;
@@ -10659,20 +10859,20 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_Thumb1_rotate_Loop";
 	setAttr ".o" -type "double3" 22.277010745318947 -19.809193500271814 -0.17737349085264559 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Clav1_rotate_Loop";
 	rename -uid "33AC0B90-40CE-37F5-2C82-89ADE5A87A91";
-	setAttr ".o" -type "double3" 5.2609446825842108 13.940451712032969 16.218188838667498 ;
+	setAttr ".o" -type "double3" 9.5098267856994187 -12.787658605374947 17.735925249089597 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Ball1_rotate_Loop";
 	rename -uid "E9F3A807-4EBE-F849-2442-83A401C29410";
 createNode animBlendNodeAdditiveDL -n "CTL_L_FootIK1_translateX_Loop";
 	rename -uid "94A26AB1-4937-0428-F84E-349935CC6D0C";
-	setAttr ".o" 1.8661741653697828;
+	setAttr ".o" -21.114008493845276;
 createNode animBlendNodeAdditiveDL -n "CTL_L_FootIK1_translateY_Loop";
 	rename -uid "CE0FCE26-4BAC-F02D-F7FF-AA87DE75A456";
 createNode animBlendNodeAdditiveDL -n "CTL_L_FootIK1_translateZ_Loop";
 	rename -uid "DAEFF133-4054-9FB3-9BE6-DAA85A223047";
-	setAttr ".o" 23.287576974461125;
+	setAttr ".o" -1.9361442170919276;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_FootIK1_rotate_Loop";
 	rename -uid "9C4179C0-4B6F-C818-3848-81ABF28F82CF";
-	setAttr ".o" -type "double3" 0 -2.15648417881884 0 ;
+	setAttr ".o" -type "double3" 0 38.222201528604046 0 ;
 createNode animBlendNodeEnum -n "CTL_L_FootIK1_parent_Loop";
 	rename -uid "0EE7E3C9-40A6-7F6C-EAD7-F49320D375FB";
 createNode animBlendNodeAdditive -n "CTL_L_FootIK1_footRoll_Loop";
@@ -10693,16 +10893,16 @@ createNode animBlendNodeAdditiveRotation -n "CTL_L_KneeFk1_rotate_Loop";
 	rename -uid "19C34658-49D1-5343-99D4-E091DD2C1247";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Index2_rotate_Loop";
 	rename -uid "B962E4F3-461B-EEF9-4662-568A7042DE42";
-	setAttr ".o" -type "double3" 11.051908052603158 -4.6520075648677688 11.274305851628734 ;
+	setAttr ".o" -type "double3" -1.4070728670098929 -2.5277225820619615 -26.949389152961114 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Pinky4_rotate_Loop";
 	rename -uid "CCBD37E5-44C2-2C89-DC92-E5A22E5B8963";
-	setAttr ".o" -type "double3" 0 0 -49.858022693347721 ;
+	setAttr ".o" -type "double3" 0 0 -53.479997802576293 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Index4_rotate_Loop";
 	rename -uid "09B01D2E-460C-E3A5-CFE3-4BB3D9969EFC";
-	setAttr ".o" -type "double3" 0 0 -28.794807154375242 ;
+	setAttr ".o" -type "double3" 0 0 -41.300799376174027 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Pinky2_rotate_Loop";
 	rename -uid "DA398434-4727-3E41-B760-9A81D4695923";
-	setAttr ".o" -type "double3" -2.6077865174284334 6.6965670045480579 5.9461223761954498 ;
+	setAttr ".o" -type "double3" -6.3525562453822912 10.11510701247594 -73.219600352415199 ;
 createNode animBlendNodeBoolean -n "CTL_L_HandGrip1_visibility_Loop";
 	rename -uid "FC62E17E-4B3A-FA45-643F-E190156F0394";
 	setAttr ".o" yes;
@@ -10736,10 +10936,10 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_HairSide1_1_rotate_Loop";
 	rename -uid "47AD82B7-4F71-150B-0286-6CBD9891D0F5";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Ring3_rotate_Loop";
 	rename -uid "5EC32070-4795-3460-42DC-43834C162F0C";
-	setAttr ".o" -type "double3" 0 0 -35.606067229904099 ;
+	setAttr ".o" -type "double3" 0 0 -93.160949113257061 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Ring2_rotate_Loop";
 	rename -uid "B5831074-4764-A470-06F4-9984841A6FFD";
-	setAttr ".o" -type "double3" 4.9367644845612393 2.1359569282693851 17.81801427036795 ;
+	setAttr ".o" -type "double3" 5.024055142545893 11.098192050422899 -53.385724135167088 ;
 createNode animBlendNodeAdditiveDL -n "CTL_L_EyeLookAt1_translateX_Loop";
 	rename -uid "FE3089F9-4072-6C9D-EDFC-F4BCF0B021C6";
 createNode animBlendNodeAdditiveDL -n "CTL_L_EyeLookAt1_translateY_Loop";
@@ -10807,7 +11007,7 @@ createNode animBlendNodeAdditiveScale -n "CTL_C_Collision1_scaleZ_Loop";
 	setAttr ".o" 1;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_ShoulderFk1_rotate_Loop";
 	rename -uid "3396D860-48F9-E72A-A844-C0BE07E642F9";
-	setAttr ".o" -type "double3" -35.050893003319629 -16.946044701269599 -15.789566166721992 ;
+	setAttr ".o" -type "double3" 15.207480019483647 -44.550410207534469 -33.892041934821442 ;
 createNode animBlendNodeEnum -n "CTL_R_ShoulderFk1_parent_Loop";
 	rename -uid "C657BB8D-4915-4E09-9EC1-8F84D12D0CFA";
 	setAttr ".o" 1;
@@ -10841,7 +11041,7 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_HairFront3_1_rotate_Loop";
 	rename -uid "64A8084A-4393-4B71-63BA-6483CBC7F605";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Index3_rotate_Loop";
 	rename -uid "D967A9C0-445C-8E23-832D-9D8FFA58A0C3";
-	setAttr ".o" -type "double3" 0 0 -23.403039581982195 ;
+	setAttr ".o" -type "double3" 0 0 -81.532914561599583 ;
 createNode animBlendNodeAdditiveDL -n "CTL_R_HairFront3_2_translateX_Loop";
 	rename -uid "7AB8DA52-4ABF-6576-1161-5F887E0095B7";
 createNode animBlendNodeAdditiveDL -n "CTL_R_HairFront3_2_translateY_Loop";
@@ -10852,26 +11052,28 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_HairFront3_2_rotate_Loop";
 	rename -uid "03B335B9-4F3C-4870-253C-86800EEAD090";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Middle4_rotate_Loop";
 	rename -uid "D87D4099-43FA-4462-014F-7C9BCD0BE107";
-	setAttr ".o" -type "double3" 0 0 -54.880933450587321 ;
+	setAttr ".o" -type "double3" 0 0 -60.502032159890817 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Thumb1_rotate_Loop";
 	rename -uid "F04411CA-4C9C-4EEF-BE55-D1AB4007E13A";
-	setAttr ".o" -type "double3" 4.6056716665675514 5.9857035398943941 6.0117049328024432 ;
+	setAttr ".o" -type "double3" 7.7522418120741898 -0.38235313053653908 -1.9198373873318841 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Thumb2_rotate_Loop";
 	rename -uid "A345304B-4E24-8695-6C47-74AA1EFFE02E";
+	setAttr ".o" -type "double3" 9.0126797761376984 -1.7917035074232246 -1.0027048742176663 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Thumb3_rotate_Loop";
 	rename -uid "9E9FB6C9-4851-89BD-2229-F483F626D4B4";
-	setAttr ".o" -type "double3" 0 14.315047986892914 0 ;
+	setAttr ".o" -type "double3" 0 9.8387182341953512 0 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Middle1_rotate_Loop";
 	rename -uid "0C7771D6-4DCE-D17B-9F05-159C13F46A10";
+	setAttr ".o" -type "double3" 0 -1.3690054544181258 0 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Middle2_rotate_Loop";
 	rename -uid "94111E4F-47E6-9DE6-C6CE-47B4E6953FE9";
-	setAttr ".o" -type "double3" 2.5993939952806855 0.063189851603195041 17.463135674255692 ;
+	setAttr ".o" -type "double3" 1.2847812273513459 2.2607594564660674 -42.346845277472681 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Middle3_rotate_Loop";
 	rename -uid "D5237DA2-40B0-18F3-3E87-39B459B72730";
-	setAttr ".o" -type "double3" 0 0 -27.907890221491822 ;
+	setAttr ".o" -type "double3" 0 0 -86.173800735926235 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Clav1_rotate_Loop";
 	rename -uid "0CDEFDB9-464E-9FBB-C971-4C8454107731";
-	setAttr ".o" -type "double3" 4.0190327229768501 -8.3614853224381118 15.539908603176139 ;
+	setAttr ".o" -type "double3" -15.717107878419714 -22.993234293742358 -7.7269257080877569 ;
 createNode animBlendNodeAdditiveDL -n "CTL_C_MouthLower1_translateX_Loop";
 	rename -uid "FDE12A21-4B14-4EA7-E643-8BB2821B0FD5";
 createNode animBlendNodeAdditiveDL -n "CTL_C_MouthLower1_translateY_Loop";
@@ -10882,22 +11084,22 @@ createNode animBlendNodeAdditiveRotation -n "CTL_C_MouthLower1_rotate_Loop";
 	rename -uid "81340D34-41EB-F7DA-EF15-2481B5C96A80";
 createNode animBlendNodeAdditiveRotation -n "CTL_C_Head1_rotate_Loop";
 	rename -uid "E515D845-474E-E30D-4450-32B563829D7F";
-	setAttr ".o" -type "double3" 9.8056100214613853 -6.3121244495263538 0.83359624105514551 ;
+	setAttr ".o" -type "double3" -21.562880746874743 -5.1952996182563487 12.421328521155532 ;
 createNode animBlendNodeEnum -n "CTL_C_Head1_parent_Loop";
 	rename -uid "2F9AE2CF-4412-881A-0FB2-328F92F3D916";
 	setAttr ".o" 1;
 createNode animBlendNodeAdditiveDL -n "CTL_L_HandIk1_translateX_Loop";
 	rename -uid "190F70B2-4663-BD5C-AFD8-0A8379D1D576";
-	setAttr ".o" -35.440325284624201;
+	setAttr ".o" -47.367454505560971;
 createNode animBlendNodeAdditiveDL -n "CTL_L_HandIk1_translateY_Loop";
 	rename -uid "0E92023A-4605-8F60-BB80-80839FEFACDB";
-	setAttr ".o" -13.91592890211594;
+	setAttr ".o" -39.660047365808666;
 createNode animBlendNodeAdditiveDL -n "CTL_L_HandIk1_translateZ_Loop";
 	rename -uid "F349ACA8-4ED7-1788-7CD9-5AA0979D3B05";
-	setAttr ".o" 28.558434606494366;
+	setAttr ".o" 7.6802723383151923;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_HandIk1_rotate_Loop";
 	rename -uid "24C4C2C9-4385-A823-FC59-8DB27E270887";
-	setAttr ".o" -type "double3" 102.1985834302312 -81.859337442356278 -106.55219666102094 ;
+	setAttr ".o" -type "double3" 95.710318093029187 -220.19036279095124 118.57268783877913 ;
 createNode animBlendNodeEnum -n "CTL_L_HandIk1_parent_Loop";
 	rename -uid "55A43D4B-496C-FF6F-19BF-F399EF3955F6";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_ToeIk1_rotate_Loop";
@@ -10909,7 +11111,7 @@ createNode animBlendNodeEnum -n "CTL_R_HipFk1_parent_Loop";
 	setAttr ".o" 1;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_ShoulderFk1_rotate_Loop";
 	rename -uid "B3B021F6-42FB-FCEF-2E55-33975923D217";
-	setAttr ".o" -type "double3" 22.053679561220864 -16.843945502428056 -5.5323474419667171 ;
+	setAttr ".o" -type "double3" -40.493211150492272 -16.13674876273074 -0.95986416733097546 ;
 createNode animBlendNodeEnum -n "CTL_L_ShoulderFk1_parent_Loop";
 	rename -uid "4D200FF0-49EB-7825-13ED-2282DA3F572B";
 	setAttr ".o" 1;
@@ -10920,7 +11122,7 @@ createNode animBlendNodeEnum -n "CTL_C_Neck2_parent_Loop";
 	setAttr ".o" 1;
 createNode animBlendNodeAdditiveRotation -n "CTL_C_Neck1_rotate_Loop";
 	rename -uid "6975BA75-4EE3-D015-8787-EAACE22A031E";
-	setAttr ".o" -type "double3" 10.265992807224926 3.8867377387001416 11.46523346143324 ;
+	setAttr ".o" -type "double3" -17.331462698710855 14.514512704197164 4.6325182541199279 ;
 createNode animBlendNodeEnum -n "CTL_C_Neck1_parent_Loop";
 	rename -uid "15477A90-4D33-987C-2F13-BBB7F2A2BCB1";
 	setAttr ".o" 1;
@@ -10932,16 +11134,16 @@ createNode animBlendNodeAdditiveDL -n "CTL_R_EyeLookAt1_translateZ_Loop";
 	rename -uid "0F418FEB-4E65-2D71-798B-92B41C700171";
 createNode animBlendNodeAdditiveDL -n "CTL_C_WeaponGrip1_translateX_Loop";
 	rename -uid "E071DE1B-42DC-CC8C-8D18-978E33CEA05E";
-	setAttr ".o" 1.0552182157236873;
+	setAttr ".o" -0.61961788984229482;
 createNode animBlendNodeAdditiveDL -n "CTL_C_WeaponGrip1_translateY_Loop";
 	rename -uid "68A5852A-4AD5-E156-5CAC-A18E40FE5E87";
-	setAttr ".o" 0.047278933695145138;
+	setAttr ".o" 81.239954709246732;
 createNode animBlendNodeAdditiveDL -n "CTL_C_WeaponGrip1_translateZ_Loop";
 	rename -uid "3DB12742-44B6-2C9F-0845-DF8DBA5D1A33";
-	setAttr ".o" -1.8923204854739228;
+	setAttr ".o" -1.602851052744904;
 createNode animBlendNodeAdditiveRotation -n "CTL_C_WeaponGrip1_rotate_Loop";
 	rename -uid "F34905F5-4760-A4E6-C905-B7A8DBA666E6";
-	setAttr ".o" -type "double3" 1.5257353343011337 1.469119694079811 1.4577180265640666 ;
+	setAttr ".o" -type "double3" -1.1484680576159039 533.56434074217827 -1.4577180265640666 ;
 createNode animBlendNodeAdditiveDL -n "CTL_R_HairFront1_2_translateX_Loop";
 	rename -uid "43FF33F4-4A5B-239F-F409-2782DC024FDB";
 createNode animBlendNodeAdditiveDL -n "CTL_R_HairFront1_2_translateY_Loop";
@@ -10960,19 +11162,19 @@ createNode animBlendNodeAdditiveRotation -n "CTL_R_HairFront1_1_rotate_Loop";
 	rename -uid "E368FD83-4DCA-8DFF-2F4F-57B5A009F13A";
 createNode animBlendNodeAdditiveRotation -n "CTL_L_ElbowFk1_rotate_Loop";
 	rename -uid "508FB482-4CA4-AC80-846E-2FA58437C3EC";
-	setAttr ".o" -type "double3" 0 -29.132103478434711 0 ;
+	setAttr ".o" -type "double3" 0 8.3719529318157289 0 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_L_Hand1_rotate_Loop";
 	rename -uid "F0109278-46BD-2A7D-8F9C-A3BC2D30E21D";
-	setAttr ".o" -type "double3" -14.298281619828906 1.7903707389645331 20.105951002554853 ;
+	setAttr ".o" -type "double3" -95.373968386213477 21.123160325305882 -29.40601984100816 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_ElbowFk1_rotate_Loop";
 	rename -uid "2E1BC397-41CB-B433-340D-64B1F120980D";
-	setAttr ".o" -type "double3" 0 -106.07632837927838 0 ;
+	setAttr ".o" -type "double3" -9.7116675503506134 -69.317087835485097 22.721303451124182 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Ring3_rotate_Loop";
 	rename -uid "40E7C6E3-4E19-82C3-3777-DA9FCB41051B";
 	setAttr ".o" -type "double3" 0 0 -58.702591008433629 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_Hand1_rotate_Loop";
 	rename -uid "E32795C6-422D-8ADF-14E3-C5B4025A589B";
-	setAttr ".o" -type "double3" -39.794293952719592 -5.7600309317591964 29.949157824698478 ;
+	setAttr ".o" -type "double3" 49.689895187886854 34.733786069416638 3.0516015330968891 ;
 createNode animBlendNodeAdditiveRotation -n "CTL_R_LowerEyelid1_rotate_Loop";
 	rename -uid "15AAEE57-44A2-7D06-1525-A0A4C50106A2";
 createNode animCurveTL -n "CTL_L_HairSide1_1_translateX_Loop_inputB";
@@ -13723,17 +13925,17 @@ createNode animCurveTA -n "CTL_C_WeaponGrip1_rotate_Loop_inputBX";
 	rename -uid "5B6E5355-4FEF-3C54-67BA-58866D9F16BE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr ".ktv[0]"  0 -6.0147030183988832;
 createNode animCurveTA -n "CTL_C_WeaponGrip1_rotate_Loop_inputBY";
 	rename -uid "75CE20E9-403E-BE38-1336-0EBECAE765D9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr ".ktv[0]"  0 73.568583730505281;
 createNode animCurveTA -n "CTL_C_WeaponGrip1_rotate_Loop_inputBZ";
 	rename -uid "4E897510-4B5B-AD7A-93A3-85961C3118E2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr ".ktv[0]"  0 -1.4577180265640666;
 createNode animCurveTL -n "CTL_R_HairFront1_2_translateX_Loop_inputB";
 	rename -uid "B6DAF25A-4C8B-2797-841A-D28C5380352E";
 	setAttr ".tan" 18;
@@ -14061,6 +14263,7 @@ createNode animBlendNodeAdditiveDL -n "AZRI:CTL_C_SkirtFront_1_translateZ_Loop";
 	rename -uid "56E03955-4115-51D1-D874-5B8FC3C422D0";
 createNode animBlendNodeAdditiveRotation -n "AZRI:CTL_C_SkirtFront_1_rotate_Loop";
 	rename -uid "1D22F506-460B-65B3-BE67-56966A7058E5";
+	setAttr ".o" -type "double3" -7.9077841649189864 -8.0297334341972224 9.5750219779859158 ;
 createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtFront_2_translateX_Loop";
 	rename -uid "AAD07A52-468C-4ACA-8C7B-9894634DD550";
 createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtFront_2_translateY_Loop";
@@ -14069,16 +14272,19 @@ createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtFront_2_translateZ_Loop";
 	rename -uid "576A128E-4E6A-3A88-AE94-49AC4FA9F79A";
 createNode animBlendNodeAdditiveRotation -n "AZRI:CTL_L_SkirtFront_2_rotate_Loop";
 	rename -uid "7AFB1760-4DD5-DE48-688F-5BB62FB47574";
-	setAttr ".o" -type "double3" 0 0 0.54364359157085496 ;
+	setAttr ".o" -type "double3" 0 0 1.6210578589236833 ;
 createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtFront_1_translateX_Loop";
 	rename -uid "BEB1B55B-4B8C-7EFA-F041-189C800726A0";
+	setAttr ".o" 0.022760394105815394;
 createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtFront_1_translateY_Loop";
 	rename -uid "9D43DABC-4C1F-8315-2151-83BC67B3B600";
+	setAttr ".o" 1.2982320702414247;
 createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtFront_1_translateZ_Loop";
 	rename -uid "D02F16A0-4FD9-7A65-9621-718577AB93DE";
+	setAttr ".o" 0.38105780303645037;
 createNode animBlendNodeAdditiveRotation -n "AZRI:CTL_L_SkirtFront_1_rotate_Loop";
 	rename -uid "7FF40696-40F1-DAEE-C05B-6584DF79D515";
-	setAttr ".o" -type "double3" 2.1566915509595974 -11.839939364402937 14.530436908385649 ;
+	setAttr ".o" -type "double3" 3.2556651349931065 -11.589422195173675 11.636486954903395 ;
 createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtSide_2_translateX_Loop";
 	rename -uid "2CA3D1FE-48B6-70A8-A121-829AEB395518";
 createNode animBlendNodeAdditiveDL -n "AZRI:CTL_L_SkirtSide_2_translateY_Loop";
@@ -14360,6 +14566,7 @@ createNode animBlendNodeAdditiveDL -n "AZRI:CTL_R_PonchoFront_2_translateZ_Loop"
 	rename -uid "FAE19EC4-4B43-8787-86C7-4089B2AFE2F3";
 createNode animBlendNodeAdditiveRotation -n "AZRI:CTL_R_PonchoFront_2_rotate_Loop";
 	rename -uid "9F4CA7BE-456B-65AE-09E2-F8B5159E0C93";
+	setAttr ".o" -type "double3" 5.8613904823984582 0.25740893773850293 10.616596487624129 ;
 createNode animBlendNodeAdditiveDL -n "AZRI:CTL_R_PonchoFront_1_translateX_Loop";
 	rename -uid "BA64334B-4716-B299-BEFE-12A58451FC53";
 createNode animBlendNodeAdditiveDL -n "AZRI:CTL_R_PonchoFront_1_translateY_Loop";
@@ -16000,9 +16207,9 @@ createNode animCurveTL -n "CTL_C_WeaponGrip1_translateX_Loop_inputA";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 1.0552182157236873 2 1.0552182157236873
 		 4 1.0552182157236873 8 1.0552182157236873 14 7.9599396350175953 20 1.5429378055358693
-		 25 1.5429378055358691 28 1.5429378055358691 32 -0.61961788984229504 38 -0.61961788984229504
-		 41 -0.61961788984229504 45 -0.61961788984229504 49 -0.61961788984229482 53 -0.61961788984229482
-		 75 -0.61961788984229482 83 -0.61961788984229482 84 -0.61961788984229471;
+		 25 1.5429378055358691 28 1.5429378055358691 32 -0.43688193358284022 38 -0.61961788984229504
+		 41 -0.61961788984229482 45 -0.61961788984229482 49 -0.61961788984229482 53 -0.61961788984229482
+		 75 -0.61961788984229482 83 -0.61961788984229482 84 -0.61961788984229482;
 	setAttr -s 17 ".kyts[0:16]" yes no no no no yes no yes no yes no no 
 		no no no yes no;
 createNode animCurveTL -n "CTL_C_WeaponGrip1_translateY_Loop_inputA";
@@ -16011,7 +16218,7 @@ createNode animCurveTL -n "CTL_C_WeaponGrip1_translateY_Loop_inputA";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0.047278933695145138 2 0.047278933695145138
 		 4 0.047278933695145138 8 0.047278933695145138 14 14.969433828075609 20 15.152195274864349
-		 25 15.152195274864349 28 15.152195274864349 32 81.239954709246732 38 81.239954709246732
+		 25 15.152195274864349 28 15.152195274864349 32 75.655539037041422 38 81.239954709246732
 		 41 81.239954709246732 45 81.239954709246732 49 81.239954709246732 53 81.239954709246732
 		 75 81.239954709246732 83 81.239954709246732 84 81.239954709246732;
 	setAttr -s 17 ".kyts[0:16]" yes no no no no yes no yes no yes no no 
@@ -16022,7 +16229,7 @@ createNode animCurveTL -n "CTL_C_WeaponGrip1_translateZ_Loop_inputA";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 -1.8923204854739228 2 -1.8923204854739228
 		 4 -1.8923204854739228 8 -1.8923204854739228 14 5.7159330215946822 20 -2.6428667254178304
-		 25 -2.6428667254178309 28 -2.6428667254178309 32 -1.602851052744904 38 -1.602851052744904
+		 25 -2.6428667254178309 28 -2.6428667254178309 32 -1.6907323770857663 38 -1.602851052744904
 		 41 -1.602851052744904 45 -1.602851052744904 49 -1.602851052744904 53 -1.602851052744904
 		 75 -1.602851052744904 83 -1.602851052744904 84 -1.602851052744904;
 	setAttr -s 17 ".kyts[0:16]" yes no no no no yes no yes no yes no no 
@@ -22208,29 +22415,30 @@ createNode animCurveTA -n "CTL_C_WeaponGrip1_rotate_Loop_inputAX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  0 1.5257353343011337 2 1.5257353343011337
-		 4 1.5257353343011337 8 1.5257353343011337 20 0 25 0 28 0 32 0 38 0 41 0 45 0 49 0
-		 53 0 75 0 83 0 84 0;
-	setAttr -s 16 ".kyts[0:15]" yes no no no yes no yes no yes no no no 
-		no no yes no;
+		 4 1.5257353343011337 8 1.5257353343011337 20 0 25 0 28 0 32 4.9146513462395065 38 5.3682701761217988
+		 41 4.8662349607829798 45 4.8662349607829798 49 4.8662349607829798 53 4.8662349607829798
+		 75 4.8662349607829798 83 4.8662349607829798 84 4.8662349607829798;
+	setAttr -s 16 ".kyts[0:15]" yes no no no yes no yes no no no no no 
+		no no no no;
 createNode animCurveTA -n "CTL_C_WeaponGrip1_rotate_Loop_inputAY";
 	rename -uid "50F1ADCE-4858-643B-6FD0-D287010DE439";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  0 1.469119694079811 2 1.469119694079811
 		 4 1.469119694079811 8 1.469119694079811 20 459.99575701167299 25 459.99575701167299
-		 28 459.99575701167299 32 459.99575701167299 38 459.99575701167299 41 459.99575701167299
+		 28 459.99575701167299 32 459.98927381706932 38 459.98867542281045 41 459.99575701167299
 		 45 459.99575701167299 49 459.99575701167299 53 459.99575701167299 75 459.99575701167299
-		 83 459.99575701167299 84 -260.00424298832701;
-	setAttr -s 16 ".kyts[0:15]" yes no no no yes no yes no yes no no no 
+		 83 459.99575701167299 84 459.99575701167299;
+	setAttr -s 16 ".kyts[0:15]" yes no no no yes no yes no no no no no 
 		no no yes no;
 createNode animCurveTA -n "CTL_C_WeaponGrip1_rotate_Loop_inputAZ";
 	rename -uid "0ACF5368-4DD9-F619-F6C1-128D5E970438";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  0 1.4577180265640666 2 1.4577180265640666
-		 4 1.4577180265640666 8 1.4577180265640666 20 0 25 0 28 0 32 0 38 0 41 0 45 0 49 0
-		 53 0 75 0 83 0 84 0;
-	setAttr -s 16 ".kyts[0:15]" yes no no no yes no yes no yes no no no 
+		 4 1.4577180265640666 8 1.4577180265640666 20 0 25 0 28 0 32 0.54962258277686638 38 0.60035235693813915
+		 41 0 45 0 49 0 53 0 75 0 83 0 84 0;
+	setAttr -s 16 ".kyts[0:15]" yes no no no yes no yes no no no no no 
 		no no yes no;
 createNode animCurveTA -n "CTL_L_MouthUpper1_rotate_Loop_inputAX";
 	rename -uid "BA2D6FCA-4D6D-731D-AC54-8C9AC9207DE8";
@@ -24712,7 +24920,7 @@ createNode gameFbxExporter -n "gameExporterPreset2";
 	setAttr ".ilu" yes;
 	setAttr ".eti" 2;
 	setAttr ".esi" 3;
-	setAttr ".ssn" -type "string" "AxeScythe";
+	setAttr ".ssn" -type "string" "AxeScythe1";
 	setAttr ".ac[0].acn" -type "string" "AxeToScythe";
 	setAttr ".ac[0].ace" 84;
 	setAttr ".spt" 2;
@@ -24828,8 +25036,8 @@ createNode objectSet -n "AxeScythe";
 	setAttr ".an" -type "string" "gCharacterSet";
 createNode animLayer -n "Weap_export";
 	rename -uid "3D9F6A31-4C8D-85AE-6BBC-5696B6E816BB";
-	setAttr -s 16 ".dsm";
-	setAttr -s 14 ".bnds";
+	setAttr -s 26 ".dsm";
+	setAttr -s 22 ".bnds";
 	setAttr ".pref" yes;
 	setAttr ".slct" yes;
 	setAttr ".ovrd" yes;
@@ -24863,16 +25071,22 @@ createNode animBlendNodeAdditiveScale -n "Axe_Main_ctrl_scaleZ_Weap_export";
 	setAttr ".o" 1;
 createNode animBlendNodeAdditive -n "Axe_Main_ctrl_Extend_Bottom_Weap_export";
 	rename -uid "81E4B076-4DF4-EE4A-CD14-1F95605888C1";
+	setAttr ".o" 1;
 createNode animBlendNodeAdditive -n "Axe_Main_ctrl_BaseIce_Weap_export";
 	rename -uid "36D5B8C2-44A3-1285-555E-80BB475B6E3F";
+	setAttr ".o" 1;
 createNode animBlendNodeAdditive -n "Axe_Main_ctrl_IceFirst_Weap_export";
 	rename -uid "CC4BDEC5-45EA-9D28-6BBB-94B6B41440E9";
+	setAttr ".o" 1;
 createNode animBlendNodeAdditive -n "Axe_Main_ctrl_IceSecond_Weap_export";
 	rename -uid "6618B9A7-4299-330E-B119-9EBD8569229F";
+	setAttr ".o" 1;
 createNode animBlendNodeAdditive -n "Axe_Main_ctrl_IceThird_Weap_export";
 	rename -uid "F6CC5CA6-4788-C2BB-6A01-7788C9D888CF";
+	setAttr ".o" 1;
 createNode animBlendNodeAdditive -n "Axe_Main_ctrl_IceEnd_Weap_export";
 	rename -uid "E2EF39B8-42C9-85A8-589D-188EF251F163";
+	setAttr ".o" 1;
 createNode animCurveTU -n "Axe_Main_ctrl_Extend_Bottom_Weap_export_inputB";
 	rename -uid "522C8DAA-43C5-790A-9591-93B80DEBD301";
 	setAttr ".tan" 18;
@@ -24909,13 +25123,141 @@ createNode animCurveTU -n "Axe_Main_ctrl_IceEnd_Weap_export_inputB";
 	setAttr ".wgt" no;
 	setAttr -s 15 ".ktv[0:14]"  0 0 2 0 4 0 8 0 14 0 20 0 25 0 28 0 33 0
 		 38 0 46 0 53 0 57 0 62 0.8835 78 1;
+createNode animCurveTU -n "Ice_R_Ice";
+	rename -uid "43AE7669-4D6F-1AF3-C01C-43B71F5C20D1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 10 32 10 38 10 64 10 84 10;
+	setAttr -s 5 ".kyts[0:4]" yes no no no yes;
+createNode animCurveTU -n "Ice_R_Ice_Start";
+	rename -uid "D7DC2D42-47E0-54F2-A8AA-BE8493DB03BC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  0 0 28 0 32 9.629999999999999 38 10 50 10
+		 56 10 64 10 84 10;
+	setAttr -s 8 ".kyts[7]" yes;
+createNode animCurveTU -n "Ice_R_Ice_01";
+	rename -uid "125DB134-4646-C6FA-751C-539146BF257A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  0 0 28 0 32 0 38 0 50 3.4899999999999998
+		 56 9.137425 64 10 84 10;
+	setAttr -s 8 ".kyts[7]" yes;
+createNode animCurveTU -n "Ice_R_Ice_02";
+	rename -uid "197640B3-470D-7166-B83B-37828FAA1BE0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  0 0 28 0 32 0 38 0 50 3.4899999999999998
+		 56 9.137425 64 10 84 10;
+	setAttr -s 8 ".kyts[7]" yes;
+createNode animCurveTU -n "Ice_R_Ice_03";
+	rename -uid "91C63CD3-4801-CDE5-1435-A4B173632ED6";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  0 0 28 0 32 0 38 0 50 3.4899999999999998
+		 56 9.137425 64 10 84 10;
+	setAttr -s 8 ".kyts[7]" yes;
+createNode animCurveTU -n "Ice_R_Ice_End";
+	rename -uid "6043FFBC-47BC-5554-9303-DB8FD25C2099";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  0 0 28 0 32 0 38 0 50 3.4899999999999998
+		 56 9.137425 64 10 84 10;
+	setAttr -s 8 ".kyts[7]" yes;
+createNode animCurveTU -n "Ice_R_Axe_Extend";
+	rename -uid "FFEC5A44-495B-CA92-45AA-3A85E3B65B9C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  0 0 28 0 32 8.095 38 10 50 10 56 10 64 10
+		 84 10;
+	setAttr -s 8 ".kyts[7]" yes;
+createNode animBlendNodeBoolean -n "AxeToScythe:Main_visibility_Weap_export";
+	rename -uid "63150FF3-445C-AEB8-6F24-80893BFEC551";
+	setAttr ".ia" yes;
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveDL -n "AxeToScythe:Main_translateX_Weap_export";
+	rename -uid "0101A29D-41D8-58E2-E487-A5930CB78F25";
+createNode animBlendNodeAdditiveDL -n "AxeToScythe:Main_translateY_Weap_export";
+	rename -uid "1033F5FD-411A-5DB2-16C5-E79BF088F98E";
+createNode animBlendNodeAdditiveDL -n "AxeToScythe:Main_translateZ_Weap_export";
+	rename -uid "2996619D-40CF-E4AC-EE7C-97B0423F53AC";
+createNode animBlendNodeAdditiveRotation -n "AxeToScythe:Main_rotate_Weap_export";
+	rename -uid "3ED4F7F0-41EE-A7B0-E066-298D0BF1157C";
+createNode animBlendNodeAdditiveScale -n "AxeToScythe:Main_scaleX_Weap_export";
+	rename -uid "FEE333CE-41EB-2198-3480-049AEDE86A37";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "AxeToScythe:Main_scaleY_Weap_export";
+	rename -uid "E534DD48-4F54-13A7-694E-8DBF0FC4133C";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "AxeToScythe:Main_scaleZ_Weap_export";
+	rename -uid "0E151A97-4AD0-DCF9-9551-E2851BE9714C";
+	setAttr ".ia" 1;
+	setAttr ".o" 1;
+createNode animCurveTU -n "Main_visibility_Weap_export_inputB";
+	rename -uid "D358585B-4352-691B-1171-69B65D1CB74E";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "Main_translateX_Weap_export_inputB";
+	rename -uid "16F32AAD-4359-161B-9A8C-BC842F73DA5B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "Main_translateY_Weap_export_inputB";
+	rename -uid "971A9B46-4974-3264-596C-02AC0A470913";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "Main_translateZ_Weap_export_inputB";
+	rename -uid "FD5BD381-4DCF-2960-63B9-288AB94DC260";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "Main_rotate_Weap_export_inputBX";
+	rename -uid "BD88B8E0-4B6D-1EC7-6B23-CB8A2BECCD10";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "Main_rotate_Weap_export_inputBY";
+	rename -uid "78BDC1BA-4F9C-B328-FB1E-21892C45ACEF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTA -n "Main_rotate_Weap_export_inputBZ";
+	rename -uid "17399FBB-4B25-133E-3885-8B87B1C8ADCA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTU -n "Main_scaleX_Weap_export_inputB";
+	rename -uid "CC7E91EB-4AED-5E8B-C9FA-66903ACE7B82";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "Main_scaleY_Weap_export_inputB";
+	rename -uid "BBAB381C-4891-4DEB-FD3C-17B98704BCE1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode animCurveTU -n "Main_scaleZ_Weap_export_inputB";
+	rename -uid "01A21E1F-46D6-8F8A-255D-399CE1FC42A0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 1;
+createNode objectSet -n "AxeScythe1";
+	rename -uid "ABDE1184-4B6F-D0FC-4B48-1F9E8BFB39BB";
+	setAttr ".ihi" 0;
+	setAttr -s 11 ".dsm";
+	setAttr ".an" -type "string" "gCharacterSet";
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -av -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" 0;
-	setAttr -av ".unw";
+	setAttr -k on ".o" 81;
+	setAttr -av ".unw" 81;
 	setAttr -k on ".etw";
 	setAttr -k on ".tps";
 	setAttr -av -k on ".tms";
@@ -24930,7 +25272,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 11 ".st";
+	setAttr -s 10 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -24943,7 +25285,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 13 ".s";
+	setAttr -s 12 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -24955,9 +25297,9 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 42 ".u";
+	setAttr -s 43 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 3 ".r";
+	setAttr -s 4 ".r";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -24969,7 +25311,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 6 ".dsm";
+	setAttr -s 10 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -24978,7 +25320,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr -k on ".ro" yes;
-	setAttr -s 2 ".gn";
+	setAttr -s 6 ".gn";
 select -ne :initialParticleSE;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -26449,817 +26791,817 @@ connectAttr "AZRIRN.phl[1321]" "Loop.dsm" -na;
 connectAttr "CTL_C_Weapon1_rotate_Loop.oz" "AZRIRN.phl[1322]";
 connectAttr "AZRIRN.phl[1323]" "CTL_C_Weapon1_rotate_Loop.ro";
 connectAttr "AZRIRN.phl[1324]" "Axe_Main_ctrl_parentConstraint1.tg[0].ts";
-connectAttr "AZRIRN.phl[1325]" "Axe_Main_ctrl_parentConstraint1.tg[0].tt";
-connectAttr "AZRIRN.phl[1326]" "Loop.dsm" -na;
-connectAttr "CTL_C_WeaponGrip1_translateX_Loop.o" "AZRIRN.phl[1327]";
+connectAttr "AZRIRN.phl[1325]" "Main_parentConstraint1.tg[0].ts";
+connectAttr "AZRIRN.phl[1326]" "Axe_Main_ctrl_parentConstraint1.tg[0].tt";
+connectAttr "AZRIRN.phl[1327]" "Main_parentConstraint1.tg[0].tt";
 connectAttr "AZRIRN.phl[1328]" "Loop.dsm" -na;
-connectAttr "CTL_C_WeaponGrip1_translateY_Loop.o" "AZRIRN.phl[1329]";
+connectAttr "CTL_C_WeaponGrip1_translateX_Loop.o" "AZRIRN.phl[1329]";
 connectAttr "AZRIRN.phl[1330]" "Loop.dsm" -na;
-connectAttr "CTL_C_WeaponGrip1_translateZ_Loop.o" "AZRIRN.phl[1331]";
-connectAttr "AZRIRN.phl[1332]" "Axe_Main_ctrl_parentConstraint1.tg[0].trp";
-connectAttr "AZRIRN.phl[1333]" "Axe_Main_ctrl_parentConstraint1.tg[0].trt";
-connectAttr "AZRIRN.phl[1334]" "Axe_Main_ctrl_parentConstraint1.tg[0].tr";
-connectAttr "AZRIRN.phl[1335]" "Loop.dsm" -na;
-connectAttr "CTL_C_WeaponGrip1_rotate_Loop.ox" "AZRIRN.phl[1336]";
-connectAttr "AZRIRN.phl[1337]" "Loop.dsm" -na;
-connectAttr "CTL_C_WeaponGrip1_rotate_Loop.oy" "AZRIRN.phl[1338]";
-connectAttr "AZRIRN.phl[1339]" "Loop.dsm" -na;
-connectAttr "CTL_C_WeaponGrip1_rotate_Loop.oz" "AZRIRN.phl[1340]";
-connectAttr "AZRIRN.phl[1341]" "Axe_Main_ctrl_parentConstraint1.tg[0].tro";
-connectAttr "AZRIRN.phl[1342]" "CTL_C_WeaponGrip1_rotate_Loop.ro";
-connectAttr "AZRIRN.phl[1343]" "Axe_Main_ctrl_parentConstraint1.tg[0].tpm";
+connectAttr "CTL_C_WeaponGrip1_translateY_Loop.o" "AZRIRN.phl[1331]";
+connectAttr "AZRIRN.phl[1332]" "Loop.dsm" -na;
+connectAttr "CTL_C_WeaponGrip1_translateZ_Loop.o" "AZRIRN.phl[1333]";
+connectAttr "AZRIRN.phl[1334]" "Axe_Main_ctrl_parentConstraint1.tg[0].trp";
+connectAttr "AZRIRN.phl[1335]" "Main_parentConstraint1.tg[0].trp";
+connectAttr "AZRIRN.phl[1336]" "Axe_Main_ctrl_parentConstraint1.tg[0].trt";
+connectAttr "AZRIRN.phl[1337]" "Main_parentConstraint1.tg[0].trt";
+connectAttr "AZRIRN.phl[1338]" "Axe_Main_ctrl_parentConstraint1.tg[0].tr";
+connectAttr "AZRIRN.phl[1339]" "Main_parentConstraint1.tg[0].tr";
+connectAttr "AZRIRN.phl[1340]" "Loop.dsm" -na;
+connectAttr "CTL_C_WeaponGrip1_rotate_Loop.ox" "AZRIRN.phl[1341]";
+connectAttr "AZRIRN.phl[1342]" "Loop.dsm" -na;
+connectAttr "CTL_C_WeaponGrip1_rotate_Loop.oy" "AZRIRN.phl[1343]";
 connectAttr "AZRIRN.phl[1344]" "Loop.dsm" -na;
-connectAttr "CTL_C_EyeLookAt1_translateX_Loop.o" "AZRIRN.phl[1345]";
-connectAttr "AZRIRN.phl[1346]" "Loop.dsm" -na;
-connectAttr "CTL_C_EyeLookAt1_translateY_Loop.o" "AZRIRN.phl[1347]";
-connectAttr "AZRIRN.phl[1348]" "Loop.dsm" -na;
-connectAttr "CTL_C_EyeLookAt1_translateZ_Loop.o" "AZRIRN.phl[1349]";
-connectAttr "AZRIRN.phl[1350]" "Loop.dsm" -na;
-connectAttr "CTL_R_EyeLookAt1_translateX_Loop.o" "AZRIRN.phl[1351]";
-connectAttr "AZRIRN.phl[1352]" "Loop.dsm" -na;
-connectAttr "CTL_R_EyeLookAt1_translateY_Loop.o" "AZRIRN.phl[1353]";
-connectAttr "AZRIRN.phl[1354]" "Loop.dsm" -na;
-connectAttr "CTL_R_EyeLookAt1_translateZ_Loop.o" "AZRIRN.phl[1355]";
-connectAttr "AZRIRN.phl[1356]" "Loop.dsm" -na;
-connectAttr "CTL_L_EyeLookAt1_translateX_Loop.o" "AZRIRN.phl[1357]";
-connectAttr "AZRIRN.phl[1358]" "Loop.dsm" -na;
-connectAttr "CTL_L_EyeLookAt1_translateY_Loop.o" "AZRIRN.phl[1359]";
-connectAttr "AZRIRN.phl[1360]" "Loop.dsm" -na;
-connectAttr "CTL_L_EyeLookAt1_translateZ_Loop.o" "AZRIRN.phl[1361]";
-connectAttr "AZRIRN.phl[1362]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_1_translateX_Loop.o" "AZRIRN.phl[1363]";
-connectAttr "AZRIRN.phl[1364]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_1_translateY_Loop.o" "AZRIRN.phl[1365]";
-connectAttr "AZRIRN.phl[1366]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_1_translateZ_Loop.o" "AZRIRN.phl[1367]";
-connectAttr "AZRIRN.phl[1368]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_1_rotate_Loop.ox" "AZRIRN.phl[1369]";
-connectAttr "AZRIRN.phl[1370]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_1_rotate_Loop.oy" "AZRIRN.phl[1371]";
-connectAttr "AZRIRN.phl[1372]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_1_rotate_Loop.oz" "AZRIRN.phl[1373]";
-connectAttr "AZRIRN.phl[1374]" "AZRI:CTL_L_SkirtFront_1_rotate_Loop.ro";
+connectAttr "CTL_C_WeaponGrip1_rotate_Loop.oz" "AZRIRN.phl[1345]";
+connectAttr "AZRIRN.phl[1346]" "Axe_Main_ctrl_parentConstraint1.tg[0].tro";
+connectAttr "AZRIRN.phl[1347]" "CTL_C_WeaponGrip1_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1348]" "Main_parentConstraint1.tg[0].tro";
+connectAttr "AZRIRN.phl[1349]" "Axe_Main_ctrl_parentConstraint1.tg[0].tpm";
+connectAttr "AZRIRN.phl[1350]" "Main_parentConstraint1.tg[0].tpm";
+connectAttr "AZRIRN.phl[1351]" "Loop.dsm" -na;
+connectAttr "CTL_C_EyeLookAt1_translateX_Loop.o" "AZRIRN.phl[1352]";
+connectAttr "AZRIRN.phl[1353]" "Loop.dsm" -na;
+connectAttr "CTL_C_EyeLookAt1_translateY_Loop.o" "AZRIRN.phl[1354]";
+connectAttr "AZRIRN.phl[1355]" "Loop.dsm" -na;
+connectAttr "CTL_C_EyeLookAt1_translateZ_Loop.o" "AZRIRN.phl[1356]";
+connectAttr "AZRIRN.phl[1357]" "Loop.dsm" -na;
+connectAttr "CTL_R_EyeLookAt1_translateX_Loop.o" "AZRIRN.phl[1358]";
+connectAttr "AZRIRN.phl[1359]" "Loop.dsm" -na;
+connectAttr "CTL_R_EyeLookAt1_translateY_Loop.o" "AZRIRN.phl[1360]";
+connectAttr "AZRIRN.phl[1361]" "Loop.dsm" -na;
+connectAttr "CTL_R_EyeLookAt1_translateZ_Loop.o" "AZRIRN.phl[1362]";
+connectAttr "AZRIRN.phl[1363]" "Loop.dsm" -na;
+connectAttr "CTL_L_EyeLookAt1_translateX_Loop.o" "AZRIRN.phl[1364]";
+connectAttr "AZRIRN.phl[1365]" "Loop.dsm" -na;
+connectAttr "CTL_L_EyeLookAt1_translateY_Loop.o" "AZRIRN.phl[1366]";
+connectAttr "AZRIRN.phl[1367]" "Loop.dsm" -na;
+connectAttr "CTL_L_EyeLookAt1_translateZ_Loop.o" "AZRIRN.phl[1368]";
+connectAttr "AZRIRN.phl[1369]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtFront_1_translateX_Loop.o" "AZRIRN.phl[1370]";
+connectAttr "AZRIRN.phl[1371]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtFront_1_translateY_Loop.o" "AZRIRN.phl[1372]";
+connectAttr "AZRIRN.phl[1373]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtFront_1_translateZ_Loop.o" "AZRIRN.phl[1374]";
 connectAttr "AZRIRN.phl[1375]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_2_translateX_Loop.o" "AZRIRN.phl[1376]";
+connectAttr "AZRI:CTL_L_SkirtFront_1_rotate_Loop.ox" "AZRIRN.phl[1376]";
 connectAttr "AZRIRN.phl[1377]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_2_translateY_Loop.o" "AZRIRN.phl[1378]";
+connectAttr "AZRI:CTL_L_SkirtFront_1_rotate_Loop.oy" "AZRIRN.phl[1378]";
 connectAttr "AZRIRN.phl[1379]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_2_translateZ_Loop.o" "AZRIRN.phl[1380]";
-connectAttr "AZRIRN.phl[1381]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_2_rotate_Loop.ox" "AZRIRN.phl[1382]";
-connectAttr "AZRIRN.phl[1383]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_2_rotate_Loop.oy" "AZRIRN.phl[1384]";
-connectAttr "AZRIRN.phl[1385]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_2_rotate_Loop.oz" "AZRIRN.phl[1386]";
-connectAttr "AZRIRN.phl[1387]" "AZRI:CTL_L_SkirtFront_2_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_SkirtFront_1_rotate_Loop.oz" "AZRIRN.phl[1380]";
+connectAttr "AZRIRN.phl[1381]" "AZRI:CTL_L_SkirtFront_1_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1382]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtFront_2_translateX_Loop.o" "AZRIRN.phl[1383]";
+connectAttr "AZRIRN.phl[1384]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtFront_2_translateY_Loop.o" "AZRIRN.phl[1385]";
+connectAttr "AZRIRN.phl[1386]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtFront_2_translateZ_Loop.o" "AZRIRN.phl[1387]";
 connectAttr "AZRIRN.phl[1388]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_3_translateX_Loop.o" "AZRIRN.phl[1389]";
+connectAttr "AZRI:CTL_L_SkirtFront_2_rotate_Loop.ox" "AZRIRN.phl[1389]";
 connectAttr "AZRIRN.phl[1390]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_3_translateY_Loop.o" "AZRIRN.phl[1391]";
+connectAttr "AZRI:CTL_L_SkirtFront_2_rotate_Loop.oy" "AZRIRN.phl[1391]";
 connectAttr "AZRIRN.phl[1392]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_3_translateZ_Loop.o" "AZRIRN.phl[1393]";
-connectAttr "AZRIRN.phl[1394]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_3_rotate_Loop.ox" "AZRIRN.phl[1395]";
-connectAttr "AZRIRN.phl[1396]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_3_rotate_Loop.oy" "AZRIRN.phl[1397]";
-connectAttr "AZRIRN.phl[1398]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_3_rotate_Loop.oz" "AZRIRN.phl[1399]";
-connectAttr "AZRIRN.phl[1400]" "AZRI:CTL_L_SkirtFront_3_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_SkirtFront_2_rotate_Loop.oz" "AZRIRN.phl[1393]";
+connectAttr "AZRIRN.phl[1394]" "AZRI:CTL_L_SkirtFront_2_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1395]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtFront_3_translateX_Loop.o" "AZRIRN.phl[1396]";
+connectAttr "AZRIRN.phl[1397]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtFront_3_translateY_Loop.o" "AZRIRN.phl[1398]";
+connectAttr "AZRIRN.phl[1399]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtFront_3_translateZ_Loop.o" "AZRIRN.phl[1400]";
 connectAttr "AZRIRN.phl[1401]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_4_translateX_Loop.o" "AZRIRN.phl[1402]";
+connectAttr "AZRI:CTL_L_SkirtFront_3_rotate_Loop.ox" "AZRIRN.phl[1402]";
 connectAttr "AZRIRN.phl[1403]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_4_translateY_Loop.o" "AZRIRN.phl[1404]";
+connectAttr "AZRI:CTL_L_SkirtFront_3_rotate_Loop.oy" "AZRIRN.phl[1404]";
 connectAttr "AZRIRN.phl[1405]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_4_translateZ_Loop.o" "AZRIRN.phl[1406]";
-connectAttr "AZRIRN.phl[1407]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_4_rotate_Loop.ox" "AZRIRN.phl[1408]";
-connectAttr "AZRIRN.phl[1409]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_4_rotate_Loop.oy" "AZRIRN.phl[1410]";
-connectAttr "AZRIRN.phl[1411]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtFront_4_rotate_Loop.oz" "AZRIRN.phl[1412]";
-connectAttr "AZRIRN.phl[1413]" "AZRI:CTL_L_SkirtFront_4_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_SkirtFront_3_rotate_Loop.oz" "AZRIRN.phl[1406]";
+connectAttr "AZRIRN.phl[1407]" "AZRI:CTL_L_SkirtFront_3_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1408]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtFront_4_translateX_Loop.o" "AZRIRN.phl[1409]";
+connectAttr "AZRIRN.phl[1410]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtFront_4_translateY_Loop.o" "AZRIRN.phl[1411]";
+connectAttr "AZRIRN.phl[1412]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtFront_4_translateZ_Loop.o" "AZRIRN.phl[1413]";
 connectAttr "AZRIRN.phl[1414]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_1_translateX_Loop.o" "AZRIRN.phl[1415]";
+connectAttr "AZRI:CTL_L_SkirtFront_4_rotate_Loop.ox" "AZRIRN.phl[1415]";
 connectAttr "AZRIRN.phl[1416]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_1_translateY_Loop.o" "AZRIRN.phl[1417]";
+connectAttr "AZRI:CTL_L_SkirtFront_4_rotate_Loop.oy" "AZRIRN.phl[1417]";
 connectAttr "AZRIRN.phl[1418]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_1_translateZ_Loop.o" "AZRIRN.phl[1419]";
-connectAttr "AZRIRN.phl[1420]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_1_rotate_Loop.ox" "AZRIRN.phl[1421]";
-connectAttr "AZRIRN.phl[1422]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_1_rotate_Loop.oy" "AZRIRN.phl[1423]";
-connectAttr "AZRIRN.phl[1424]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_1_rotate_Loop.oz" "AZRIRN.phl[1425]";
-connectAttr "AZRIRN.phl[1426]" "AZRI:CTL_L_SkirtSide_1_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_SkirtFront_4_rotate_Loop.oz" "AZRIRN.phl[1419]";
+connectAttr "AZRIRN.phl[1420]" "AZRI:CTL_L_SkirtFront_4_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1421]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtSide_1_translateX_Loop.o" "AZRIRN.phl[1422]";
+connectAttr "AZRIRN.phl[1423]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtSide_1_translateY_Loop.o" "AZRIRN.phl[1424]";
+connectAttr "AZRIRN.phl[1425]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtSide_1_translateZ_Loop.o" "AZRIRN.phl[1426]";
 connectAttr "AZRIRN.phl[1427]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_2_translateX_Loop.o" "AZRIRN.phl[1428]";
+connectAttr "AZRI:CTL_L_SkirtSide_1_rotate_Loop.ox" "AZRIRN.phl[1428]";
 connectAttr "AZRIRN.phl[1429]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_2_translateY_Loop.o" "AZRIRN.phl[1430]";
+connectAttr "AZRI:CTL_L_SkirtSide_1_rotate_Loop.oy" "AZRIRN.phl[1430]";
 connectAttr "AZRIRN.phl[1431]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_2_translateZ_Loop.o" "AZRIRN.phl[1432]";
-connectAttr "AZRIRN.phl[1433]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_2_rotate_Loop.ox" "AZRIRN.phl[1434]";
-connectAttr "AZRIRN.phl[1435]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_2_rotate_Loop.oy" "AZRIRN.phl[1436]";
-connectAttr "AZRIRN.phl[1437]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_2_rotate_Loop.oz" "AZRIRN.phl[1438]";
-connectAttr "AZRIRN.phl[1439]" "AZRI:CTL_L_SkirtSide_2_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_SkirtSide_1_rotate_Loop.oz" "AZRIRN.phl[1432]";
+connectAttr "AZRIRN.phl[1433]" "AZRI:CTL_L_SkirtSide_1_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1434]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtSide_2_translateX_Loop.o" "AZRIRN.phl[1435]";
+connectAttr "AZRIRN.phl[1436]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtSide_2_translateY_Loop.o" "AZRIRN.phl[1437]";
+connectAttr "AZRIRN.phl[1438]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtSide_2_translateZ_Loop.o" "AZRIRN.phl[1439]";
 connectAttr "AZRIRN.phl[1440]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_3_translateX_Loop.o" "AZRIRN.phl[1441]";
+connectAttr "AZRI:CTL_L_SkirtSide_2_rotate_Loop.ox" "AZRIRN.phl[1441]";
 connectAttr "AZRIRN.phl[1442]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_3_translateY_Loop.o" "AZRIRN.phl[1443]";
+connectAttr "AZRI:CTL_L_SkirtSide_2_rotate_Loop.oy" "AZRIRN.phl[1443]";
 connectAttr "AZRIRN.phl[1444]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_3_translateZ_Loop.o" "AZRIRN.phl[1445]";
-connectAttr "AZRIRN.phl[1446]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_3_rotate_Loop.ox" "AZRIRN.phl[1447]";
-connectAttr "AZRIRN.phl[1448]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_3_rotate_Loop.oy" "AZRIRN.phl[1449]";
-connectAttr "AZRIRN.phl[1450]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_3_rotate_Loop.oz" "AZRIRN.phl[1451]";
-connectAttr "AZRIRN.phl[1452]" "AZRI:CTL_L_SkirtSide_3_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_SkirtSide_2_rotate_Loop.oz" "AZRIRN.phl[1445]";
+connectAttr "AZRIRN.phl[1446]" "AZRI:CTL_L_SkirtSide_2_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1447]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtSide_3_translateX_Loop.o" "AZRIRN.phl[1448]";
+connectAttr "AZRIRN.phl[1449]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtSide_3_translateY_Loop.o" "AZRIRN.phl[1450]";
+connectAttr "AZRIRN.phl[1451]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtSide_3_translateZ_Loop.o" "AZRIRN.phl[1452]";
 connectAttr "AZRIRN.phl[1453]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_4_translateX_Loop.o" "AZRIRN.phl[1454]";
+connectAttr "AZRI:CTL_L_SkirtSide_3_rotate_Loop.ox" "AZRIRN.phl[1454]";
 connectAttr "AZRIRN.phl[1455]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_4_translateY_Loop.o" "AZRIRN.phl[1456]";
+connectAttr "AZRI:CTL_L_SkirtSide_3_rotate_Loop.oy" "AZRIRN.phl[1456]";
 connectAttr "AZRIRN.phl[1457]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_4_translateZ_Loop.o" "AZRIRN.phl[1458]";
-connectAttr "AZRIRN.phl[1459]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_4_rotate_Loop.ox" "AZRIRN.phl[1460]";
-connectAttr "AZRIRN.phl[1461]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_4_rotate_Loop.oy" "AZRIRN.phl[1462]";
-connectAttr "AZRIRN.phl[1463]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtSide_4_rotate_Loop.oz" "AZRIRN.phl[1464]";
-connectAttr "AZRIRN.phl[1465]" "AZRI:CTL_L_SkirtSide_4_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_SkirtSide_3_rotate_Loop.oz" "AZRIRN.phl[1458]";
+connectAttr "AZRIRN.phl[1459]" "AZRI:CTL_L_SkirtSide_3_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1460]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtSide_4_translateX_Loop.o" "AZRIRN.phl[1461]";
+connectAttr "AZRIRN.phl[1462]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtSide_4_translateY_Loop.o" "AZRIRN.phl[1463]";
+connectAttr "AZRIRN.phl[1464]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtSide_4_translateZ_Loop.o" "AZRIRN.phl[1465]";
 connectAttr "AZRIRN.phl[1466]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_1_translateX_Loop.o" "AZRIRN.phl[1467]";
+connectAttr "AZRI:CTL_L_SkirtSide_4_rotate_Loop.ox" "AZRIRN.phl[1467]";
 connectAttr "AZRIRN.phl[1468]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_1_translateY_Loop.o" "AZRIRN.phl[1469]";
+connectAttr "AZRI:CTL_L_SkirtSide_4_rotate_Loop.oy" "AZRIRN.phl[1469]";
 connectAttr "AZRIRN.phl[1470]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_1_translateZ_Loop.o" "AZRIRN.phl[1471]";
-connectAttr "AZRIRN.phl[1472]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_1_rotate_Loop.ox" "AZRIRN.phl[1473]";
-connectAttr "AZRIRN.phl[1474]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_1_rotate_Loop.oy" "AZRIRN.phl[1475]";
-connectAttr "AZRIRN.phl[1476]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_1_rotate_Loop.oz" "AZRIRN.phl[1477]";
-connectAttr "AZRIRN.phl[1478]" "AZRI:CTL_L_SkirtBack_1_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_SkirtSide_4_rotate_Loop.oz" "AZRIRN.phl[1471]";
+connectAttr "AZRIRN.phl[1472]" "AZRI:CTL_L_SkirtSide_4_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1473]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtBack_1_translateX_Loop.o" "AZRIRN.phl[1474]";
+connectAttr "AZRIRN.phl[1475]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtBack_1_translateY_Loop.o" "AZRIRN.phl[1476]";
+connectAttr "AZRIRN.phl[1477]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtBack_1_translateZ_Loop.o" "AZRIRN.phl[1478]";
 connectAttr "AZRIRN.phl[1479]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_2_translateX_Loop.o" "AZRIRN.phl[1480]";
+connectAttr "AZRI:CTL_L_SkirtBack_1_rotate_Loop.ox" "AZRIRN.phl[1480]";
 connectAttr "AZRIRN.phl[1481]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_2_translateY_Loop.o" "AZRIRN.phl[1482]";
+connectAttr "AZRI:CTL_L_SkirtBack_1_rotate_Loop.oy" "AZRIRN.phl[1482]";
 connectAttr "AZRIRN.phl[1483]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_2_translateZ_Loop.o" "AZRIRN.phl[1484]";
-connectAttr "AZRIRN.phl[1485]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_2_rotate_Loop.ox" "AZRIRN.phl[1486]";
-connectAttr "AZRIRN.phl[1487]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_2_rotate_Loop.oy" "AZRIRN.phl[1488]";
-connectAttr "AZRIRN.phl[1489]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_2_rotate_Loop.oz" "AZRIRN.phl[1490]";
-connectAttr "AZRIRN.phl[1491]" "AZRI:CTL_L_SkirtBack_2_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_SkirtBack_1_rotate_Loop.oz" "AZRIRN.phl[1484]";
+connectAttr "AZRIRN.phl[1485]" "AZRI:CTL_L_SkirtBack_1_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1486]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtBack_2_translateX_Loop.o" "AZRIRN.phl[1487]";
+connectAttr "AZRIRN.phl[1488]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtBack_2_translateY_Loop.o" "AZRIRN.phl[1489]";
+connectAttr "AZRIRN.phl[1490]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtBack_2_translateZ_Loop.o" "AZRIRN.phl[1491]";
 connectAttr "AZRIRN.phl[1492]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_3_translateX_Loop.o" "AZRIRN.phl[1493]";
+connectAttr "AZRI:CTL_L_SkirtBack_2_rotate_Loop.ox" "AZRIRN.phl[1493]";
 connectAttr "AZRIRN.phl[1494]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_3_translateY_Loop.o" "AZRIRN.phl[1495]";
+connectAttr "AZRI:CTL_L_SkirtBack_2_rotate_Loop.oy" "AZRIRN.phl[1495]";
 connectAttr "AZRIRN.phl[1496]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_3_translateZ_Loop.o" "AZRIRN.phl[1497]";
-connectAttr "AZRIRN.phl[1498]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_3_rotate_Loop.ox" "AZRIRN.phl[1499]";
-connectAttr "AZRIRN.phl[1500]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_3_rotate_Loop.oy" "AZRIRN.phl[1501]";
-connectAttr "AZRIRN.phl[1502]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_3_rotate_Loop.oz" "AZRIRN.phl[1503]";
-connectAttr "AZRIRN.phl[1504]" "AZRI:CTL_L_SkirtBack_3_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_SkirtBack_2_rotate_Loop.oz" "AZRIRN.phl[1497]";
+connectAttr "AZRIRN.phl[1498]" "AZRI:CTL_L_SkirtBack_2_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1499]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtBack_3_translateX_Loop.o" "AZRIRN.phl[1500]";
+connectAttr "AZRIRN.phl[1501]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtBack_3_translateY_Loop.o" "AZRIRN.phl[1502]";
+connectAttr "AZRIRN.phl[1503]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtBack_3_translateZ_Loop.o" "AZRIRN.phl[1504]";
 connectAttr "AZRIRN.phl[1505]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_4_translateX_Loop.o" "AZRIRN.phl[1506]";
+connectAttr "AZRI:CTL_L_SkirtBack_3_rotate_Loop.ox" "AZRIRN.phl[1506]";
 connectAttr "AZRIRN.phl[1507]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_4_translateY_Loop.o" "AZRIRN.phl[1508]";
+connectAttr "AZRI:CTL_L_SkirtBack_3_rotate_Loop.oy" "AZRIRN.phl[1508]";
 connectAttr "AZRIRN.phl[1509]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_4_translateZ_Loop.o" "AZRIRN.phl[1510]";
-connectAttr "AZRIRN.phl[1511]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_4_rotate_Loop.ox" "AZRIRN.phl[1512]";
-connectAttr "AZRIRN.phl[1513]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_4_rotate_Loop.oy" "AZRIRN.phl[1514]";
-connectAttr "AZRIRN.phl[1515]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_SkirtBack_4_rotate_Loop.oz" "AZRIRN.phl[1516]";
-connectAttr "AZRIRN.phl[1517]" "AZRI:CTL_L_SkirtBack_4_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_SkirtBack_3_rotate_Loop.oz" "AZRIRN.phl[1510]";
+connectAttr "AZRIRN.phl[1511]" "AZRI:CTL_L_SkirtBack_3_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1512]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtBack_4_translateX_Loop.o" "AZRIRN.phl[1513]";
+connectAttr "AZRIRN.phl[1514]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtBack_4_translateY_Loop.o" "AZRIRN.phl[1515]";
+connectAttr "AZRIRN.phl[1516]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_SkirtBack_4_translateZ_Loop.o" "AZRIRN.phl[1517]";
 connectAttr "AZRIRN.phl[1518]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_2_translateX_Loop.o" "AZRIRN.phl[1519]";
+connectAttr "AZRI:CTL_L_SkirtBack_4_rotate_Loop.ox" "AZRIRN.phl[1519]";
 connectAttr "AZRIRN.phl[1520]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_2_translateY_Loop.o" "AZRIRN.phl[1521]";
+connectAttr "AZRI:CTL_L_SkirtBack_4_rotate_Loop.oy" "AZRIRN.phl[1521]";
 connectAttr "AZRIRN.phl[1522]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_2_translateZ_Loop.o" "AZRIRN.phl[1523]";
-connectAttr "AZRIRN.phl[1524]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_2_rotate_Loop.ox" "AZRIRN.phl[1525]";
-connectAttr "AZRIRN.phl[1526]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_2_rotate_Loop.oy" "AZRIRN.phl[1527]";
-connectAttr "AZRIRN.phl[1528]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_2_rotate_Loop.oz" "AZRIRN.phl[1529]";
-connectAttr "AZRIRN.phl[1530]" "AZRI:CTL_R_SkirtFront_2_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_SkirtBack_4_rotate_Loop.oz" "AZRIRN.phl[1523]";
+connectAttr "AZRIRN.phl[1524]" "AZRI:CTL_L_SkirtBack_4_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1525]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtFront_2_translateX_Loop.o" "AZRIRN.phl[1526]";
+connectAttr "AZRIRN.phl[1527]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtFront_2_translateY_Loop.o" "AZRIRN.phl[1528]";
+connectAttr "AZRIRN.phl[1529]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtFront_2_translateZ_Loop.o" "AZRIRN.phl[1530]";
 connectAttr "AZRIRN.phl[1531]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_3_translateX_Loop.o" "AZRIRN.phl[1532]";
+connectAttr "AZRI:CTL_R_SkirtFront_2_rotate_Loop.ox" "AZRIRN.phl[1532]";
 connectAttr "AZRIRN.phl[1533]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_3_translateY_Loop.o" "AZRIRN.phl[1534]";
+connectAttr "AZRI:CTL_R_SkirtFront_2_rotate_Loop.oy" "AZRIRN.phl[1534]";
 connectAttr "AZRIRN.phl[1535]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_3_translateZ_Loop.o" "AZRIRN.phl[1536]";
-connectAttr "AZRIRN.phl[1537]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_3_rotate_Loop.ox" "AZRIRN.phl[1538]";
-connectAttr "AZRIRN.phl[1539]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_3_rotate_Loop.oy" "AZRIRN.phl[1540]";
-connectAttr "AZRIRN.phl[1541]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_3_rotate_Loop.oz" "AZRIRN.phl[1542]";
-connectAttr "AZRIRN.phl[1543]" "AZRI:CTL_R_SkirtFront_3_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_SkirtFront_2_rotate_Loop.oz" "AZRIRN.phl[1536]";
+connectAttr "AZRIRN.phl[1537]" "AZRI:CTL_R_SkirtFront_2_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1538]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtFront_3_translateX_Loop.o" "AZRIRN.phl[1539]";
+connectAttr "AZRIRN.phl[1540]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtFront_3_translateY_Loop.o" "AZRIRN.phl[1541]";
+connectAttr "AZRIRN.phl[1542]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtFront_3_translateZ_Loop.o" "AZRIRN.phl[1543]";
 connectAttr "AZRIRN.phl[1544]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_4_translateX_Loop.o" "AZRIRN.phl[1545]";
+connectAttr "AZRI:CTL_R_SkirtFront_3_rotate_Loop.ox" "AZRIRN.phl[1545]";
 connectAttr "AZRIRN.phl[1546]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_4_translateY_Loop.o" "AZRIRN.phl[1547]";
+connectAttr "AZRI:CTL_R_SkirtFront_3_rotate_Loop.oy" "AZRIRN.phl[1547]";
 connectAttr "AZRIRN.phl[1548]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_4_translateZ_Loop.o" "AZRIRN.phl[1549]";
-connectAttr "AZRIRN.phl[1550]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_4_rotate_Loop.ox" "AZRIRN.phl[1551]";
-connectAttr "AZRIRN.phl[1552]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_4_rotate_Loop.oy" "AZRIRN.phl[1553]";
-connectAttr "AZRIRN.phl[1554]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtFront_4_rotate_Loop.oz" "AZRIRN.phl[1555]";
-connectAttr "AZRIRN.phl[1556]" "AZRI:CTL_R_SkirtFront_4_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_SkirtFront_3_rotate_Loop.oz" "AZRIRN.phl[1549]";
+connectAttr "AZRIRN.phl[1550]" "AZRI:CTL_R_SkirtFront_3_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1551]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtFront_4_translateX_Loop.o" "AZRIRN.phl[1552]";
+connectAttr "AZRIRN.phl[1553]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtFront_4_translateY_Loop.o" "AZRIRN.phl[1554]";
+connectAttr "AZRIRN.phl[1555]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtFront_4_translateZ_Loop.o" "AZRIRN.phl[1556]";
 connectAttr "AZRIRN.phl[1557]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_1_translateX_Loop.o" "AZRIRN.phl[1558]";
+connectAttr "AZRI:CTL_R_SkirtFront_4_rotate_Loop.ox" "AZRIRN.phl[1558]";
 connectAttr "AZRIRN.phl[1559]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_1_translateY_Loop.o" "AZRIRN.phl[1560]";
+connectAttr "AZRI:CTL_R_SkirtFront_4_rotate_Loop.oy" "AZRIRN.phl[1560]";
 connectAttr "AZRIRN.phl[1561]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_1_translateZ_Loop.o" "AZRIRN.phl[1562]";
-connectAttr "AZRIRN.phl[1563]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_1_rotate_Loop.ox" "AZRIRN.phl[1564]";
-connectAttr "AZRIRN.phl[1565]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_1_rotate_Loop.oy" "AZRIRN.phl[1566]";
-connectAttr "AZRIRN.phl[1567]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_1_rotate_Loop.oz" "AZRIRN.phl[1568]";
-connectAttr "AZRIRN.phl[1569]" "AZRI:CTL_R_SkirtSide_1_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_SkirtFront_4_rotate_Loop.oz" "AZRIRN.phl[1562]";
+connectAttr "AZRIRN.phl[1563]" "AZRI:CTL_R_SkirtFront_4_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1564]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtSide_1_translateX_Loop.o" "AZRIRN.phl[1565]";
+connectAttr "AZRIRN.phl[1566]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtSide_1_translateY_Loop.o" "AZRIRN.phl[1567]";
+connectAttr "AZRIRN.phl[1568]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtSide_1_translateZ_Loop.o" "AZRIRN.phl[1569]";
 connectAttr "AZRIRN.phl[1570]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_2_translateX_Loop.o" "AZRIRN.phl[1571]";
+connectAttr "AZRI:CTL_R_SkirtSide_1_rotate_Loop.ox" "AZRIRN.phl[1571]";
 connectAttr "AZRIRN.phl[1572]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_2_translateY_Loop.o" "AZRIRN.phl[1573]";
+connectAttr "AZRI:CTL_R_SkirtSide_1_rotate_Loop.oy" "AZRIRN.phl[1573]";
 connectAttr "AZRIRN.phl[1574]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_2_translateZ_Loop.o" "AZRIRN.phl[1575]";
-connectAttr "AZRIRN.phl[1576]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_2_rotate_Loop.ox" "AZRIRN.phl[1577]";
-connectAttr "AZRIRN.phl[1578]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_2_rotate_Loop.oy" "AZRIRN.phl[1579]";
-connectAttr "AZRIRN.phl[1580]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_2_rotate_Loop.oz" "AZRIRN.phl[1581]";
-connectAttr "AZRIRN.phl[1582]" "AZRI:CTL_R_SkirtSide_2_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_SkirtSide_1_rotate_Loop.oz" "AZRIRN.phl[1575]";
+connectAttr "AZRIRN.phl[1576]" "AZRI:CTL_R_SkirtSide_1_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1577]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtSide_2_translateX_Loop.o" "AZRIRN.phl[1578]";
+connectAttr "AZRIRN.phl[1579]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtSide_2_translateY_Loop.o" "AZRIRN.phl[1580]";
+connectAttr "AZRIRN.phl[1581]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtSide_2_translateZ_Loop.o" "AZRIRN.phl[1582]";
 connectAttr "AZRIRN.phl[1583]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_3_translateX_Loop.o" "AZRIRN.phl[1584]";
+connectAttr "AZRI:CTL_R_SkirtSide_2_rotate_Loop.ox" "AZRIRN.phl[1584]";
 connectAttr "AZRIRN.phl[1585]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_3_translateY_Loop.o" "AZRIRN.phl[1586]";
+connectAttr "AZRI:CTL_R_SkirtSide_2_rotate_Loop.oy" "AZRIRN.phl[1586]";
 connectAttr "AZRIRN.phl[1587]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_3_translateZ_Loop.o" "AZRIRN.phl[1588]";
-connectAttr "AZRIRN.phl[1589]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_3_rotate_Loop.ox" "AZRIRN.phl[1590]";
-connectAttr "AZRIRN.phl[1591]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_3_rotate_Loop.oy" "AZRIRN.phl[1592]";
-connectAttr "AZRIRN.phl[1593]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_3_rotate_Loop.oz" "AZRIRN.phl[1594]";
-connectAttr "AZRIRN.phl[1595]" "AZRI:CTL_R_SkirtSide_3_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_SkirtSide_2_rotate_Loop.oz" "AZRIRN.phl[1588]";
+connectAttr "AZRIRN.phl[1589]" "AZRI:CTL_R_SkirtSide_2_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1590]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtSide_3_translateX_Loop.o" "AZRIRN.phl[1591]";
+connectAttr "AZRIRN.phl[1592]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtSide_3_translateY_Loop.o" "AZRIRN.phl[1593]";
+connectAttr "AZRIRN.phl[1594]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtSide_3_translateZ_Loop.o" "AZRIRN.phl[1595]";
 connectAttr "AZRIRN.phl[1596]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_4_translateX_Loop.o" "AZRIRN.phl[1597]";
+connectAttr "AZRI:CTL_R_SkirtSide_3_rotate_Loop.ox" "AZRIRN.phl[1597]";
 connectAttr "AZRIRN.phl[1598]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_4_translateY_Loop.o" "AZRIRN.phl[1599]";
+connectAttr "AZRI:CTL_R_SkirtSide_3_rotate_Loop.oy" "AZRIRN.phl[1599]";
 connectAttr "AZRIRN.phl[1600]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_4_translateZ_Loop.o" "AZRIRN.phl[1601]";
-connectAttr "AZRIRN.phl[1602]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_4_rotate_Loop.ox" "AZRIRN.phl[1603]";
-connectAttr "AZRIRN.phl[1604]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_4_rotate_Loop.oy" "AZRIRN.phl[1605]";
-connectAttr "AZRIRN.phl[1606]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtSide_4_rotate_Loop.oz" "AZRIRN.phl[1607]";
-connectAttr "AZRIRN.phl[1608]" "AZRI:CTL_R_SkirtSide_4_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_SkirtSide_3_rotate_Loop.oz" "AZRIRN.phl[1601]";
+connectAttr "AZRIRN.phl[1602]" "AZRI:CTL_R_SkirtSide_3_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1603]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtSide_4_translateX_Loop.o" "AZRIRN.phl[1604]";
+connectAttr "AZRIRN.phl[1605]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtSide_4_translateY_Loop.o" "AZRIRN.phl[1606]";
+connectAttr "AZRIRN.phl[1607]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtSide_4_translateZ_Loop.o" "AZRIRN.phl[1608]";
 connectAttr "AZRIRN.phl[1609]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_1_translateX_Loop.o" "AZRIRN.phl[1610]";
+connectAttr "AZRI:CTL_R_SkirtSide_4_rotate_Loop.ox" "AZRIRN.phl[1610]";
 connectAttr "AZRIRN.phl[1611]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_1_translateY_Loop.o" "AZRIRN.phl[1612]";
+connectAttr "AZRI:CTL_R_SkirtSide_4_rotate_Loop.oy" "AZRIRN.phl[1612]";
 connectAttr "AZRIRN.phl[1613]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_1_translateZ_Loop.o" "AZRIRN.phl[1614]";
-connectAttr "AZRIRN.phl[1615]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_1_rotate_Loop.ox" "AZRIRN.phl[1616]";
-connectAttr "AZRIRN.phl[1617]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_1_rotate_Loop.oy" "AZRIRN.phl[1618]";
-connectAttr "AZRIRN.phl[1619]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_1_rotate_Loop.oz" "AZRIRN.phl[1620]";
-connectAttr "AZRIRN.phl[1621]" "AZRI:CTL_R_SkirtBack_1_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_SkirtSide_4_rotate_Loop.oz" "AZRIRN.phl[1614]";
+connectAttr "AZRIRN.phl[1615]" "AZRI:CTL_R_SkirtSide_4_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1616]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtBack_1_translateX_Loop.o" "AZRIRN.phl[1617]";
+connectAttr "AZRIRN.phl[1618]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtBack_1_translateY_Loop.o" "AZRIRN.phl[1619]";
+connectAttr "AZRIRN.phl[1620]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtBack_1_translateZ_Loop.o" "AZRIRN.phl[1621]";
 connectAttr "AZRIRN.phl[1622]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_2_translateX_Loop.o" "AZRIRN.phl[1623]";
+connectAttr "AZRI:CTL_R_SkirtBack_1_rotate_Loop.ox" "AZRIRN.phl[1623]";
 connectAttr "AZRIRN.phl[1624]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_2_translateY_Loop.o" "AZRIRN.phl[1625]";
+connectAttr "AZRI:CTL_R_SkirtBack_1_rotate_Loop.oy" "AZRIRN.phl[1625]";
 connectAttr "AZRIRN.phl[1626]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_2_translateZ_Loop.o" "AZRIRN.phl[1627]";
-connectAttr "AZRIRN.phl[1628]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_2_rotate_Loop.ox" "AZRIRN.phl[1629]";
-connectAttr "AZRIRN.phl[1630]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_2_rotate_Loop.oy" "AZRIRN.phl[1631]";
-connectAttr "AZRIRN.phl[1632]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_2_rotate_Loop.oz" "AZRIRN.phl[1633]";
-connectAttr "AZRIRN.phl[1634]" "AZRI:CTL_R_SkirtBack_2_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_SkirtBack_1_rotate_Loop.oz" "AZRIRN.phl[1627]";
+connectAttr "AZRIRN.phl[1628]" "AZRI:CTL_R_SkirtBack_1_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1629]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtBack_2_translateX_Loop.o" "AZRIRN.phl[1630]";
+connectAttr "AZRIRN.phl[1631]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtBack_2_translateY_Loop.o" "AZRIRN.phl[1632]";
+connectAttr "AZRIRN.phl[1633]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtBack_2_translateZ_Loop.o" "AZRIRN.phl[1634]";
 connectAttr "AZRIRN.phl[1635]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_3_translateX_Loop.o" "AZRIRN.phl[1636]";
+connectAttr "AZRI:CTL_R_SkirtBack_2_rotate_Loop.ox" "AZRIRN.phl[1636]";
 connectAttr "AZRIRN.phl[1637]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_3_translateY_Loop.o" "AZRIRN.phl[1638]";
+connectAttr "AZRI:CTL_R_SkirtBack_2_rotate_Loop.oy" "AZRIRN.phl[1638]";
 connectAttr "AZRIRN.phl[1639]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_3_translateZ_Loop.o" "AZRIRN.phl[1640]";
-connectAttr "AZRIRN.phl[1641]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_3_rotate_Loop.ox" "AZRIRN.phl[1642]";
-connectAttr "AZRIRN.phl[1643]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_3_rotate_Loop.oy" "AZRIRN.phl[1644]";
-connectAttr "AZRIRN.phl[1645]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_3_rotate_Loop.oz" "AZRIRN.phl[1646]";
-connectAttr "AZRIRN.phl[1647]" "AZRI:CTL_R_SkirtBack_3_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_SkirtBack_2_rotate_Loop.oz" "AZRIRN.phl[1640]";
+connectAttr "AZRIRN.phl[1641]" "AZRI:CTL_R_SkirtBack_2_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1642]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtBack_3_translateX_Loop.o" "AZRIRN.phl[1643]";
+connectAttr "AZRIRN.phl[1644]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtBack_3_translateY_Loop.o" "AZRIRN.phl[1645]";
+connectAttr "AZRIRN.phl[1646]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtBack_3_translateZ_Loop.o" "AZRIRN.phl[1647]";
 connectAttr "AZRIRN.phl[1648]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_4_translateX_Loop.o" "AZRIRN.phl[1649]";
+connectAttr "AZRI:CTL_R_SkirtBack_3_rotate_Loop.ox" "AZRIRN.phl[1649]";
 connectAttr "AZRIRN.phl[1650]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_4_translateY_Loop.o" "AZRIRN.phl[1651]";
+connectAttr "AZRI:CTL_R_SkirtBack_3_rotate_Loop.oy" "AZRIRN.phl[1651]";
 connectAttr "AZRIRN.phl[1652]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_4_translateZ_Loop.o" "AZRIRN.phl[1653]";
-connectAttr "AZRIRN.phl[1654]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_4_rotate_Loop.ox" "AZRIRN.phl[1655]";
-connectAttr "AZRIRN.phl[1656]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_4_rotate_Loop.oy" "AZRIRN.phl[1657]";
-connectAttr "AZRIRN.phl[1658]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_SkirtBack_4_rotate_Loop.oz" "AZRIRN.phl[1659]";
-connectAttr "AZRIRN.phl[1660]" "AZRI:CTL_R_SkirtBack_4_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_SkirtBack_3_rotate_Loop.oz" "AZRIRN.phl[1653]";
+connectAttr "AZRIRN.phl[1654]" "AZRI:CTL_R_SkirtBack_3_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1655]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtBack_4_translateX_Loop.o" "AZRIRN.phl[1656]";
+connectAttr "AZRIRN.phl[1657]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtBack_4_translateY_Loop.o" "AZRIRN.phl[1658]";
+connectAttr "AZRIRN.phl[1659]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_SkirtBack_4_translateZ_Loop.o" "AZRIRN.phl[1660]";
 connectAttr "AZRIRN.phl[1661]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_1_translateX_Loop.o" "AZRIRN.phl[1662]";
+connectAttr "AZRI:CTL_R_SkirtBack_4_rotate_Loop.ox" "AZRIRN.phl[1662]";
 connectAttr "AZRIRN.phl[1663]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_1_translateY_Loop.o" "AZRIRN.phl[1664]";
+connectAttr "AZRI:CTL_R_SkirtBack_4_rotate_Loop.oy" "AZRIRN.phl[1664]";
 connectAttr "AZRIRN.phl[1665]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_1_translateZ_Loop.o" "AZRIRN.phl[1666]";
-connectAttr "AZRIRN.phl[1667]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_1_rotate_Loop.ox" "AZRIRN.phl[1668]";
-connectAttr "AZRIRN.phl[1669]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_1_rotate_Loop.oy" "AZRIRN.phl[1670]";
-connectAttr "AZRIRN.phl[1671]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_1_rotate_Loop.oz" "AZRIRN.phl[1672]";
-connectAttr "AZRIRN.phl[1673]" "AZRI:CTL_C_SkirtFront_1_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_SkirtBack_4_rotate_Loop.oz" "AZRIRN.phl[1666]";
+connectAttr "AZRIRN.phl[1667]" "AZRI:CTL_R_SkirtBack_4_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1668]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtFront_1_translateX_Loop.o" "AZRIRN.phl[1669]";
+connectAttr "AZRIRN.phl[1670]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtFront_1_translateY_Loop.o" "AZRIRN.phl[1671]";
+connectAttr "AZRIRN.phl[1672]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtFront_1_translateZ_Loop.o" "AZRIRN.phl[1673]";
 connectAttr "AZRIRN.phl[1674]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_2_translateX_Loop.o" "AZRIRN.phl[1675]";
+connectAttr "AZRI:CTL_C_SkirtFront_1_rotate_Loop.ox" "AZRIRN.phl[1675]";
 connectAttr "AZRIRN.phl[1676]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_2_translateY_Loop.o" "AZRIRN.phl[1677]";
+connectAttr "AZRI:CTL_C_SkirtFront_1_rotate_Loop.oy" "AZRIRN.phl[1677]";
 connectAttr "AZRIRN.phl[1678]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_2_translateZ_Loop.o" "AZRIRN.phl[1679]";
-connectAttr "AZRIRN.phl[1680]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_2_rotate_Loop.ox" "AZRIRN.phl[1681]";
-connectAttr "AZRIRN.phl[1682]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_2_rotate_Loop.oy" "AZRIRN.phl[1683]";
-connectAttr "AZRIRN.phl[1684]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_2_rotate_Loop.oz" "AZRIRN.phl[1685]";
-connectAttr "AZRIRN.phl[1686]" "AZRI:CTL_C_SkirtFront_2_rotate_Loop.ro";
+connectAttr "AZRI:CTL_C_SkirtFront_1_rotate_Loop.oz" "AZRIRN.phl[1679]";
+connectAttr "AZRIRN.phl[1680]" "AZRI:CTL_C_SkirtFront_1_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1681]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtFront_2_translateX_Loop.o" "AZRIRN.phl[1682]";
+connectAttr "AZRIRN.phl[1683]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtFront_2_translateY_Loop.o" "AZRIRN.phl[1684]";
+connectAttr "AZRIRN.phl[1685]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtFront_2_translateZ_Loop.o" "AZRIRN.phl[1686]";
 connectAttr "AZRIRN.phl[1687]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_3_translateX_Loop.o" "AZRIRN.phl[1688]";
+connectAttr "AZRI:CTL_C_SkirtFront_2_rotate_Loop.ox" "AZRIRN.phl[1688]";
 connectAttr "AZRIRN.phl[1689]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_3_translateY_Loop.o" "AZRIRN.phl[1690]";
+connectAttr "AZRI:CTL_C_SkirtFront_2_rotate_Loop.oy" "AZRIRN.phl[1690]";
 connectAttr "AZRIRN.phl[1691]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_3_translateZ_Loop.o" "AZRIRN.phl[1692]";
-connectAttr "AZRIRN.phl[1693]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_3_rotate_Loop.ox" "AZRIRN.phl[1694]";
-connectAttr "AZRIRN.phl[1695]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_3_rotate_Loop.oy" "AZRIRN.phl[1696]";
-connectAttr "AZRIRN.phl[1697]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_3_rotate_Loop.oz" "AZRIRN.phl[1698]";
-connectAttr "AZRIRN.phl[1699]" "AZRI:CTL_C_SkirtFront_3_rotate_Loop.ro";
+connectAttr "AZRI:CTL_C_SkirtFront_2_rotate_Loop.oz" "AZRIRN.phl[1692]";
+connectAttr "AZRIRN.phl[1693]" "AZRI:CTL_C_SkirtFront_2_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1694]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtFront_3_translateX_Loop.o" "AZRIRN.phl[1695]";
+connectAttr "AZRIRN.phl[1696]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtFront_3_translateY_Loop.o" "AZRIRN.phl[1697]";
+connectAttr "AZRIRN.phl[1698]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtFront_3_translateZ_Loop.o" "AZRIRN.phl[1699]";
 connectAttr "AZRIRN.phl[1700]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_4_translateX_Loop.o" "AZRIRN.phl[1701]";
+connectAttr "AZRI:CTL_C_SkirtFront_3_rotate_Loop.ox" "AZRIRN.phl[1701]";
 connectAttr "AZRIRN.phl[1702]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_4_translateY_Loop.o" "AZRIRN.phl[1703]";
+connectAttr "AZRI:CTL_C_SkirtFront_3_rotate_Loop.oy" "AZRIRN.phl[1703]";
 connectAttr "AZRIRN.phl[1704]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_4_translateZ_Loop.o" "AZRIRN.phl[1705]";
-connectAttr "AZRIRN.phl[1706]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_4_rotate_Loop.ox" "AZRIRN.phl[1707]";
-connectAttr "AZRIRN.phl[1708]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_4_rotate_Loop.oy" "AZRIRN.phl[1709]";
-connectAttr "AZRIRN.phl[1710]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtFront_4_rotate_Loop.oz" "AZRIRN.phl[1711]";
-connectAttr "AZRIRN.phl[1712]" "AZRI:CTL_C_SkirtFront_4_rotate_Loop.ro";
+connectAttr "AZRI:CTL_C_SkirtFront_3_rotate_Loop.oz" "AZRIRN.phl[1705]";
+connectAttr "AZRIRN.phl[1706]" "AZRI:CTL_C_SkirtFront_3_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1707]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtFront_4_translateX_Loop.o" "AZRIRN.phl[1708]";
+connectAttr "AZRIRN.phl[1709]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtFront_4_translateY_Loop.o" "AZRIRN.phl[1710]";
+connectAttr "AZRIRN.phl[1711]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtFront_4_translateZ_Loop.o" "AZRIRN.phl[1712]";
 connectAttr "AZRIRN.phl[1713]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_1_translateX_Loop.o" "AZRIRN.phl[1714]";
+connectAttr "AZRI:CTL_C_SkirtFront_4_rotate_Loop.ox" "AZRIRN.phl[1714]";
 connectAttr "AZRIRN.phl[1715]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_1_translateY_Loop.o" "AZRIRN.phl[1716]";
+connectAttr "AZRI:CTL_C_SkirtFront_4_rotate_Loop.oy" "AZRIRN.phl[1716]";
 connectAttr "AZRIRN.phl[1717]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_1_translateZ_Loop.o" "AZRIRN.phl[1718]";
-connectAttr "AZRIRN.phl[1719]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_1_rotate_Loop.ox" "AZRIRN.phl[1720]";
-connectAttr "AZRIRN.phl[1721]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_1_rotate_Loop.oy" "AZRIRN.phl[1722]";
-connectAttr "AZRIRN.phl[1723]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_1_rotate_Loop.oz" "AZRIRN.phl[1724]";
-connectAttr "AZRIRN.phl[1725]" "AZRI:CTL_C_SkirtBack_1_rotate_Loop.ro";
+connectAttr "AZRI:CTL_C_SkirtFront_4_rotate_Loop.oz" "AZRIRN.phl[1718]";
+connectAttr "AZRIRN.phl[1719]" "AZRI:CTL_C_SkirtFront_4_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1720]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtBack_1_translateX_Loop.o" "AZRIRN.phl[1721]";
+connectAttr "AZRIRN.phl[1722]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtBack_1_translateY_Loop.o" "AZRIRN.phl[1723]";
+connectAttr "AZRIRN.phl[1724]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtBack_1_translateZ_Loop.o" "AZRIRN.phl[1725]";
 connectAttr "AZRIRN.phl[1726]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_2_translateX_Loop.o" "AZRIRN.phl[1727]";
+connectAttr "AZRI:CTL_C_SkirtBack_1_rotate_Loop.ox" "AZRIRN.phl[1727]";
 connectAttr "AZRIRN.phl[1728]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_2_translateY_Loop.o" "AZRIRN.phl[1729]";
+connectAttr "AZRI:CTL_C_SkirtBack_1_rotate_Loop.oy" "AZRIRN.phl[1729]";
 connectAttr "AZRIRN.phl[1730]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_2_translateZ_Loop.o" "AZRIRN.phl[1731]";
-connectAttr "AZRIRN.phl[1732]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_2_rotate_Loop.ox" "AZRIRN.phl[1733]";
-connectAttr "AZRIRN.phl[1734]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_2_rotate_Loop.oy" "AZRIRN.phl[1735]";
-connectAttr "AZRIRN.phl[1736]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_2_rotate_Loop.oz" "AZRIRN.phl[1737]";
-connectAttr "AZRIRN.phl[1738]" "AZRI:CTL_C_SkirtBack_2_rotate_Loop.ro";
+connectAttr "AZRI:CTL_C_SkirtBack_1_rotate_Loop.oz" "AZRIRN.phl[1731]";
+connectAttr "AZRIRN.phl[1732]" "AZRI:CTL_C_SkirtBack_1_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1733]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtBack_2_translateX_Loop.o" "AZRIRN.phl[1734]";
+connectAttr "AZRIRN.phl[1735]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtBack_2_translateY_Loop.o" "AZRIRN.phl[1736]";
+connectAttr "AZRIRN.phl[1737]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtBack_2_translateZ_Loop.o" "AZRIRN.phl[1738]";
 connectAttr "AZRIRN.phl[1739]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_3_translateX_Loop.o" "AZRIRN.phl[1740]";
+connectAttr "AZRI:CTL_C_SkirtBack_2_rotate_Loop.ox" "AZRIRN.phl[1740]";
 connectAttr "AZRIRN.phl[1741]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_3_translateY_Loop.o" "AZRIRN.phl[1742]";
+connectAttr "AZRI:CTL_C_SkirtBack_2_rotate_Loop.oy" "AZRIRN.phl[1742]";
 connectAttr "AZRIRN.phl[1743]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_3_translateZ_Loop.o" "AZRIRN.phl[1744]";
-connectAttr "AZRIRN.phl[1745]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_3_rotate_Loop.ox" "AZRIRN.phl[1746]";
-connectAttr "AZRIRN.phl[1747]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_3_rotate_Loop.oy" "AZRIRN.phl[1748]";
-connectAttr "AZRIRN.phl[1749]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_3_rotate_Loop.oz" "AZRIRN.phl[1750]";
-connectAttr "AZRIRN.phl[1751]" "AZRI:CTL_C_SkirtBack_3_rotate_Loop.ro";
+connectAttr "AZRI:CTL_C_SkirtBack_2_rotate_Loop.oz" "AZRIRN.phl[1744]";
+connectAttr "AZRIRN.phl[1745]" "AZRI:CTL_C_SkirtBack_2_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1746]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtBack_3_translateX_Loop.o" "AZRIRN.phl[1747]";
+connectAttr "AZRIRN.phl[1748]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtBack_3_translateY_Loop.o" "AZRIRN.phl[1749]";
+connectAttr "AZRIRN.phl[1750]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtBack_3_translateZ_Loop.o" "AZRIRN.phl[1751]";
 connectAttr "AZRIRN.phl[1752]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_4_translateX_Loop.o" "AZRIRN.phl[1753]";
+connectAttr "AZRI:CTL_C_SkirtBack_3_rotate_Loop.ox" "AZRIRN.phl[1753]";
 connectAttr "AZRIRN.phl[1754]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_4_translateY_Loop.o" "AZRIRN.phl[1755]";
+connectAttr "AZRI:CTL_C_SkirtBack_3_rotate_Loop.oy" "AZRIRN.phl[1755]";
 connectAttr "AZRIRN.phl[1756]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_4_translateZ_Loop.o" "AZRIRN.phl[1757]";
-connectAttr "AZRIRN.phl[1758]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_4_rotate_Loop.ox" "AZRIRN.phl[1759]";
-connectAttr "AZRIRN.phl[1760]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_4_rotate_Loop.oy" "AZRIRN.phl[1761]";
-connectAttr "AZRIRN.phl[1762]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_SkirtBack_4_rotate_Loop.oz" "AZRIRN.phl[1763]";
-connectAttr "AZRIRN.phl[1764]" "AZRI:CTL_C_SkirtBack_4_rotate_Loop.ro";
+connectAttr "AZRI:CTL_C_SkirtBack_3_rotate_Loop.oz" "AZRIRN.phl[1757]";
+connectAttr "AZRIRN.phl[1758]" "AZRI:CTL_C_SkirtBack_3_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1759]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtBack_4_translateX_Loop.o" "AZRIRN.phl[1760]";
+connectAttr "AZRIRN.phl[1761]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtBack_4_translateY_Loop.o" "AZRIRN.phl[1762]";
+connectAttr "AZRIRN.phl[1763]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_SkirtBack_4_translateZ_Loop.o" "AZRIRN.phl[1764]";
 connectAttr "AZRIRN.phl[1765]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_1_translateX_Loop.o" "AZRIRN.phl[1766]";
+connectAttr "AZRI:CTL_C_SkirtBack_4_rotate_Loop.ox" "AZRIRN.phl[1766]";
 connectAttr "AZRIRN.phl[1767]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_1_translateY_Loop.o" "AZRIRN.phl[1768]";
+connectAttr "AZRI:CTL_C_SkirtBack_4_rotate_Loop.oy" "AZRIRN.phl[1768]";
 connectAttr "AZRIRN.phl[1769]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_1_translateZ_Loop.o" "AZRIRN.phl[1770]";
-connectAttr "AZRIRN.phl[1771]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_1_rotate_Loop.ox" "AZRIRN.phl[1772]";
-connectAttr "AZRIRN.phl[1773]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_1_rotate_Loop.oy" "AZRIRN.phl[1774]";
-connectAttr "AZRIRN.phl[1775]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_1_rotate_Loop.oz" "AZRIRN.phl[1776]";
-connectAttr "AZRIRN.phl[1777]" "AZRI:CTL_L_PonchoFront_1_rotate_Loop.ro";
+connectAttr "AZRI:CTL_C_SkirtBack_4_rotate_Loop.oz" "AZRIRN.phl[1770]";
+connectAttr "AZRIRN.phl[1771]" "AZRI:CTL_C_SkirtBack_4_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1772]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoFront_1_translateX_Loop.o" "AZRIRN.phl[1773]";
+connectAttr "AZRIRN.phl[1774]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoFront_1_translateY_Loop.o" "AZRIRN.phl[1775]";
+connectAttr "AZRIRN.phl[1776]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoFront_1_translateZ_Loop.o" "AZRIRN.phl[1777]";
 connectAttr "AZRIRN.phl[1778]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_2_translateX_Loop.o" "AZRIRN.phl[1779]";
+connectAttr "AZRI:CTL_L_PonchoFront_1_rotate_Loop.ox" "AZRIRN.phl[1779]";
 connectAttr "AZRIRN.phl[1780]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_2_translateY_Loop.o" "AZRIRN.phl[1781]";
+connectAttr "AZRI:CTL_L_PonchoFront_1_rotate_Loop.oy" "AZRIRN.phl[1781]";
 connectAttr "AZRIRN.phl[1782]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_2_translateZ_Loop.o" "AZRIRN.phl[1783]";
-connectAttr "AZRIRN.phl[1784]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_2_rotate_Loop.ox" "AZRIRN.phl[1785]";
-connectAttr "AZRIRN.phl[1786]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_2_rotate_Loop.oy" "AZRIRN.phl[1787]";
-connectAttr "AZRIRN.phl[1788]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_2_rotate_Loop.oz" "AZRIRN.phl[1789]";
-connectAttr "AZRIRN.phl[1790]" "AZRI:CTL_L_PonchoFront_2_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_PonchoFront_1_rotate_Loop.oz" "AZRIRN.phl[1783]";
+connectAttr "AZRIRN.phl[1784]" "AZRI:CTL_L_PonchoFront_1_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1785]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoFront_2_translateX_Loop.o" "AZRIRN.phl[1786]";
+connectAttr "AZRIRN.phl[1787]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoFront_2_translateY_Loop.o" "AZRIRN.phl[1788]";
+connectAttr "AZRIRN.phl[1789]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoFront_2_translateZ_Loop.o" "AZRIRN.phl[1790]";
 connectAttr "AZRIRN.phl[1791]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_3_translateX_Loop.o" "AZRIRN.phl[1792]";
+connectAttr "AZRI:CTL_L_PonchoFront_2_rotate_Loop.ox" "AZRIRN.phl[1792]";
 connectAttr "AZRIRN.phl[1793]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_3_translateY_Loop.o" "AZRIRN.phl[1794]";
+connectAttr "AZRI:CTL_L_PonchoFront_2_rotate_Loop.oy" "AZRIRN.phl[1794]";
 connectAttr "AZRIRN.phl[1795]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_3_translateZ_Loop.o" "AZRIRN.phl[1796]";
-connectAttr "AZRIRN.phl[1797]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_3_rotate_Loop.ox" "AZRIRN.phl[1798]";
-connectAttr "AZRIRN.phl[1799]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_3_rotate_Loop.oy" "AZRIRN.phl[1800]";
-connectAttr "AZRIRN.phl[1801]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_3_rotate_Loop.oz" "AZRIRN.phl[1802]";
-connectAttr "AZRIRN.phl[1803]" "AZRI:CTL_L_PonchoFront_3_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_PonchoFront_2_rotate_Loop.oz" "AZRIRN.phl[1796]";
+connectAttr "AZRIRN.phl[1797]" "AZRI:CTL_L_PonchoFront_2_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1798]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoFront_3_translateX_Loop.o" "AZRIRN.phl[1799]";
+connectAttr "AZRIRN.phl[1800]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoFront_3_translateY_Loop.o" "AZRIRN.phl[1801]";
+connectAttr "AZRIRN.phl[1802]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoFront_3_translateZ_Loop.o" "AZRIRN.phl[1803]";
 connectAttr "AZRIRN.phl[1804]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_4_translateX_Loop.o" "AZRIRN.phl[1805]";
+connectAttr "AZRI:CTL_L_PonchoFront_3_rotate_Loop.ox" "AZRIRN.phl[1805]";
 connectAttr "AZRIRN.phl[1806]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_4_translateY_Loop.o" "AZRIRN.phl[1807]";
+connectAttr "AZRI:CTL_L_PonchoFront_3_rotate_Loop.oy" "AZRIRN.phl[1807]";
 connectAttr "AZRIRN.phl[1808]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_4_translateZ_Loop.o" "AZRIRN.phl[1809]";
-connectAttr "AZRIRN.phl[1810]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_4_rotate_Loop.ox" "AZRIRN.phl[1811]";
-connectAttr "AZRIRN.phl[1812]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_4_rotate_Loop.oy" "AZRIRN.phl[1813]";
-connectAttr "AZRIRN.phl[1814]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoFront_4_rotate_Loop.oz" "AZRIRN.phl[1815]";
-connectAttr "AZRIRN.phl[1816]" "AZRI:CTL_L_PonchoFront_4_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_PonchoFront_3_rotate_Loop.oz" "AZRIRN.phl[1809]";
+connectAttr "AZRIRN.phl[1810]" "AZRI:CTL_L_PonchoFront_3_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1811]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoFront_4_translateX_Loop.o" "AZRIRN.phl[1812]";
+connectAttr "AZRIRN.phl[1813]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoFront_4_translateY_Loop.o" "AZRIRN.phl[1814]";
+connectAttr "AZRIRN.phl[1815]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoFront_4_translateZ_Loop.o" "AZRIRN.phl[1816]";
 connectAttr "AZRIRN.phl[1817]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_1_translateX_Loop.o" "AZRIRN.phl[1818]";
+connectAttr "AZRI:CTL_L_PonchoFront_4_rotate_Loop.ox" "AZRIRN.phl[1818]";
 connectAttr "AZRIRN.phl[1819]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_1_translateY_Loop.o" "AZRIRN.phl[1820]";
+connectAttr "AZRI:CTL_L_PonchoFront_4_rotate_Loop.oy" "AZRIRN.phl[1820]";
 connectAttr "AZRIRN.phl[1821]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_1_translateZ_Loop.o" "AZRIRN.phl[1822]";
-connectAttr "AZRIRN.phl[1823]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_1_rotate_Loop.ox" "AZRIRN.phl[1824]";
-connectAttr "AZRIRN.phl[1825]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_1_rotate_Loop.oy" "AZRIRN.phl[1826]";
-connectAttr "AZRIRN.phl[1827]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_1_rotate_Loop.oz" "AZRIRN.phl[1828]";
-connectAttr "AZRIRN.phl[1829]" "AZRI:CTL_L_PonchoSide_1_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_PonchoFront_4_rotate_Loop.oz" "AZRIRN.phl[1822]";
+connectAttr "AZRIRN.phl[1823]" "AZRI:CTL_L_PonchoFront_4_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1824]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoSide_1_translateX_Loop.o" "AZRIRN.phl[1825]";
+connectAttr "AZRIRN.phl[1826]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoSide_1_translateY_Loop.o" "AZRIRN.phl[1827]";
+connectAttr "AZRIRN.phl[1828]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoSide_1_translateZ_Loop.o" "AZRIRN.phl[1829]";
 connectAttr "AZRIRN.phl[1830]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_2_translateX_Loop.o" "AZRIRN.phl[1831]";
+connectAttr "AZRI:CTL_L_PonchoSide_1_rotate_Loop.ox" "AZRIRN.phl[1831]";
 connectAttr "AZRIRN.phl[1832]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_2_translateY_Loop.o" "AZRIRN.phl[1833]";
+connectAttr "AZRI:CTL_L_PonchoSide_1_rotate_Loop.oy" "AZRIRN.phl[1833]";
 connectAttr "AZRIRN.phl[1834]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_2_translateZ_Loop.o" "AZRIRN.phl[1835]";
-connectAttr "AZRIRN.phl[1836]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_2_rotate_Loop.ox" "AZRIRN.phl[1837]";
-connectAttr "AZRIRN.phl[1838]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_2_rotate_Loop.oy" "AZRIRN.phl[1839]";
-connectAttr "AZRIRN.phl[1840]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_2_rotate_Loop.oz" "AZRIRN.phl[1841]";
-connectAttr "AZRIRN.phl[1842]" "AZRI:CTL_L_PonchoSide_2_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_PonchoSide_1_rotate_Loop.oz" "AZRIRN.phl[1835]";
+connectAttr "AZRIRN.phl[1836]" "AZRI:CTL_L_PonchoSide_1_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1837]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoSide_2_translateX_Loop.o" "AZRIRN.phl[1838]";
+connectAttr "AZRIRN.phl[1839]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoSide_2_translateY_Loop.o" "AZRIRN.phl[1840]";
+connectAttr "AZRIRN.phl[1841]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoSide_2_translateZ_Loop.o" "AZRIRN.phl[1842]";
 connectAttr "AZRIRN.phl[1843]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_3_translateX_Loop.o" "AZRIRN.phl[1844]";
+connectAttr "AZRI:CTL_L_PonchoSide_2_rotate_Loop.ox" "AZRIRN.phl[1844]";
 connectAttr "AZRIRN.phl[1845]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_3_translateY_Loop.o" "AZRIRN.phl[1846]";
+connectAttr "AZRI:CTL_L_PonchoSide_2_rotate_Loop.oy" "AZRIRN.phl[1846]";
 connectAttr "AZRIRN.phl[1847]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_3_translateZ_Loop.o" "AZRIRN.phl[1848]";
-connectAttr "AZRIRN.phl[1849]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_3_rotate_Loop.ox" "AZRIRN.phl[1850]";
-connectAttr "AZRIRN.phl[1851]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_3_rotate_Loop.oy" "AZRIRN.phl[1852]";
-connectAttr "AZRIRN.phl[1853]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_3_rotate_Loop.oz" "AZRIRN.phl[1854]";
-connectAttr "AZRIRN.phl[1855]" "AZRI:CTL_L_PonchoSide_3_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_PonchoSide_2_rotate_Loop.oz" "AZRIRN.phl[1848]";
+connectAttr "AZRIRN.phl[1849]" "AZRI:CTL_L_PonchoSide_2_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1850]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoSide_3_translateX_Loop.o" "AZRIRN.phl[1851]";
+connectAttr "AZRIRN.phl[1852]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoSide_3_translateY_Loop.o" "AZRIRN.phl[1853]";
+connectAttr "AZRIRN.phl[1854]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoSide_3_translateZ_Loop.o" "AZRIRN.phl[1855]";
 connectAttr "AZRIRN.phl[1856]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_4_translateX_Loop.o" "AZRIRN.phl[1857]";
+connectAttr "AZRI:CTL_L_PonchoSide_3_rotate_Loop.ox" "AZRIRN.phl[1857]";
 connectAttr "AZRIRN.phl[1858]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_4_translateY_Loop.o" "AZRIRN.phl[1859]";
+connectAttr "AZRI:CTL_L_PonchoSide_3_rotate_Loop.oy" "AZRIRN.phl[1859]";
 connectAttr "AZRIRN.phl[1860]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_4_translateZ_Loop.o" "AZRIRN.phl[1861]";
-connectAttr "AZRIRN.phl[1862]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_4_rotate_Loop.ox" "AZRIRN.phl[1863]";
-connectAttr "AZRIRN.phl[1864]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_4_rotate_Loop.oy" "AZRIRN.phl[1865]";
-connectAttr "AZRIRN.phl[1866]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoSide_4_rotate_Loop.oz" "AZRIRN.phl[1867]";
-connectAttr "AZRIRN.phl[1868]" "AZRI:CTL_L_PonchoSide_4_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_PonchoSide_3_rotate_Loop.oz" "AZRIRN.phl[1861]";
+connectAttr "AZRIRN.phl[1862]" "AZRI:CTL_L_PonchoSide_3_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1863]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoSide_4_translateX_Loop.o" "AZRIRN.phl[1864]";
+connectAttr "AZRIRN.phl[1865]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoSide_4_translateY_Loop.o" "AZRIRN.phl[1866]";
+connectAttr "AZRIRN.phl[1867]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoSide_4_translateZ_Loop.o" "AZRIRN.phl[1868]";
 connectAttr "AZRIRN.phl[1869]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_1_translateX_Loop.o" "AZRIRN.phl[1870]";
+connectAttr "AZRI:CTL_L_PonchoSide_4_rotate_Loop.ox" "AZRIRN.phl[1870]";
 connectAttr "AZRIRN.phl[1871]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_1_translateY_Loop.o" "AZRIRN.phl[1872]";
+connectAttr "AZRI:CTL_L_PonchoSide_4_rotate_Loop.oy" "AZRIRN.phl[1872]";
 connectAttr "AZRIRN.phl[1873]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_1_translateZ_Loop.o" "AZRIRN.phl[1874]";
-connectAttr "AZRIRN.phl[1875]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_1_rotate_Loop.ox" "AZRIRN.phl[1876]";
-connectAttr "AZRIRN.phl[1877]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_1_rotate_Loop.oy" "AZRIRN.phl[1878]";
-connectAttr "AZRIRN.phl[1879]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_1_rotate_Loop.oz" "AZRIRN.phl[1880]";
-connectAttr "AZRIRN.phl[1881]" "AZRI:CTL_L_PonchoBack_1_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_PonchoSide_4_rotate_Loop.oz" "AZRIRN.phl[1874]";
+connectAttr "AZRIRN.phl[1875]" "AZRI:CTL_L_PonchoSide_4_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1876]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoBack_1_translateX_Loop.o" "AZRIRN.phl[1877]";
+connectAttr "AZRIRN.phl[1878]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoBack_1_translateY_Loop.o" "AZRIRN.phl[1879]";
+connectAttr "AZRIRN.phl[1880]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoBack_1_translateZ_Loop.o" "AZRIRN.phl[1881]";
 connectAttr "AZRIRN.phl[1882]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_2_translateX_Loop.o" "AZRIRN.phl[1883]";
+connectAttr "AZRI:CTL_L_PonchoBack_1_rotate_Loop.ox" "AZRIRN.phl[1883]";
 connectAttr "AZRIRN.phl[1884]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_2_translateY_Loop.o" "AZRIRN.phl[1885]";
+connectAttr "AZRI:CTL_L_PonchoBack_1_rotate_Loop.oy" "AZRIRN.phl[1885]";
 connectAttr "AZRIRN.phl[1886]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_2_translateZ_Loop.o" "AZRIRN.phl[1887]";
-connectAttr "AZRIRN.phl[1888]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_2_rotate_Loop.ox" "AZRIRN.phl[1889]";
-connectAttr "AZRIRN.phl[1890]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_2_rotate_Loop.oy" "AZRIRN.phl[1891]";
-connectAttr "AZRIRN.phl[1892]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_2_rotate_Loop.oz" "AZRIRN.phl[1893]";
-connectAttr "AZRIRN.phl[1894]" "AZRI:CTL_L_PonchoBack_2_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_PonchoBack_1_rotate_Loop.oz" "AZRIRN.phl[1887]";
+connectAttr "AZRIRN.phl[1888]" "AZRI:CTL_L_PonchoBack_1_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1889]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoBack_2_translateX_Loop.o" "AZRIRN.phl[1890]";
+connectAttr "AZRIRN.phl[1891]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoBack_2_translateY_Loop.o" "AZRIRN.phl[1892]";
+connectAttr "AZRIRN.phl[1893]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoBack_2_translateZ_Loop.o" "AZRIRN.phl[1894]";
 connectAttr "AZRIRN.phl[1895]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_3_translateX_Loop.o" "AZRIRN.phl[1896]";
+connectAttr "AZRI:CTL_L_PonchoBack_2_rotate_Loop.ox" "AZRIRN.phl[1896]";
 connectAttr "AZRIRN.phl[1897]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_3_translateY_Loop.o" "AZRIRN.phl[1898]";
+connectAttr "AZRI:CTL_L_PonchoBack_2_rotate_Loop.oy" "AZRIRN.phl[1898]";
 connectAttr "AZRIRN.phl[1899]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_3_translateZ_Loop.o" "AZRIRN.phl[1900]";
-connectAttr "AZRIRN.phl[1901]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_3_rotate_Loop.ox" "AZRIRN.phl[1902]";
-connectAttr "AZRIRN.phl[1903]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_3_rotate_Loop.oy" "AZRIRN.phl[1904]";
-connectAttr "AZRIRN.phl[1905]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_3_rotate_Loop.oz" "AZRIRN.phl[1906]";
-connectAttr "AZRIRN.phl[1907]" "AZRI:CTL_L_PonchoBack_3_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_PonchoBack_2_rotate_Loop.oz" "AZRIRN.phl[1900]";
+connectAttr "AZRIRN.phl[1901]" "AZRI:CTL_L_PonchoBack_2_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1902]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoBack_3_translateX_Loop.o" "AZRIRN.phl[1903]";
+connectAttr "AZRIRN.phl[1904]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoBack_3_translateY_Loop.o" "AZRIRN.phl[1905]";
+connectAttr "AZRIRN.phl[1906]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoBack_3_translateZ_Loop.o" "AZRIRN.phl[1907]";
 connectAttr "AZRIRN.phl[1908]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_4_translateX_Loop.o" "AZRIRN.phl[1909]";
+connectAttr "AZRI:CTL_L_PonchoBack_3_rotate_Loop.ox" "AZRIRN.phl[1909]";
 connectAttr "AZRIRN.phl[1910]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_4_translateY_Loop.o" "AZRIRN.phl[1911]";
+connectAttr "AZRI:CTL_L_PonchoBack_3_rotate_Loop.oy" "AZRIRN.phl[1911]";
 connectAttr "AZRIRN.phl[1912]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_4_translateZ_Loop.o" "AZRIRN.phl[1913]";
-connectAttr "AZRIRN.phl[1914]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_4_rotate_Loop.ox" "AZRIRN.phl[1915]";
-connectAttr "AZRIRN.phl[1916]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_4_rotate_Loop.oy" "AZRIRN.phl[1917]";
-connectAttr "AZRIRN.phl[1918]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_L_PonchoBack_4_rotate_Loop.oz" "AZRIRN.phl[1919]";
-connectAttr "AZRIRN.phl[1920]" "AZRI:CTL_L_PonchoBack_4_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_PonchoBack_3_rotate_Loop.oz" "AZRIRN.phl[1913]";
+connectAttr "AZRIRN.phl[1914]" "AZRI:CTL_L_PonchoBack_3_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1915]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoBack_4_translateX_Loop.o" "AZRIRN.phl[1916]";
+connectAttr "AZRIRN.phl[1917]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoBack_4_translateY_Loop.o" "AZRIRN.phl[1918]";
+connectAttr "AZRIRN.phl[1919]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_L_PonchoBack_4_translateZ_Loop.o" "AZRIRN.phl[1920]";
 connectAttr "AZRIRN.phl[1921]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_1_translateX_Loop.o" "AZRIRN.phl[1922]";
+connectAttr "AZRI:CTL_L_PonchoBack_4_rotate_Loop.ox" "AZRIRN.phl[1922]";
 connectAttr "AZRIRN.phl[1923]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_1_translateY_Loop.o" "AZRIRN.phl[1924]";
+connectAttr "AZRI:CTL_L_PonchoBack_4_rotate_Loop.oy" "AZRIRN.phl[1924]";
 connectAttr "AZRIRN.phl[1925]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_1_translateZ_Loop.o" "AZRIRN.phl[1926]";
-connectAttr "AZRIRN.phl[1927]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_1_rotate_Loop.ox" "AZRIRN.phl[1928]";
-connectAttr "AZRIRN.phl[1929]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_1_rotate_Loop.oy" "AZRIRN.phl[1930]";
-connectAttr "AZRIRN.phl[1931]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_1_rotate_Loop.oz" "AZRIRN.phl[1932]";
-connectAttr "AZRIRN.phl[1933]" "AZRI:CTL_R_PonchoFront_1_rotate_Loop.ro";
+connectAttr "AZRI:CTL_L_PonchoBack_4_rotate_Loop.oz" "AZRIRN.phl[1926]";
+connectAttr "AZRIRN.phl[1927]" "AZRI:CTL_L_PonchoBack_4_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1928]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoFront_1_translateX_Loop.o" "AZRIRN.phl[1929]";
+connectAttr "AZRIRN.phl[1930]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoFront_1_translateY_Loop.o" "AZRIRN.phl[1931]";
+connectAttr "AZRIRN.phl[1932]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoFront_1_translateZ_Loop.o" "AZRIRN.phl[1933]";
 connectAttr "AZRIRN.phl[1934]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_2_translateX_Loop.o" "AZRIRN.phl[1935]";
+connectAttr "AZRI:CTL_R_PonchoFront_1_rotate_Loop.ox" "AZRIRN.phl[1935]";
 connectAttr "AZRIRN.phl[1936]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_2_translateY_Loop.o" "AZRIRN.phl[1937]";
+connectAttr "AZRI:CTL_R_PonchoFront_1_rotate_Loop.oy" "AZRIRN.phl[1937]";
 connectAttr "AZRIRN.phl[1938]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_2_translateZ_Loop.o" "AZRIRN.phl[1939]";
-connectAttr "AZRIRN.phl[1940]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_2_rotate_Loop.ox" "AZRIRN.phl[1941]";
-connectAttr "AZRIRN.phl[1942]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_2_rotate_Loop.oy" "AZRIRN.phl[1943]";
-connectAttr "AZRIRN.phl[1944]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_2_rotate_Loop.oz" "AZRIRN.phl[1945]";
-connectAttr "AZRIRN.phl[1946]" "AZRI:CTL_R_PonchoFront_2_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_PonchoFront_1_rotate_Loop.oz" "AZRIRN.phl[1939]";
+connectAttr "AZRIRN.phl[1940]" "AZRI:CTL_R_PonchoFront_1_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1941]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoFront_2_translateX_Loop.o" "AZRIRN.phl[1942]";
+connectAttr "AZRIRN.phl[1943]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoFront_2_translateY_Loop.o" "AZRIRN.phl[1944]";
+connectAttr "AZRIRN.phl[1945]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoFront_2_translateZ_Loop.o" "AZRIRN.phl[1946]";
 connectAttr "AZRIRN.phl[1947]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_3_translateX_Loop.o" "AZRIRN.phl[1948]";
+connectAttr "AZRI:CTL_R_PonchoFront_2_rotate_Loop.ox" "AZRIRN.phl[1948]";
 connectAttr "AZRIRN.phl[1949]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_3_translateY_Loop.o" "AZRIRN.phl[1950]";
+connectAttr "AZRI:CTL_R_PonchoFront_2_rotate_Loop.oy" "AZRIRN.phl[1950]";
 connectAttr "AZRIRN.phl[1951]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_3_translateZ_Loop.o" "AZRIRN.phl[1952]";
-connectAttr "AZRIRN.phl[1953]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_3_rotate_Loop.ox" "AZRIRN.phl[1954]";
-connectAttr "AZRIRN.phl[1955]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_3_rotate_Loop.oy" "AZRIRN.phl[1956]";
-connectAttr "AZRIRN.phl[1957]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_3_rotate_Loop.oz" "AZRIRN.phl[1958]";
-connectAttr "AZRIRN.phl[1959]" "AZRI:CTL_R_PonchoFront_3_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_PonchoFront_2_rotate_Loop.oz" "AZRIRN.phl[1952]";
+connectAttr "AZRIRN.phl[1953]" "AZRI:CTL_R_PonchoFront_2_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1954]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoFront_3_translateX_Loop.o" "AZRIRN.phl[1955]";
+connectAttr "AZRIRN.phl[1956]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoFront_3_translateY_Loop.o" "AZRIRN.phl[1957]";
+connectAttr "AZRIRN.phl[1958]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoFront_3_translateZ_Loop.o" "AZRIRN.phl[1959]";
 connectAttr "AZRIRN.phl[1960]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_4_translateX_Loop.o" "AZRIRN.phl[1961]";
+connectAttr "AZRI:CTL_R_PonchoFront_3_rotate_Loop.ox" "AZRIRN.phl[1961]";
 connectAttr "AZRIRN.phl[1962]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_4_translateY_Loop.o" "AZRIRN.phl[1963]";
+connectAttr "AZRI:CTL_R_PonchoFront_3_rotate_Loop.oy" "AZRIRN.phl[1963]";
 connectAttr "AZRIRN.phl[1964]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_4_translateZ_Loop.o" "AZRIRN.phl[1965]";
-connectAttr "AZRIRN.phl[1966]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_4_rotate_Loop.ox" "AZRIRN.phl[1967]";
-connectAttr "AZRIRN.phl[1968]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_4_rotate_Loop.oy" "AZRIRN.phl[1969]";
-connectAttr "AZRIRN.phl[1970]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoFront_4_rotate_Loop.oz" "AZRIRN.phl[1971]";
-connectAttr "AZRIRN.phl[1972]" "AZRI:CTL_R_PonchoFront_4_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_PonchoFront_3_rotate_Loop.oz" "AZRIRN.phl[1965]";
+connectAttr "AZRIRN.phl[1966]" "AZRI:CTL_R_PonchoFront_3_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1967]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoFront_4_translateX_Loop.o" "AZRIRN.phl[1968]";
+connectAttr "AZRIRN.phl[1969]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoFront_4_translateY_Loop.o" "AZRIRN.phl[1970]";
+connectAttr "AZRIRN.phl[1971]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoFront_4_translateZ_Loop.o" "AZRIRN.phl[1972]";
 connectAttr "AZRIRN.phl[1973]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_1_translateX_Loop.o" "AZRIRN.phl[1974]";
+connectAttr "AZRI:CTL_R_PonchoFront_4_rotate_Loop.ox" "AZRIRN.phl[1974]";
 connectAttr "AZRIRN.phl[1975]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_1_translateY_Loop.o" "AZRIRN.phl[1976]";
+connectAttr "AZRI:CTL_R_PonchoFront_4_rotate_Loop.oy" "AZRIRN.phl[1976]";
 connectAttr "AZRIRN.phl[1977]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_1_translateZ_Loop.o" "AZRIRN.phl[1978]";
-connectAttr "AZRIRN.phl[1979]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_1_rotate_Loop.ox" "AZRIRN.phl[1980]";
-connectAttr "AZRIRN.phl[1981]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_1_rotate_Loop.oy" "AZRIRN.phl[1982]";
-connectAttr "AZRIRN.phl[1983]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_1_rotate_Loop.oz" "AZRIRN.phl[1984]";
-connectAttr "AZRIRN.phl[1985]" "AZRI:CTL_R_PonchoSide_1_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_PonchoFront_4_rotate_Loop.oz" "AZRIRN.phl[1978]";
+connectAttr "AZRIRN.phl[1979]" "AZRI:CTL_R_PonchoFront_4_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1980]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoSide_1_translateX_Loop.o" "AZRIRN.phl[1981]";
+connectAttr "AZRIRN.phl[1982]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoSide_1_translateY_Loop.o" "AZRIRN.phl[1983]";
+connectAttr "AZRIRN.phl[1984]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoSide_1_translateZ_Loop.o" "AZRIRN.phl[1985]";
 connectAttr "AZRIRN.phl[1986]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_2_translateX_Loop.o" "AZRIRN.phl[1987]";
+connectAttr "AZRI:CTL_R_PonchoSide_1_rotate_Loop.ox" "AZRIRN.phl[1987]";
 connectAttr "AZRIRN.phl[1988]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_2_translateY_Loop.o" "AZRIRN.phl[1989]";
+connectAttr "AZRI:CTL_R_PonchoSide_1_rotate_Loop.oy" "AZRIRN.phl[1989]";
 connectAttr "AZRIRN.phl[1990]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_2_translateZ_Loop.o" "AZRIRN.phl[1991]";
-connectAttr "AZRIRN.phl[1992]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_2_rotate_Loop.ox" "AZRIRN.phl[1993]";
-connectAttr "AZRIRN.phl[1994]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_2_rotate_Loop.oy" "AZRIRN.phl[1995]";
-connectAttr "AZRIRN.phl[1996]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_2_rotate_Loop.oz" "AZRIRN.phl[1997]";
-connectAttr "AZRIRN.phl[1998]" "AZRI:CTL_R_PonchoSide_2_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_PonchoSide_1_rotate_Loop.oz" "AZRIRN.phl[1991]";
+connectAttr "AZRIRN.phl[1992]" "AZRI:CTL_R_PonchoSide_1_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[1993]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoSide_2_translateX_Loop.o" "AZRIRN.phl[1994]";
+connectAttr "AZRIRN.phl[1995]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoSide_2_translateY_Loop.o" "AZRIRN.phl[1996]";
+connectAttr "AZRIRN.phl[1997]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoSide_2_translateZ_Loop.o" "AZRIRN.phl[1998]";
 connectAttr "AZRIRN.phl[1999]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_3_translateX_Loop.o" "AZRIRN.phl[2000]";
+connectAttr "AZRI:CTL_R_PonchoSide_2_rotate_Loop.ox" "AZRIRN.phl[2000]";
 connectAttr "AZRIRN.phl[2001]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_3_translateY_Loop.o" "AZRIRN.phl[2002]";
+connectAttr "AZRI:CTL_R_PonchoSide_2_rotate_Loop.oy" "AZRIRN.phl[2002]";
 connectAttr "AZRIRN.phl[2003]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_3_translateZ_Loop.o" "AZRIRN.phl[2004]";
-connectAttr "AZRIRN.phl[2005]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_3_rotate_Loop.ox" "AZRIRN.phl[2006]";
-connectAttr "AZRIRN.phl[2007]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_3_rotate_Loop.oy" "AZRIRN.phl[2008]";
-connectAttr "AZRIRN.phl[2009]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_3_rotate_Loop.oz" "AZRIRN.phl[2010]";
-connectAttr "AZRIRN.phl[2011]" "AZRI:CTL_R_PonchoSide_3_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_PonchoSide_2_rotate_Loop.oz" "AZRIRN.phl[2004]";
+connectAttr "AZRIRN.phl[2005]" "AZRI:CTL_R_PonchoSide_2_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[2006]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoSide_3_translateX_Loop.o" "AZRIRN.phl[2007]";
+connectAttr "AZRIRN.phl[2008]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoSide_3_translateY_Loop.o" "AZRIRN.phl[2009]";
+connectAttr "AZRIRN.phl[2010]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoSide_3_translateZ_Loop.o" "AZRIRN.phl[2011]";
 connectAttr "AZRIRN.phl[2012]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_4_translateX_Loop.o" "AZRIRN.phl[2013]";
+connectAttr "AZRI:CTL_R_PonchoSide_3_rotate_Loop.ox" "AZRIRN.phl[2013]";
 connectAttr "AZRIRN.phl[2014]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_4_translateY_Loop.o" "AZRIRN.phl[2015]";
+connectAttr "AZRI:CTL_R_PonchoSide_3_rotate_Loop.oy" "AZRIRN.phl[2015]";
 connectAttr "AZRIRN.phl[2016]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_4_translateZ_Loop.o" "AZRIRN.phl[2017]";
-connectAttr "AZRIRN.phl[2018]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_4_rotate_Loop.ox" "AZRIRN.phl[2019]";
-connectAttr "AZRIRN.phl[2020]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_4_rotate_Loop.oy" "AZRIRN.phl[2021]";
-connectAttr "AZRIRN.phl[2022]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_R_PonchoSide_4_rotate_Loop.oz" "AZRIRN.phl[2023]";
-connectAttr "AZRIRN.phl[2024]" "AZRI:CTL_R_PonchoSide_4_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_PonchoSide_3_rotate_Loop.oz" "AZRIRN.phl[2017]";
+connectAttr "AZRIRN.phl[2018]" "AZRI:CTL_R_PonchoSide_3_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[2019]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoSide_4_translateX_Loop.o" "AZRIRN.phl[2020]";
+connectAttr "AZRIRN.phl[2021]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoSide_4_translateY_Loop.o" "AZRIRN.phl[2022]";
+connectAttr "AZRIRN.phl[2023]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_R_PonchoSide_4_translateZ_Loop.o" "AZRIRN.phl[2024]";
 connectAttr "AZRIRN.phl[2025]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_1_translateX_Loop.o" "AZRIRN.phl[2026]";
+connectAttr "AZRI:CTL_R_PonchoSide_4_rotate_Loop.ox" "AZRIRN.phl[2026]";
 connectAttr "AZRIRN.phl[2027]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_1_translateY_Loop.o" "AZRIRN.phl[2028]";
+connectAttr "AZRI:CTL_R_PonchoSide_4_rotate_Loop.oy" "AZRIRN.phl[2028]";
 connectAttr "AZRIRN.phl[2029]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_1_translateZ_Loop.o" "AZRIRN.phl[2030]";
-connectAttr "AZRIRN.phl[2031]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_1_rotate_Loop.ox" "AZRIRN.phl[2032]";
-connectAttr "AZRIRN.phl[2033]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_1_rotate_Loop.oy" "AZRIRN.phl[2034]";
-connectAttr "AZRIRN.phl[2035]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_1_rotate_Loop.oz" "AZRIRN.phl[2036]";
-connectAttr "AZRIRN.phl[2037]" "AZRI:CTL_C_PonchoFront_1_rotate_Loop.ro";
+connectAttr "AZRI:CTL_R_PonchoSide_4_rotate_Loop.oz" "AZRIRN.phl[2030]";
+connectAttr "AZRIRN.phl[2031]" "AZRI:CTL_R_PonchoSide_4_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[2032]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoFront_1_translateX_Loop.o" "AZRIRN.phl[2033]";
+connectAttr "AZRIRN.phl[2034]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoFront_1_translateY_Loop.o" "AZRIRN.phl[2035]";
+connectAttr "AZRIRN.phl[2036]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoFront_1_translateZ_Loop.o" "AZRIRN.phl[2037]";
 connectAttr "AZRIRN.phl[2038]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_2_translateX_Loop.o" "AZRIRN.phl[2039]";
+connectAttr "AZRI:CTL_C_PonchoFront_1_rotate_Loop.ox" "AZRIRN.phl[2039]";
 connectAttr "AZRIRN.phl[2040]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_2_translateY_Loop.o" "AZRIRN.phl[2041]";
+connectAttr "AZRI:CTL_C_PonchoFront_1_rotate_Loop.oy" "AZRIRN.phl[2041]";
 connectAttr "AZRIRN.phl[2042]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_2_translateZ_Loop.o" "AZRIRN.phl[2043]";
-connectAttr "AZRIRN.phl[2044]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_2_rotate_Loop.ox" "AZRIRN.phl[2045]";
-connectAttr "AZRIRN.phl[2046]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_2_rotate_Loop.oy" "AZRIRN.phl[2047]";
-connectAttr "AZRIRN.phl[2048]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_2_rotate_Loop.oz" "AZRIRN.phl[2049]";
-connectAttr "AZRIRN.phl[2050]" "AZRI:CTL_C_PonchoFront_2_rotate_Loop.ro";
+connectAttr "AZRI:CTL_C_PonchoFront_1_rotate_Loop.oz" "AZRIRN.phl[2043]";
+connectAttr "AZRIRN.phl[2044]" "AZRI:CTL_C_PonchoFront_1_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[2045]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoFront_2_translateX_Loop.o" "AZRIRN.phl[2046]";
+connectAttr "AZRIRN.phl[2047]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoFront_2_translateY_Loop.o" "AZRIRN.phl[2048]";
+connectAttr "AZRIRN.phl[2049]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoFront_2_translateZ_Loop.o" "AZRIRN.phl[2050]";
 connectAttr "AZRIRN.phl[2051]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_3_translateX_Loop.o" "AZRIRN.phl[2052]";
+connectAttr "AZRI:CTL_C_PonchoFront_2_rotate_Loop.ox" "AZRIRN.phl[2052]";
 connectAttr "AZRIRN.phl[2053]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_3_translateY_Loop.o" "AZRIRN.phl[2054]";
+connectAttr "AZRI:CTL_C_PonchoFront_2_rotate_Loop.oy" "AZRIRN.phl[2054]";
 connectAttr "AZRIRN.phl[2055]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_3_translateZ_Loop.o" "AZRIRN.phl[2056]";
-connectAttr "AZRIRN.phl[2057]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_3_rotate_Loop.ox" "AZRIRN.phl[2058]";
-connectAttr "AZRIRN.phl[2059]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_3_rotate_Loop.oy" "AZRIRN.phl[2060]";
-connectAttr "AZRIRN.phl[2061]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_3_rotate_Loop.oz" "AZRIRN.phl[2062]";
-connectAttr "AZRIRN.phl[2063]" "AZRI:CTL_C_PonchoFront_3_rotate_Loop.ro";
+connectAttr "AZRI:CTL_C_PonchoFront_2_rotate_Loop.oz" "AZRIRN.phl[2056]";
+connectAttr "AZRIRN.phl[2057]" "AZRI:CTL_C_PonchoFront_2_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[2058]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoFront_3_translateX_Loop.o" "AZRIRN.phl[2059]";
+connectAttr "AZRIRN.phl[2060]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoFront_3_translateY_Loop.o" "AZRIRN.phl[2061]";
+connectAttr "AZRIRN.phl[2062]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoFront_3_translateZ_Loop.o" "AZRIRN.phl[2063]";
 connectAttr "AZRIRN.phl[2064]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_4_translateX_Loop.o" "AZRIRN.phl[2065]";
+connectAttr "AZRI:CTL_C_PonchoFront_3_rotate_Loop.ox" "AZRIRN.phl[2065]";
 connectAttr "AZRIRN.phl[2066]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_4_translateY_Loop.o" "AZRIRN.phl[2067]";
+connectAttr "AZRI:CTL_C_PonchoFront_3_rotate_Loop.oy" "AZRIRN.phl[2067]";
 connectAttr "AZRIRN.phl[2068]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_4_translateZ_Loop.o" "AZRIRN.phl[2069]";
-connectAttr "AZRIRN.phl[2070]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_4_rotate_Loop.ox" "AZRIRN.phl[2071]";
-connectAttr "AZRIRN.phl[2072]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_4_rotate_Loop.oy" "AZRIRN.phl[2073]";
-connectAttr "AZRIRN.phl[2074]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoFront_4_rotate_Loop.oz" "AZRIRN.phl[2075]";
-connectAttr "AZRIRN.phl[2076]" "AZRI:CTL_C_PonchoFront_4_rotate_Loop.ro";
+connectAttr "AZRI:CTL_C_PonchoFront_3_rotate_Loop.oz" "AZRIRN.phl[2069]";
+connectAttr "AZRIRN.phl[2070]" "AZRI:CTL_C_PonchoFront_3_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[2071]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoFront_4_translateX_Loop.o" "AZRIRN.phl[2072]";
+connectAttr "AZRIRN.phl[2073]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoFront_4_translateY_Loop.o" "AZRIRN.phl[2074]";
+connectAttr "AZRIRN.phl[2075]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoFront_4_translateZ_Loop.o" "AZRIRN.phl[2076]";
 connectAttr "AZRIRN.phl[2077]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_1_translateX_Loop.o" "AZRIRN.phl[2078]";
+connectAttr "AZRI:CTL_C_PonchoFront_4_rotate_Loop.ox" "AZRIRN.phl[2078]";
 connectAttr "AZRIRN.phl[2079]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_1_translateY_Loop.o" "AZRIRN.phl[2080]";
+connectAttr "AZRI:CTL_C_PonchoFront_4_rotate_Loop.oy" "AZRIRN.phl[2080]";
 connectAttr "AZRIRN.phl[2081]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_1_translateZ_Loop.o" "AZRIRN.phl[2082]";
-connectAttr "AZRIRN.phl[2083]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_1_rotate_Loop.ox" "AZRIRN.phl[2084]";
-connectAttr "AZRIRN.phl[2085]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_1_rotate_Loop.oy" "AZRIRN.phl[2086]";
-connectAttr "AZRIRN.phl[2087]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_1_rotate_Loop.oz" "AZRIRN.phl[2088]";
-connectAttr "AZRIRN.phl[2089]" "AZRI:CTL_C_PonchoBack_1_rotate_Loop.ro";
+connectAttr "AZRI:CTL_C_PonchoFront_4_rotate_Loop.oz" "AZRIRN.phl[2082]";
+connectAttr "AZRIRN.phl[2083]" "AZRI:CTL_C_PonchoFront_4_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[2084]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoBack_1_translateX_Loop.o" "AZRIRN.phl[2085]";
+connectAttr "AZRIRN.phl[2086]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoBack_1_translateY_Loop.o" "AZRIRN.phl[2087]";
+connectAttr "AZRIRN.phl[2088]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoBack_1_translateZ_Loop.o" "AZRIRN.phl[2089]";
 connectAttr "AZRIRN.phl[2090]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_2_translateX_Loop.o" "AZRIRN.phl[2091]";
+connectAttr "AZRI:CTL_C_PonchoBack_1_rotate_Loop.ox" "AZRIRN.phl[2091]";
 connectAttr "AZRIRN.phl[2092]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_2_translateY_Loop.o" "AZRIRN.phl[2093]";
+connectAttr "AZRI:CTL_C_PonchoBack_1_rotate_Loop.oy" "AZRIRN.phl[2093]";
 connectAttr "AZRIRN.phl[2094]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_2_translateZ_Loop.o" "AZRIRN.phl[2095]";
-connectAttr "AZRIRN.phl[2096]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_2_rotate_Loop.ox" "AZRIRN.phl[2097]";
-connectAttr "AZRIRN.phl[2098]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_2_rotate_Loop.oy" "AZRIRN.phl[2099]";
-connectAttr "AZRIRN.phl[2100]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_2_rotate_Loop.oz" "AZRIRN.phl[2101]";
-connectAttr "AZRIRN.phl[2102]" "AZRI:CTL_C_PonchoBack_2_rotate_Loop.ro";
+connectAttr "AZRI:CTL_C_PonchoBack_1_rotate_Loop.oz" "AZRIRN.phl[2095]";
+connectAttr "AZRIRN.phl[2096]" "AZRI:CTL_C_PonchoBack_1_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[2097]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoBack_2_translateX_Loop.o" "AZRIRN.phl[2098]";
+connectAttr "AZRIRN.phl[2099]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoBack_2_translateY_Loop.o" "AZRIRN.phl[2100]";
+connectAttr "AZRIRN.phl[2101]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoBack_2_translateZ_Loop.o" "AZRIRN.phl[2102]";
 connectAttr "AZRIRN.phl[2103]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_3_translateX_Loop.o" "AZRIRN.phl[2104]";
+connectAttr "AZRI:CTL_C_PonchoBack_2_rotate_Loop.ox" "AZRIRN.phl[2104]";
 connectAttr "AZRIRN.phl[2105]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_3_translateY_Loop.o" "AZRIRN.phl[2106]";
+connectAttr "AZRI:CTL_C_PonchoBack_2_rotate_Loop.oy" "AZRIRN.phl[2106]";
 connectAttr "AZRIRN.phl[2107]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_3_translateZ_Loop.o" "AZRIRN.phl[2108]";
-connectAttr "AZRIRN.phl[2109]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_3_rotate_Loop.ox" "AZRIRN.phl[2110]";
-connectAttr "AZRIRN.phl[2111]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_3_rotate_Loop.oy" "AZRIRN.phl[2112]";
-connectAttr "AZRIRN.phl[2113]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_3_rotate_Loop.oz" "AZRIRN.phl[2114]";
-connectAttr "AZRIRN.phl[2115]" "AZRI:CTL_C_PonchoBack_3_rotate_Loop.ro";
+connectAttr "AZRI:CTL_C_PonchoBack_2_rotate_Loop.oz" "AZRIRN.phl[2108]";
+connectAttr "AZRIRN.phl[2109]" "AZRI:CTL_C_PonchoBack_2_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[2110]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoBack_3_translateX_Loop.o" "AZRIRN.phl[2111]";
+connectAttr "AZRIRN.phl[2112]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoBack_3_translateY_Loop.o" "AZRIRN.phl[2113]";
+connectAttr "AZRIRN.phl[2114]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoBack_3_translateZ_Loop.o" "AZRIRN.phl[2115]";
 connectAttr "AZRIRN.phl[2116]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_4_translateX_Loop.o" "AZRIRN.phl[2117]";
+connectAttr "AZRI:CTL_C_PonchoBack_3_rotate_Loop.ox" "AZRIRN.phl[2117]";
 connectAttr "AZRIRN.phl[2118]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_4_translateY_Loop.o" "AZRIRN.phl[2119]";
+connectAttr "AZRI:CTL_C_PonchoBack_3_rotate_Loop.oy" "AZRIRN.phl[2119]";
 connectAttr "AZRIRN.phl[2120]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_4_translateZ_Loop.o" "AZRIRN.phl[2121]";
-connectAttr "AZRIRN.phl[2122]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_4_rotate_Loop.ox" "AZRIRN.phl[2123]";
-connectAttr "AZRIRN.phl[2124]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_4_rotate_Loop.oy" "AZRIRN.phl[2125]";
-connectAttr "AZRIRN.phl[2126]" "Loop.dsm" -na;
-connectAttr "AZRI:CTL_C_PonchoBack_4_rotate_Loop.oz" "AZRIRN.phl[2127]";
-connectAttr "AZRIRN.phl[2128]" "AZRI:CTL_C_PonchoBack_4_rotate_Loop.ro";
-connectAttr "AZRIRN.phl[2129]" "ExportBones.dsm" -na;
-connectAttr "AZRIRN.phl[2130]" "ExportBones.dsm" -na;
-connectAttr "AZRIRN.phl[2131]" "ExportBones.dsm" -na;
-connectAttr "AZRIRN.phl[2132]" "ExportBones.dsm" -na;
-connectAttr "AZRIRN.phl[2133]" "ExportBones.dsm" -na;
-connectAttr "AZRIRN.phl[2134]" "ExportBones.dsm" -na;
-connectAttr "AZRIRN.phl[2135]" "ExportBones.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoBack_3_rotate_Loop.oz" "AZRIRN.phl[2121]";
+connectAttr "AZRIRN.phl[2122]" "AZRI:CTL_C_PonchoBack_3_rotate_Loop.ro";
+connectAttr "AZRIRN.phl[2123]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoBack_4_translateX_Loop.o" "AZRIRN.phl[2124]";
+connectAttr "AZRIRN.phl[2125]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoBack_4_translateY_Loop.o" "AZRIRN.phl[2126]";
+connectAttr "AZRIRN.phl[2127]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoBack_4_translateZ_Loop.o" "AZRIRN.phl[2128]";
+connectAttr "AZRIRN.phl[2129]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoBack_4_rotate_Loop.ox" "AZRIRN.phl[2130]";
+connectAttr "AZRIRN.phl[2131]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoBack_4_rotate_Loop.oy" "AZRIRN.phl[2132]";
+connectAttr "AZRIRN.phl[2133]" "Loop.dsm" -na;
+connectAttr "AZRI:CTL_C_PonchoBack_4_rotate_Loop.oz" "AZRIRN.phl[2134]";
+connectAttr "AZRIRN.phl[2135]" "AZRI:CTL_C_PonchoBack_4_rotate_Loop.ro";
 connectAttr "AZRIRN.phl[2136]" "ExportBones.dsm" -na;
 connectAttr "AZRIRN.phl[2137]" "ExportBones.dsm" -na;
 connectAttr "AZRIRN.phl[2138]" "ExportBones.dsm" -na;
@@ -27505,53 +27847,63 @@ connectAttr "AZRIRN.phl[2377]" "ExportBones.dsm" -na;
 connectAttr "AZRIRN.phl[2378]" "ExportBones.dsm" -na;
 connectAttr "AZRIRN.phl[2379]" "ExportBones.dsm" -na;
 connectAttr "AZRIRN.phl[2380]" "ExportBones.dsm" -na;
-connectAttr "AxeToScytheRN.phl[1]" "AxeScythe.dsm" -na;
-connectAttr "AxeToScytheRN.phl[2]" "AxeScythe.dsm" -na;
-connectAttr "AxeToScytheRN.phl[3]" "AxeScythe.dsm" -na;
-connectAttr "AxeToScytheRN.phl[4]" "AxeScythe.dsm" -na;
-connectAttr "AxeToScytheRN.phl[5]" "AxeScythe.dsm" -na;
-connectAttr "AxeToScytheRN.phl[6]" "AxeScythe.dsm" -na;
-connectAttr "AxeToScytheRN.phl[7]" "Weap_export.dsm" -na;
-connectAttr "Axe_Main_ctrl_Extend_Bottom_Weap_export.o" "AxeToScytheRN.phl[8]";
-connectAttr "AxeToScytheRN.phl[9]" "Weap_export.dsm" -na;
-connectAttr "Axe_Main_ctrl_BaseIce_Weap_export.o" "AxeToScytheRN.phl[10]";
-connectAttr "AxeToScytheRN.phl[11]" "Weap_export.dsm" -na;
-connectAttr "Axe_Main_ctrl_IceFirst_Weap_export.o" "AxeToScytheRN.phl[12]";
-connectAttr "AxeToScytheRN.phl[13]" "Weap_export.dsm" -na;
-connectAttr "Axe_Main_ctrl_IceSecond_Weap_export.o" "AxeToScytheRN.phl[14]";
-connectAttr "AxeToScytheRN.phl[15]" "Weap_export.dsm" -na;
-connectAttr "Axe_Main_ctrl_IceThird_Weap_export.o" "AxeToScytheRN.phl[16]";
-connectAttr "AxeToScytheRN.phl[17]" "Weap_export.dsm" -na;
-connectAttr "Axe_Main_ctrl_IceEnd_Weap_export.o" "AxeToScytheRN.phl[18]";
-connectAttr "AxeToScytheRN.phl[19]" "Weap_export.dsm" -na;
-connectAttr "Axe_Main_ctrl_translateX_Weap_export.o" "AxeToScytheRN.phl[20]";
-connectAttr "AxeToScytheRN.phl[21]" "Weap_export.dsm" -na;
-connectAttr "Axe_Main_ctrl_translateY_Weap_export.o" "AxeToScytheRN.phl[22]";
-connectAttr "AxeToScytheRN.phl[23]" "Weap_export.dsm" -na;
-connectAttr "Axe_Main_ctrl_translateZ_Weap_export.o" "AxeToScytheRN.phl[24]";
-connectAttr "AxeToScytheRN.phl[25]" "Axe_Main_ctrl_parentConstraint1.crp";
-connectAttr "AxeToScytheRN.phl[26]" "Axe_Main_ctrl_parentConstraint1.crt";
-connectAttr "AxeToScytheRN.phl[27]" "Weap_export.dsm" -na;
-connectAttr "Axe_Main_ctrl_rotate_Weap_export.ox" "AxeToScytheRN.phl[28]";
-connectAttr "AxeToScytheRN.phl[29]" "Weap_export.dsm" -na;
-connectAttr "Axe_Main_ctrl_rotate_Weap_export.oy" "AxeToScytheRN.phl[30]";
-connectAttr "AxeToScytheRN.phl[31]" "Weap_export.dsm" -na;
-connectAttr "Axe_Main_ctrl_rotate_Weap_export.oz" "AxeToScytheRN.phl[32]";
-connectAttr "AxeToScytheRN.phl[33]" "Axe_Main_ctrl_parentConstraint1.cro";
-connectAttr "AxeToScytheRN.phl[34]" "Axe_Main_ctrl_rotate_Weap_export.ro";
-connectAttr "AxeToScytheRN.phl[35]" "Weap_export.dsm" -na;
-connectAttr "Axe_Main_ctrl_scaleX_Weap_export.o" "AxeToScytheRN.phl[36]";
-connectAttr "AxeToScytheRN.phl[37]" "Weap_export.dsm" -na;
-connectAttr "Axe_Main_ctrl_scaleY_Weap_export.o" "AxeToScytheRN.phl[38]";
-connectAttr "AxeToScytheRN.phl[39]" "Weap_export.dsm" -na;
-connectAttr "Axe_Main_ctrl_scaleZ_Weap_export.o" "AxeToScytheRN.phl[40]";
-connectAttr "AxeToScytheRN.phl[41]" "Weap_export.dsm" -na;
-connectAttr "Axe_Main_ctrl_visibility_Weap_export.o" "AxeToScytheRN.phl[42]";
-connectAttr "AxeToScytheRN.phl[43]" "Axe_Main_ctrl_parentConstraint1.cpim";
-connectAttr "layer1.di" "AxeToScytheRN.phl[44]";
-connectAttr "layer1.di" "AxeToScytheRN.phl[45]";
+connectAttr "AZRIRN.phl[2381]" "ExportBones.dsm" -na;
+connectAttr "AZRIRN.phl[2382]" "ExportBones.dsm" -na;
+connectAttr "AZRIRN.phl[2383]" "ExportBones.dsm" -na;
+connectAttr "AZRIRN.phl[2384]" "ExportBones.dsm" -na;
+connectAttr "AZRIRN.phl[2385]" "ExportBones.dsm" -na;
+connectAttr "AZRIRN.phl[2386]" "ExportBones.dsm" -na;
+connectAttr "AZRIRN.phl[2387]" "ExportBones.dsm" -na;
+connectAttr "AxeToScytheRN.phl[46]" "Weap_export.dsm" -na;
+connectAttr "AxeToScythe:Main_translateX_Weap_export.o" "AxeToScytheRN.phl[47]";
+connectAttr "AxeToScytheRN.phl[48]" "Weap_export.dsm" -na;
+connectAttr "AxeToScythe:Main_translateY_Weap_export.o" "AxeToScytheRN.phl[49]";
+connectAttr "AxeToScytheRN.phl[50]" "Weap_export.dsm" -na;
+connectAttr "AxeToScythe:Main_translateZ_Weap_export.o" "AxeToScytheRN.phl[51]";
+connectAttr "AxeToScytheRN.phl[52]" "Main_parentConstraint1.crp";
+connectAttr "AxeToScytheRN.phl[53]" "Main_parentConstraint1.crt";
+connectAttr "AxeToScytheRN.phl[54]" "Weap_export.dsm" -na;
+connectAttr "AxeToScythe:Main_rotate_Weap_export.ox" "AxeToScytheRN.phl[55]";
+connectAttr "AxeToScytheRN.phl[56]" "Weap_export.dsm" -na;
+connectAttr "AxeToScythe:Main_rotate_Weap_export.oy" "AxeToScytheRN.phl[57]";
+connectAttr "AxeToScytheRN.phl[58]" "Weap_export.dsm" -na;
+connectAttr "AxeToScythe:Main_rotate_Weap_export.oz" "AxeToScytheRN.phl[59]";
+connectAttr "AxeToScytheRN.phl[60]" "Main_parentConstraint1.cro";
+connectAttr "AxeToScytheRN.phl[61]" "AxeToScythe:Main_rotate_Weap_export.ro";
+connectAttr "AxeToScytheRN.phl[62]" "Weap_export.dsm" -na;
+connectAttr "AxeToScythe:Main_scaleX_Weap_export.o" "AxeToScytheRN.phl[63]";
+connectAttr "AxeToScytheRN.phl[64]" "Weap_export.dsm" -na;
+connectAttr "AxeToScythe:Main_scaleY_Weap_export.o" "AxeToScytheRN.phl[65]";
+connectAttr "AxeToScytheRN.phl[66]" "Weap_export.dsm" -na;
+connectAttr "AxeToScythe:Main_scaleZ_Weap_export.o" "AxeToScytheRN.phl[67]";
+connectAttr "AxeToScytheRN.phl[68]" "Main_parentConstraint1.cpim";
+connectAttr "AxeToScytheRN.phl[69]" "Weap_export.dsm" -na;
+connectAttr "AxeToScythe:Main_visibility_Weap_export.o" "AxeToScytheRN.phl[70]";
+connectAttr "Ice_R_Ice_Start.o" "AxeToScytheRN.phl[71]";
+connectAttr "Ice_R_Ice_01.o" "AxeToScytheRN.phl[72]";
+connectAttr "Ice_R_Ice_02.o" "AxeToScytheRN.phl[73]";
+connectAttr "Ice_R_Ice_03.o" "AxeToScytheRN.phl[74]";
+connectAttr "Ice_R_Ice_End.o" "AxeToScytheRN.phl[75]";
+connectAttr "Ice_R_Axe_Extend.o" "AxeToScytheRN.phl[76]";
+connectAttr "Ice_R_Ice.o" "AxeToScytheRN.phl[77]";
+connectAttr "AxeToScytheRN.phl[78]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[79]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[80]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[81]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[82]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[83]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[84]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[85]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[86]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[87]" "AxeScythe1.dsm" -na;
+connectAttr "AxeToScytheRN.phl[88]" "AxeScythe1.dsm" -na;
 connectAttr "Axe_Main_ctrl_parentConstraint1.w0" "Axe_Main_ctrl_parentConstraint1.tg[0].tw"
 		;
+connectAttr "AxeToScytheRN.phl[25]" "Axe_Main_ctrl_parentConstraint1.crp";
+connectAttr "AxeToScytheRN.phl[26]" "Axe_Main_ctrl_parentConstraint1.crt";
+connectAttr "AxeToScytheRN.phl[33]" "Axe_Main_ctrl_parentConstraint1.cro";
+connectAttr "AxeToScytheRN.phl[43]" "Axe_Main_ctrl_parentConstraint1.cpim";
+connectAttr "Main_parentConstraint1.w0" "Main_parentConstraint1.tg[0].tw";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -27559,6 +27911,24 @@ relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":default
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "sharedReferenceNode.sr" "AZRIRN.sr";
+connectAttr "Axe_Main_ctrl_Extend_Bottom_Weap_export.o" "AxeToScytheRN.phl[8]";
+connectAttr "Axe_Main_ctrl_BaseIce_Weap_export.o" "AxeToScytheRN.phl[10]";
+connectAttr "Axe_Main_ctrl_IceFirst_Weap_export.o" "AxeToScytheRN.phl[12]";
+connectAttr "Axe_Main_ctrl_IceSecond_Weap_export.o" "AxeToScytheRN.phl[14]";
+connectAttr "Axe_Main_ctrl_IceThird_Weap_export.o" "AxeToScytheRN.phl[16]";
+connectAttr "Axe_Main_ctrl_IceEnd_Weap_export.o" "AxeToScytheRN.phl[18]";
+connectAttr "Axe_Main_ctrl_translateX_Weap_export.o" "AxeToScytheRN.phl[20]";
+connectAttr "Axe_Main_ctrl_translateY_Weap_export.o" "AxeToScytheRN.phl[22]";
+connectAttr "Axe_Main_ctrl_translateZ_Weap_export.o" "AxeToScytheRN.phl[24]";
+connectAttr "Axe_Main_ctrl_rotate_Weap_export.ox" "AxeToScytheRN.phl[28]";
+connectAttr "Axe_Main_ctrl_rotate_Weap_export.oy" "AxeToScytheRN.phl[30]";
+connectAttr "Axe_Main_ctrl_rotate_Weap_export.oz" "AxeToScytheRN.phl[32]";
+connectAttr "Axe_Main_ctrl_scaleX_Weap_export.o" "AxeToScytheRN.phl[36]";
+connectAttr "Axe_Main_ctrl_scaleY_Weap_export.o" "AxeToScytheRN.phl[38]";
+connectAttr "Axe_Main_ctrl_scaleZ_Weap_export.o" "AxeToScytheRN.phl[40]";
+connectAttr "Axe_Main_ctrl_visibility_Weap_export.o" "AxeToScytheRN.phl[42]";
+connectAttr "layer1.di" "AxeToScytheRN.phl[44]";
+connectAttr "layer1.di" "AxeToScytheRN.phl[45]";
 connectAttr "sharedReferenceNode.sr" "AxeToScytheRN.sr";
 connectAttr "AxeToScytheRNfosterParent1.msg" "AxeToScytheRN.fp";
 connectAttr "layerManager.dli[1]" "layer1.id";
@@ -32995,6 +33365,28 @@ connectAttr "CTL_C_PonchoBack_1_rotate_Loop_inputBY.o" "AZRI:CTL_C_PonchoBack_1_
 		;
 connectAttr "CTL_C_PonchoBack_1_rotate_Loop_inputBZ.o" "AZRI:CTL_C_PonchoBack_1_rotate_Loop.ibz"
 		;
+connectAttr "AxeToScytheRN.phl[1]" "AxeScythe.dsm" -na;
+connectAttr "AxeToScytheRN.phl[2]" "AxeScythe.dsm" -na;
+connectAttr "AxeToScytheRN.phl[3]" "AxeScythe.dsm" -na;
+connectAttr "AxeToScytheRN.phl[4]" "AxeScythe.dsm" -na;
+connectAttr "AxeToScytheRN.phl[5]" "AxeScythe.dsm" -na;
+connectAttr "AxeToScytheRN.phl[6]" "AxeScythe.dsm" -na;
+connectAttr "AxeToScytheRN.phl[7]" "Weap_export.dsm" -na;
+connectAttr "AxeToScytheRN.phl[9]" "Weap_export.dsm" -na;
+connectAttr "AxeToScytheRN.phl[11]" "Weap_export.dsm" -na;
+connectAttr "AxeToScytheRN.phl[13]" "Weap_export.dsm" -na;
+connectAttr "AxeToScytheRN.phl[15]" "Weap_export.dsm" -na;
+connectAttr "AxeToScytheRN.phl[17]" "Weap_export.dsm" -na;
+connectAttr "AxeToScytheRN.phl[19]" "Weap_export.dsm" -na;
+connectAttr "AxeToScytheRN.phl[21]" "Weap_export.dsm" -na;
+connectAttr "AxeToScytheRN.phl[23]" "Weap_export.dsm" -na;
+connectAttr "AxeToScytheRN.phl[27]" "Weap_export.dsm" -na;
+connectAttr "AxeToScytheRN.phl[29]" "Weap_export.dsm" -na;
+connectAttr "AxeToScytheRN.phl[31]" "Weap_export.dsm" -na;
+connectAttr "AxeToScytheRN.phl[35]" "Weap_export.dsm" -na;
+connectAttr "AxeToScytheRN.phl[37]" "Weap_export.dsm" -na;
+connectAttr "AxeToScytheRN.phl[39]" "Weap_export.dsm" -na;
+connectAttr "AxeToScytheRN.phl[41]" "Weap_export.dsm" -na;
 connectAttr "BaseAnimation.csol" "Weap_export.sslo";
 connectAttr "BaseAnimation.fgwt" "Weap_export.pwth";
 connectAttr "BaseAnimation.omte" "Weap_export.pmte";
@@ -33013,6 +33405,18 @@ connectAttr "Axe_Main_ctrl_IceFirst_Weap_export.msg" "Weap_export.bnds[13]";
 connectAttr "Axe_Main_ctrl_IceSecond_Weap_export.msg" "Weap_export.bnds[14]";
 connectAttr "Axe_Main_ctrl_IceThird_Weap_export.msg" "Weap_export.bnds[15]";
 connectAttr "Axe_Main_ctrl_IceEnd_Weap_export.msg" "Weap_export.bnds[16]";
+connectAttr "AxeToScythe:Main_visibility_Weap_export.msg" "Weap_export.bnds[17]"
+		;
+connectAttr "AxeToScythe:Main_translateX_Weap_export.msg" "Weap_export.bnds[18]"
+		;
+connectAttr "AxeToScythe:Main_translateY_Weap_export.msg" "Weap_export.bnds[19]"
+		;
+connectAttr "AxeToScythe:Main_translateZ_Weap_export.msg" "Weap_export.bnds[20]"
+		;
+connectAttr "AxeToScythe:Main_rotate_Weap_export.msg" "Weap_export.bnds[24]";
+connectAttr "AxeToScythe:Main_scaleX_Weap_export.msg" "Weap_export.bnds[25]";
+connectAttr "AxeToScythe:Main_scaleY_Weap_export.msg" "Weap_export.bnds[26]";
+connectAttr "AxeToScythe:Main_scaleZ_Weap_export.msg" "Weap_export.bnds[27]";
 connectAttr "Weap_export.bgwt" "Axe_Main_ctrl_visibility_Weap_export.wa";
 connectAttr "Weap_export.fgwt" "Axe_Main_ctrl_visibility_Weap_export.wb";
 connectAttr "Weap_export.bgwt" "Axe_Main_ctrl_translateX_Weap_export.wa";
@@ -33027,6 +33431,7 @@ connectAttr "Weap_export.bgwt" "Axe_Main_ctrl_translateZ_Weap_export.wa";
 connectAttr "Weap_export.fgwt" "Axe_Main_ctrl_translateZ_Weap_export.wb";
 connectAttr "Axe_Main_ctrl_parentConstraint1.ctz" "Axe_Main_ctrl_translateZ_Weap_export.ia"
 		;
+connectAttr "AxeToScytheRN.phl[34]" "Axe_Main_ctrl_rotate_Weap_export.ro";
 connectAttr "Axe_Main_ctrl_parentConstraint1.crx" "Axe_Main_ctrl_rotate_Weap_export.iax"
 		;
 connectAttr "Axe_Main_ctrl_parentConstraint1.cry" "Axe_Main_ctrl_rotate_Weap_export.iay"
@@ -33076,6 +33481,58 @@ connectAttr "Weap_export.bgwt" "Axe_Main_ctrl_IceEnd_Weap_export.wa";
 connectAttr "Weap_export.fgwt" "Axe_Main_ctrl_IceEnd_Weap_export.wb";
 connectAttr "Axe_Main_ctrl_IceEnd.o" "Axe_Main_ctrl_IceEnd_Weap_export.ia";
 connectAttr "Axe_Main_ctrl_IceEnd_Weap_export_inputB.o" "Axe_Main_ctrl_IceEnd_Weap_export.ib"
+		;
+connectAttr "Weap_export.bgwt" "AxeToScythe:Main_visibility_Weap_export.wa";
+connectAttr "Weap_export.fgwt" "AxeToScythe:Main_visibility_Weap_export.wb";
+connectAttr "Main_visibility_Weap_export_inputB.o" "AxeToScythe:Main_visibility_Weap_export.ib"
+		;
+connectAttr "Weap_export.bgwt" "AxeToScythe:Main_translateX_Weap_export.wa";
+connectAttr "Weap_export.fgwt" "AxeToScythe:Main_translateX_Weap_export.wb";
+connectAttr "Main_parentConstraint1.ctx" "AxeToScythe:Main_translateX_Weap_export.ia"
+		;
+connectAttr "Main_translateX_Weap_export_inputB.o" "AxeToScythe:Main_translateX_Weap_export.ib"
+		;
+connectAttr "Weap_export.bgwt" "AxeToScythe:Main_translateY_Weap_export.wa";
+connectAttr "Weap_export.fgwt" "AxeToScythe:Main_translateY_Weap_export.wb";
+connectAttr "Main_parentConstraint1.cty" "AxeToScythe:Main_translateY_Weap_export.ia"
+		;
+connectAttr "Main_translateY_Weap_export_inputB.o" "AxeToScythe:Main_translateY_Weap_export.ib"
+		;
+connectAttr "Weap_export.bgwt" "AxeToScythe:Main_translateZ_Weap_export.wa";
+connectAttr "Weap_export.fgwt" "AxeToScythe:Main_translateZ_Weap_export.wb";
+connectAttr "Main_parentConstraint1.ctz" "AxeToScythe:Main_translateZ_Weap_export.ia"
+		;
+connectAttr "Main_translateZ_Weap_export_inputB.o" "AxeToScythe:Main_translateZ_Weap_export.ib"
+		;
+connectAttr "Main_parentConstraint1.crx" "AxeToScythe:Main_rotate_Weap_export.iax"
+		;
+connectAttr "Main_parentConstraint1.cry" "AxeToScythe:Main_rotate_Weap_export.iay"
+		;
+connectAttr "Main_parentConstraint1.crz" "AxeToScythe:Main_rotate_Weap_export.iaz"
+		;
+connectAttr "Weap_export.oram" "AxeToScythe:Main_rotate_Weap_export.acm";
+connectAttr "Weap_export.bgwt" "AxeToScythe:Main_rotate_Weap_export.wa";
+connectAttr "Weap_export.fgwt" "AxeToScythe:Main_rotate_Weap_export.wb";
+connectAttr "Main_rotate_Weap_export_inputBX.o" "AxeToScythe:Main_rotate_Weap_export.ibx"
+		;
+connectAttr "Main_rotate_Weap_export_inputBY.o" "AxeToScythe:Main_rotate_Weap_export.iby"
+		;
+connectAttr "Main_rotate_Weap_export_inputBZ.o" "AxeToScythe:Main_rotate_Weap_export.ibz"
+		;
+connectAttr "Weap_export.sam" "AxeToScythe:Main_scaleX_Weap_export.acm";
+connectAttr "Weap_export.bgwt" "AxeToScythe:Main_scaleX_Weap_export.wa";
+connectAttr "Weap_export.fgwt" "AxeToScythe:Main_scaleX_Weap_export.wb";
+connectAttr "Main_scaleX_Weap_export_inputB.o" "AxeToScythe:Main_scaleX_Weap_export.ib"
+		;
+connectAttr "Weap_export.sam" "AxeToScythe:Main_scaleY_Weap_export.acm";
+connectAttr "Weap_export.bgwt" "AxeToScythe:Main_scaleY_Weap_export.wa";
+connectAttr "Weap_export.fgwt" "AxeToScythe:Main_scaleY_Weap_export.wb";
+connectAttr "Main_scaleY_Weap_export_inputB.o" "AxeToScythe:Main_scaleY_Weap_export.ib"
+		;
+connectAttr "Weap_export.sam" "AxeToScythe:Main_scaleZ_Weap_export.acm";
+connectAttr "Weap_export.bgwt" "AxeToScythe:Main_scaleZ_Weap_export.wa";
+connectAttr "Weap_export.fgwt" "AxeToScythe:Main_scaleZ_Weap_export.wb";
+connectAttr "Main_scaleZ_Weap_export_inputB.o" "AxeToScythe:Main_scaleZ_Weap_export.ib"
 		;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of AxeToScythe.ma
