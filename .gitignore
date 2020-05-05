@@ -7,3 +7,8 @@ CharacterandAI/Intermediate
 CharacterandAI/Saved/AutoScreenshot.png
 CharacterandAI/Saved/Logs/CharacterandAI.log
 CharacterandAI/Intermediate/CachedAssetRegistry.bin
+CharacterandAI/Saved/Logs/CharacterandAI.log
+CharacterandAI/Saved/Logs/CharacterandAI.log
+*.log
+CharacterandAI/Intermediate/CachedAssetRegistry.bin
+*.bin
