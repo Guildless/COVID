@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: FL_StartStop_Sprint_180_R.ma
-//Last modified: Wed, May 13, 2020 09:03:06 PM
+//Last modified: Wed, May 13, 2020 09:12:42 PM
 //Codeset: 1252
 file -rdi 1 -ns "model" -rfn "modelRN" -op "VERS|2019|UVER|undef|MADE|undef|CHNG|Tue, May 12, 2020 07:42:53 AM|ICON|undef|INFO|undef|OBJN|2356|INCL|undef(|LUNI|cm|TUNI|ntsc|AUNI|deg|TDUR|141120000|"
 		 -typ "mayaAscii" "D:/Projects/COVID/SourceFiles/Characters/MainCharacter/Rig/MainCharacter_Rig.ma";
@@ -21,8 +21,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "62AB945C-49BA-FD98-2248-EFA86EB07F45";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -997.80438519112136 -707.20767955663962 362.37188124252293 ;
-	setAttr ".r" -type "double3" 73.029077589183984 6.3611093629270351e-15 -51.600328476944568 ;
+	setAttr ".t" -type "double3" -1049.6918845711134 -619.83866000402918 401.01629027820383 ;
+	setAttr ".r" -type "double3" 74.82907758918418 -6.3611093629270335e-15 -57.200328476944733 ;
 	setAttr ".rp" -type "double3" -7.1054273576010019e-15 -7.1054273576010019e-15 0 ;
 	setAttr ".rpt" -type "double3" 5.8638728198569675e-15 9.5287839301304723e-19 6.9970837191203505e-15 ;
 createNode camera -s -n "perspShape" -p "persp";

@@ -1313,3 +1313,1024 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.05.14-01.09.26:356][532]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
 [2020.05.14-01.09.26:420][532]LogWorld: UWorld::CleanupWorld for World_13, bSessionEnded=true, bCleanupResources=true
 [2020.05.14-01.09.26:420][532]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-01.11.08:872][342]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2020.05.14-01.11.08:892][342]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.14-01.11.08:892][342]PIE: New page: PIE session: WhiteRoom_Player_Mechanics (May 13, 2020, 5:11:08 p.m.)
+[2020.05.14-01.11.08:892][342]LogPlayLevel: Creating play world package: /Game/Maps/Levels/WhiteRooms/UEDPIE_0_WhiteRoom_Player_Mechanics
+[2020.05.14-01.11.08:895][342]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003007s)
+[2020.05.14-01.11.08:896][342]LogAIModule: Creating AISystem for world WhiteRoom_Player_Mechanics
+[2020.05.14-01.11.08:897][342]LogPlayLevel: PIE: World Init took: (0.000997s)
+[2020.05.14-01.11.08:897][342]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/Levels/WhiteRooms/WhiteRoom_Player_Mechanics.WhiteRoom_Player_Mechanics to /Game/Maps/Levels/WhiteRooms/UEDPIE_0_WhiteRoom_Player_Mechanics.WhiteRoom_Player_Mechanics (0.004128s)
+[2020.05.14-01.11.08:930][342]LogUObjectHash: Compacting FUObjectHashTables data took   1.73ms
+[2020.05.14-01.11.08:934][342]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2020.05.14-01.11.08:934][342]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2020.05.14-01.11.08:934][342]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2020.05.14-01.11.08:934][342]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2020.05.14-01.11.08:934][342]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2020.05.14-01.11.08:934][342]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2020.05.14-01.11.08:934][342]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2020.05.14-01.11.08:934][342]LogAudio: Display: AudioDevice MaxSources: 32
+[2020.05.14-01.11.08:934][342]LogAudio: Display: Using built-in audio occlusion.
+[2020.05.14-01.11.08:934][342]LogAudioMixer: Display: Initializing audio mixer.
+[2020.05.14-01.11.08:999][342]LogAudioMixer: Display: Audio Device Output Speaker Info:
+[2020.05.14-01.11.08:999][342]LogAudioMixer: Display: Name: Headset Earphone (Sennheiser Communication Audio)
+[2020.05.14-01.11.08:999][342]LogAudioMixer: Display: Is Default: Yes
+[2020.05.14-01.11.08:999][342]LogAudioMixer: Display: Sample Rate: 48000
+[2020.05.14-01.11.08:999][342]LogAudioMixer: Display: Channel Count Used: 2
+[2020.05.14-01.11.08:999][342]LogAudioMixer: Display: Device Channel Count: 2
+[2020.05.14-01.11.08:999][342]LogAudioMixer: Display: Channel Order:
+[2020.05.14-01.11.08:999][342]LogAudioMixer: Display: 0: FrontLeft
+[2020.05.14-01.11.08:999][342]LogAudioMixer: Display: 1: FrontRight
+[2020.05.14-01.11.09:013][342]LogAudioMixer: Display: Using Audio Device Headset Earphone (Sennheiser Communication Audio)
+[2020.05.14-01.11.09:014][342]LogInit: FAudioDevice initialized.
+[2020.05.14-01.11.09:039][342]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.05.14-01.11.09:040][342]LogLoad: Game class is 'ThirdPersonGameMode_C'
+[2020.05.14-01.11.09:041][342]PIE: Warning: Invalid Simulate Options: Body (EnnemyBP_2.CharacterMesh0 Mannequin) is set to simulate physics but Collision Enabled is incompatible
+[2020.05.14-01.11.09:041][342]PIE: Warning: Invalid Simulate Options: Body (EnnemyBP_2.CharacterMesh0 Mannequin) is set to simulate physics but Collision Enabled is incompatible
+[2020.05.14-01.11.09:041][342]LogWorld: Bringing World /Game/Maps/Levels/WhiteRooms/UEDPIE_0_WhiteRoom_Player_Mechanics.WhiteRoom_Player_Mechanics up for play (max tick rate 0) at 2020.05.13-21.11.09
+[2020.05.14-01.11.09:042][342]LogWorld: Bringing up level for play took: 0.001661
+[2020.05.14-01.11.09:042][342]LogOnline: OSS: Creating online subsystem instance for: :Context_18
+[2020.05.14-01.11.09:045][342]PIE: Warning: Invalid Simulate Options: Body (ThirdPersonCharacter_C_0.CharacterMesh0 Mannequin) is set to simulate physics but Collision Enabled is incompatible
+[2020.05.14-01.11.09:045][342]PIE: Warning: Invalid Simulate Options: Body (ThirdPersonCharacter_C_0.CharacterMesh0 Mannequin) is set to simulate physics but Collision Enabled is incompatible
+[2020.05.14-01.11.09:048][342]PIE: Play in editor start time for /Game/Maps/Levels/WhiteRooms/UEDPIE_0_WhiteRoom_Player_Mechanics 0.9
+[2020.05.14-01.11.39:417][970]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.11.45:146][657]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.11.45:446][693]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.11.47:788][974]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.11.53:815][697]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.11.54:989][837]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.05.14-01.11.54:991][837]LogAudioMixer: Display: Flush succeeded in the source manager command queue (1).
+[2020.05.14-01.11.55:011][837]LogAudioMixer: Display: Flush succeeded the source manager command queue (2).
+[2020.05.14-01.11.55:011][837]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.05.14-01.11.55:012][837]LogWorld: BeginTearingDown for /Game/Maps/Levels/WhiteRooms/UEDPIE_0_WhiteRoom_Player_Mechanics
+[2020.05.14-01.11.55:029][837]LogSlate: Window 'CharacterandAI Game Preview Standalone (64-bit/PCD3D_SM5)' being destroyed
+[2020.05.14-01.11.55:034][837]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.05.14-01.11.55:034][837]LogWorld: UWorld::CleanupWorld for WhiteRoom_Player_Mechanics, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-01.11.55:034][837]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-01.11.55:043][837]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2020.05.14-01.11.55:046][837]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-01.11.55:075][837]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.05.14-01.11.55:080][837]LogUObjectHash: Compacting FUObjectHashTables data took   1.74ms
+[2020.05.14-01.11.55:135][838]LogPlayLevel: Display: Destroying online subsystem :Context_18
+[2020.05.14-01.12.04:119][878]LogSlate: Window 'Message Log' being destroyed
+[2020.05.14-01.12.04:124][878]LogSlate: Window 'Message Log' being destroyed
+[2020.05.14-01.44.33:478][ 73]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 D:\Projects\COVID\SourceFiles\Characters\MainCharacter\Animation\Exports\MainChar_Axe_Idle.fbx)
+[2020.05.14-01.44.33:489][ 73]LogFbx: Loading FBX Scene from D:\Projects\COVID\SourceFiles\Characters\MainCharacter\Animation\Exports\MainChar_Axe_Idle.fbx
+[2020.05.14-01.44.33:522][ 73]LogFbx: FBX Scene Loaded Succesfully
+[2020.05.14-01.44.40:228][ 73]LogSlate: Window 'FBX Import Options' being destroyed
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(0) root
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(1) pelvis
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(2) spine_01
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(3) spine_02
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(4) spine_03
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(5) clavicle_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(6) upperarm_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(7) lowerarm_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(8) hand_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(9) index_01_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(10) index_02_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(11) index_03_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(12) middle_01_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(13) middle_02_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(14) middle_03_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(15) pinky_01_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(16) pinky_02_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(17) pinky_03_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(18) ring_01_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(19) ring_02_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(20) ring_03_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(21) thumb_01_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(22) thumb_02_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(23) thumb_03_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(24) lowerarm_twist_01_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(25) upperarm_twist_01_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(26) clavicle_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(27) upperarm_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(28) lowerarm_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(29) hand_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(30) index_01_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(31) index_02_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(32) index_03_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(33) middle_01_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(34) middle_02_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(35) middle_03_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(36) pinky_01_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(37) pinky_02_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(38) pinky_03_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(39) ring_01_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(40) ring_02_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(41) ring_03_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(42) thumb_01_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(43) thumb_02_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(44) thumb_03_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(45) lowerarm_twist_01_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(46) upperarm_twist_01_r
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(47) neck_01
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(48) head
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(49) unrealJaw_M
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(50) unrealEye_R
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(51) unrealEye_L
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(52) thigh_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(53) calf_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(54) calf_twist_01_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(55) foot_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(56) ball_l
+[2020.05.14-01.44.40:276][ 73]LogFbx: SortedLinks :(57) thigh_twist_01_l
+[2020.05.14-01.44.40:277][ 73]LogFbx: SortedLinks :(58) thigh_r
+[2020.05.14-01.44.40:277][ 73]LogFbx: SortedLinks :(59) calf_r
+[2020.05.14-01.44.40:277][ 73]LogFbx: SortedLinks :(60) calf_twist_01_r
+[2020.05.14-01.44.40:277][ 73]LogFbx: SortedLinks :(61) foot_r
+[2020.05.14-01.44.40:277][ 73]LogFbx: SortedLinks :(62) ball_r
+[2020.05.14-01.44.40:277][ 73]LogFbx: SortedLinks :(63) thigh_twist_01_r
+[2020.05.14-01.44.40:277][ 73]LogFbx: Parsing AnimStack Axe_Idle
+[2020.05.14-01.44.40:282][ 73]LogLinker: Failed to load '/Game/Characters/MainCharacter/Animation/Idles/MainChar_Axe_Idle': Can't find file.
+[2020.05.14-01.44.40:282][ 73]LogLinker: Failed to load '/Game/Characters/MainCharacter/Animation/Idles/MainChar_Axe_Idle': Can't find file.
+[2020.05.14-01.44.40:376][ 73]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Characters/MainCharacter/Animation/Idles/MainChar_Axe_Idle.MainChar_Axe_Idle
+[2020.05.14-01.44.40:376][ 73]LogAnimationCompression: Recompressing (AnimSequence /Game/Characters/MainCharacter/Animation/Idles/MainChar_Axe_Idle.MainChar_Axe_Idle) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.14-01.44.40:385][ 73]LogUObjectGlobals: Warning: Failed to find object 'DataTable None.'
+[2020.05.14-01.44.41:581][177]LogSavePackage: Moving '../../../../../Projects/COVID/CharacterandAI/Saved/MainChar_Axe_Idle485DFC7141F26275687725A7ACE28442.tmp' to '../../../../../Projects/COVID/CharacterandAI/Content/Characters/MainCharacter/Animation/Idles/MainChar_Axe_Idle.uasset'
+[2020.05.14-01.44.41:787][177]AssetCheck: New page: Asset Save: MainChar_Axe_Idle
+[2020.05.14-01.44.41:787][177]LogContentValidation: Display: Validating AnimSequence /Game/Characters/MainCharacter/Animation/Idles/MainChar_Axe_Idle.MainChar_Axe_Idle
+[2020.05.14-01.44.53:257][199]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 D:\Projects\COVID\SourceFiles\Characters\MainCharacter\Animation\Exports\MainChar_Axe_LightAttack01.fbx)
+[2020.05.14-01.44.53:266][199]LogFbx: Loading FBX Scene from D:\Projects\COVID\SourceFiles\Characters\MainCharacter\Animation\Exports\MainChar_Axe_LightAttack01.fbx
+[2020.05.14-01.44.53:296][199]LogFbx: FBX Scene Loaded Succesfully
+[2020.05.14-01.44.57:396][199]LogSlate: Window 'FBX Import Options' being destroyed
+[2020.05.14-01.44.57:441][199]LogFbx: SortedLinks :(0) root
+[2020.05.14-01.44.57:441][199]LogFbx: SortedLinks :(1) pelvis
+[2020.05.14-01.44.57:441][199]LogFbx: SortedLinks :(2) spine_01
+[2020.05.14-01.44.57:441][199]LogFbx: SortedLinks :(3) spine_02
+[2020.05.14-01.44.57:441][199]LogFbx: SortedLinks :(4) spine_03
+[2020.05.14-01.44.57:441][199]LogFbx: SortedLinks :(5) clavicle_l
+[2020.05.14-01.44.57:441][199]LogFbx: SortedLinks :(6) upperarm_l
+[2020.05.14-01.44.57:441][199]LogFbx: SortedLinks :(7) lowerarm_l
+[2020.05.14-01.44.57:441][199]LogFbx: SortedLinks :(8) hand_l
+[2020.05.14-01.44.57:441][199]LogFbx: SortedLinks :(9) index_01_l
+[2020.05.14-01.44.57:441][199]LogFbx: SortedLinks :(10) index_02_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(11) index_03_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(12) middle_01_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(13) middle_02_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(14) middle_03_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(15) pinky_01_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(16) pinky_02_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(17) pinky_03_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(18) ring_01_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(19) ring_02_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(20) ring_03_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(21) thumb_01_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(22) thumb_02_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(23) thumb_03_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(24) lowerarm_twist_01_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(25) upperarm_twist_01_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(26) clavicle_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(27) upperarm_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(28) lowerarm_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(29) hand_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(30) index_01_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(31) index_02_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(32) index_03_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(33) middle_01_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(34) middle_02_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(35) middle_03_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(36) pinky_01_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(37) pinky_02_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(38) pinky_03_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(39) ring_01_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(40) ring_02_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(41) ring_03_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(42) thumb_01_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(43) thumb_02_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(44) thumb_03_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(45) lowerarm_twist_01_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(46) upperarm_twist_01_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(47) neck_01
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(48) head
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(49) unrealJaw_M
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(50) unrealEye_R
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(51) unrealEye_L
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(52) thigh_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(53) calf_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(54) calf_twist_01_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(55) foot_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(56) ball_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(57) thigh_twist_01_l
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(58) thigh_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(59) calf_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(60) calf_twist_01_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(61) foot_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(62) ball_r
+[2020.05.14-01.44.57:442][199]LogFbx: SortedLinks :(63) thigh_twist_01_r
+[2020.05.14-01.44.57:442][199]LogFbx: Parsing AnimStack Axe_LightAttack01
+[2020.05.14-01.44.57:450][199]LogLinker: Failed to load '/Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack01': Can't find file.
+[2020.05.14-01.44.57:450][199]LogLinker: Failed to load '/Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack01': Can't find file.
+[2020.05.14-01.44.57:583][199]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack01.MainChar_Axe_LightAttack01
+[2020.05.14-01.44.57:583][199]LogAnimationCompression: Recompressing (AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack01.MainChar_Axe_LightAttack01) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.14-01.44.57:592][199]LogUObjectGlobals: Warning: Failed to find object 'DataTable None.'
+[2020.05.14-01.44.57:660][199]LogFactory: FactoryCreateFile: AnimSequence with FbxFactory (0 0 D:\Projects\COVID\SourceFiles\Characters\MainCharacter\Animation\Exports\MainChar_Axe_LightAttack01_End.fbx)
+[2020.05.14-01.44.57:673][199]LogFbx: Loading FBX Scene from D:\Projects\COVID\SourceFiles\Characters\MainCharacter\Animation\Exports\MainChar_Axe_LightAttack01_End.fbx
+[2020.05.14-01.44.57:704][199]LogFbx: FBX Scene Loaded Succesfully
+[2020.05.14-01.44.57:707][199]LogFbx: SortedLinks :(0) root
+[2020.05.14-01.44.57:707][199]LogFbx: SortedLinks :(1) pelvis
+[2020.05.14-01.44.57:707][199]LogFbx: SortedLinks :(2) spine_01
+[2020.05.14-01.44.57:707][199]LogFbx: SortedLinks :(3) spine_02
+[2020.05.14-01.44.57:707][199]LogFbx: SortedLinks :(4) spine_03
+[2020.05.14-01.44.57:707][199]LogFbx: SortedLinks :(5) clavicle_l
+[2020.05.14-01.44.57:707][199]LogFbx: SortedLinks :(6) upperarm_l
+[2020.05.14-01.44.57:707][199]LogFbx: SortedLinks :(7) lowerarm_l
+[2020.05.14-01.44.57:707][199]LogFbx: SortedLinks :(8) hand_l
+[2020.05.14-01.44.57:707][199]LogFbx: SortedLinks :(9) index_01_l
+[2020.05.14-01.44.57:707][199]LogFbx: SortedLinks :(10) index_02_l
+[2020.05.14-01.44.57:707][199]LogFbx: SortedLinks :(11) index_03_l
+[2020.05.14-01.44.57:707][199]LogFbx: SortedLinks :(12) middle_01_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(13) middle_02_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(14) middle_03_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(15) pinky_01_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(16) pinky_02_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(17) pinky_03_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(18) ring_01_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(19) ring_02_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(20) ring_03_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(21) thumb_01_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(22) thumb_02_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(23) thumb_03_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(24) lowerarm_twist_01_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(25) upperarm_twist_01_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(26) clavicle_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(27) upperarm_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(28) lowerarm_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(29) hand_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(30) index_01_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(31) index_02_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(32) index_03_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(33) middle_01_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(34) middle_02_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(35) middle_03_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(36) pinky_01_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(37) pinky_02_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(38) pinky_03_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(39) ring_01_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(40) ring_02_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(41) ring_03_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(42) thumb_01_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(43) thumb_02_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(44) thumb_03_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(45) lowerarm_twist_01_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(46) upperarm_twist_01_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(47) neck_01
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(48) head
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(49) unrealJaw_M
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(50) unrealEye_R
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(51) unrealEye_L
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(52) thigh_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(53) calf_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(54) calf_twist_01_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(55) foot_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(56) ball_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(57) thigh_twist_01_l
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(58) thigh_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(59) calf_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(60) calf_twist_01_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(61) foot_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(62) ball_r
+[2020.05.14-01.44.57:708][199]LogFbx: SortedLinks :(63) thigh_twist_01_r
+[2020.05.14-01.44.57:708][199]LogFbx: Parsing AnimStack Axe_LightAttack01_End
+[2020.05.14-01.44.57:708][199]LogLinker: Failed to load '/Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack01_End': Can't find file.
+[2020.05.14-01.44.57:708][199]LogLinker: Failed to load '/Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack01_End': Can't find file.
+[2020.05.14-01.44.57:829][199]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack01_End.MainChar_Axe_LightAttack01_End
+[2020.05.14-01.44.57:829][199]LogAnimationCompression: Recompressing (AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack01_End.MainChar_Axe_LightAttack01_End) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.14-01.44.57:838][199]LogUObjectGlobals: Warning: Failed to find object 'DataTable None.'
+[2020.05.14-01.44.57:904][199]LogFactory: FactoryCreateFile: AnimSequence with FbxFactory (0 0 D:\Projects\COVID\SourceFiles\Characters\MainCharacter\Animation\Exports\MainChar_Axe_LightAttack02.fbx)
+[2020.05.14-01.44.57:914][199]LogFbx: Loading FBX Scene from D:\Projects\COVID\SourceFiles\Characters\MainCharacter\Animation\Exports\MainChar_Axe_LightAttack02.fbx
+[2020.05.14-01.44.57:945][199]LogFbx: FBX Scene Loaded Succesfully
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(0) root
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(1) pelvis
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(2) spine_01
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(3) spine_02
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(4) spine_03
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(5) clavicle_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(6) upperarm_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(7) lowerarm_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(8) hand_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(9) index_01_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(10) index_02_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(11) index_03_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(12) middle_01_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(13) middle_02_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(14) middle_03_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(15) pinky_01_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(16) pinky_02_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(17) pinky_03_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(18) ring_01_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(19) ring_02_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(20) ring_03_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(21) thumb_01_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(22) thumb_02_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(23) thumb_03_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(24) lowerarm_twist_01_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(25) upperarm_twist_01_l
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(26) clavicle_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(27) upperarm_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(28) lowerarm_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(29) hand_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(30) index_01_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(31) index_02_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(32) index_03_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(33) middle_01_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(34) middle_02_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(35) middle_03_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(36) pinky_01_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(37) pinky_02_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(38) pinky_03_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(39) ring_01_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(40) ring_02_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(41) ring_03_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(42) thumb_01_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(43) thumb_02_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(44) thumb_03_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(45) lowerarm_twist_01_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(46) upperarm_twist_01_r
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(47) neck_01
+[2020.05.14-01.44.57:949][199]LogFbx: SortedLinks :(48) head
+[2020.05.14-01.44.57:950][199]LogFbx: SortedLinks :(49) unrealJaw_M
+[2020.05.14-01.44.57:950][199]LogFbx: SortedLinks :(50) unrealEye_R
+[2020.05.14-01.44.57:950][199]LogFbx: SortedLinks :(51) unrealEye_L
+[2020.05.14-01.44.57:950][199]LogFbx: SortedLinks :(52) thigh_l
+[2020.05.14-01.44.57:950][199]LogFbx: SortedLinks :(53) calf_l
+[2020.05.14-01.44.57:950][199]LogFbx: SortedLinks :(54) calf_twist_01_l
+[2020.05.14-01.44.57:950][199]LogFbx: SortedLinks :(55) foot_l
+[2020.05.14-01.44.57:950][199]LogFbx: SortedLinks :(56) ball_l
+[2020.05.14-01.44.57:950][199]LogFbx: SortedLinks :(57) thigh_twist_01_l
+[2020.05.14-01.44.57:950][199]LogFbx: SortedLinks :(58) thigh_r
+[2020.05.14-01.44.57:950][199]LogFbx: SortedLinks :(59) calf_r
+[2020.05.14-01.44.57:950][199]LogFbx: SortedLinks :(60) calf_twist_01_r
+[2020.05.14-01.44.57:950][199]LogFbx: SortedLinks :(61) foot_r
+[2020.05.14-01.44.57:950][199]LogFbx: SortedLinks :(62) ball_r
+[2020.05.14-01.44.57:950][199]LogFbx: SortedLinks :(63) thigh_twist_01_r
+[2020.05.14-01.44.57:950][199]LogFbx: Parsing AnimStack Axe_LightAttack02
+[2020.05.14-01.44.57:950][199]LogLinker: Failed to load '/Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack02': Can't find file.
+[2020.05.14-01.44.57:950][199]LogLinker: Failed to load '/Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack02': Can't find file.
+[2020.05.14-01.44.58:071][199]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack02.MainChar_Axe_LightAttack02
+[2020.05.14-01.44.58:071][199]LogAnimationCompression: Recompressing (AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack02.MainChar_Axe_LightAttack02) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.14-01.44.58:079][199]LogUObjectGlobals: Warning: Failed to find object 'DataTable None.'
+[2020.05.14-01.44.58:147][199]LogFactory: FactoryCreateFile: AnimSequence with FbxFactory (0 0 D:\Projects\COVID\SourceFiles\Characters\MainCharacter\Animation\Exports\MainChar_Axe_LightAttack02_End.fbx)
+[2020.05.14-01.44.58:157][199]LogFbx: Loading FBX Scene from D:\Projects\COVID\SourceFiles\Characters\MainCharacter\Animation\Exports\MainChar_Axe_LightAttack02_End.fbx
+[2020.05.14-01.44.58:188][199]LogFbx: FBX Scene Loaded Succesfully
+[2020.05.14-01.44.58:191][199]LogFbx: SortedLinks :(0) root
+[2020.05.14-01.44.58:191][199]LogFbx: SortedLinks :(1) pelvis
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(2) spine_01
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(3) spine_02
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(4) spine_03
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(5) clavicle_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(6) upperarm_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(7) lowerarm_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(8) hand_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(9) index_01_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(10) index_02_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(11) index_03_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(12) middle_01_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(13) middle_02_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(14) middle_03_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(15) pinky_01_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(16) pinky_02_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(17) pinky_03_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(18) ring_01_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(19) ring_02_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(20) ring_03_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(21) thumb_01_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(22) thumb_02_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(23) thumb_03_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(24) lowerarm_twist_01_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(25) upperarm_twist_01_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(26) clavicle_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(27) upperarm_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(28) lowerarm_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(29) hand_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(30) index_01_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(31) index_02_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(32) index_03_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(33) middle_01_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(34) middle_02_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(35) middle_03_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(36) pinky_01_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(37) pinky_02_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(38) pinky_03_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(39) ring_01_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(40) ring_02_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(41) ring_03_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(42) thumb_01_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(43) thumb_02_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(44) thumb_03_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(45) lowerarm_twist_01_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(46) upperarm_twist_01_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(47) neck_01
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(48) head
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(49) unrealJaw_M
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(50) unrealEye_R
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(51) unrealEye_L
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(52) thigh_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(53) calf_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(54) calf_twist_01_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(55) foot_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(56) ball_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(57) thigh_twist_01_l
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(58) thigh_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(59) calf_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(60) calf_twist_01_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(61) foot_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(62) ball_r
+[2020.05.14-01.44.58:192][199]LogFbx: SortedLinks :(63) thigh_twist_01_r
+[2020.05.14-01.44.58:192][199]LogFbx: Parsing AnimStack Axe_LightAttack02_End
+[2020.05.14-01.44.58:192][199]LogLinker: Failed to load '/Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack02_End': Can't find file.
+[2020.05.14-01.44.58:193][199]LogLinker: Failed to load '/Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack02_End': Can't find file.
+[2020.05.14-01.44.58:311][199]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack02_End.MainChar_Axe_LightAttack02_End
+[2020.05.14-01.44.58:311][199]LogAnimationCompression: Recompressing (AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack02_End.MainChar_Axe_LightAttack02_End) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.14-01.44.58:320][199]LogUObjectGlobals: Warning: Failed to find object 'DataTable None.'
+[2020.05.14-01.44.58:383][199]LogFactory: FactoryCreateFile: AnimSequence with FbxFactory (0 0 D:\Projects\COVID\SourceFiles\Characters\MainCharacter\Animation\Exports\MainChar_Axe_LightAttack03.fbx)
+[2020.05.14-01.44.58:393][199]LogFbx: Loading FBX Scene from D:\Projects\COVID\SourceFiles\Characters\MainCharacter\Animation\Exports\MainChar_Axe_LightAttack03.fbx
+[2020.05.14-01.44.58:422][199]LogFbx: FBX Scene Loaded Succesfully
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(0) root
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(1) pelvis
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(2) spine_01
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(3) spine_02
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(4) spine_03
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(5) clavicle_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(6) upperarm_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(7) lowerarm_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(8) hand_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(9) index_01_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(10) index_02_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(11) index_03_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(12) middle_01_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(13) middle_02_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(14) middle_03_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(15) pinky_01_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(16) pinky_02_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(17) pinky_03_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(18) ring_01_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(19) ring_02_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(20) ring_03_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(21) thumb_01_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(22) thumb_02_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(23) thumb_03_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(24) lowerarm_twist_01_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(25) upperarm_twist_01_l
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(26) clavicle_r
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(27) upperarm_r
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(28) lowerarm_r
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(29) hand_r
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(30) index_01_r
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(31) index_02_r
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(32) index_03_r
+[2020.05.14-01.44.58:426][199]LogFbx: SortedLinks :(33) middle_01_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(34) middle_02_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(35) middle_03_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(36) pinky_01_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(37) pinky_02_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(38) pinky_03_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(39) ring_01_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(40) ring_02_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(41) ring_03_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(42) thumb_01_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(43) thumb_02_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(44) thumb_03_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(45) lowerarm_twist_01_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(46) upperarm_twist_01_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(47) neck_01
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(48) head
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(49) unrealJaw_M
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(50) unrealEye_R
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(51) unrealEye_L
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(52) thigh_l
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(53) calf_l
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(54) calf_twist_01_l
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(55) foot_l
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(56) ball_l
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(57) thigh_twist_01_l
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(58) thigh_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(59) calf_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(60) calf_twist_01_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(61) foot_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(62) ball_r
+[2020.05.14-01.44.58:427][199]LogFbx: SortedLinks :(63) thigh_twist_01_r
+[2020.05.14-01.44.58:427][199]LogFbx: Parsing AnimStack Axe_LightAttack03
+[2020.05.14-01.44.58:427][199]LogLinker: Failed to load '/Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack03': Can't find file.
+[2020.05.14-01.44.58:427][199]LogLinker: Failed to load '/Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack03': Can't find file.
+[2020.05.14-01.44.58:547][199]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack03.MainChar_Axe_LightAttack03
+[2020.05.14-01.44.58:547][199]LogAnimationCompression: Recompressing (AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack03.MainChar_Axe_LightAttack03) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.14-01.44.58:556][199]LogUObjectGlobals: Warning: Failed to find object 'DataTable None.'
+[2020.05.14-01.44.58:618][199]LogFactory: FactoryCreateFile: AnimSequence with FbxFactory (0 0 D:\Projects\COVID\SourceFiles\Characters\MainCharacter\Animation\Exports\MainChar_Axe_LightAttack03_End.fbx)
+[2020.05.14-01.44.58:628][199]LogFbx: Loading FBX Scene from D:\Projects\COVID\SourceFiles\Characters\MainCharacter\Animation\Exports\MainChar_Axe_LightAttack03_End.fbx
+[2020.05.14-01.44.58:659][199]LogFbx: FBX Scene Loaded Succesfully
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(0) root
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(1) pelvis
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(2) spine_01
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(3) spine_02
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(4) spine_03
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(5) clavicle_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(6) upperarm_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(7) lowerarm_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(8) hand_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(9) index_01_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(10) index_02_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(11) index_03_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(12) middle_01_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(13) middle_02_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(14) middle_03_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(15) pinky_01_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(16) pinky_02_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(17) pinky_03_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(18) ring_01_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(19) ring_02_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(20) ring_03_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(21) thumb_01_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(22) thumb_02_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(23) thumb_03_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(24) lowerarm_twist_01_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(25) upperarm_twist_01_l
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(26) clavicle_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(27) upperarm_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(28) lowerarm_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(29) hand_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(30) index_01_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(31) index_02_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(32) index_03_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(33) middle_01_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(34) middle_02_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(35) middle_03_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(36) pinky_01_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(37) pinky_02_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(38) pinky_03_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(39) ring_01_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(40) ring_02_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(41) ring_03_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(42) thumb_01_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(43) thumb_02_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(44) thumb_03_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(45) lowerarm_twist_01_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(46) upperarm_twist_01_r
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(47) neck_01
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(48) head
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(49) unrealJaw_M
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(50) unrealEye_R
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(51) unrealEye_L
+[2020.05.14-01.44.58:663][199]LogFbx: SortedLinks :(52) thigh_l
+[2020.05.14-01.44.58:664][199]LogFbx: SortedLinks :(53) calf_l
+[2020.05.14-01.44.58:664][199]LogFbx: SortedLinks :(54) calf_twist_01_l
+[2020.05.14-01.44.58:664][199]LogFbx: SortedLinks :(55) foot_l
+[2020.05.14-01.44.58:664][199]LogFbx: SortedLinks :(56) ball_l
+[2020.05.14-01.44.58:664][199]LogFbx: SortedLinks :(57) thigh_twist_01_l
+[2020.05.14-01.44.58:664][199]LogFbx: SortedLinks :(58) thigh_r
+[2020.05.14-01.44.58:664][199]LogFbx: SortedLinks :(59) calf_r
+[2020.05.14-01.44.58:664][199]LogFbx: SortedLinks :(60) calf_twist_01_r
+[2020.05.14-01.44.58:664][199]LogFbx: SortedLinks :(61) foot_r
+[2020.05.14-01.44.58:664][199]LogFbx: SortedLinks :(62) ball_r
+[2020.05.14-01.44.58:664][199]LogFbx: SortedLinks :(63) thigh_twist_01_r
+[2020.05.14-01.44.58:664][199]LogFbx: Parsing AnimStack Axe_LightAttack03_End
+[2020.05.14-01.44.58:664][199]LogLinker: Failed to load '/Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack03_End': Can't find file.
+[2020.05.14-01.44.58:664][199]LogLinker: Failed to load '/Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack03_End': Can't find file.
+[2020.05.14-01.44.58:781][199]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack03_End.MainChar_Axe_LightAttack03_End
+[2020.05.14-01.44.58:781][199]LogAnimationCompression: Recompressing (AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack03_End.MainChar_Axe_LightAttack03_End) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.14-01.44.58:789][199]LogUObjectGlobals: Warning: Failed to find object 'DataTable None.'
+[2020.05.14-01.45.01:378][449]LogSavePackage: Moving '../../../../../Projects/COVID/CharacterandAI/Saved/MainChar_Axe_LightAttack03_EndD2B4FC074E2CD359855FDFA6FBC0AE59.tmp' to '../../../../../Projects/COVID/CharacterandAI/Content/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack03_End.uasset'
+[2020.05.14-01.45.01:586][449]LogSavePackage: Moving '../../../../../Projects/COVID/CharacterandAI/Saved/MainChar_Axe_LightAttack017551C196412B9C0339F6BBA5E88E725A.tmp' to '../../../../../Projects/COVID/CharacterandAI/Content/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack01.uasset'
+[2020.05.14-01.45.01:780][449]LogSavePackage: Moving '../../../../../Projects/COVID/CharacterandAI/Saved/MainChar_Axe_LightAttack01_End6775E873464B7C8B1835499B6BA061FD.tmp' to '../../../../../Projects/COVID/CharacterandAI/Content/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack01_End.uasset'
+[2020.05.14-01.45.01:957][449]LogSavePackage: Moving '../../../../../Projects/COVID/CharacterandAI/Saved/MainChar_Axe_LightAttack02FE4E195942D2A17D59B702A13E244525.tmp' to '../../../../../Projects/COVID/CharacterandAI/Content/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack02.uasset'
+[2020.05.14-01.45.02:127][449]LogSavePackage: Moving '../../../../../Projects/COVID/CharacterandAI/Saved/MainChar_Axe_LightAttack02_End79DDB0E3428B4008E099F98555D24953.tmp' to '../../../../../Projects/COVID/CharacterandAI/Content/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack02_End.uasset'
+[2020.05.14-01.45.02:319][449]LogSavePackage: Moving '../../../../../Projects/COVID/CharacterandAI/Saved/MainChar_Axe_LightAttack0359299657431845C56A2914B85932E50B.tmp' to '../../../../../Projects/COVID/CharacterandAI/Content/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack03.uasset'
+[2020.05.14-01.45.02:481][449]AssetCheck: New page: Asset Save: multiple assets
+[2020.05.14-01.45.02:481][449]LogContentValidation: Display: Validating AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack03_End.MainChar_Axe_LightAttack03_End
+[2020.05.14-01.45.02:481][449]LogContentValidation: Display: Validating AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack01.MainChar_Axe_LightAttack01
+[2020.05.14-01.45.02:481][449]LogContentValidation: Display: Validating AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack01_End.MainChar_Axe_LightAttack01_End
+[2020.05.14-01.45.02:481][449]LogContentValidation: Display: Validating AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack02.MainChar_Axe_LightAttack02
+[2020.05.14-01.45.02:481][449]LogContentValidation: Display: Validating AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack02_End.MainChar_Axe_LightAttack02_End
+[2020.05.14-01.45.02:481][449]LogContentValidation: Display: Validating AnimSequence /Game/Characters/MainCharacter/Animation/Attacks/MainChar_Axe_LightAttack03.MainChar_Axe_LightAttack03
+[2020.05.14-01.51.39:372][910]LogAssetEditorSubsystem: Opening Asset editor for AnimMontage /Game/Characters/MainCharacter/Animation/TurnInPlace/ALS_RF_Turn_R90_Montage.ALS_RF_Turn_R90_Montage
+[2020.05.14-01.51.39:378][910]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_14:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-01.51.39:460][910]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_14:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.05.14-01.51.39:837][910]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2020.05.14-01.51.47:045][697]LogSlate: Window 'ALS_RF_Turn_R90_Montage' being destroyed
+[2020.05.14-01.51.47:050][697]LogSlate: Window 'ALS_RF_Turn_R90_Montage' being destroyed
+[2020.05.14-01.51.47:050][697]LogWorld: UWorld::CleanupWorld for World_14, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-01.51.47:050][697]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-01.51.47:110][697]LogWorld: UWorld::CleanupWorld for World_15, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-01.51.47:110][697]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-01.54.51:494][662]LogAssetEditorSubsystem: Opening Asset editor for AnimMontage /Game/Characters/MainCharacter/Animation/TurnInPlace/ALS_RF_Turn_R90_Montage.ALS_RF_Turn_R90_Montage
+[2020.05.14-01.54.51:500][662]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_16:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-01.54.51:557][662]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_16:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.05.14-01.54.51:866][662]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2020.05.14-01.55.09:032][423]LogSlate: Window 'ALS_RF_Turn_R90_Montage' being destroyed
+[2020.05.14-01.55.09:036][423]LogSlate: Window 'ALS_RF_Turn_R90_Montage' being destroyed
+[2020.05.14-01.55.09:036][423]LogWorld: UWorld::CleanupWorld for World_16, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-01.55.09:036][423]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-01.55.09:096][423]LogWorld: UWorld::CleanupWorld for World_17, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-01.55.09:096][423]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-01.55.09:170][423]LogWorld: UWorld::CleanupWorld for World_18, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-01.55.09:170][423]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-01.58.17:066][625]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2020.05.14-01.58.17:086][625]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.14-01.58.17:086][625]PIE: New page: PIE session: WhiteRoom_Player_Mechanics (May 13, 2020, 5:58:17 p.m.)
+[2020.05.14-01.58.17:086][625]LogPlayLevel: Creating play world package: /Game/Maps/Levels/WhiteRooms/UEDPIE_0_WhiteRoom_Player_Mechanics
+[2020.05.14-01.58.17:090][625]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003765s)
+[2020.05.14-01.58.17:091][625]LogAIModule: Creating AISystem for world WhiteRoom_Player_Mechanics
+[2020.05.14-01.58.17:091][625]LogPlayLevel: PIE: World Init took: (0.001094s)
+[2020.05.14-01.58.17:091][625]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/Levels/WhiteRooms/WhiteRoom_Player_Mechanics.WhiteRoom_Player_Mechanics to /Game/Maps/Levels/WhiteRooms/UEDPIE_0_WhiteRoom_Player_Mechanics.WhiteRoom_Player_Mechanics (0.004992s)
+[2020.05.14-01.58.17:124][625]LogUObjectHash: Compacting FUObjectHashTables data took   2.49ms
+[2020.05.14-01.58.17:130][625]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2020.05.14-01.58.17:130][625]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2020.05.14-01.58.17:130][625]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2020.05.14-01.58.17:130][625]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2020.05.14-01.58.17:130][625]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2020.05.14-01.58.17:130][625]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2020.05.14-01.58.17:130][625]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2020.05.14-01.58.17:130][625]LogAudio: Display: AudioDevice MaxSources: 32
+[2020.05.14-01.58.17:131][625]LogAudio: Display: Using built-in audio occlusion.
+[2020.05.14-01.58.17:131][625]LogAudioMixer: Display: Initializing audio mixer.
+[2020.05.14-01.58.17:195][625]LogAudioMixer: Display: Audio Device Output Speaker Info:
+[2020.05.14-01.58.17:195][625]LogAudioMixer: Display: Name: Headset Earphone (Sennheiser Communication Audio)
+[2020.05.14-01.58.17:195][625]LogAudioMixer: Display: Is Default: Yes
+[2020.05.14-01.58.17:195][625]LogAudioMixer: Display: Sample Rate: 48000
+[2020.05.14-01.58.17:195][625]LogAudioMixer: Display: Channel Count Used: 2
+[2020.05.14-01.58.17:195][625]LogAudioMixer: Display: Device Channel Count: 2
+[2020.05.14-01.58.17:195][625]LogAudioMixer: Display: Channel Order:
+[2020.05.14-01.58.17:195][625]LogAudioMixer: Display: 0: FrontLeft
+[2020.05.14-01.58.17:195][625]LogAudioMixer: Display: 1: FrontRight
+[2020.05.14-01.58.17:208][625]LogAudioMixer: Display: Using Audio Device Headset Earphone (Sennheiser Communication Audio)
+[2020.05.14-01.58.17:210][625]LogInit: FAudioDevice initialized.
+[2020.05.14-01.58.17:233][625]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.05.14-01.58.17:233][625]LogLoad: Game class is 'ThirdPersonGameMode_C'
+[2020.05.14-01.58.17:235][625]PIE: Warning: Invalid Simulate Options: Body (EnnemyBP_2.CharacterMesh0 Mannequin) is set to simulate physics but Collision Enabled is incompatible
+[2020.05.14-01.58.17:235][625]PIE: Warning: Invalid Simulate Options: Body (EnnemyBP_2.CharacterMesh0 Mannequin) is set to simulate physics but Collision Enabled is incompatible
+[2020.05.14-01.58.17:235][625]LogWorld: Bringing World /Game/Maps/Levels/WhiteRooms/UEDPIE_0_WhiteRoom_Player_Mechanics.WhiteRoom_Player_Mechanics up for play (max tick rate 0) at 2020.05.13-21.58.17
+[2020.05.14-01.58.17:236][625]LogWorld: Bringing up level for play took: 0.001798
+[2020.05.14-01.58.17:236][625]LogOnline: OSS: Creating online subsystem instance for: :Context_24
+[2020.05.14-01.58.17:238][625]PIE: Warning: Invalid Simulate Options: Body (ThirdPersonCharacter_C_0.CharacterMesh0 Mannequin) is set to simulate physics but Collision Enabled is incompatible
+[2020.05.14-01.58.17:238][625]PIE: Warning: Invalid Simulate Options: Body (ThirdPersonCharacter_C_0.CharacterMesh0 Mannequin) is set to simulate physics but Collision Enabled is incompatible
+[2020.05.14-01.58.17:243][625]PIE: Play in editor start time for /Game/Maps/Levels/WhiteRooms/UEDPIE_0_WhiteRoom_Player_Mechanics 1.095
+[2020.05.14-01.59.20:985][261]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.59.21:444][316]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.59.29:328][262]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.59.29:478][280]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.59.47:816][477]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.59.48:091][510]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.59.48:975][616]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.59.49:616][693]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.59.52:025][982]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.59.52:300][ 15]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.59.54:850][321]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.59.55:333][379]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.59.57:525][642]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-01.59.58:000][699]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-02.00.06:812][756]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.05.14-02.00.06:827][756]LogAudioMixer: Display: Flush succeeded in the source manager command queue (1).
+[2020.05.14-02.00.06:847][756]LogAudioMixer: Display: Flush succeeded the source manager command queue (2).
+[2020.05.14-02.00.06:847][756]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.05.14-02.00.06:847][756]LogWorld: BeginTearingDown for /Game/Maps/Levels/WhiteRooms/UEDPIE_0_WhiteRoom_Player_Mechanics
+[2020.05.14-02.00.06:866][756]LogSlate: Window 'CharacterandAI Game Preview Standalone (64-bit/PCD3D_SM5)' being destroyed
+[2020.05.14-02.00.06:872][756]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.05.14-02.00.06:872][756]LogWorld: UWorld::CleanupWorld for WhiteRoom_Player_Mechanics, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.00.06:872][756]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.00.06:880][756]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2020.05.14-02.00.06:883][756]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.00.06:910][756]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.05.14-02.00.06:916][756]LogUObjectHash: Compacting FUObjectHashTables data took   1.56ms
+[2020.05.14-02.00.06:977][757]LogPlayLevel: Display: Destroying online subsystem :Context_24
+[2020.05.14-02.00.08:571][919]LogSlate: Window 'Message Log' being destroyed
+[2020.05.14-02.00.08:574][919]LogSlate: Window 'Message Log' being destroyed
+[2020.05.14-02.00.11:282][241]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2020.05.14-02.00.22:339][519]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2020.05.14-02.00.22:376][519]LogSavePackage: Moving '../../../../../Projects/COVID/CharacterandAI/Saved/WhiteRoom_Player_Mechanics53F53B6A4548B91318B6ADB2E54CDF20.tmp' to '../../../../../Projects/COVID/CharacterandAI/Content/Maps/Levels/WhiteRooms/WhiteRoom_Player_Mechanics.umap'
+[2020.05.14-02.00.22:519][519]LogSavePackage: Moving '../../../../../Projects/COVID/CharacterandAI/Saved/WhiteRoom_Player_Mechanics_BuiltD94F04C5430511D7FAB5DD842921ED5C.tmp' to '../../../../../Projects/COVID/CharacterandAI/Content/Maps/Levels/WhiteRooms/WhiteRoom_Player_Mechanics_BuiltData.uasset'
+[2020.05.14-02.00.22:528][519]AssetCheck: New page: Asset Save: multiple assets
+[2020.05.14-02.00.22:528][519]LogContentValidation: Display: Validating World /Game/Maps/Levels/WhiteRooms/WhiteRoom_Player_Mechanics.WhiteRoom_Player_Mechanics
+[2020.05.14-02.00.22:528][519]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/Maps/Levels/WhiteRooms/WhiteRoom_Player_Mechanics_BuiltData.WhiteRoom_Player_Mechanics_BuiltData
+[2020.05.14-02.01.10:997][ 63]LogContentBrowser: Native class hierarchy updated for 'WorldBrowser' in 0.0003 seconds. Added 2 classes and 3 folders.
+[2020.05.14-02.01.13:693][380]LogSlate: Window 'Levels' being destroyed
+[2020.05.14-02.01.13:698][380]LogSlate: Window 'Levels' being destroyed
+[2020.05.14-02.01.17:651][847]LogTemp: Repeating last play command: New Editor Window (PIE)
+[2020.05.14-02.01.17:675][847]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2020.05.14-02.01.17:675][847]PIE: New page: PIE session: WhiteRoom_Player_Mechanics (May 13, 2020, 6:01:17 p.m.)
+[2020.05.14-02.01.17:675][847]LogPlayLevel: Creating play world package: /Game/Maps/Levels/WhiteRooms/UEDPIE_0_WhiteRoom_Player_Mechanics
+[2020.05.14-02.01.17:678][847]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003413s)
+[2020.05.14-02.01.17:679][847]LogAIModule: Creating AISystem for world WhiteRoom_Player_Mechanics
+[2020.05.14-02.01.17:680][847]LogPlayLevel: PIE: World Init took: (0.001024s)
+[2020.05.14-02.01.17:680][847]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/Levels/WhiteRooms/WhiteRoom_Player_Mechanics.WhiteRoom_Player_Mechanics to /Game/Maps/Levels/WhiteRooms/UEDPIE_0_WhiteRoom_Player_Mechanics.WhiteRoom_Player_Mechanics (0.004581s)
+[2020.05.14-02.01.17:708][847]LogUObjectHash: Compacting FUObjectHashTables data took   1.71ms
+[2020.05.14-02.01.17:712][847]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2020.05.14-02.01.17:712][847]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2020.05.14-02.01.17:712][847]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2020.05.14-02.01.17:712][847]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2020.05.14-02.01.17:712][847]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2020.05.14-02.01.17:713][847]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2020.05.14-02.01.17:713][847]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2020.05.14-02.01.17:713][847]LogAudio: Display: AudioDevice MaxSources: 32
+[2020.05.14-02.01.17:713][847]LogAudio: Display: Using built-in audio occlusion.
+[2020.05.14-02.01.17:713][847]LogAudioMixer: Display: Initializing audio mixer.
+[2020.05.14-02.01.17:778][847]LogAudioMixer: Display: Audio Device Output Speaker Info:
+[2020.05.14-02.01.17:778][847]LogAudioMixer: Display: Name: Headset Earphone (Sennheiser Communication Audio)
+[2020.05.14-02.01.17:778][847]LogAudioMixer: Display: Is Default: Yes
+[2020.05.14-02.01.17:778][847]LogAudioMixer: Display: Sample Rate: 48000
+[2020.05.14-02.01.17:778][847]LogAudioMixer: Display: Channel Count Used: 2
+[2020.05.14-02.01.17:778][847]LogAudioMixer: Display: Device Channel Count: 2
+[2020.05.14-02.01.17:778][847]LogAudioMixer: Display: Channel Order:
+[2020.05.14-02.01.17:778][847]LogAudioMixer: Display: 0: FrontLeft
+[2020.05.14-02.01.17:778][847]LogAudioMixer: Display: 1: FrontRight
+[2020.05.14-02.01.17:791][847]LogAudioMixer: Display: Using Audio Device Headset Earphone (Sennheiser Communication Audio)
+[2020.05.14-02.01.17:792][847]LogInit: FAudioDevice initialized.
+[2020.05.14-02.01.17:820][847]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.05.14-02.01.17:820][847]LogLoad: Game class is 'ThirdPersonGameMode_C'
+[2020.05.14-02.01.17:821][847]PIE: Warning: Invalid Simulate Options: Body (EnnemyBP_2.CharacterMesh0 Mannequin) is set to simulate physics but Collision Enabled is incompatible
+[2020.05.14-02.01.17:821][847]PIE: Warning: Invalid Simulate Options: Body (EnnemyBP_2.CharacterMesh0 Mannequin) is set to simulate physics but Collision Enabled is incompatible
+[2020.05.14-02.01.17:821][847]LogWorld: Bringing World /Game/Maps/Levels/WhiteRooms/UEDPIE_0_WhiteRoom_Player_Mechanics.WhiteRoom_Player_Mechanics up for play (max tick rate 0) at 2020.05.13-22.01.17
+[2020.05.14-02.01.17:822][847]LogWorld: Bringing up level for play took: 0.001670
+[2020.05.14-02.01.17:822][847]LogOnline: OSS: Creating online subsystem instance for: :Context_26
+[2020.05.14-02.01.17:824][847]PIE: Warning: Invalid Simulate Options: Body (ThirdPersonCharacter_C_0.CharacterMesh0 Mannequin) is set to simulate physics but Collision Enabled is incompatible
+[2020.05.14-02.01.17:824][847]PIE: Warning: Invalid Simulate Options: Body (ThirdPersonCharacter_C_0.CharacterMesh0 Mannequin) is set to simulate physics but Collision Enabled is incompatible
+[2020.05.14-02.01.17:827][847]PIE: Play in editor start time for /Game/Maps/Levels/WhiteRooms/UEDPIE_0_WhiteRoom_Player_Mechanics -0.321
+[2020.05.14-02.01.27:956][ 45]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-02.01.28:165][ 70]LogScript: Warning: Script Msg: A null object was passed as a world context object to UEngine::GetWorldFromContextObject().
+[2020.05.14-02.01.53:110][ 60]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.05.14-02.01.53:118][ 60]LogAudioMixer: Display: Flush succeeded in the source manager command queue (1).
+[2020.05.14-02.01.53:137][ 60]LogAudioMixer: Display: Flush succeeded the source manager command queue (2).
+[2020.05.14-02.01.53:138][ 60]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2020.05.14-02.01.53:138][ 60]LogWorld: BeginTearingDown for /Game/Maps/Levels/WhiteRooms/UEDPIE_0_WhiteRoom_Player_Mechanics
+[2020.05.14-02.01.53:156][ 60]LogSlate: Window 'CharacterandAI Game Preview Standalone (64-bit/PCD3D_SM5)' being destroyed
+[2020.05.14-02.01.53:161][ 60]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.05.14-02.01.53:161][ 60]LogWorld: UWorld::CleanupWorld for WhiteRoom_Player_Mechanics, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.01.53:162][ 60]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.01.53:171][ 60]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2020.05.14-02.01.53:174][ 60]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.01.53:202][ 60]LogAudioMixer: Display: No commands were queued while flushing the source manager.
+[2020.05.14-02.01.53:207][ 60]LogUObjectHash: Compacting FUObjectHashTables data took   1.68ms
+[2020.05.14-02.01.53:266][ 61]LogPlayLevel: Display: Destroying online subsystem :Context_26
+[2020.05.14-02.01.54:329][162]LogSlate: Window 'Message Log' being destroyed
+[2020.05.14-02.01.54:333][162]LogSlate: Window 'Message Log' being destroyed
+[2020.05.14-02.02.25:565][638]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/Characters/MainCharacter/Animation/TurnInPlace/ALS_LF_Turn_L90.ALS_LF_Turn_L90
+[2020.05.14-02.02.25:571][638]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_20:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.02.25:627][638]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_20:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.05.14-02.02.25:938][638]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2020.05.14-02.02.28:873][921]LogSlate: Window 'ALS_LF_Turn_L90' being destroyed
+[2020.05.14-02.02.28:878][921]LogSlate: Window 'ALS_LF_Turn_L90' being destroyed
+[2020.05.14-02.02.28:878][921]LogWorld: UWorld::CleanupWorld for World_20, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.02.28:878][921]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.02.28:938][921]LogWorld: UWorld::CleanupWorld for World_21, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.02.28:938][921]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.02.36:254][711]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/Characters/MainCharacter/Animation/AdditivePoses/ALS_N_Lean_F_Pose.ALS_N_Lean_F_Pose
+[2020.05.14-02.02.36:260][711]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_22:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.02.36:313][711]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_22:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.05.14-02.02.36:611][711]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2020.05.14-02.02.41:379][205]LogSlate: Window 'ALS_N_Lean_F_Pose' being destroyed
+[2020.05.14-02.02.41:384][205]LogSlate: Window 'ALS_N_Lean_F_Pose' being destroyed
+[2020.05.14-02.02.41:384][205]LogWorld: UWorld::CleanupWorld for World_22, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.02.41:384][205]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.02.41:448][205]LogWorld: UWorld::CleanupWorld for World_23, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.02.41:448][205]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.02.42:981][374]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/Characters/MainCharacter/Animation/AdditivePoses/ALS_N_Lean_L_Pose.ALS_N_Lean_L_Pose
+[2020.05.14-02.02.42:988][374]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_24:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.02.43:042][374]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_24:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.05.14-02.02.43:338][374]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2020.05.14-02.02.47:068][763]LogSlate: Window 'ALS_N_Lean_L_Pose' being destroyed
+[2020.05.14-02.02.47:072][763]LogSlate: Window 'ALS_N_Lean_L_Pose' being destroyed
+[2020.05.14-02.02.47:073][763]LogWorld: UWorld::CleanupWorld for World_24, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.02.47:073][763]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.02.47:133][763]LogWorld: UWorld::CleanupWorld for World_25, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.02.47:134][763]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.02.50:114][102]LogAssetEditorSubsystem: Opening Asset editor for BlendSpace /Game/Characters/MainCharacter/Animation/AdditivePoses/ALS_N_Lean_Grounded.ALS_N_Lean_Grounded
+[2020.05.14-02.02.50:119][102]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_26:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.02.50:175][102]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_26:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.05.14-02.02.50:490][102]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2020.05.14-02.03.02:710][413]LogSlate: Window 'ALS_N_Lean_Grounded' being destroyed
+[2020.05.14-02.03.02:713][413]LogSlate: Window 'ALS_N_Lean_Grounded' being destroyed
+[2020.05.14-02.03.02:714][413]LogWorld: UWorld::CleanupWorld for World_26, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.03.02:714][413]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.03.02:780][413]LogWorld: UWorld::CleanupWorld for World_27, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.03.02:780][413]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.03.14:035][230]LogSlate: Window 'Pick Skeleton' being destroyed
+[2020.05.14-02.03.34:421][303]LogSavePackage: Moving '../../../../../Projects/COVID/CharacterandAI/Saved/MC_Leaning_AdditiveB6152E0C4BCB651359F650853F318EE8.tmp' to '../../../../../Projects/COVID/CharacterandAI/Content/Characters/MainCharacter/Animation/AdditivePoses/MC_Leaning_Additive.uasset'
+[2020.05.14-02.03.34:627][303]AssetCheck: New page: Asset Save: MC_Leaning_Additive
+[2020.05.14-02.03.34:627][303]LogContentValidation: Display: Validating BlendSpace /Game/Characters/MainCharacter/Animation/AdditivePoses/MC_Leaning_Additive.MC_Leaning_Additive
+[2020.05.14-02.03.35:636][416]LogAssetEditorSubsystem: Opening Asset editor for BlendSpace /Game/Characters/MainCharacter/Animation/AdditivePoses/MC_Leaning_Additive.MC_Leaning_Additive
+[2020.05.14-02.03.35:641][416]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.03.35:697][416]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_28:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.05.14-02.03.35:995][416]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2020.05.14-02.03.45:136][330]LogAssetEditorSubsystem: Opening Asset editor for BlendSpace /Game/Characters/MainCharacter/Animation/AdditivePoses/ALS_N_Lean_InAir.ALS_N_Lean_InAir
+[2020.05.14-02.03.49:038][715]LogAssetEditorSubsystem: Opening Asset editor for BlendSpace /Game/Characters/MainCharacter/Animation/AdditivePoses/ALS_N_Lean_Grounded.ALS_N_Lean_Grounded
+[2020.05.14-02.03.52:001][  2]LogSlate: Window 'ALS_N_Lean_Grounded' being destroyed
+[2020.05.14-02.04.03:966][345]LogUObjectHash: Compacting FUObjectHashTables data took   1.67ms
+[2020.05.14-02.04.05:293][345]LogSlate: Window 'Delete Assets' being destroyed
+[2020.05.14-02.04.05:539][345]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/Characters/MainCharacter/Animation/AdditivePoses/MC_Leaning_Additive.MC_Leaning_Additive
+[2020.05.14-02.04.07:018][345]LogUObjectHash: Compacting FUObjectHashTables data took   1.48ms
+[2020.05.14-02.04.07:048][345]LogUObjectHash: Compacting FUObjectHashTables data took   1.54ms
+[2020.05.14-02.04.07:076][345]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2020.05.14-02.04.07:171][345]SourceControl: rm 'CharacterandAI/Content/Characters/MainCharacter/Animation/AdditivePoses/MC_Leaning_Additive.uasset'
+[2020.05.14-02.04.14:929][ 50]LogSlate: Window 'Pick Skeleton' being destroyed
+[2020.05.14-02.04.32:936][869]LogSavePackage: Moving '../../../../../Projects/COVID/CharacterandAI/Saved/MC_BS_Leaning_RunF4C3CBA1476E83EC09858CB6E237C2B4.tmp' to '../../../../../Projects/COVID/CharacterandAI/Content/Characters/MainCharacter/Animation/AdditivePoses/MC_BS_Leaning_Run.uasset'
+[2020.05.14-02.04.33:113][869]AssetCheck: New page: Asset Save: MC_BS_Leaning_Run
+[2020.05.14-02.04.33:113][869]LogContentValidation: Display: Validating BlendSpace1D /Game/Characters/MainCharacter/Animation/AdditivePoses/MC_BS_Leaning_Run.MC_BS_Leaning_Run
+[2020.05.14-02.04.33:496][910]LogAssetEditorSubsystem: Opening Asset editor for BlendSpace1D /Game/Characters/MainCharacter/Animation/AdditivePoses/MC_BS_Leaning_Run.MC_BS_Leaning_Run
+[2020.05.14-02.05.09:735][570]LogAssetEditorSubsystem: Opening Asset editor for BlendSpace /Game/Characters/MainCharacter/Animation/AdditivePoses/ALS_N_Lean_Grounded.ALS_N_Lean_Grounded
+[2020.05.14-02.05.16:944][375]LogSlate: Window 'ALS_N_Lean_Grounded' being destroyed
+[2020.05.14-02.05.16:950][375]LogWorld: UWorld::CleanupWorld for World_28, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.05.16:950][375]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.05.17:013][375]LogWorld: UWorld::CleanupWorld for World_29, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.05.17:013][375]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.05.33:591][148]LogSavePackage: Moving '../../../../../Projects/COVID/CharacterandAI/Saved/MC_BS_Leaning_RunFBCD7B76481330CB614473BB8C568F7E.tmp' to '../../../../../Projects/COVID/CharacterandAI/Content/Characters/MainCharacter/Animation/AdditivePoses/MC_BS_Leaning_Run.uasset'
+[2020.05.14-02.05.33:601][148]AssetCheck: New page: Asset Save: MC_BS_Leaning_Run
+[2020.05.14-02.05.33:601][148]LogContentValidation: Display: Validating BlendSpace1D /Game/Characters/MainCharacter/Animation/AdditivePoses/MC_BS_Leaning_Run.MC_BS_Leaning_Run
+[2020.05.14-02.05.35:200][321]LogAssetEditorSubsystem: Opening Asset editor for BlendSpace1D /Game/Characters/MainCharacter/Animation/AdditivePoses/MC_BS_Leaning_Run.MC_BS_Leaning_Run
+[2020.05.14-02.05.35:206][321]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_30:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.05.35:255][321]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_30:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.05.14-02.05.35:551][321]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2020.05.14-02.05.41:699][935]LogSlate: Window 'MC_BS_Leaning_Run' being destroyed
+[2020.05.14-02.05.41:703][935]LogSlate: Window 'MC_BS_Leaning_Run' being destroyed
+[2020.05.14-02.05.41:703][935]LogWorld: UWorld::CleanupWorld for World_30, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.05.41:704][935]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.05.41:764][935]LogWorld: UWorld::CleanupWorld for World_31, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.05.41:764][935]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.05.44:511][222]LogAssetEditorSubsystem: Opening Asset editor for AnimBlueprint /Game/Characters/MainCharacter/MC_AnimBP.MC_AnimBP
+[2020.05.14-02.05.44:554][222]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_33:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.05.44:902][222]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0005 seconds. Added 121 classes and 0 folders.
+[2020.05.14-02.05.45:762][222]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_33:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.05.14-02.05.46:055][222]LogSlate: Took 0.004745 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2020.05.14-02.05.46:326][222]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2020.05.14-02.05.46:366][223]LogSlate: Took 0.017327 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2020.05.14-02.06.49:529][744]LogSlate: Window 'MC_AnimBP' being destroyed
+[2020.05.14-02.06.49:533][744]LogSlate: Window 'MC_AnimBP' being destroyed
+[2020.05.14-02.06.49:568][744]LogWorld: UWorld::CleanupWorld for World_33, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.06.49:568][744]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.06.49:572][744]LogWorld: UWorld::CleanupWorld for World_32, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.06.49:572][744]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.06.49:695][744]LogWorld: UWorld::CleanupWorld for World_34, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.06.49:695][744]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.06.51:653][964]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.51:653][964]LogEditorTransaction: Undo Move Node
+[2020.05.14-02.06.52:736][ 51]LogAssetEditorSubsystem: Opening Asset editor for AnimBlueprint /Game/Characters/MainCharacter/MC_AnimBP.MC_AnimBP
+[2020.05.14-02.06.52:744][ 51]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.06.53:019][ 51]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.05.14-02.06.53:345][ 51]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2020.05.14-02.06.53:957][113]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.53:957][113]LogEditorTransaction: Undo Move Node
+[2020.05.14-02.06.54:062][113]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.06.55:102][218]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.55:102][218]LogEditorTransaction: Undo Move Node
+[2020.05.14-02.06.55:195][218]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.06.55:933][294]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.55:934][294]LogEditorTransaction: Undo Move Node
+[2020.05.14-02.06.56:029][294]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.06.56:704][359]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.56:704][359]LogEditorTransaction: Undo Move Node
+[2020.05.14-02.06.56:798][359]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.06.57:036][381]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.57:036][381]LogEditorTransaction: Undo Move Node
+[2020.05.14-02.06.57:130][381]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.06.57:310][397]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.57:310][397]LogEditorTransaction: Undo Move Node
+[2020.05.14-02.06.57:403][397]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.06.57:561][411]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.57:561][411]LogEditorTransaction: Undo Moving Blend Grid Sample
+[2020.05.14-02.06.57:639][411]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.06.57:784][421]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.57:784][421]LogEditorTransaction: Undo Adding Blend Grid Sample
+[2020.05.14-02.06.57:860][421]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.06.57:985][431]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.57:985][431]LogEditorTransaction: Undo Moving Blend Grid Sample
+[2020.05.14-02.06.58:061][431]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.06.58:435][468]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.58:435][468]LogEditorTransaction: Undo Moving Blend Grid Sample
+[2020.05.14-02.06.58:512][468]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.06.58:672][483]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.58:672][483]LogEditorTransaction: Undo Moving Blend Grid Sample
+[2020.05.14-02.06.58:748][483]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.06.58:918][499]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.58:918][499]LogEditorTransaction: Undo Moving Blend Grid Sample
+[2020.05.14-02.06.58:995][499]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.06.59:137][512]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.59:137][512]LogEditorTransaction: Undo Moving Blend Grid Sample
+[2020.05.14-02.06.59:215][512]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.06.59:341][523]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.59:341][523]LogEditorTransaction: Undo Moving Blend Grid Sample
+[2020.05.14-02.06.59:420][523]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.06.59:553][535]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.59:553][535]LogEditorTransaction: Undo Moving Blend Grid Sample
+[2020.05.14-02.06.59:631][535]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.06.59:842][553]Cmd: TRANSACTION UNDO
+[2020.05.14-02.06.59:842][553]LogEditorTransaction: Undo Moving Blend Grid Sample
+[2020.05.14-02.06.59:919][553]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.07.00:919][642]LogEditorTransaction: Undo Adding Blend Grid Sample
+[2020.05.14-02.07.00:999][642]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.07.04:824][982]LogSlate: Window 'MC_AnimBP' being destroyed
+[2020.05.14-02.07.04:828][982]LogSlate: Window 'MC_AnimBP' being destroyed
+[2020.05.14-02.07.04:864][982]LogWorld: UWorld::CleanupWorld for World_36, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.07.04:864][982]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.07.04:868][982]LogWorld: UWorld::CleanupWorld for World_35, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.07.04:868][982]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.07.05:306][982]LogWorld: UWorld::CleanupWorld for World_37, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.07.05:307][982]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.07.46:758][431]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Characters/MainCharacter/MC_AnimBP" FILE="../../../../../Projects/COVID/CharacterandAI/Content/Characters/MainCharacter/MC_AnimBP.uasset" SILENT=true
+[2020.05.14-02.07.46:959][431]LogSavePackage: Moving '../../../../../Projects/COVID/CharacterandAI/Saved/MC_AnimBPDAFA45AF4411FA9B9CF970AF9A7FB609.tmp' to '../../../../../Projects/COVID/CharacterandAI/Content/Characters/MainCharacter/MC_AnimBP.uasset'
+[2020.05.14-02.07.46:971][431]AssetCheck: New page: Asset Save: MC_AnimBP
+[2020.05.14-02.07.46:972][431]LogContentValidation: Display: Validating AnimBlueprint /Game/Characters/MainCharacter/MC_AnimBP.MC_AnimBP
+[2020.05.14-02.08.02:232][357]LogAssetEditorSubsystem: Opening Asset editor for BlendSpace1D /Game/Characters/MainCharacter/Animation/AdditivePoses/MC_BS_Leaning_Run.MC_BS_Leaning_Run
+[2020.05.14-02.08.02:238][357]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_38:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.08.02:292][357]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_38:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.05.14-02.08.02:592][357]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2020.05.14-02.09.14:239][976]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/Characters/MainCharacter/Animation/Locomotion/ALS_N_Run_F.ALS_N_Run_F
+[2020.05.14-02.09.33:624][938]LogSlate: Window 'ALS_N_Run_F' being destroyed
+[2020.05.14-02.09.33:628][938]LogSlate: Window 'ALS_N_Run_F' being destroyed
+[2020.05.14-02.09.33:629][938]LogWorld: UWorld::CleanupWorld for World_38, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.09.33:629][938]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.09.33:697][938]LogWorld: UWorld::CleanupWorld for World_39, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.09.33:697][938]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.11.02:193][700]LogUObjectHash: Compacting FUObjectHashTables data took   3.81ms
+[2020.05.14-02.11.02:210][700]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Maps/Levels/WhiteRooms/WhiteRoom_Player_Mechanics' took 0.076
+[2020.05.14-02.11.02:210][700]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Characters/MainCharacter/Animation/AdditivePoses/MC_BS_Leaning_Run] ([1] browsable assets)...
+[2020.05.14-02.11.02:229][700]OBJ SavePackage:     Rendered thumbnail for [BlendSpace1D /Game/Characters/MainCharacter/Animation/AdditivePoses/MC_BS_Leaning_Run.MC_BS_Leaning_Run]
+[2020.05.14-02.11.02:229][700]OBJ SavePackage: Finished generating thumbnails for package [/Game/Characters/MainCharacter/Animation/AdditivePoses/MC_BS_Leaning_Run]
+[2020.05.14-02.11.02:259][700]LogSavePackage: Moving '../../../../../Projects/COVID/CharacterandAI/Saved/MC_BS_Leaning_Run_Auto2B8998A8F4D5EA03F30D7998CF5BFEA3F.tmp' to '../../../../../Projects/COVID/CharacterandAI/Saved/Autosaves/Game/Characters/MainCharacter/Animation/AdditivePoses/MC_BS_Leaning_Run_Auto2.uasset'
+[2020.05.14-02.11.02:259][700]LogFileHelpers: Auto-saving content packages took 0.050
+[2020.05.14-02.17.24:634][499]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 D:\Projects\COVID\SourceFiles\Characters\MainCharacter\Animation\Exports\MainChar_Dodge.fbx)
+[2020.05.14-02.17.24:643][499]LogFbx: Loading FBX Scene from D:\Projects\COVID\SourceFiles\Characters\MainCharacter\Animation\Exports\MainChar_Dodge.fbx
+[2020.05.14-02.17.24:674][499]LogFbx: FBX Scene Loaded Succesfully
+[2020.05.14-02.17.30:168][499]LogSlate: Window 'FBX Import Options' being destroyed
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(0) root
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(1) pelvis
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(2) spine_01
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(3) spine_02
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(4) spine_03
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(5) clavicle_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(6) upperarm_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(7) lowerarm_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(8) hand_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(9) index_01_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(10) index_02_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(11) index_03_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(12) middle_01_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(13) middle_02_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(14) middle_03_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(15) pinky_01_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(16) pinky_02_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(17) pinky_03_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(18) ring_01_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(19) ring_02_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(20) ring_03_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(21) thumb_01_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(22) thumb_02_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(23) thumb_03_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(24) lowerarm_twist_01_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(25) upperarm_twist_01_l
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(26) clavicle_r
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(27) upperarm_r
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(28) lowerarm_r
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(29) hand_r
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(30) index_01_r
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(31) index_02_r
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(32) index_03_r
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(33) middle_01_r
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(34) middle_02_r
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(35) middle_03_r
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(36) pinky_01_r
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(37) pinky_02_r
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(38) pinky_03_r
+[2020.05.14-02.17.30:198][499]LogFbx: SortedLinks :(39) ring_01_r
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(40) ring_02_r
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(41) ring_03_r
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(42) thumb_01_r
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(43) thumb_02_r
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(44) thumb_03_r
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(45) lowerarm_twist_01_r
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(46) upperarm_twist_01_r
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(47) neck_01
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(48) head
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(49) unrealJaw_M
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(50) unrealEye_R
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(51) unrealEye_L
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(52) thigh_l
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(53) calf_l
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(54) calf_twist_01_l
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(55) foot_l
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(56) ball_l
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(57) thigh_twist_01_l
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(58) thigh_r
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(59) calf_r
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(60) calf_twist_01_r
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(61) foot_r
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(62) ball_r
+[2020.05.14-02.17.30:199][499]LogFbx: SortedLinks :(63) thigh_twist_01_r
+[2020.05.14-02.17.30:199][499]LogFbx: Parsing AnimStack Dodge
+[2020.05.14-02.17.30:202][499]LogLinker: Failed to load '/Game/Characters/MainCharacter/Animation/Dodges/MainChar_Dodge': Can't find file.
+[2020.05.14-02.17.30:202][499]LogLinker: Failed to load '/Game/Characters/MainCharacter/Animation/Dodges/MainChar_Dodge': Can't find file.
+[2020.05.14-02.17.30:341][499]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Characters/MainCharacter/Animation/Dodges/MainChar_Dodge.MainChar_Dodge
+[2020.05.14-02.17.30:341][499]LogAnimationCompression: Recompressing (AnimSequence /Game/Characters/MainCharacter/Animation/Dodges/MainChar_Dodge.MainChar_Dodge) using current/default (AnimCompress_BitwiseCompressOnly_0) bFirstRecompressUsingCurrentOrDefault(1) bTryAlternateCompressor(0) IsCompressedDataValid(0)
+[2020.05.14-02.17.30:350][499]LogUObjectGlobals: Warning: Failed to find object 'DataTable None.'
+[2020.05.14-02.17.31:354][582]LogSavePackage: Moving '../../../../../Projects/COVID/CharacterandAI/Saved/MainChar_DodgeDF4CAA6A47B303CDFFA7D98639ECDF3B.tmp' to '../../../../../Projects/COVID/CharacterandAI/Content/Characters/MainCharacter/Animation/Dodges/MainChar_Dodge.uasset'
+[2020.05.14-02.17.31:540][582]AssetCheck: New page: Asset Save: MainChar_Dodge
+[2020.05.14-02.17.31:540][582]LogContentValidation: Display: Validating AnimSequence /Game/Characters/MainCharacter/Animation/Dodges/MainChar_Dodge.MainChar_Dodge
+[2020.05.14-02.17.32:012][636]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/Characters/MainCharacter/Animation/Dodges/MainChar_Dodge.MainChar_Dodge
+[2020.05.14-02.17.32:018][636]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_41:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2020.05.14-02.17.32:067][636]LogSkeletalMesh: USkeletalMeshComponent::InitArticulated : Bodies already created (/Engine/Transient.World_41:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) - call TermArticulated first.
+[2020.05.14-02.17.32:370][636]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2020.05.14-02.17.35:512][965]LogSlate: Window 'MainChar_Dodge' being destroyed
+[2020.05.14-02.17.35:517][965]LogSlate: Window 'MainChar_Dodge' being destroyed
+[2020.05.14-02.17.35:517][965]LogWorld: UWorld::CleanupWorld for World_41, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.17.35:517][965]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2020.05.14-02.17.35:580][965]LogWorld: UWorld::CleanupWorld for World_42, bSessionEnded=true, bCleanupResources=true
+[2020.05.14-02.17.35:580][965]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
