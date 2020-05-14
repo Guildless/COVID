@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: FL_StartStop_Run_90_R.ma
-//Last modified: Tue, May 12, 2020 04:18:34 PM
+//Last modified: Wed, May 13, 2020 09:02:28 PM
 //Codeset: 1252
 file -rdi 1 -ns "model" -rfn "modelRN" -op "VERS|2019|UVER|undef|MADE|undef|CHNG|Tue, May 12, 2020 07:42:53 AM|ICON|undef|INFO|undef|OBJN|2356|INCL|undef(|LUNI|cm|TUNI|ntsc|AUNI|deg|TDUR|141120000|"
 		 -typ "mayaAscii" "D:/Projects/COVID/SourceFiles/Characters/MainCharacter/Rig/MainCharacter_Rig.ma";
@@ -21,17 +21,19 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "62AB945C-49BA-FD98-2248-EFA86EB07F45";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -9.8224347206562896 144.01637027685979 -517.68930500917338 ;
-	setAttr ".r" -type "double3" -8.1383527309279025 -6298.6000000041577 0 ;
+	setAttr ".t" -type "double3" -657.35192377722421 -18.854373076295083 186.1287346695209 ;
+	setAttr ".r" -type "double3" 76.863042747378699 0 -82.484689997190927 ;
+	setAttr ".rp" -type "double3" 4.8849813083506888e-14 -2.8421709430404007e-14 0 ;
+	setAttr ".rpt" -type "double3" -6.018128271860426e-15 2.8623164625533765e-16 -2.3831480677736493e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "2A353193-4CE4-F74C-7897-7C830402E2C3";
 	setAttr -k off ".v" no;
-	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 538.16398659059405;
+	setAttr ".fl" 34.999999999999979;
+	setAttr ".coi" 738.58984289017769;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -25.329412871064484 111.7494075009256 3.8118178631640713 ;
+	setAttr ".tp" -type "double3" 20.194505309990262 107.16166443205749 -6.5276580410772453 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -531,29 +533,29 @@ createNode locator -n "locatorShape1" -p "locator1";
 	rename -uid "BFB280F6-4E8F-DFC3-8F99-00B21A1DABDE";
 	setAttr -k off ".v";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "FCA05A2B-47F6-74C9-6E24-99A8A2C4A951";
+	rename -uid "D4C0D52A-46AC-F623-EA21-E5B97C680205";
 	setAttr -s 5 ".lnk";
 	setAttr -s 5 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "54B3E386-4789-1CC5-BF57-3AB27AA2B191";
+	rename -uid "0EE2DEA7-492F-A183-6DB0-D6B495715AD3";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 2 0 1 ;
 	setAttr -s 2 ".bspr";
 	setAttr -s 2 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "18CC961E-4737-E43C-61F3-FAAEF4451760";
+	rename -uid "54807D7D-40B4-0B0D-67AA-189D465A77BB";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7E20B209-4055-F249-7411-6F82B81302E1";
+	rename -uid "71896544-4E5C-124E-990D-F9A6F519F7AC";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "014B7E20-44B4-85F1-4527-8A8B477CEE99";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "DD1FD281-4FBB-69E9-C0C5-8AA1EC79DC44";
+	rename -uid "A19C2602-4D01-C0F6-3F37-5EBB427D5B5F";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "042275FA-4245-FF3F-1E6E-9A96C604F442";
 	setAttr ".g" yes;
 createNode reference -n "modelRN";
 	rename -uid "31CAD5B7-433B-37F6-D9C6-DA9E713D14DA";
 	setAttr ".fn[0]" -type "string" "D:/Projects/COVID/SourceFiles/Characters/MainCharacter/Rig/MainCharacter_Rig.mb";
-	setAttr -s 728 ".phl";
+	setAttr -s 779 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -1282,11 +1284,62 @@ createNode reference -n "modelRN";
 	setAttr ".phl[726]" 0;
 	setAttr ".phl[727]" 0;
 	setAttr ".phl[728]" 0;
+	setAttr ".phl[729]" 0;
+	setAttr ".phl[730]" 0;
+	setAttr ".phl[731]" 0;
+	setAttr ".phl[732]" 0;
+	setAttr ".phl[733]" 0;
+	setAttr ".phl[734]" 0;
+	setAttr ".phl[735]" 0;
+	setAttr ".phl[736]" 0;
+	setAttr ".phl[737]" 0;
+	setAttr ".phl[738]" 0;
+	setAttr ".phl[739]" 0;
+	setAttr ".phl[740]" 0;
+	setAttr ".phl[741]" 0;
+	setAttr ".phl[742]" 0;
+	setAttr ".phl[743]" 0;
+	setAttr ".phl[744]" 0;
+	setAttr ".phl[745]" 0;
+	setAttr ".phl[746]" 0;
+	setAttr ".phl[747]" 0;
+	setAttr ".phl[748]" 0;
+	setAttr ".phl[749]" 0;
+	setAttr ".phl[750]" 0;
+	setAttr ".phl[751]" 0;
+	setAttr ".phl[752]" 0;
+	setAttr ".phl[753]" 0;
+	setAttr ".phl[754]" 0;
+	setAttr ".phl[755]" 0;
+	setAttr ".phl[756]" 0;
+	setAttr ".phl[757]" 0;
+	setAttr ".phl[758]" 0;
+	setAttr ".phl[759]" 0;
+	setAttr ".phl[760]" 0;
+	setAttr ".phl[761]" 0;
+	setAttr ".phl[762]" 0;
+	setAttr ".phl[763]" 0;
+	setAttr ".phl[764]" 0;
+	setAttr ".phl[765]" 0;
+	setAttr ".phl[766]" 0;
+	setAttr ".phl[767]" 0;
+	setAttr ".phl[768]" 0;
+	setAttr ".phl[769]" 0;
+	setAttr ".phl[770]" 0;
+	setAttr ".phl[771]" 0;
+	setAttr ".phl[772]" 0;
+	setAttr ".phl[773]" 0;
+	setAttr ".phl[774]" 0;
+	setAttr ".phl[775]" 0;
+	setAttr ".phl[776]" 0;
+	setAttr ".phl[777]" 0;
+	setAttr ".phl[778]" 0;
+	setAttr ".phl[779]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"modelRN"
 		"model:modelRN" 0
 		"modelRN" 0
-		"modelRN" 1654
+		"modelRN" 1705
 		2 "|model:Group|model:Main" "visibility" " -av 1"
 		2 "|model:Group|model:Main" "translate" " -type \"double3\" 0 0 0"
 		2 "|model:Group|model:Main" "translateX" " -av"
@@ -2642,7 +2695,7 @@ createNode reference -n "modelRN";
 		2 "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R" 
 		"visibility" " -av 1"
 		2 "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R" 
-		"translate" " -type \"double3\" 0.46393464622559399 23.63976413904941865 -54.41741647143099669"
+		"translate" " -type \"double3\" 0.4639329927549305 30.95985429272705147 -54.41741570798617289"
 		
 		2 "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R" 
 		"translateX" " -av"
@@ -2651,7 +2704,7 @@ createNode reference -n "modelRN";
 		2 "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R" 
 		"translateZ" " -av"
 		2 "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R" 
-		"rotate" " -type \"double3\" 90.20665811393115519 -2.24994809445336541 -0.0063826131898962321"
+		"rotate" " -type \"double3\" 90.20666553196836901 -2.24994817179180906 -0.0063823466597397035"
 		
 		2 "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R" 
 		"rotateX" " -av"
@@ -2806,7 +2859,7 @@ createNode reference -n "modelRN";
 		2 "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L" 
 		"visibility" " -av 1"
 		2 "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L" 
-		"translate" " -type \"double3\" -4.9399428889984911 -2.95495570476231073 33.54645830583481825"
+		"translate" " -type \"double3\" -4.93994333550305953 4.36512654785755849 33.54645632472666961"
 		
 		2 "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L" 
 		"translateX" " -av"
@@ -2815,7 +2868,7 @@ createNode reference -n "modelRN";
 		2 "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L" 
 		"translateZ" " -av"
 		2 "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L" 
-		"rotate" " -type \"double3\" -16.63105727576074244 2.49806432109792498 0.71567979214708244"
+		"rotate" " -type \"double3\" -16.63105050875863 2.49806417316491558 0.71568030742938737"
 		
 		2 "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L" 
 		"rotateX" " -av"
@@ -3044,8 +3097,7 @@ createNode reference -n "modelRN";
 		2 "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M" 
 		"visibility" " -av 1"
 		2 "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M" 
-		"translate" " -type \"double3\" -3.1592255361950003e-07 -10.26477653409659752 -3.23155900794029671"
-		
+		"translate" " -type \"double3\" 0 -2.94469399862065018 -3.23155962453732393"
 		2 "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M" 
 		"translateX" " -av"
 		2 "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M" 
@@ -3053,7 +3105,7 @@ createNode reference -n "modelRN";
 		2 "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M" 
 		"translateZ" " -av"
 		2 "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M" 
-		"rotate" " -type \"double3\" -0.14195800266035841 -7.75561956088343418 1.89028683008083198"
+		"rotate" " -type \"double3\" -0.14195800654084961 -7.7556199592552133 1.89028666576895943"
 		
 		2 "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M" 
 		"rotateX" " -av"
@@ -4184,415 +4236,517 @@ createNode reference -n "modelRN";
 		"modelRN.placeHolderList[525]" ""
 		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKSystem|model:FKParentConstraintToScapula_L|model:FKOffsetShoulder_L|model:FKExtraShoulder_L|model:FKShoulder_L|model:FKXShoulder_L|model:FKOffsetElbow_L|model:FKExtraElbow_L|model:FKElbow_L|model:FKXElbow_L|model:FKOffsetWrist_L|model:FKExtraWrist_L|model:FKWrist_L.rotateZ" 
 		"modelRN.placeHolderList[526]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.scaleX" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.scaleX" 
 		"modelRN.placeHolderList[527]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.scaleY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.scaleX" 
 		"modelRN.placeHolderList[528]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.scaleZ" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.scaleY" 
 		"modelRN.placeHolderList[529]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.translateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.scaleY" 
 		"modelRN.placeHolderList[530]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.translateY" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.scaleZ" 
 		"modelRN.placeHolderList[531]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.translateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.scaleZ" 
 		"modelRN.placeHolderList[532]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.rotateX" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.translateX" 
 		"modelRN.placeHolderList[533]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.rotateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.translateX" 
 		"modelRN.placeHolderList[534]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.rotateZ" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.translateY" 
 		"modelRN.placeHolderList[535]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.swivel" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.translateY" 
 		"modelRN.placeHolderList[536]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.rollAngle" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.translateZ" 
 		"modelRN.placeHolderList[537]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.roll" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.translateZ" 
 		"modelRN.placeHolderList[538]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.stretchy" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.rotateX" 
 		"modelRN.placeHolderList[539]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.antiPop" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.rotateX" 
 		"modelRN.placeHolderList[540]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.Lenght1" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.rotateY" 
 		"modelRN.placeHolderList[541]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.Lenght2" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.rotateY" 
 		"modelRN.placeHolderList[542]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.Fatness1" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.rotateZ" 
 		"modelRN.placeHolderList[543]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.Fatness2" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.rotateZ" 
 		"modelRN.placeHolderList[544]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.volume" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.rotateOrder" 
 		"modelRN.placeHolderList[545]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.visibility" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.swivel" 
 		"modelRN.placeHolderList[546]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.visibility" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.swivel" 
 		"modelRN.placeHolderList[547]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.translateX" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.rollAngle" 
 		"modelRN.placeHolderList[548]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.translateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.rollAngle" 
 		"modelRN.placeHolderList[549]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.translateZ" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.roll" 
 		"modelRN.placeHolderList[550]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.rotateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.roll" 
 		"modelRN.placeHolderList[551]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.rotateY" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.stretchy" 
 		"modelRN.placeHolderList[552]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.rotateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.stretchy" 
 		"modelRN.placeHolderList[553]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.scaleX" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.antiPop" 
 		"modelRN.placeHolderList[554]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.scaleY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.antiPop" 
 		"modelRN.placeHolderList[555]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.scaleZ" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.Lenght1" 
 		"modelRN.placeHolderList[556]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.visibility" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.Lenght1" 
 		"modelRN.placeHolderList[557]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.translateX" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.Lenght2" 
 		"modelRN.placeHolderList[558]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.translateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.Lenght2" 
 		"modelRN.placeHolderList[559]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.translateZ" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.Fatness1" 
 		"modelRN.placeHolderList[560]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.rotateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.Fatness1" 
 		"modelRN.placeHolderList[561]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.rotateY" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.Fatness2" 
 		"modelRN.placeHolderList[562]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.rotateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.Fatness2" 
 		"modelRN.placeHolderList[563]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.scaleX" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.volume" 
 		"modelRN.placeHolderList[564]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.scaleY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.volume" 
 		"modelRN.placeHolderList[565]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.scaleZ" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.visibility" 
 		"modelRN.placeHolderList[566]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.visibility" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R.visibility" 
 		"modelRN.placeHolderList[567]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.translateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.visibility" 
 		"modelRN.placeHolderList[568]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.translateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.translateX" 
 		"modelRN.placeHolderList[569]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.translateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.translateY" 
 		"modelRN.placeHolderList[570]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.rotateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.translateZ" 
 		"modelRN.placeHolderList[571]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.rotateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.rotateX" 
 		"modelRN.placeHolderList[572]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.rotateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.rotateY" 
 		"modelRN.placeHolderList[573]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.scaleX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.rotateZ" 
 		"modelRN.placeHolderList[574]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.scaleY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.scaleX" 
 		"modelRN.placeHolderList[575]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.scaleZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.scaleY" 
 		"modelRN.placeHolderList[576]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.visibility" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R.scaleZ" 
 		"modelRN.placeHolderList[577]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.translateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.visibility" 
 		"modelRN.placeHolderList[578]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.translateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.translateX" 
 		"modelRN.placeHolderList[579]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.translateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.translateY" 
 		"modelRN.placeHolderList[580]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.rotateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.translateZ" 
 		"modelRN.placeHolderList[581]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.rotateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.rotateX" 
 		"modelRN.placeHolderList[582]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.rotateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.rotateY" 
 		"modelRN.placeHolderList[583]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.scaleX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.rotateZ" 
 		"modelRN.placeHolderList[584]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.scaleY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.scaleX" 
 		"modelRN.placeHolderList[585]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.scaleZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.scaleY" 
 		"modelRN.placeHolderList[586]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_R|model:PoleExtraLeg_R|model:PoleLeg_R.translateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R.scaleZ" 
 		"modelRN.placeHolderList[587]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_R|model:PoleExtraLeg_R|model:PoleLeg_R.translateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.visibility" 
 		"modelRN.placeHolderList[588]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_R|model:PoleExtraLeg_R|model:PoleLeg_R.translateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.translateX" 
 		"modelRN.placeHolderList[589]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_R|model:PoleExtraLeg_R|model:PoleLeg_R.follow" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.translateY" 
 		"modelRN.placeHolderList[590]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_R|model:PoleExtraLeg_R|model:PoleLeg_R.lock" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.translateZ" 
 		"modelRN.placeHolderList[591]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.scaleX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.rotateX" 
 		"modelRN.placeHolderList[592]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.scaleY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.rotateY" 
 		"modelRN.placeHolderList[593]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.scaleZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.rotateZ" 
 		"modelRN.placeHolderList[594]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.translateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.scaleX" 
 		"modelRN.placeHolderList[595]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.translateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.scaleY" 
 		"modelRN.placeHolderList[596]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.translateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:RollOffsetToes_R|model:RollRollerToes_R|model:RollExtraToes_R|model:RollToes_R.scaleZ" 
 		"modelRN.placeHolderList[597]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.rotateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.visibility" 
 		"modelRN.placeHolderList[598]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.rotateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.translateX" 
 		"modelRN.placeHolderList[599]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.rotateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.translateY" 
 		"modelRN.placeHolderList[600]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.swivel" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.translateZ" 
 		"modelRN.placeHolderList[601]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.rollAngle" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.rotateX" 
 		"modelRN.placeHolderList[602]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.roll" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.rotateY" 
 		"modelRN.placeHolderList[603]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.stretchy" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.rotateZ" 
 		"modelRN.placeHolderList[604]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.antiPop" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.scaleX" 
 		"modelRN.placeHolderList[605]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.Lenght1" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.scaleY" 
 		"modelRN.placeHolderList[606]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.Lenght2" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_R|model:IKExtraLeg_R|model:IKLeg_R|model:RollOffsetHeel_R|model:RollRollerHeel_R|model:RollExtraHeel_R|model:RollHeel_R|model:RollOffsetToesEnd_R|model:RollRollerToesEnd_R|model:RollExtraToesEnd_R|model:RollToesEnd_R|model:IKOffsetToes_R|model:IKExtraToes_R|model:IKToes_R.scaleZ" 
 		"modelRN.placeHolderList[607]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.Fatness1" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_R|model:PoleExtraLeg_R|model:PoleLeg_R.translateX" 
 		"modelRN.placeHolderList[608]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.Fatness2" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_R|model:PoleExtraLeg_R|model:PoleLeg_R.translateY" 
 		"modelRN.placeHolderList[609]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.volume" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_R|model:PoleExtraLeg_R|model:PoleLeg_R.translateZ" 
 		"modelRN.placeHolderList[610]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.visibility" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_R|model:PoleExtraLeg_R|model:PoleLeg_R.follow" 
 		"modelRN.placeHolderList[611]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.visibility" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_R|model:PoleExtraLeg_R|model:PoleLeg_R.lock" 
 		"modelRN.placeHolderList[612]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.translateX" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.scaleX" 
 		"modelRN.placeHolderList[613]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.translateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.scaleX" 
 		"modelRN.placeHolderList[614]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.translateZ" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.scaleY" 
 		"modelRN.placeHolderList[615]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.rotateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.scaleY" 
 		"modelRN.placeHolderList[616]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.rotateY" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.scaleZ" 
 		"modelRN.placeHolderList[617]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.rotateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.scaleZ" 
 		"modelRN.placeHolderList[618]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.scaleX" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.translateX" 
 		"modelRN.placeHolderList[619]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.scaleY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.translateX" 
 		"modelRN.placeHolderList[620]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.scaleZ" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.translateY" 
 		"modelRN.placeHolderList[621]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.visibility" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.translateY" 
 		"modelRN.placeHolderList[622]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.translateX" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.translateZ" 
 		"modelRN.placeHolderList[623]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.translateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.translateZ" 
 		"modelRN.placeHolderList[624]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.translateZ" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.rotateX" 
 		"modelRN.placeHolderList[625]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.rotateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.rotateX" 
 		"modelRN.placeHolderList[626]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.rotateY" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.rotateY" 
 		"modelRN.placeHolderList[627]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.rotateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.rotateY" 
 		"modelRN.placeHolderList[628]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.scaleX" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.rotateZ" 
 		"modelRN.placeHolderList[629]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.scaleY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.rotateZ" 
 		"modelRN.placeHolderList[630]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.scaleZ" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.rotateOrder" 
 		"modelRN.placeHolderList[631]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.visibility" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.swivel" 
 		"modelRN.placeHolderList[632]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.translateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.swivel" 
 		"modelRN.placeHolderList[633]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.translateY" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.rollAngle" 
 		"modelRN.placeHolderList[634]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.translateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.rollAngle" 
 		"modelRN.placeHolderList[635]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.rotateX" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.roll" 
 		"modelRN.placeHolderList[636]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.rotateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.roll" 
 		"modelRN.placeHolderList[637]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.rotateZ" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.stretchy" 
 		"modelRN.placeHolderList[638]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.scaleX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.stretchy" 
 		"modelRN.placeHolderList[639]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.scaleY" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.antiPop" 
 		"modelRN.placeHolderList[640]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.scaleZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.antiPop" 
 		"modelRN.placeHolderList[641]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.visibility" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.Lenght1" 
 		"modelRN.placeHolderList[642]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.translateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.Lenght1" 
 		"modelRN.placeHolderList[643]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.translateY" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.Lenght2" 
 		"modelRN.placeHolderList[644]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.translateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.Lenght2" 
 		"modelRN.placeHolderList[645]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.rotateX" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.Fatness1" 
 		"modelRN.placeHolderList[646]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.rotateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.Fatness1" 
 		"modelRN.placeHolderList[647]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.rotateZ" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.Fatness2" 
 		"modelRN.placeHolderList[648]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.scaleX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.Fatness2" 
 		"modelRN.placeHolderList[649]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.scaleY" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.volume" 
 		"modelRN.placeHolderList[650]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.scaleZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.volume" 
 		"modelRN.placeHolderList[651]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_L|model:PoleExtraLeg_L|model:PoleLeg_L.translateX" 
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.visibility" 
 		"modelRN.placeHolderList[652]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_L|model:PoleExtraLeg_L|model:PoleLeg_L.translateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L.visibility" 
 		"modelRN.placeHolderList[653]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_L|model:PoleExtraLeg_L|model:PoleLeg_L.translateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.visibility" 
 		"modelRN.placeHolderList[654]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_L|model:PoleExtraLeg_L|model:PoleLeg_L.follow" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.translateX" 
 		"modelRN.placeHolderList[655]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_L|model:PoleExtraLeg_L|model:PoleLeg_L.lock" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.translateY" 
 		"modelRN.placeHolderList[656]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintLeg_R|model:FKIKLeg_R.FKIKBlend" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.translateZ" 
 		"modelRN.placeHolderList[657]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintLeg_R|model:FKIKLeg_R.IKVis" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.rotateX" 
 		"modelRN.placeHolderList[658]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintLeg_R|model:FKIKLeg_R.FKVis" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.rotateY" 
 		"modelRN.placeHolderList[659]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintArm_R|model:FKIKArm_R.FKIKBlend" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.rotateZ" 
 		"modelRN.placeHolderList[660]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintArm_R|model:FKIKArm_R.IKVis" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.scaleX" 
 		"modelRN.placeHolderList[661]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintArm_R|model:FKIKArm_R.FKVis" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.scaleY" 
 		"modelRN.placeHolderList[662]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintSpine_M|model:FKIKSpine_M.FKIKBlend" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L.scaleZ" 
 		"modelRN.placeHolderList[663]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintSpine_M|model:FKIKSpine_M.IKVis" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.visibility" 
 		"modelRN.placeHolderList[664]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintSpine_M|model:FKIKSpine_M.FKVis" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.translateX" 
 		"modelRN.placeHolderList[665]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintLeg_L|model:FKIKLeg_L.FKIKBlend" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.translateY" 
 		"modelRN.placeHolderList[666]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintLeg_L|model:FKIKLeg_L.IKVis" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.translateZ" 
 		"modelRN.placeHolderList[667]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintLeg_L|model:FKIKLeg_L.FKVis" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.rotateX" 
 		"modelRN.placeHolderList[668]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintArm_L|model:FKIKArm_L.FKIKBlend" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.rotateY" 
 		"modelRN.placeHolderList[669]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintArm_L|model:FKIKArm_L.IKVis" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.rotateZ" 
 		"modelRN.placeHolderList[670]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintArm_L|model:FKIKArm_L.FKVis" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.scaleX" 
 		"modelRN.placeHolderList[671]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.follow" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.scaleY" 
 		"modelRN.placeHolderList[672]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.visibility" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L.scaleZ" 
 		"modelRN.placeHolderList[673]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.translateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.visibility" 
 		"modelRN.placeHolderList[674]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.translateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.translateX" 
 		"modelRN.placeHolderList[675]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.translateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.translateY" 
 		"modelRN.placeHolderList[676]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.rotateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.translateZ" 
 		"modelRN.placeHolderList[677]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.rotateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.rotateX" 
 		"modelRN.placeHolderList[678]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.rotateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.rotateY" 
 		"modelRN.placeHolderList[679]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.scaleX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.rotateZ" 
 		"modelRN.placeHolderList[680]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.scaleY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.scaleX" 
 		"modelRN.placeHolderList[681]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.scaleZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.scaleY" 
 		"modelRN.placeHolderList[682]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M|model:AimOffsetEye_R|model:AimEye_R.translateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:RollOffsetToes_L|model:RollRollerToes_L|model:RollExtraToes_L|model:RollToes_L.scaleZ" 
 		"modelRN.placeHolderList[683]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M|model:AimOffsetEye_R|model:AimEye_R.translateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.visibility" 
 		"modelRN.placeHolderList[684]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M|model:AimOffsetEye_R|model:AimEye_R.translateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.translateX" 
 		"modelRN.placeHolderList[685]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M|model:AimOffsetEye_L|model:AimEye_L.translateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.translateY" 
 		"modelRN.placeHolderList[686]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M|model:AimOffsetEye_L|model:AimEye_L.translateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.translateZ" 
 		"modelRN.placeHolderList[687]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M|model:AimOffsetEye_L|model:AimEye_L.translateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.rotateX" 
 		"modelRN.placeHolderList[688]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.translateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.rotateY" 
 		"modelRN.placeHolderList[689]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.translateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.rotateZ" 
 		"modelRN.placeHolderList[690]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.translateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.scaleX" 
 		"modelRN.placeHolderList[691]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.rotateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.scaleY" 
 		"modelRN.placeHolderList[692]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.rotateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:IKOffsetLeg_L|model:IKExtraLeg_L|model:IKLeg_L|model:RollOffsetHeel_L|model:RollRollerHeel_L|model:RollExtraHeel_L|model:RollHeel_L|model:RollOffsetToesEnd_L|model:RollRollerToesEnd_L|model:RollExtraToesEnd_L|model:RollToesEnd_L|model:IKOffsetToes_L|model:IKExtraToes_L|model:IKToes_L.scaleZ" 
 		"modelRN.placeHolderList[693]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.rotateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_L|model:PoleExtraLeg_L|model:PoleLeg_L.translateX" 
 		"modelRN.placeHolderList[694]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.CenterBtwFeet" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_L|model:PoleExtraLeg_L|model:PoleLeg_L.translateY" 
 		"modelRN.placeHolderList[695]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.visibility" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_L|model:PoleExtraLeg_L|model:PoleLeg_L.translateZ" 
 		"modelRN.placeHolderList[696]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_R.spread" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_L|model:PoleExtraLeg_L|model:PoleLeg_L.follow" 
 		"modelRN.placeHolderList[697]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_R.indexCurl" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:IKSystem|model:IKHandle|model:PoleOffsetLeg_L|model:PoleExtraLeg_L|model:PoleLeg_L.lock" 
 		"modelRN.placeHolderList[698]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_R.middleCurl" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintLeg_R|model:FKIKLeg_R.FKIKBlend" 
 		"modelRN.placeHolderList[699]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_R.ringCurl" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintLeg_R|model:FKIKLeg_R.IKVis" 
 		"modelRN.placeHolderList[700]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_R.pinkyCurl" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintLeg_R|model:FKIKLeg_R.FKVis" 
 		"modelRN.placeHolderList[701]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_R.thumbCurl" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintArm_R|model:FKIKArm_R.FKIKBlend" 
 		"modelRN.placeHolderList[702]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_L.spread" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintArm_R|model:FKIKArm_R.IKVis" 
 		"modelRN.placeHolderList[703]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_L.indexCurl" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintArm_R|model:FKIKArm_R.FKVis" 
 		"modelRN.placeHolderList[704]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_L.middleCurl" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintSpine_M|model:FKIKSpine_M.FKIKBlend" 
 		"modelRN.placeHolderList[705]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_L.ringCurl" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintSpine_M|model:FKIKSpine_M.IKVis" 
 		"modelRN.placeHolderList[706]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_L.pinkyCurl" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintSpine_M|model:FKIKSpine_M.FKVis" 
 		"modelRN.placeHolderList[707]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_L.thumbCurl" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintLeg_L|model:FKIKLeg_L.FKIKBlend" 
 		"modelRN.placeHolderList[708]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.translateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintLeg_L|model:FKIKLeg_L.IKVis" 
 		"modelRN.placeHolderList[709]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.translateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintLeg_L|model:FKIKLeg_L.FKVis" 
 		"modelRN.placeHolderList[710]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.translateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintArm_L|model:FKIKArm_L.FKIKBlend" 
 		"modelRN.placeHolderList[711]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.rotateX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintArm_L|model:FKIKArm_L.IKVis" 
 		"modelRN.placeHolderList[712]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.rotateY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:FKIKSystem|model:FKIKParentConstraintArm_L|model:FKIKArm_L.FKVis" 
 		"modelRN.placeHolderList[713]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.rotateZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.follow" 
 		"modelRN.placeHolderList[714]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.scaleX" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.visibility" 
 		"modelRN.placeHolderList[715]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.scaleY" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.translateX" 
 		"modelRN.placeHolderList[716]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.scaleZ" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.translateY" 
 		"modelRN.placeHolderList[717]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.visibility" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.translateZ" 
 		"modelRN.placeHolderList[718]" ""
-		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.translateX" "modelRN.placeHolderList[719]" 
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.rotateX" 
+		"modelRN.placeHolderList[719]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.rotateY" 
+		"modelRN.placeHolderList[720]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.rotateZ" 
+		"modelRN.placeHolderList[721]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.scaleX" 
+		"modelRN.placeHolderList[722]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.scaleY" 
+		"modelRN.placeHolderList[723]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M.scaleZ" 
+		"modelRN.placeHolderList[724]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M|model:AimOffsetEye_R|model:AimEye_R.translateX" 
+		"modelRN.placeHolderList[725]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M|model:AimOffsetEye_R|model:AimEye_R.translateY" 
+		"modelRN.placeHolderList[726]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M|model:AimOffsetEye_R|model:AimEye_R.translateZ" 
+		"modelRN.placeHolderList[727]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M|model:AimOffsetEye_L|model:AimEye_L.translateX" 
+		"modelRN.placeHolderList[728]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M|model:AimOffsetEye_L|model:AimEye_L.translateY" 
+		"modelRN.placeHolderList[729]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:AimSystem|model:AimEye|model:AimOffsetEye|model:AimFollowEye|model:AimEye_M|model:AimOffsetEye_L|model:AimEye_L.translateZ" 
+		"modelRN.placeHolderList[730]" ""
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.translateX" 
+		"modelRN.placeHolderList[731]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.translateX" 
+		"modelRN.placeHolderList[732]" ""
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.translateY" 
+		"modelRN.placeHolderList[733]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.translateY" 
+		"modelRN.placeHolderList[734]" ""
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.translateZ" 
+		"modelRN.placeHolderList[735]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.translateZ" 
+		"modelRN.placeHolderList[736]" ""
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.rotateX" 
+		"modelRN.placeHolderList[737]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.rotateX" 
+		"modelRN.placeHolderList[738]" ""
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.rotateY" 
+		"modelRN.placeHolderList[739]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.rotateY" 
+		"modelRN.placeHolderList[740]" ""
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.rotateZ" 
+		"modelRN.placeHolderList[741]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.rotateZ" 
+		"modelRN.placeHolderList[742]" ""
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.rotateOrder" 
+		"modelRN.placeHolderList[743]" ""
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.CenterBtwFeet" 
+		"modelRN.placeHolderList[744]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.CenterBtwFeet" 
+		"modelRN.placeHolderList[745]" ""
+		5 3 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.visibility" 
+		"modelRN.placeHolderList[746]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:RootSystem|model:RootCenterBtwLegsBlended_M|model:RootOffsetX_M|model:RootExtraX_M|model:RootX_M.visibility" 
+		"modelRN.placeHolderList[747]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_R.spread" 
+		"modelRN.placeHolderList[748]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_R.indexCurl" 
+		"modelRN.placeHolderList[749]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_R.middleCurl" 
+		"modelRN.placeHolderList[750]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_R.ringCurl" 
+		"modelRN.placeHolderList[751]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_R.pinkyCurl" 
+		"modelRN.placeHolderList[752]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_R.thumbCurl" 
+		"modelRN.placeHolderList[753]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_L.spread" 
+		"modelRN.placeHolderList[754]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_L.indexCurl" 
+		"modelRN.placeHolderList[755]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_L.middleCurl" 
+		"modelRN.placeHolderList[756]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_L.ringCurl" 
+		"modelRN.placeHolderList[757]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_L.pinkyCurl" 
+		"modelRN.placeHolderList[758]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:DrivingSystem|model:Fingers_L.thumbCurl" 
+		"modelRN.placeHolderList[759]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.translateX" 
+		"modelRN.placeHolderList[760]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.translateY" 
+		"modelRN.placeHolderList[761]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.translateZ" 
+		"modelRN.placeHolderList[762]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.rotateX" 
+		"modelRN.placeHolderList[763]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.rotateY" 
+		"modelRN.placeHolderList[764]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.rotateZ" 
+		"modelRN.placeHolderList[765]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.scaleX" 
+		"modelRN.placeHolderList[766]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.scaleY" 
+		"modelRN.placeHolderList[767]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.scaleZ" 
+		"modelRN.placeHolderList[768]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:MotionSystem|model:Weapon.visibility" 
+		"modelRN.placeHolderList[769]" ""
+		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.translateX" "modelRN.placeHolderList[770]" 
 		""
-		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.translateY" "modelRN.placeHolderList[720]" 
+		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.translateY" "modelRN.placeHolderList[771]" 
 		""
-		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.translateZ" "modelRN.placeHolderList[721]" 
+		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.translateZ" "modelRN.placeHolderList[772]" 
 		""
-		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.rotateX" "modelRN.placeHolderList[722]" 
+		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.rotateX" "modelRN.placeHolderList[773]" 
 		""
-		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.rotateY" "modelRN.placeHolderList[723]" 
+		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.rotateY" "modelRN.placeHolderList[774]" 
 		""
-		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.rotateZ" "modelRN.placeHolderList[724]" 
+		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.rotateZ" "modelRN.placeHolderList[775]" 
 		""
-		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.scaleX" "modelRN.placeHolderList[725]" 
+		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.scaleX" "modelRN.placeHolderList[776]" 
 		""
-		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.scaleY" "modelRN.placeHolderList[726]" 
+		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.scaleY" "modelRN.placeHolderList[777]" 
 		""
-		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.scaleZ" "modelRN.placeHolderList[727]" 
+		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.scaleZ" "modelRN.placeHolderList[778]" 
 		""
-		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.visibility" "modelRN.placeHolderList[728]" 
+		5 4 "modelRN" "|model:Group|model:Main|model:Root_ctrl.visibility" "modelRN.placeHolderList[779]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "5E8D853D-423C-77D8-80BB-ADA4D5D96D2A";
-	setAttr ".b" -type "string" "playbackOptions -min -15 -max 43 -ast -15 -aet 43 ";
+	setAttr ".b" -type "string" "playbackOptions -min -15 -max 0 -ast -15 -aet 43 ";
 	setAttr ".st" 6;
 createNode animCurveTL -n "root_translateX";
 	rename -uid "6D2D085C-4A1C-300D-EABF-12AEEC9A6128";
@@ -14768,63 +14922,62 @@ createNode animCurveTU -n "Main_visibility";
 	rename -uid "624CF221-41B8-848E-81EE-858949DA182E";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  -15 1 -13 1 0 1 24 1 43 1;
-	setAttr -s 5 ".kyts[0:4]" yes no yes yes yes;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr ".ktv[0]"  0 1;
+	setAttr ".kyts[0]" yes;
+	setAttr ".kot[0]"  5;
 createNode animCurveTL -n "Main_translateX";
 	rename -uid "DA1861CC-4130-99EA-B5D0-6EB95842BA06";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  -15 0 -13 0 0 0 24 0 43 0;
-	setAttr -s 5 ".kyts[0:4]" yes no yes yes yes;
+	setAttr ".ktv[0]"  0 0;
+	setAttr ".kyts[0]" yes;
 createNode animCurveTL -n "Main_translateY";
 	rename -uid "B524AC6F-43BB-AA69-0DB8-898384BE3AFC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  -15 0 -13 0 0 0 24 0 43 0;
-	setAttr -s 5 ".kyts[0:4]" yes no yes yes yes;
+	setAttr ".ktv[0]"  0 0;
+	setAttr ".kyts[0]" yes;
 createNode animCurveTL -n "Main_translateZ";
 	rename -uid "C83B03C6-4EDF-3578-BC9A-C3B9DD6D06C3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  -15 0 -13 0 0 0 24 0 43 0;
-	setAttr -s 5 ".kyts[0:4]" yes no yes yes yes;
+	setAttr ".ktv[0]"  0 0;
+	setAttr ".kyts[0]" yes;
 createNode animCurveTA -n "Main_rotateX";
 	rename -uid "B795F6B3-4FF8-8020-2386-10A1574242AC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  -15 0 -13 0 0 0 24 0 43 0;
-	setAttr -s 5 ".kyts[0:4]" yes no yes yes yes;
+	setAttr ".ktv[0]"  0 0;
 createNode animCurveTA -n "Main_rotateY";
 	rename -uid "7EEAA944-41BF-FDE5-9780-9DAB45E52D0C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  -15 0 -13 0 0 0 24 0 43 0;
-	setAttr -s 5 ".kyts[0:4]" yes no yes yes yes;
+	setAttr ".ktv[0]"  0 0;
+	setAttr ".kyts[0]" yes;
 createNode animCurveTA -n "Main_rotateZ";
 	rename -uid "CAEEE536-443C-CDF9-0DDB-9E816AEB23EF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  -15 0 -13 0 0 0 24 0 43 0;
-	setAttr -s 5 ".kyts[0:4]" yes no yes yes yes;
+	setAttr ".ktv[0]"  0 0;
+	setAttr ".kyts[0]" yes;
 createNode animCurveTU -n "Main_scaleX";
 	rename -uid "E95C9E42-4674-A0A0-8E95-9ABEB0FCB5B4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  -15 1 -13 1 0 1 24 1 43 1;
-	setAttr -s 5 ".kyts[0:4]" yes no yes yes yes;
+	setAttr ".ktv[0]"  0 1;
+	setAttr ".kyts[0]" yes;
 createNode animCurveTU -n "Main_scaleY";
 	rename -uid "A613247B-43F3-32DC-4AC0-FC8EBF05B93C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  -15 1 -13 1 0 1 24 1 43 1;
-	setAttr -s 5 ".kyts[0:4]" yes no yes yes yes;
+	setAttr ".ktv[0]"  0 1;
+	setAttr ".kyts[0]" yes;
 createNode animCurveTU -n "Main_scaleZ";
 	rename -uid "10ABDE39-47C8-06C9-2BBD-CDACEEAEA96A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  -15 1 -13 1 0 1 24 1 43 1;
-	setAttr -s 5 ".kyts[0:4]" yes no yes yes yes;
+	setAttr ".ktv[0]"  0 1;
+	setAttr ".kyts[0]" yes;
 createNode animCurveTU -n "FKRingFinger1_R_visibility";
 	rename -uid "3BFF0D81-4F42-16E7-C9D2-DF991D9AE123";
 	setAttr ".tan" 9;
@@ -18138,7 +18291,7 @@ createNode animCurveTA -n "IKLeg_L_rotateX";
 	rename -uid "1D4142B0-4C36-01FF-D3BA-74AC72AD7127";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 33 ".ktv[0:32]"  -15 0.92367129347483989 -14 0.85393654594838031
+	setAttr -s 33 ".ktv[0:32]"  -15 0.92367129347483989 -14 0.85393654594838042
 		 -13 0.78721561837241472 -12 0.72192076951314577 -11 0.65659448767405226 -10 0.58977643703759308
 		 -9 0.51986985063129043 -5 46.341006279788019 0 -16.63105050875863 1 -9.3057618786494949
 		 2 -2.9343745666659009 3 -0.0035757036981967005 4 -0.0036502835088116736 5 -0.0039954816788668277
@@ -18184,7 +18337,7 @@ createNode animCurveTA -n "IKLeg_L_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 33 ".ktv[0:32]"  -15 -17.867716266749401 -14 -11.868094423107793
-		 -13 -5.868456235681788 -12 0.13118968527724079 -11 6.1308354357773593 -10 12.130473096510897
+		 -13 -5.868456235681788 -12 0.13118968527724079 -11 6.1308354357773602 -10 12.130473096510897
 		 -9 18.130094008278093 -5 12.364569021116603 0 2.4980641731649156 1 2.3701941382130163
 		 2 2.2087831401775149 3 2.1192819465331958 4 2.1193746410303276 5 2.1192751184678311
 		 6 2.009622709795114 7 1.504560093339649 8 1.1895717169880358 9 1.0062926965643706
@@ -18230,7 +18383,7 @@ createNode animCurveTA -n "IKLeg_L_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 33 ".ktv[0:32]"  -15 -0.65288947872524938 -14 -0.63497158530921505
 		 -13 -0.62467154970815253 -12 -0.62139930756664574 -11 -0.62497227876480588 -10 -0.63558994045711448
-		 -9 -0.65386163173257128 -5 42.199877487118719 0 0.71568030742938737 1 1.2080787024602304
+		 -9 -0.65386163173257128 -5 42.199877487118727 0 0.71568030742938737 1 1.2080787024602304
 		 2 1.6200005799892403 3 1.8029746808574016 4 1.8030401648712537 5 1.8029119057069747
 		 6 1.7443089754336805 7 1.3310388313694788 8 0.84801019353374185 9 0.10458096851718342
 		 10 -0.41726278699717573 11 -0.69679176346927962 12 -0.88419259557670171 13 -1.0256950127735522
@@ -19150,7 +19303,7 @@ createNode animCurveTA -n "RootX_M_rotateY";
 	rename -uid "9CADC59B-4320-406B-853D-479846D25E39";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 29 ".ktv[0:28]"  -15 -34.708965662133416 -12 -9.2387174522535851
+	setAttr -s 29 ".ktv[0:28]"  -15 -34.708965662133416 -12 -9.2387174522535869
 		 -8 -18.034426876106433 -4 -27.761329709557053 0 -7.7556199592552133 1 -7.4415667729316031
 		 2 -6.5753413774794476 3 -5.2683307561897816 4 -3.6308406561091018 5 -1.7731292198709223
 		 6 0.19524725969244444 7 2.164366001798443 8 4.0238866903267887 9 5.6633061711584674
@@ -19440,6 +19593,8 @@ createNode reference -n "sharedReferenceNode";
 		"sharedReferenceNode";
 createNode animLayer -n "BaseAnimation";
 	rename -uid "631552DE-4799-9F76-39FF-E3BCDBEEE54F";
+	setAttr -s 2 ".cdly";
+	setAttr -s 2 ".chsl";
 	setAttr ".ovrd" yes;
 createNode animLayer -n "Rotation";
 	rename -uid "216FE454-490F-86E0-BD0F-3AAC2779810A";
@@ -19447,8 +19602,6 @@ createNode animLayer -n "Rotation";
 	setAttr -s 8 ".bnds";
 	setAttr ".mt" yes;
 	setAttr ".lo" yes;
-	setAttr ".pref" yes;
-	setAttr ".slct" yes;
 	setAttr ".ovrd" yes;
 createNode animBlendNodeBoolean -n "Main_visibility_Rotation";
 	rename -uid "CD32CDE8-487C-4930-FE4D-10AEAE612141";
@@ -19541,13 +19694,375 @@ createNode animCurveTU -n "Main_scaleZ_Rotation_inputB";
 	setAttr -s 2 -l on ".ktv[0:1]"  -15 1 0 1;
 	setAttr -l on ".ktv";
 	setAttr -s 2 ".kyts[0:1]" yes yes;
+createNode animLayer -n "height";
+	rename -uid "A9860FFA-4DAE-AFB0-924A-40B46CCE29FA";
+	setAttr -s 48 ".dsm";
+	setAttr -s 42 ".bnds";
+	setAttr ".pref" yes;
+	setAttr ".slct" yes;
+createNode animBlendNodeBoolean -n "IKLeg_R_visibility_height";
+	rename -uid "23C0B48E-4507-2A6C-9237-53A24549B455";
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveDL -n "IKLeg_R_translateX_height";
+	rename -uid "09C005B5-4AC3-F7F4-F69E-72A33BB09480";
+	setAttr ".o" 0.4639329927549305;
+createNode animBlendNodeAdditiveDL -n "IKLeg_R_translateY_height";
+	rename -uid "29A1991F-402C-8887-2677-9495FE4864BB";
+	setAttr ".o" 30.959854292727051;
+createNode animBlendNodeAdditiveDL -n "IKLeg_R_translateZ_height";
+	rename -uid "2271A6BA-4A74-DEA5-B060-34AD697408EA";
+	setAttr ".o" -54.417415707986173;
+createNode animBlendNodeAdditiveRotation -n "IKLeg_R_rotate_height";
+	rename -uid "A7A8C0AC-48AD-DF0B-BFB7-E68432B2077F";
+	setAttr ".o" -type "double3" 90.206665531968369 -2.2499481717918091 -0.0063823466597397035 ;
+createNode animBlendNodeAdditiveScale -n "IKLeg_R_scaleX_height";
+	rename -uid "B0419F24-48F9-BD99-85E6-F9AAF6C6E80A";
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "IKLeg_R_scaleY_height";
+	rename -uid "12659BB2-42A4-212A-B26F-01B992674AA0";
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "IKLeg_R_scaleZ_height";
+	rename -uid "6F181129-4EDC-8420-759C-368979989D4C";
+	setAttr ".o" 1;
+createNode animBlendNodeAdditive -n "IKLeg_R_swivel_height";
+	rename -uid "C688FAA8-46D9-4448-A308-F4AE1C1E26C0";
+createNode animBlendNodeAdditive -n "IKLeg_R_roll_height";
+	rename -uid "51F78944-4598-8F55-BEBB-75848E7655A6";
+createNode animBlendNodeAdditive -n "IKLeg_R_rollAngle_height";
+	rename -uid "01963FC2-4626-1CD1-0003-E7954EAA3B39";
+	setAttr ".o" 25;
+createNode animBlendNodeAdditive -n "IKLeg_R_stretchy_height";
+	rename -uid "5842FE19-4A1E-9A5D-055B-23B30164925C";
+createNode animBlendNodeAdditive -n "IKLeg_R_antiPop_height";
+	rename -uid "5C152E58-47FF-7D8F-A8ED-959BC6F1970D";
+createNode animBlendNodeAdditive -n "IKLeg_R_Lenght1_height";
+	rename -uid "CD15501C-4AB5-D8CA-8D4B-B48B1FCCEEE8";
+	setAttr ".o" 1;
+createNode animBlendNodeAdditive -n "IKLeg_R_Lenght2_height";
+	rename -uid "D2ABDDF2-4C7A-5467-71E2-F8B2ED89AFCD";
+	setAttr ".o" 1;
+createNode animBlendNodeAdditive -n "IKLeg_R_Fatness1_height";
+	rename -uid "DDE0136B-4CAD-5D07-D795-D69C4E57CEBE";
+createNode animBlendNodeAdditive -n "IKLeg_R_Fatness2_height";
+	rename -uid "375F7A83-4CF8-61EF-6BE7-3D8E0603FE93";
+createNode animBlendNodeAdditive -n "IKLeg_R_volume_height";
+	rename -uid "7913E42A-4735-DF93-2DFE-C8A0C617675A";
+	setAttr ".o" 10;
+createNode animBlendNodeBoolean -n "IKLeg_L_visibility_height";
+	rename -uid "3B8E5EAA-448E-313A-1D05-1BADC8ACF5B8";
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveDL -n "IKLeg_L_translateX_height";
+	rename -uid "AA2BB9B5-488C-1CEC-0D35-BE931644CAA2";
+	setAttr ".o" -4.9399433355030595;
+createNode animBlendNodeAdditiveDL -n "IKLeg_L_translateY_height";
+	rename -uid "6FD61E5E-4C24-99CF-A150-B598505CA363";
+	setAttr ".o" 4.3651265478575585;
+createNode animBlendNodeAdditiveDL -n "IKLeg_L_translateZ_height";
+	rename -uid "B9B590D6-4C58-0282-A9C0-84AAC411D7E7";
+	setAttr ".o" 33.54645632472667;
+createNode animBlendNodeAdditiveRotation -n "IKLeg_L_rotate_height";
+	rename -uid "198B1654-42D8-DE74-232F-8A8DDEC6D851";
+	setAttr ".o" -type "double3" -16.63105050875863 2.4980641731649156 0.71568030742938737 ;
+createNode animBlendNodeAdditiveScale -n "IKLeg_L_scaleX_height";
+	rename -uid "F9CB0E34-4748-9638-EF3F-4AB62E8F9213";
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "IKLeg_L_scaleY_height";
+	rename -uid "AE8915DB-4BA8-AD6D-BD65-C1B5F5CFF2EE";
+	setAttr ".o" 1;
+createNode animBlendNodeAdditiveScale -n "IKLeg_L_scaleZ_height";
+	rename -uid "C7948FC3-4A7B-B3EF-7D28-708F1E01ED0D";
+	setAttr ".o" 1;
+createNode animBlendNodeAdditive -n "IKLeg_L_swivel_height";
+	rename -uid "ED9E5028-4284-60E9-06D9-E5BC018A91FC";
+createNode animBlendNodeAdditive -n "IKLeg_L_roll_height";
+	rename -uid "39C06DDC-4BD4-D417-E799-7ABDAD451803";
+createNode animBlendNodeAdditive -n "IKLeg_L_rollAngle_height";
+	rename -uid "D4B28EA1-49DF-5D2B-D6D5-0994F1813524";
+	setAttr ".o" 25;
+createNode animBlendNodeAdditive -n "IKLeg_L_stretchy_height";
+	rename -uid "29E4913F-406E-4644-C116-549E3FEFA1A6";
+createNode animBlendNodeAdditive -n "IKLeg_L_antiPop_height";
+	rename -uid "9EA3523D-4DDB-FAB5-F254-09A2F8C39B29";
+createNode animBlendNodeAdditive -n "IKLeg_L_Lenght1_height";
+	rename -uid "9092D23D-4532-C172-A728-C5B27B1A6583";
+	setAttr ".o" 1;
+createNode animBlendNodeAdditive -n "IKLeg_L_Lenght2_height";
+	rename -uid "9B78FC60-4380-9D87-A923-738BAD1B2CC8";
+	setAttr ".o" 1;
+createNode animBlendNodeAdditive -n "IKLeg_L_Fatness1_height";
+	rename -uid "735B626F-4BE4-BAA3-A7DC-4E8ACBFB53F4";
+createNode animBlendNodeAdditive -n "IKLeg_L_Fatness2_height";
+	rename -uid "360666D9-4256-5693-FCDB-F59AADD198BC";
+createNode animBlendNodeAdditive -n "IKLeg_L_volume_height";
+	rename -uid "D62AD9DF-422B-70A1-0530-5688F1959A85";
+	setAttr ".o" 10;
+createNode animBlendNodeBoolean -n "RootX_M_visibility_height";
+	rename -uid "0F316EE7-416B-AB08-252C-1594B27924A9";
+	setAttr ".o" yes;
+createNode animBlendNodeAdditiveDL -n "RootX_M_translateX_height";
+	rename -uid "DFE331AA-47C2-56AA-4BBB-BF953A24D1A2";
+	setAttr ".o" -3.0011231316806953e-15;
+createNode animBlendNodeAdditiveDL -n "RootX_M_translateY_height";
+	rename -uid "A2853B6F-49C4-61D4-3596-65A953811798";
+	setAttr ".o" -2.9446939986206502;
+createNode animBlendNodeAdditiveDL -n "RootX_M_translateZ_height";
+	rename -uid "38D9D2B3-447A-BF94-D768-2480CE09F2CD";
+	setAttr ".o" -3.2315596245373239;
+createNode animBlendNodeAdditiveRotation -n "RootX_M_rotate_height";
+	rename -uid "0635CC3B-4DE8-D21B-01FB-B89026923A8F";
+	setAttr ".o" -type "double3" -0.14195800654084961 -7.7556199592552133 1.8902866657689594 ;
+createNode animBlendNodeAdditive -n "RootX_M_CenterBtwFeet_height";
+	rename -uid "11937D2E-45A3-F649-3BBB-24B96220FC33";
+createNode animCurveTL -n "IKLeg_L_translateX_height_inputB";
+	rename -uid "B9C82D86-4634-C6EB-6B74-03B46302FC35";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTL -n "IKLeg_L_translateY_height_inputB";
+	rename -uid "3A349186-49AB-A119-3E2F-12B881A0668F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 7.3200852328375703;
+createNode animCurveTL -n "IKLeg_L_translateZ_height_inputB";
+	rename -uid "D4422D55-4491-2FFA-45B1-DF93248D2895";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTL -n "IKLeg_R_translateX_height_inputB";
+	rename -uid "D356661F-47EB-FD02-B046-6ABF13CEC650";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTL -n "IKLeg_R_translateY_height_inputB";
+	rename -uid "72272CE5-4FD4-5F14-DE98-9BA7555A5D47";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 7.3200852328375703;
+createNode animCurveTL -n "IKLeg_R_translateZ_height_inputB";
+	rename -uid "1ADBEEB6-4089-C200-FCBB-64AE256F73C4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTL -n "RootX_M_translateX_height_inputB";
+	rename -uid "D6F52769-494B-7AF6-7CB9-48A936664204";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTL -n "RootX_M_translateY_height_inputB";
+	rename -uid "3084FAC8-4422-98F8-3442-D592D1A8FD3A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 7.3200852328375703;
+createNode animCurveTL -n "RootX_M_translateZ_height_inputB";
+	rename -uid "A9DB2C90-43C4-192B-D373-C6B67EA46D35";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_R_visibility_height_inputB";
+	rename -uid "6B03A8FA-40BA-5E7E-4386-CBAF488C4481";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTA -n "IKLeg_R_rotate_height_inputBX";
+	rename -uid "D041DC68-4E8E-C6E4-B5E5-6594ED255CDC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTA -n "IKLeg_R_rotate_height_inputBY";
+	rename -uid "2BBFAE7D-4302-1731-875D-70B28D2E9FAE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTA -n "IKLeg_R_rotate_height_inputBZ";
+	rename -uid "F740FBE4-45BE-84B0-7BFF-D8AC9067507C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_R_scaleX_height_inputB";
+	rename -uid "C1DAB349-4B49-281E-DEDE-F39FBA8E3CFD";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 1;
+createNode animCurveTU -n "IKLeg_R_scaleY_height_inputB";
+	rename -uid "2273C701-43A2-9C5F-6712-EC95B3104BA0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 1;
+createNode animCurveTU -n "IKLeg_R_scaleZ_height_inputB";
+	rename -uid "95CA00A2-423B-E8D6-CA5C-AC803D2BCB80";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 1;
+createNode animCurveTU -n "IKLeg_R_swivel_height_inputB";
+	rename -uid "5B9E0B6C-454F-A08E-D407-449C41B70EF3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_R_roll_height_inputB";
+	rename -uid "5720A6BB-4B0E-1E87-AAFB-76B38A85076E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_R_rollAngle_height_inputB";
+	rename -uid "10D6D322-421D-3DAA-B5A3-CAAAD0678400";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_R_stretchy_height_inputB";
+	rename -uid "D217732E-4D5C-1FBD-6757-C5B2A914420E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_R_antiPop_height_inputB";
+	rename -uid "A2B2AD54-4BDD-7A8D-BA09-F1B7736B2856";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_R_Lenght1_height_inputB";
+	rename -uid "D8E7C559-4E59-122E-E672-A48A6D158719";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_R_Lenght2_height_inputB";
+	rename -uid "FD41971B-4A47-D55B-D3EE-58944FD3CDEB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_R_Fatness1_height_inputB";
+	rename -uid "495501D7-4F1F-8EE0-2417-A0AF1F40D8BA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_R_Fatness2_height_inputB";
+	rename -uid "829043C1-40AF-A977-3BD4-E69DDE9C6FEE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_R_volume_height_inputB";
+	rename -uid "97A02E77-49AE-0927-4C1A-248CF520238D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_L_visibility_height_inputB";
+	rename -uid "736D373A-4DE0-2D6C-E0F6-038DFAEEA479";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTA -n "IKLeg_L_rotate_height_inputBX";
+	rename -uid "29E5CAFF-4B7E-C842-5A03-868B32C153B5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTA -n "IKLeg_L_rotate_height_inputBY";
+	rename -uid "19D766D7-4E45-7BF9-68A3-279F8D35CA12";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTA -n "IKLeg_L_rotate_height_inputBZ";
+	rename -uid "56EC6B4A-4505-5615-6B81-7EBABDAEF124";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_L_scaleX_height_inputB";
+	rename -uid "A731A86A-4BF2-5F66-A519-2D90CE50AB41";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 1;
+createNode animCurveTU -n "IKLeg_L_scaleY_height_inputB";
+	rename -uid "889F8DFE-4302-2638-C4D9-98A9D5A394AD";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 1;
+createNode animCurveTU -n "IKLeg_L_scaleZ_height_inputB";
+	rename -uid "12B7CBEE-418E-D772-D973-F5806C29429E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 1;
+createNode animCurveTU -n "IKLeg_L_swivel_height_inputB";
+	rename -uid "7CACD651-4932-EADC-7F3C-71B7B94F94FA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_L_roll_height_inputB";
+	rename -uid "A1C59174-4F5C-6882-EAB0-D48EB193BF95";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_L_rollAngle_height_inputB";
+	rename -uid "6BF7C157-4245-4798-7083-12AE168BB1C1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_L_stretchy_height_inputB";
+	rename -uid "14FA080C-4A4D-A828-08FC-29AC0163A8C4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_L_antiPop_height_inputB";
+	rename -uid "D28B98D2-4E15-7333-DA3A-A095EA714954";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_L_Lenght1_height_inputB";
+	rename -uid "F617AF0C-423A-3655-F285-82BD92A86914";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_L_Lenght2_height_inputB";
+	rename -uid "73BC6D38-4087-3EEE-02B3-4391219E875F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_L_Fatness1_height_inputB";
+	rename -uid "12635E66-47FB-6751-BAEB-36A471B4AF80";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_L_Fatness2_height_inputB";
+	rename -uid "2ACA7010-41A0-F1B3-8F45-6B8318E08AEB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "IKLeg_L_volume_height_inputB";
+	rename -uid "AA07DA2A-4765-DD76-E004-358493460846";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "RootX_M_visibility_height_inputB";
+	rename -uid "49BA9AA6-4480-CA20-993A-078F0CA1D010";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTA -n "RootX_M_rotate_height_inputBX";
+	rename -uid "9467B754-4C2A-0A9E-504A-8D9DC47023B9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTA -n "RootX_M_rotate_height_inputBY";
+	rename -uid "8FF73F42-4867-28DD-E2ED-898D14DBB135";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTA -n "RootX_M_rotate_height_inputBZ";
+	rename -uid "B10785AC-44C9-7C54-DB01-53B1F413484E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
+createNode animCurveTU -n "RootX_M_CenterBtwFeet_height_inputB";
+	rename -uid "5ECD9215-465D-C132-3851-9EB49BFF305A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  -15 0;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -av -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" 26;
-	setAttr -av ".unw" 26;
+	setAttr -k on ".o" 0;
+	setAttr -av ".unw";
 	setAttr -k on ".etw";
 	setAttr -k on ".tps";
 	setAttr -av -k on ".tms";
@@ -20279,208 +20794,259 @@ connectAttr "FKWrist_L_translateZ.o" "modelRN.phl[523]";
 connectAttr "FKWrist_L_rotateX.o" "modelRN.phl[524]";
 connectAttr "FKWrist_L_rotateY.o" "modelRN.phl[525]";
 connectAttr "FKWrist_L_rotateZ.o" "modelRN.phl[526]";
-connectAttr "IKLeg_R_scaleX.o" "modelRN.phl[527]";
-connectAttr "IKLeg_R_scaleY.o" "modelRN.phl[528]";
-connectAttr "IKLeg_R_scaleZ.o" "modelRN.phl[529]";
-connectAttr "IKLeg_R_translateX.o" "modelRN.phl[530]";
-connectAttr "IKLeg_R_translateY.o" "modelRN.phl[531]";
-connectAttr "IKLeg_R_translateZ.o" "modelRN.phl[532]";
-connectAttr "IKLeg_R_rotateX.o" "modelRN.phl[533]";
-connectAttr "IKLeg_R_rotateY.o" "modelRN.phl[534]";
-connectAttr "IKLeg_R_rotateZ.o" "modelRN.phl[535]";
-connectAttr "IKLeg_R_swivel.o" "modelRN.phl[536]";
-connectAttr "IKLeg_R_rollAngle.o" "modelRN.phl[537]";
-connectAttr "IKLeg_R_roll.o" "modelRN.phl[538]";
-connectAttr "IKLeg_R_stretchy.o" "modelRN.phl[539]";
-connectAttr "IKLeg_R_antiPop.o" "modelRN.phl[540]";
-connectAttr "IKLeg_R_Lenght1.o" "modelRN.phl[541]";
-connectAttr "IKLeg_R_Lenght2.o" "modelRN.phl[542]";
-connectAttr "IKLeg_R_Fatness1.o" "modelRN.phl[543]";
-connectAttr "IKLeg_R_Fatness2.o" "modelRN.phl[544]";
-connectAttr "IKLeg_R_volume.o" "modelRN.phl[545]";
-connectAttr "IKLeg_R_visibility.o" "modelRN.phl[546]";
-connectAttr "RollHeel_R_visibility.o" "modelRN.phl[547]";
-connectAttr "RollHeel_R_translateX.o" "modelRN.phl[548]";
-connectAttr "RollHeel_R_translateY.o" "modelRN.phl[549]";
-connectAttr "RollHeel_R_translateZ.o" "modelRN.phl[550]";
-connectAttr "RollHeel_R_rotateX.o" "modelRN.phl[551]";
-connectAttr "RollHeel_R_rotateY.o" "modelRN.phl[552]";
-connectAttr "RollHeel_R_rotateZ.o" "modelRN.phl[553]";
-connectAttr "RollHeel_R_scaleX.o" "modelRN.phl[554]";
-connectAttr "RollHeel_R_scaleY.o" "modelRN.phl[555]";
-connectAttr "RollHeel_R_scaleZ.o" "modelRN.phl[556]";
-connectAttr "RollToesEnd_R_visibility.o" "modelRN.phl[557]";
-connectAttr "RollToesEnd_R_translateX.o" "modelRN.phl[558]";
-connectAttr "RollToesEnd_R_translateY.o" "modelRN.phl[559]";
-connectAttr "RollToesEnd_R_translateZ.o" "modelRN.phl[560]";
-connectAttr "RollToesEnd_R_rotateX.o" "modelRN.phl[561]";
-connectAttr "RollToesEnd_R_rotateY.o" "modelRN.phl[562]";
-connectAttr "RollToesEnd_R_rotateZ.o" "modelRN.phl[563]";
-connectAttr "RollToesEnd_R_scaleX.o" "modelRN.phl[564]";
-connectAttr "RollToesEnd_R_scaleY.o" "modelRN.phl[565]";
-connectAttr "RollToesEnd_R_scaleZ.o" "modelRN.phl[566]";
-connectAttr "RollToes_R_visibility.o" "modelRN.phl[567]";
-connectAttr "RollToes_R_translateX.o" "modelRN.phl[568]";
-connectAttr "RollToes_R_translateY.o" "modelRN.phl[569]";
-connectAttr "RollToes_R_translateZ.o" "modelRN.phl[570]";
-connectAttr "RollToes_R_rotateX.o" "modelRN.phl[571]";
-connectAttr "RollToes_R_rotateY.o" "modelRN.phl[572]";
-connectAttr "RollToes_R_rotateZ.o" "modelRN.phl[573]";
-connectAttr "RollToes_R_scaleX.o" "modelRN.phl[574]";
-connectAttr "RollToes_R_scaleY.o" "modelRN.phl[575]";
-connectAttr "RollToes_R_scaleZ.o" "modelRN.phl[576]";
-connectAttr "IKToes_R_visibility.o" "modelRN.phl[577]";
-connectAttr "IKToes_R_translateX.o" "modelRN.phl[578]";
-connectAttr "IKToes_R_translateY.o" "modelRN.phl[579]";
-connectAttr "IKToes_R_translateZ.o" "modelRN.phl[580]";
-connectAttr "IKToes_R_rotateX.o" "modelRN.phl[581]";
-connectAttr "IKToes_R_rotateY.o" "modelRN.phl[582]";
-connectAttr "IKToes_R_rotateZ.o" "modelRN.phl[583]";
-connectAttr "IKToes_R_scaleX.o" "modelRN.phl[584]";
-connectAttr "IKToes_R_scaleY.o" "modelRN.phl[585]";
-connectAttr "IKToes_R_scaleZ.o" "modelRN.phl[586]";
-connectAttr "PoleLeg_R_translateX.o" "modelRN.phl[587]";
-connectAttr "PoleLeg_R_translateY.o" "modelRN.phl[588]";
-connectAttr "PoleLeg_R_translateZ.o" "modelRN.phl[589]";
-connectAttr "PoleLeg_R_follow.o" "modelRN.phl[590]";
-connectAttr "PoleLeg_R_lock.o" "modelRN.phl[591]";
-connectAttr "IKLeg_L_scaleX.o" "modelRN.phl[592]";
-connectAttr "IKLeg_L_scaleY.o" "modelRN.phl[593]";
-connectAttr "IKLeg_L_scaleZ.o" "modelRN.phl[594]";
-connectAttr "IKLeg_L_translateX.o" "modelRN.phl[595]";
-connectAttr "IKLeg_L_translateY.o" "modelRN.phl[596]";
-connectAttr "IKLeg_L_translateZ.o" "modelRN.phl[597]";
-connectAttr "IKLeg_L_rotateX.o" "modelRN.phl[598]";
-connectAttr "IKLeg_L_rotateY.o" "modelRN.phl[599]";
-connectAttr "IKLeg_L_rotateZ.o" "modelRN.phl[600]";
-connectAttr "IKLeg_L_swivel.o" "modelRN.phl[601]";
-connectAttr "IKLeg_L_rollAngle.o" "modelRN.phl[602]";
-connectAttr "IKLeg_L_roll.o" "modelRN.phl[603]";
-connectAttr "IKLeg_L_stretchy.o" "modelRN.phl[604]";
-connectAttr "IKLeg_L_antiPop.o" "modelRN.phl[605]";
-connectAttr "IKLeg_L_Lenght1.o" "modelRN.phl[606]";
-connectAttr "IKLeg_L_Lenght2.o" "modelRN.phl[607]";
-connectAttr "IKLeg_L_Fatness1.o" "modelRN.phl[608]";
-connectAttr "IKLeg_L_Fatness2.o" "modelRN.phl[609]";
-connectAttr "IKLeg_L_volume.o" "modelRN.phl[610]";
-connectAttr "IKLeg_L_visibility.o" "modelRN.phl[611]";
-connectAttr "RollHeel_L_visibility.o" "modelRN.phl[612]";
-connectAttr "RollHeel_L_translateX.o" "modelRN.phl[613]";
-connectAttr "RollHeel_L_translateY.o" "modelRN.phl[614]";
-connectAttr "RollHeel_L_translateZ.o" "modelRN.phl[615]";
-connectAttr "RollHeel_L_rotateX.o" "modelRN.phl[616]";
-connectAttr "RollHeel_L_rotateY.o" "modelRN.phl[617]";
-connectAttr "RollHeel_L_rotateZ.o" "modelRN.phl[618]";
-connectAttr "RollHeel_L_scaleX.o" "modelRN.phl[619]";
-connectAttr "RollHeel_L_scaleY.o" "modelRN.phl[620]";
-connectAttr "RollHeel_L_scaleZ.o" "modelRN.phl[621]";
-connectAttr "RollToesEnd_L_visibility.o" "modelRN.phl[622]";
-connectAttr "RollToesEnd_L_translateX.o" "modelRN.phl[623]";
-connectAttr "RollToesEnd_L_translateY.o" "modelRN.phl[624]";
-connectAttr "RollToesEnd_L_translateZ.o" "modelRN.phl[625]";
-connectAttr "RollToesEnd_L_rotateX.o" "modelRN.phl[626]";
-connectAttr "RollToesEnd_L_rotateY.o" "modelRN.phl[627]";
-connectAttr "RollToesEnd_L_rotateZ.o" "modelRN.phl[628]";
-connectAttr "RollToesEnd_L_scaleX.o" "modelRN.phl[629]";
-connectAttr "RollToesEnd_L_scaleY.o" "modelRN.phl[630]";
-connectAttr "RollToesEnd_L_scaleZ.o" "modelRN.phl[631]";
-connectAttr "RollToes_L_visibility.o" "modelRN.phl[632]";
-connectAttr "RollToes_L_translateX.o" "modelRN.phl[633]";
-connectAttr "RollToes_L_translateY.o" "modelRN.phl[634]";
-connectAttr "RollToes_L_translateZ.o" "modelRN.phl[635]";
-connectAttr "RollToes_L_rotateX.o" "modelRN.phl[636]";
-connectAttr "RollToes_L_rotateY.o" "modelRN.phl[637]";
-connectAttr "RollToes_L_rotateZ.o" "modelRN.phl[638]";
-connectAttr "RollToes_L_scaleX.o" "modelRN.phl[639]";
-connectAttr "RollToes_L_scaleY.o" "modelRN.phl[640]";
-connectAttr "RollToes_L_scaleZ.o" "modelRN.phl[641]";
-connectAttr "IKToes_L_visibility.o" "modelRN.phl[642]";
-connectAttr "IKToes_L_translateX.o" "modelRN.phl[643]";
-connectAttr "IKToes_L_translateY.o" "modelRN.phl[644]";
-connectAttr "IKToes_L_translateZ.o" "modelRN.phl[645]";
-connectAttr "IKToes_L_rotateX.o" "modelRN.phl[646]";
-connectAttr "IKToes_L_rotateY.o" "modelRN.phl[647]";
-connectAttr "IKToes_L_rotateZ.o" "modelRN.phl[648]";
-connectAttr "IKToes_L_scaleX.o" "modelRN.phl[649]";
-connectAttr "IKToes_L_scaleY.o" "modelRN.phl[650]";
-connectAttr "IKToes_L_scaleZ.o" "modelRN.phl[651]";
-connectAttr "PoleLeg_L_translateX.o" "modelRN.phl[652]";
-connectAttr "PoleLeg_L_translateY.o" "modelRN.phl[653]";
-connectAttr "PoleLeg_L_translateZ.o" "modelRN.phl[654]";
-connectAttr "PoleLeg_L_follow.o" "modelRN.phl[655]";
-connectAttr "PoleLeg_L_lock.o" "modelRN.phl[656]";
-connectAttr "FKIKLeg_R_FKIKBlend.o" "modelRN.phl[657]";
-connectAttr "FKIKLeg_R_IKVis.o" "modelRN.phl[658]";
-connectAttr "FKIKLeg_R_FKVis.o" "modelRN.phl[659]";
-connectAttr "FKIKArm_R_FKIKBlend.o" "modelRN.phl[660]";
-connectAttr "FKIKArm_R_IKVis.o" "modelRN.phl[661]";
-connectAttr "FKIKArm_R_FKVis.o" "modelRN.phl[662]";
-connectAttr "FKIKSpine_M_FKIKBlend.o" "modelRN.phl[663]";
-connectAttr "FKIKSpine_M_IKVis.o" "modelRN.phl[664]";
-connectAttr "FKIKSpine_M_FKVis.o" "modelRN.phl[665]";
-connectAttr "FKIKLeg_L_FKIKBlend.o" "modelRN.phl[666]";
-connectAttr "FKIKLeg_L_IKVis.o" "modelRN.phl[667]";
-connectAttr "FKIKLeg_L_FKVis.o" "modelRN.phl[668]";
-connectAttr "FKIKArm_L_FKIKBlend.o" "modelRN.phl[669]";
-connectAttr "FKIKArm_L_IKVis.o" "modelRN.phl[670]";
-connectAttr "FKIKArm_L_FKVis.o" "modelRN.phl[671]";
-connectAttr "AimEye_M_follow.o" "modelRN.phl[672]";
-connectAttr "AimEye_M_visibility.o" "modelRN.phl[673]";
-connectAttr "AimEye_M_translateX.o" "modelRN.phl[674]";
-connectAttr "AimEye_M_translateY.o" "modelRN.phl[675]";
-connectAttr "AimEye_M_translateZ.o" "modelRN.phl[676]";
-connectAttr "AimEye_M_rotateX.o" "modelRN.phl[677]";
-connectAttr "AimEye_M_rotateY.o" "modelRN.phl[678]";
-connectAttr "AimEye_M_rotateZ.o" "modelRN.phl[679]";
-connectAttr "AimEye_M_scaleX.o" "modelRN.phl[680]";
-connectAttr "AimEye_M_scaleY.o" "modelRN.phl[681]";
-connectAttr "AimEye_M_scaleZ.o" "modelRN.phl[682]";
-connectAttr "AimEye_R_translateX.o" "modelRN.phl[683]";
-connectAttr "AimEye_R_translateY.o" "modelRN.phl[684]";
-connectAttr "AimEye_R_translateZ.o" "modelRN.phl[685]";
-connectAttr "AimEye_L_translateX.o" "modelRN.phl[686]";
-connectAttr "AimEye_L_translateY.o" "modelRN.phl[687]";
-connectAttr "AimEye_L_translateZ.o" "modelRN.phl[688]";
-connectAttr "RootX_M_translateX.o" "modelRN.phl[689]";
-connectAttr "RootX_M_translateY.o" "modelRN.phl[690]";
-connectAttr "RootX_M_translateZ.o" "modelRN.phl[691]";
-connectAttr "RootX_M_rotateX.o" "modelRN.phl[692]";
-connectAttr "RootX_M_rotateY.o" "modelRN.phl[693]";
-connectAttr "RootX_M_rotateZ.o" "modelRN.phl[694]";
-connectAttr "RootX_M_CenterBtwFeet.o" "modelRN.phl[695]";
-connectAttr "RootX_M_visibility.o" "modelRN.phl[696]";
-connectAttr "Fingers_R_spread.o" "modelRN.phl[697]";
-connectAttr "Fingers_R_indexCurl.o" "modelRN.phl[698]";
-connectAttr "Fingers_R_middleCurl.o" "modelRN.phl[699]";
-connectAttr "Fingers_R_ringCurl.o" "modelRN.phl[700]";
-connectAttr "Fingers_R_pinkyCurl.o" "modelRN.phl[701]";
-connectAttr "Fingers_R_thumbCurl.o" "modelRN.phl[702]";
-connectAttr "Fingers_L_spread.o" "modelRN.phl[703]";
-connectAttr "Fingers_L_indexCurl.o" "modelRN.phl[704]";
-connectAttr "Fingers_L_middleCurl.o" "modelRN.phl[705]";
-connectAttr "Fingers_L_ringCurl.o" "modelRN.phl[706]";
-connectAttr "Fingers_L_pinkyCurl.o" "modelRN.phl[707]";
-connectAttr "Fingers_L_thumbCurl.o" "modelRN.phl[708]";
-connectAttr "Weapon_translateX.o" "modelRN.phl[709]";
-connectAttr "Weapon_translateY.o" "modelRN.phl[710]";
-connectAttr "Weapon_translateZ.o" "modelRN.phl[711]";
-connectAttr "Weapon_rotateX.o" "modelRN.phl[712]";
-connectAttr "Weapon_rotateY.o" "modelRN.phl[713]";
-connectAttr "Weapon_rotateZ.o" "modelRN.phl[714]";
-connectAttr "Weapon_scaleX.o" "modelRN.phl[715]";
-connectAttr "Weapon_scaleY.o" "modelRN.phl[716]";
-connectAttr "Weapon_scaleZ.o" "modelRN.phl[717]";
-connectAttr "Weapon_visibility.o" "modelRN.phl[718]";
-connectAttr "Root_ctrl_translateX.o" "modelRN.phl[719]";
-connectAttr "Root_ctrl_translateY.o" "modelRN.phl[720]";
-connectAttr "Root_ctrl_translateZ.o" "modelRN.phl[721]";
-connectAttr "Root_ctrl_rotateX.o" "modelRN.phl[722]";
-connectAttr "Root_ctrl_rotateY.o" "modelRN.phl[723]";
-connectAttr "Root_ctrl_rotateZ.o" "modelRN.phl[724]";
-connectAttr "Root_ctrl_scaleX.o" "modelRN.phl[725]";
-connectAttr "Root_ctrl_scaleY.o" "modelRN.phl[726]";
-connectAttr "Root_ctrl_scaleZ.o" "modelRN.phl[727]";
-connectAttr "Root_ctrl_visibility.o" "modelRN.phl[728]";
+connectAttr "modelRN.phl[527]" "height.dsm" -na;
+connectAttr "IKLeg_R_scaleX_height.o" "modelRN.phl[528]";
+connectAttr "modelRN.phl[529]" "height.dsm" -na;
+connectAttr "IKLeg_R_scaleY_height.o" "modelRN.phl[530]";
+connectAttr "modelRN.phl[531]" "height.dsm" -na;
+connectAttr "IKLeg_R_scaleZ_height.o" "modelRN.phl[532]";
+connectAttr "modelRN.phl[533]" "height.dsm" -na;
+connectAttr "IKLeg_R_translateX_height.o" "modelRN.phl[534]";
+connectAttr "modelRN.phl[535]" "height.dsm" -na;
+connectAttr "IKLeg_R_translateY_height.o" "modelRN.phl[536]";
+connectAttr "modelRN.phl[537]" "height.dsm" -na;
+connectAttr "IKLeg_R_translateZ_height.o" "modelRN.phl[538]";
+connectAttr "modelRN.phl[539]" "height.dsm" -na;
+connectAttr "IKLeg_R_rotate_height.ox" "modelRN.phl[540]";
+connectAttr "modelRN.phl[541]" "height.dsm" -na;
+connectAttr "IKLeg_R_rotate_height.oy" "modelRN.phl[542]";
+connectAttr "modelRN.phl[543]" "height.dsm" -na;
+connectAttr "IKLeg_R_rotate_height.oz" "modelRN.phl[544]";
+connectAttr "modelRN.phl[545]" "IKLeg_R_rotate_height.ro";
+connectAttr "modelRN.phl[546]" "height.dsm" -na;
+connectAttr "IKLeg_R_swivel_height.o" "modelRN.phl[547]";
+connectAttr "modelRN.phl[548]" "height.dsm" -na;
+connectAttr "IKLeg_R_rollAngle_height.o" "modelRN.phl[549]";
+connectAttr "modelRN.phl[550]" "height.dsm" -na;
+connectAttr "IKLeg_R_roll_height.o" "modelRN.phl[551]";
+connectAttr "modelRN.phl[552]" "height.dsm" -na;
+connectAttr "IKLeg_R_stretchy_height.o" "modelRN.phl[553]";
+connectAttr "modelRN.phl[554]" "height.dsm" -na;
+connectAttr "IKLeg_R_antiPop_height.o" "modelRN.phl[555]";
+connectAttr "modelRN.phl[556]" "height.dsm" -na;
+connectAttr "IKLeg_R_Lenght1_height.o" "modelRN.phl[557]";
+connectAttr "modelRN.phl[558]" "height.dsm" -na;
+connectAttr "IKLeg_R_Lenght2_height.o" "modelRN.phl[559]";
+connectAttr "modelRN.phl[560]" "height.dsm" -na;
+connectAttr "IKLeg_R_Fatness1_height.o" "modelRN.phl[561]";
+connectAttr "modelRN.phl[562]" "height.dsm" -na;
+connectAttr "IKLeg_R_Fatness2_height.o" "modelRN.phl[563]";
+connectAttr "modelRN.phl[564]" "height.dsm" -na;
+connectAttr "IKLeg_R_volume_height.o" "modelRN.phl[565]";
+connectAttr "modelRN.phl[566]" "height.dsm" -na;
+connectAttr "IKLeg_R_visibility_height.o" "modelRN.phl[567]";
+connectAttr "RollHeel_R_visibility.o" "modelRN.phl[568]";
+connectAttr "RollHeel_R_translateX.o" "modelRN.phl[569]";
+connectAttr "RollHeel_R_translateY.o" "modelRN.phl[570]";
+connectAttr "RollHeel_R_translateZ.o" "modelRN.phl[571]";
+connectAttr "RollHeel_R_rotateX.o" "modelRN.phl[572]";
+connectAttr "RollHeel_R_rotateY.o" "modelRN.phl[573]";
+connectAttr "RollHeel_R_rotateZ.o" "modelRN.phl[574]";
+connectAttr "RollHeel_R_scaleX.o" "modelRN.phl[575]";
+connectAttr "RollHeel_R_scaleY.o" "modelRN.phl[576]";
+connectAttr "RollHeel_R_scaleZ.o" "modelRN.phl[577]";
+connectAttr "RollToesEnd_R_visibility.o" "modelRN.phl[578]";
+connectAttr "RollToesEnd_R_translateX.o" "modelRN.phl[579]";
+connectAttr "RollToesEnd_R_translateY.o" "modelRN.phl[580]";
+connectAttr "RollToesEnd_R_translateZ.o" "modelRN.phl[581]";
+connectAttr "RollToesEnd_R_rotateX.o" "modelRN.phl[582]";
+connectAttr "RollToesEnd_R_rotateY.o" "modelRN.phl[583]";
+connectAttr "RollToesEnd_R_rotateZ.o" "modelRN.phl[584]";
+connectAttr "RollToesEnd_R_scaleX.o" "modelRN.phl[585]";
+connectAttr "RollToesEnd_R_scaleY.o" "modelRN.phl[586]";
+connectAttr "RollToesEnd_R_scaleZ.o" "modelRN.phl[587]";
+connectAttr "RollToes_R_visibility.o" "modelRN.phl[588]";
+connectAttr "RollToes_R_translateX.o" "modelRN.phl[589]";
+connectAttr "RollToes_R_translateY.o" "modelRN.phl[590]";
+connectAttr "RollToes_R_translateZ.o" "modelRN.phl[591]";
+connectAttr "RollToes_R_rotateX.o" "modelRN.phl[592]";
+connectAttr "RollToes_R_rotateY.o" "modelRN.phl[593]";
+connectAttr "RollToes_R_rotateZ.o" "modelRN.phl[594]";
+connectAttr "RollToes_R_scaleX.o" "modelRN.phl[595]";
+connectAttr "RollToes_R_scaleY.o" "modelRN.phl[596]";
+connectAttr "RollToes_R_scaleZ.o" "modelRN.phl[597]";
+connectAttr "IKToes_R_visibility.o" "modelRN.phl[598]";
+connectAttr "IKToes_R_translateX.o" "modelRN.phl[599]";
+connectAttr "IKToes_R_translateY.o" "modelRN.phl[600]";
+connectAttr "IKToes_R_translateZ.o" "modelRN.phl[601]";
+connectAttr "IKToes_R_rotateX.o" "modelRN.phl[602]";
+connectAttr "IKToes_R_rotateY.o" "modelRN.phl[603]";
+connectAttr "IKToes_R_rotateZ.o" "modelRN.phl[604]";
+connectAttr "IKToes_R_scaleX.o" "modelRN.phl[605]";
+connectAttr "IKToes_R_scaleY.o" "modelRN.phl[606]";
+connectAttr "IKToes_R_scaleZ.o" "modelRN.phl[607]";
+connectAttr "PoleLeg_R_translateX.o" "modelRN.phl[608]";
+connectAttr "PoleLeg_R_translateY.o" "modelRN.phl[609]";
+connectAttr "PoleLeg_R_translateZ.o" "modelRN.phl[610]";
+connectAttr "PoleLeg_R_follow.o" "modelRN.phl[611]";
+connectAttr "PoleLeg_R_lock.o" "modelRN.phl[612]";
+connectAttr "modelRN.phl[613]" "height.dsm" -na;
+connectAttr "IKLeg_L_scaleX_height.o" "modelRN.phl[614]";
+connectAttr "modelRN.phl[615]" "height.dsm" -na;
+connectAttr "IKLeg_L_scaleY_height.o" "modelRN.phl[616]";
+connectAttr "modelRN.phl[617]" "height.dsm" -na;
+connectAttr "IKLeg_L_scaleZ_height.o" "modelRN.phl[618]";
+connectAttr "modelRN.phl[619]" "height.dsm" -na;
+connectAttr "IKLeg_L_translateX_height.o" "modelRN.phl[620]";
+connectAttr "modelRN.phl[621]" "height.dsm" -na;
+connectAttr "IKLeg_L_translateY_height.o" "modelRN.phl[622]";
+connectAttr "modelRN.phl[623]" "height.dsm" -na;
+connectAttr "IKLeg_L_translateZ_height.o" "modelRN.phl[624]";
+connectAttr "modelRN.phl[625]" "height.dsm" -na;
+connectAttr "IKLeg_L_rotate_height.ox" "modelRN.phl[626]";
+connectAttr "modelRN.phl[627]" "height.dsm" -na;
+connectAttr "IKLeg_L_rotate_height.oy" "modelRN.phl[628]";
+connectAttr "modelRN.phl[629]" "height.dsm" -na;
+connectAttr "IKLeg_L_rotate_height.oz" "modelRN.phl[630]";
+connectAttr "modelRN.phl[631]" "IKLeg_L_rotate_height.ro";
+connectAttr "modelRN.phl[632]" "height.dsm" -na;
+connectAttr "IKLeg_L_swivel_height.o" "modelRN.phl[633]";
+connectAttr "modelRN.phl[634]" "height.dsm" -na;
+connectAttr "IKLeg_L_rollAngle_height.o" "modelRN.phl[635]";
+connectAttr "modelRN.phl[636]" "height.dsm" -na;
+connectAttr "IKLeg_L_roll_height.o" "modelRN.phl[637]";
+connectAttr "modelRN.phl[638]" "height.dsm" -na;
+connectAttr "IKLeg_L_stretchy_height.o" "modelRN.phl[639]";
+connectAttr "modelRN.phl[640]" "height.dsm" -na;
+connectAttr "IKLeg_L_antiPop_height.o" "modelRN.phl[641]";
+connectAttr "modelRN.phl[642]" "height.dsm" -na;
+connectAttr "IKLeg_L_Lenght1_height.o" "modelRN.phl[643]";
+connectAttr "modelRN.phl[644]" "height.dsm" -na;
+connectAttr "IKLeg_L_Lenght2_height.o" "modelRN.phl[645]";
+connectAttr "modelRN.phl[646]" "height.dsm" -na;
+connectAttr "IKLeg_L_Fatness1_height.o" "modelRN.phl[647]";
+connectAttr "modelRN.phl[648]" "height.dsm" -na;
+connectAttr "IKLeg_L_Fatness2_height.o" "modelRN.phl[649]";
+connectAttr "modelRN.phl[650]" "height.dsm" -na;
+connectAttr "IKLeg_L_volume_height.o" "modelRN.phl[651]";
+connectAttr "modelRN.phl[652]" "height.dsm" -na;
+connectAttr "IKLeg_L_visibility_height.o" "modelRN.phl[653]";
+connectAttr "RollHeel_L_visibility.o" "modelRN.phl[654]";
+connectAttr "RollHeel_L_translateX.o" "modelRN.phl[655]";
+connectAttr "RollHeel_L_translateY.o" "modelRN.phl[656]";
+connectAttr "RollHeel_L_translateZ.o" "modelRN.phl[657]";
+connectAttr "RollHeel_L_rotateX.o" "modelRN.phl[658]";
+connectAttr "RollHeel_L_rotateY.o" "modelRN.phl[659]";
+connectAttr "RollHeel_L_rotateZ.o" "modelRN.phl[660]";
+connectAttr "RollHeel_L_scaleX.o" "modelRN.phl[661]";
+connectAttr "RollHeel_L_scaleY.o" "modelRN.phl[662]";
+connectAttr "RollHeel_L_scaleZ.o" "modelRN.phl[663]";
+connectAttr "RollToesEnd_L_visibility.o" "modelRN.phl[664]";
+connectAttr "RollToesEnd_L_translateX.o" "modelRN.phl[665]";
+connectAttr "RollToesEnd_L_translateY.o" "modelRN.phl[666]";
+connectAttr "RollToesEnd_L_translateZ.o" "modelRN.phl[667]";
+connectAttr "RollToesEnd_L_rotateX.o" "modelRN.phl[668]";
+connectAttr "RollToesEnd_L_rotateY.o" "modelRN.phl[669]";
+connectAttr "RollToesEnd_L_rotateZ.o" "modelRN.phl[670]";
+connectAttr "RollToesEnd_L_scaleX.o" "modelRN.phl[671]";
+connectAttr "RollToesEnd_L_scaleY.o" "modelRN.phl[672]";
+connectAttr "RollToesEnd_L_scaleZ.o" "modelRN.phl[673]";
+connectAttr "RollToes_L_visibility.o" "modelRN.phl[674]";
+connectAttr "RollToes_L_translateX.o" "modelRN.phl[675]";
+connectAttr "RollToes_L_translateY.o" "modelRN.phl[676]";
+connectAttr "RollToes_L_translateZ.o" "modelRN.phl[677]";
+connectAttr "RollToes_L_rotateX.o" "modelRN.phl[678]";
+connectAttr "RollToes_L_rotateY.o" "modelRN.phl[679]";
+connectAttr "RollToes_L_rotateZ.o" "modelRN.phl[680]";
+connectAttr "RollToes_L_scaleX.o" "modelRN.phl[681]";
+connectAttr "RollToes_L_scaleY.o" "modelRN.phl[682]";
+connectAttr "RollToes_L_scaleZ.o" "modelRN.phl[683]";
+connectAttr "IKToes_L_visibility.o" "modelRN.phl[684]";
+connectAttr "IKToes_L_translateX.o" "modelRN.phl[685]";
+connectAttr "IKToes_L_translateY.o" "modelRN.phl[686]";
+connectAttr "IKToes_L_translateZ.o" "modelRN.phl[687]";
+connectAttr "IKToes_L_rotateX.o" "modelRN.phl[688]";
+connectAttr "IKToes_L_rotateY.o" "modelRN.phl[689]";
+connectAttr "IKToes_L_rotateZ.o" "modelRN.phl[690]";
+connectAttr "IKToes_L_scaleX.o" "modelRN.phl[691]";
+connectAttr "IKToes_L_scaleY.o" "modelRN.phl[692]";
+connectAttr "IKToes_L_scaleZ.o" "modelRN.phl[693]";
+connectAttr "PoleLeg_L_translateX.o" "modelRN.phl[694]";
+connectAttr "PoleLeg_L_translateY.o" "modelRN.phl[695]";
+connectAttr "PoleLeg_L_translateZ.o" "modelRN.phl[696]";
+connectAttr "PoleLeg_L_follow.o" "modelRN.phl[697]";
+connectAttr "PoleLeg_L_lock.o" "modelRN.phl[698]";
+connectAttr "FKIKLeg_R_FKIKBlend.o" "modelRN.phl[699]";
+connectAttr "FKIKLeg_R_IKVis.o" "modelRN.phl[700]";
+connectAttr "FKIKLeg_R_FKVis.o" "modelRN.phl[701]";
+connectAttr "FKIKArm_R_FKIKBlend.o" "modelRN.phl[702]";
+connectAttr "FKIKArm_R_IKVis.o" "modelRN.phl[703]";
+connectAttr "FKIKArm_R_FKVis.o" "modelRN.phl[704]";
+connectAttr "FKIKSpine_M_FKIKBlend.o" "modelRN.phl[705]";
+connectAttr "FKIKSpine_M_IKVis.o" "modelRN.phl[706]";
+connectAttr "FKIKSpine_M_FKVis.o" "modelRN.phl[707]";
+connectAttr "FKIKLeg_L_FKIKBlend.o" "modelRN.phl[708]";
+connectAttr "FKIKLeg_L_IKVis.o" "modelRN.phl[709]";
+connectAttr "FKIKLeg_L_FKVis.o" "modelRN.phl[710]";
+connectAttr "FKIKArm_L_FKIKBlend.o" "modelRN.phl[711]";
+connectAttr "FKIKArm_L_IKVis.o" "modelRN.phl[712]";
+connectAttr "FKIKArm_L_FKVis.o" "modelRN.phl[713]";
+connectAttr "AimEye_M_follow.o" "modelRN.phl[714]";
+connectAttr "AimEye_M_visibility.o" "modelRN.phl[715]";
+connectAttr "AimEye_M_translateX.o" "modelRN.phl[716]";
+connectAttr "AimEye_M_translateY.o" "modelRN.phl[717]";
+connectAttr "AimEye_M_translateZ.o" "modelRN.phl[718]";
+connectAttr "AimEye_M_rotateX.o" "modelRN.phl[719]";
+connectAttr "AimEye_M_rotateY.o" "modelRN.phl[720]";
+connectAttr "AimEye_M_rotateZ.o" "modelRN.phl[721]";
+connectAttr "AimEye_M_scaleX.o" "modelRN.phl[722]";
+connectAttr "AimEye_M_scaleY.o" "modelRN.phl[723]";
+connectAttr "AimEye_M_scaleZ.o" "modelRN.phl[724]";
+connectAttr "AimEye_R_translateX.o" "modelRN.phl[725]";
+connectAttr "AimEye_R_translateY.o" "modelRN.phl[726]";
+connectAttr "AimEye_R_translateZ.o" "modelRN.phl[727]";
+connectAttr "AimEye_L_translateX.o" "modelRN.phl[728]";
+connectAttr "AimEye_L_translateY.o" "modelRN.phl[729]";
+connectAttr "AimEye_L_translateZ.o" "modelRN.phl[730]";
+connectAttr "modelRN.phl[731]" "height.dsm" -na;
+connectAttr "RootX_M_translateX_height.o" "modelRN.phl[732]";
+connectAttr "modelRN.phl[733]" "height.dsm" -na;
+connectAttr "RootX_M_translateY_height.o" "modelRN.phl[734]";
+connectAttr "modelRN.phl[735]" "height.dsm" -na;
+connectAttr "RootX_M_translateZ_height.o" "modelRN.phl[736]";
+connectAttr "modelRN.phl[737]" "height.dsm" -na;
+connectAttr "RootX_M_rotate_height.ox" "modelRN.phl[738]";
+connectAttr "modelRN.phl[739]" "height.dsm" -na;
+connectAttr "RootX_M_rotate_height.oy" "modelRN.phl[740]";
+connectAttr "modelRN.phl[741]" "height.dsm" -na;
+connectAttr "RootX_M_rotate_height.oz" "modelRN.phl[742]";
+connectAttr "modelRN.phl[743]" "RootX_M_rotate_height.ro";
+connectAttr "modelRN.phl[744]" "height.dsm" -na;
+connectAttr "RootX_M_CenterBtwFeet_height.o" "modelRN.phl[745]";
+connectAttr "modelRN.phl[746]" "height.dsm" -na;
+connectAttr "RootX_M_visibility_height.o" "modelRN.phl[747]";
+connectAttr "Fingers_R_spread.o" "modelRN.phl[748]";
+connectAttr "Fingers_R_indexCurl.o" "modelRN.phl[749]";
+connectAttr "Fingers_R_middleCurl.o" "modelRN.phl[750]";
+connectAttr "Fingers_R_ringCurl.o" "modelRN.phl[751]";
+connectAttr "Fingers_R_pinkyCurl.o" "modelRN.phl[752]";
+connectAttr "Fingers_R_thumbCurl.o" "modelRN.phl[753]";
+connectAttr "Fingers_L_spread.o" "modelRN.phl[754]";
+connectAttr "Fingers_L_indexCurl.o" "modelRN.phl[755]";
+connectAttr "Fingers_L_middleCurl.o" "modelRN.phl[756]";
+connectAttr "Fingers_L_ringCurl.o" "modelRN.phl[757]";
+connectAttr "Fingers_L_pinkyCurl.o" "modelRN.phl[758]";
+connectAttr "Fingers_L_thumbCurl.o" "modelRN.phl[759]";
+connectAttr "Weapon_translateX.o" "modelRN.phl[760]";
+connectAttr "Weapon_translateY.o" "modelRN.phl[761]";
+connectAttr "Weapon_translateZ.o" "modelRN.phl[762]";
+connectAttr "Weapon_rotateX.o" "modelRN.phl[763]";
+connectAttr "Weapon_rotateY.o" "modelRN.phl[764]";
+connectAttr "Weapon_rotateZ.o" "modelRN.phl[765]";
+connectAttr "Weapon_scaleX.o" "modelRN.phl[766]";
+connectAttr "Weapon_scaleY.o" "modelRN.phl[767]";
+connectAttr "Weapon_scaleZ.o" "modelRN.phl[768]";
+connectAttr "Weapon_visibility.o" "modelRN.phl[769]";
+connectAttr "Root_ctrl_translateX.o" "modelRN.phl[770]";
+connectAttr "Root_ctrl_translateY.o" "modelRN.phl[771]";
+connectAttr "Root_ctrl_translateZ.o" "modelRN.phl[772]";
+connectAttr "Root_ctrl_rotateX.o" "modelRN.phl[773]";
+connectAttr "Root_ctrl_rotateY.o" "modelRN.phl[774]";
+connectAttr "Root_ctrl_rotateZ.o" "modelRN.phl[775]";
+connectAttr "Root_ctrl_scaleX.o" "modelRN.phl[776]";
+connectAttr "Root_ctrl_scaleY.o" "modelRN.phl[777]";
+connectAttr "Root_ctrl_scaleZ.o" "modelRN.phl[778]";
+connectAttr "Root_ctrl_visibility.o" "modelRN.phl[779]";
 connectAttr "root_scaleX.o" "root.sx";
 connectAttr "root_scaleY.o" "root.sy";
 connectAttr "root_scaleZ.o" "root.sz";
@@ -21202,7 +21768,9 @@ connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "sharedReferenceNode.sr" "modelRN.sr";
 connectAttr "Rotation.sl" "BaseAnimation.chsl[0]";
+connectAttr "height.sl" "BaseAnimation.chsl[1]";
 connectAttr "Rotation.play" "BaseAnimation.cdly[0]";
+connectAttr "height.play" "BaseAnimation.cdly[1]";
 connectAttr "BaseAnimation.csol" "Rotation.sslo";
 connectAttr "BaseAnimation.fgwt" "Rotation.pwth";
 connectAttr "BaseAnimation.omte" "Rotation.pmte";
@@ -21254,5 +21822,240 @@ connectAttr "Rotation.bgwt" "Main_scaleZ_Rotation.wa";
 connectAttr "Rotation.fgwt" "Main_scaleZ_Rotation.wb";
 connectAttr "Main_scaleZ.o" "Main_scaleZ_Rotation.ia";
 connectAttr "Main_scaleZ_Rotation_inputB.o" "Main_scaleZ_Rotation.ib";
+connectAttr "BaseAnimation.csol" "height.sslo";
+connectAttr "BaseAnimation.fgwt" "height.pwth";
+connectAttr "BaseAnimation.omte" "height.pmte";
+connectAttr "IKLeg_R_visibility_height.msg" "height.bnds[0]";
+connectAttr "IKLeg_R_translateX_height.msg" "height.bnds[1]";
+connectAttr "IKLeg_R_translateY_height.msg" "height.bnds[2]";
+connectAttr "IKLeg_R_translateZ_height.msg" "height.bnds[3]";
+connectAttr "IKLeg_R_rotate_height.msg" "height.bnds[7]";
+connectAttr "IKLeg_R_scaleX_height.msg" "height.bnds[8]";
+connectAttr "IKLeg_R_scaleY_height.msg" "height.bnds[9]";
+connectAttr "IKLeg_R_scaleZ_height.msg" "height.bnds[10]";
+connectAttr "IKLeg_R_swivel_height.msg" "height.bnds[11]";
+connectAttr "IKLeg_R_roll_height.msg" "height.bnds[12]";
+connectAttr "IKLeg_R_rollAngle_height.msg" "height.bnds[13]";
+connectAttr "IKLeg_R_stretchy_height.msg" "height.bnds[14]";
+connectAttr "IKLeg_R_antiPop_height.msg" "height.bnds[15]";
+connectAttr "IKLeg_R_Lenght1_height.msg" "height.bnds[16]";
+connectAttr "IKLeg_R_Lenght2_height.msg" "height.bnds[17]";
+connectAttr "IKLeg_R_Fatness1_height.msg" "height.bnds[18]";
+connectAttr "IKLeg_R_Fatness2_height.msg" "height.bnds[19]";
+connectAttr "IKLeg_R_volume_height.msg" "height.bnds[20]";
+connectAttr "IKLeg_L_visibility_height.msg" "height.bnds[21]";
+connectAttr "IKLeg_L_translateX_height.msg" "height.bnds[22]";
+connectAttr "IKLeg_L_translateY_height.msg" "height.bnds[23]";
+connectAttr "IKLeg_L_translateZ_height.msg" "height.bnds[24]";
+connectAttr "IKLeg_L_rotate_height.msg" "height.bnds[28]";
+connectAttr "IKLeg_L_scaleX_height.msg" "height.bnds[29]";
+connectAttr "IKLeg_L_scaleY_height.msg" "height.bnds[30]";
+connectAttr "IKLeg_L_scaleZ_height.msg" "height.bnds[31]";
+connectAttr "IKLeg_L_swivel_height.msg" "height.bnds[32]";
+connectAttr "IKLeg_L_roll_height.msg" "height.bnds[33]";
+connectAttr "IKLeg_L_rollAngle_height.msg" "height.bnds[34]";
+connectAttr "IKLeg_L_stretchy_height.msg" "height.bnds[35]";
+connectAttr "IKLeg_L_antiPop_height.msg" "height.bnds[36]";
+connectAttr "IKLeg_L_Lenght1_height.msg" "height.bnds[37]";
+connectAttr "IKLeg_L_Lenght2_height.msg" "height.bnds[38]";
+connectAttr "IKLeg_L_Fatness1_height.msg" "height.bnds[39]";
+connectAttr "IKLeg_L_Fatness2_height.msg" "height.bnds[40]";
+connectAttr "IKLeg_L_volume_height.msg" "height.bnds[41]";
+connectAttr "RootX_M_visibility_height.msg" "height.bnds[42]";
+connectAttr "RootX_M_translateX_height.msg" "height.bnds[43]";
+connectAttr "RootX_M_translateY_height.msg" "height.bnds[44]";
+connectAttr "RootX_M_translateZ_height.msg" "height.bnds[45]";
+connectAttr "RootX_M_rotate_height.msg" "height.bnds[49]";
+connectAttr "RootX_M_CenterBtwFeet_height.msg" "height.bnds[50]";
+connectAttr "height.bgwt" "IKLeg_R_visibility_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_visibility_height.wb";
+connectAttr "IKLeg_R_visibility.o" "IKLeg_R_visibility_height.ia";
+connectAttr "IKLeg_R_visibility_height_inputB.o" "IKLeg_R_visibility_height.ib";
+connectAttr "height.bgwt" "IKLeg_R_translateX_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_translateX_height.wb";
+connectAttr "IKLeg_R_translateX.o" "IKLeg_R_translateX_height.ia";
+connectAttr "IKLeg_R_translateX_height_inputB.o" "IKLeg_R_translateX_height.ib";
+connectAttr "height.bgwt" "IKLeg_R_translateY_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_translateY_height.wb";
+connectAttr "IKLeg_R_translateY.o" "IKLeg_R_translateY_height.ia";
+connectAttr "IKLeg_R_translateY_height_inputB.o" "IKLeg_R_translateY_height.ib";
+connectAttr "height.bgwt" "IKLeg_R_translateZ_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_translateZ_height.wb";
+connectAttr "IKLeg_R_translateZ.o" "IKLeg_R_translateZ_height.ia";
+connectAttr "IKLeg_R_translateZ_height_inputB.o" "IKLeg_R_translateZ_height.ib";
+connectAttr "IKLeg_R_rotateX.o" "IKLeg_R_rotate_height.iax";
+connectAttr "IKLeg_R_rotateY.o" "IKLeg_R_rotate_height.iay";
+connectAttr "IKLeg_R_rotateZ.o" "IKLeg_R_rotate_height.iaz";
+connectAttr "height.oram" "IKLeg_R_rotate_height.acm";
+connectAttr "height.bgwt" "IKLeg_R_rotate_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_rotate_height.wb";
+connectAttr "IKLeg_R_rotate_height_inputBX.o" "IKLeg_R_rotate_height.ibx";
+connectAttr "IKLeg_R_rotate_height_inputBY.o" "IKLeg_R_rotate_height.iby";
+connectAttr "IKLeg_R_rotate_height_inputBZ.o" "IKLeg_R_rotate_height.ibz";
+connectAttr "height.sam" "IKLeg_R_scaleX_height.acm";
+connectAttr "height.bgwt" "IKLeg_R_scaleX_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_scaleX_height.wb";
+connectAttr "IKLeg_R_scaleX.o" "IKLeg_R_scaleX_height.ia";
+connectAttr "IKLeg_R_scaleX_height_inputB.o" "IKLeg_R_scaleX_height.ib";
+connectAttr "height.sam" "IKLeg_R_scaleY_height.acm";
+connectAttr "height.bgwt" "IKLeg_R_scaleY_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_scaleY_height.wb";
+connectAttr "IKLeg_R_scaleY.o" "IKLeg_R_scaleY_height.ia";
+connectAttr "IKLeg_R_scaleY_height_inputB.o" "IKLeg_R_scaleY_height.ib";
+connectAttr "height.sam" "IKLeg_R_scaleZ_height.acm";
+connectAttr "height.bgwt" "IKLeg_R_scaleZ_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_scaleZ_height.wb";
+connectAttr "IKLeg_R_scaleZ.o" "IKLeg_R_scaleZ_height.ia";
+connectAttr "IKLeg_R_scaleZ_height_inputB.o" "IKLeg_R_scaleZ_height.ib";
+connectAttr "height.bgwt" "IKLeg_R_swivel_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_swivel_height.wb";
+connectAttr "IKLeg_R_swivel.o" "IKLeg_R_swivel_height.ia";
+connectAttr "IKLeg_R_swivel_height_inputB.o" "IKLeg_R_swivel_height.ib";
+connectAttr "height.bgwt" "IKLeg_R_roll_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_roll_height.wb";
+connectAttr "IKLeg_R_roll.o" "IKLeg_R_roll_height.ia";
+connectAttr "IKLeg_R_roll_height_inputB.o" "IKLeg_R_roll_height.ib";
+connectAttr "height.bgwt" "IKLeg_R_rollAngle_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_rollAngle_height.wb";
+connectAttr "IKLeg_R_rollAngle.o" "IKLeg_R_rollAngle_height.ia";
+connectAttr "IKLeg_R_rollAngle_height_inputB.o" "IKLeg_R_rollAngle_height.ib";
+connectAttr "height.bgwt" "IKLeg_R_stretchy_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_stretchy_height.wb";
+connectAttr "IKLeg_R_stretchy.o" "IKLeg_R_stretchy_height.ia";
+connectAttr "IKLeg_R_stretchy_height_inputB.o" "IKLeg_R_stretchy_height.ib";
+connectAttr "height.bgwt" "IKLeg_R_antiPop_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_antiPop_height.wb";
+connectAttr "IKLeg_R_antiPop.o" "IKLeg_R_antiPop_height.ia";
+connectAttr "IKLeg_R_antiPop_height_inputB.o" "IKLeg_R_antiPop_height.ib";
+connectAttr "height.bgwt" "IKLeg_R_Lenght1_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_Lenght1_height.wb";
+connectAttr "IKLeg_R_Lenght1.o" "IKLeg_R_Lenght1_height.ia";
+connectAttr "IKLeg_R_Lenght1_height_inputB.o" "IKLeg_R_Lenght1_height.ib";
+connectAttr "height.bgwt" "IKLeg_R_Lenght2_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_Lenght2_height.wb";
+connectAttr "IKLeg_R_Lenght2.o" "IKLeg_R_Lenght2_height.ia";
+connectAttr "IKLeg_R_Lenght2_height_inputB.o" "IKLeg_R_Lenght2_height.ib";
+connectAttr "height.bgwt" "IKLeg_R_Fatness1_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_Fatness1_height.wb";
+connectAttr "IKLeg_R_Fatness1.o" "IKLeg_R_Fatness1_height.ia";
+connectAttr "IKLeg_R_Fatness1_height_inputB.o" "IKLeg_R_Fatness1_height.ib";
+connectAttr "height.bgwt" "IKLeg_R_Fatness2_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_Fatness2_height.wb";
+connectAttr "IKLeg_R_Fatness2.o" "IKLeg_R_Fatness2_height.ia";
+connectAttr "IKLeg_R_Fatness2_height_inputB.o" "IKLeg_R_Fatness2_height.ib";
+connectAttr "height.bgwt" "IKLeg_R_volume_height.wa";
+connectAttr "height.fgwt" "IKLeg_R_volume_height.wb";
+connectAttr "IKLeg_R_volume.o" "IKLeg_R_volume_height.ia";
+connectAttr "IKLeg_R_volume_height_inputB.o" "IKLeg_R_volume_height.ib";
+connectAttr "height.bgwt" "IKLeg_L_visibility_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_visibility_height.wb";
+connectAttr "IKLeg_L_visibility.o" "IKLeg_L_visibility_height.ia";
+connectAttr "IKLeg_L_visibility_height_inputB.o" "IKLeg_L_visibility_height.ib";
+connectAttr "height.bgwt" "IKLeg_L_translateX_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_translateX_height.wb";
+connectAttr "IKLeg_L_translateX.o" "IKLeg_L_translateX_height.ia";
+connectAttr "IKLeg_L_translateX_height_inputB.o" "IKLeg_L_translateX_height.ib";
+connectAttr "height.bgwt" "IKLeg_L_translateY_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_translateY_height.wb";
+connectAttr "IKLeg_L_translateY.o" "IKLeg_L_translateY_height.ia";
+connectAttr "IKLeg_L_translateY_height_inputB.o" "IKLeg_L_translateY_height.ib";
+connectAttr "height.bgwt" "IKLeg_L_translateZ_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_translateZ_height.wb";
+connectAttr "IKLeg_L_translateZ.o" "IKLeg_L_translateZ_height.ia";
+connectAttr "IKLeg_L_translateZ_height_inputB.o" "IKLeg_L_translateZ_height.ib";
+connectAttr "IKLeg_L_rotateX.o" "IKLeg_L_rotate_height.iax";
+connectAttr "IKLeg_L_rotateY.o" "IKLeg_L_rotate_height.iay";
+connectAttr "IKLeg_L_rotateZ.o" "IKLeg_L_rotate_height.iaz";
+connectAttr "height.oram" "IKLeg_L_rotate_height.acm";
+connectAttr "height.bgwt" "IKLeg_L_rotate_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_rotate_height.wb";
+connectAttr "IKLeg_L_rotate_height_inputBX.o" "IKLeg_L_rotate_height.ibx";
+connectAttr "IKLeg_L_rotate_height_inputBY.o" "IKLeg_L_rotate_height.iby";
+connectAttr "IKLeg_L_rotate_height_inputBZ.o" "IKLeg_L_rotate_height.ibz";
+connectAttr "height.sam" "IKLeg_L_scaleX_height.acm";
+connectAttr "height.bgwt" "IKLeg_L_scaleX_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_scaleX_height.wb";
+connectAttr "IKLeg_L_scaleX.o" "IKLeg_L_scaleX_height.ia";
+connectAttr "IKLeg_L_scaleX_height_inputB.o" "IKLeg_L_scaleX_height.ib";
+connectAttr "height.sam" "IKLeg_L_scaleY_height.acm";
+connectAttr "height.bgwt" "IKLeg_L_scaleY_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_scaleY_height.wb";
+connectAttr "IKLeg_L_scaleY.o" "IKLeg_L_scaleY_height.ia";
+connectAttr "IKLeg_L_scaleY_height_inputB.o" "IKLeg_L_scaleY_height.ib";
+connectAttr "height.sam" "IKLeg_L_scaleZ_height.acm";
+connectAttr "height.bgwt" "IKLeg_L_scaleZ_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_scaleZ_height.wb";
+connectAttr "IKLeg_L_scaleZ.o" "IKLeg_L_scaleZ_height.ia";
+connectAttr "IKLeg_L_scaleZ_height_inputB.o" "IKLeg_L_scaleZ_height.ib";
+connectAttr "height.bgwt" "IKLeg_L_swivel_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_swivel_height.wb";
+connectAttr "IKLeg_L_swivel.o" "IKLeg_L_swivel_height.ia";
+connectAttr "IKLeg_L_swivel_height_inputB.o" "IKLeg_L_swivel_height.ib";
+connectAttr "height.bgwt" "IKLeg_L_roll_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_roll_height.wb";
+connectAttr "IKLeg_L_roll.o" "IKLeg_L_roll_height.ia";
+connectAttr "IKLeg_L_roll_height_inputB.o" "IKLeg_L_roll_height.ib";
+connectAttr "height.bgwt" "IKLeg_L_rollAngle_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_rollAngle_height.wb";
+connectAttr "IKLeg_L_rollAngle.o" "IKLeg_L_rollAngle_height.ia";
+connectAttr "IKLeg_L_rollAngle_height_inputB.o" "IKLeg_L_rollAngle_height.ib";
+connectAttr "height.bgwt" "IKLeg_L_stretchy_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_stretchy_height.wb";
+connectAttr "IKLeg_L_stretchy.o" "IKLeg_L_stretchy_height.ia";
+connectAttr "IKLeg_L_stretchy_height_inputB.o" "IKLeg_L_stretchy_height.ib";
+connectAttr "height.bgwt" "IKLeg_L_antiPop_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_antiPop_height.wb";
+connectAttr "IKLeg_L_antiPop.o" "IKLeg_L_antiPop_height.ia";
+connectAttr "IKLeg_L_antiPop_height_inputB.o" "IKLeg_L_antiPop_height.ib";
+connectAttr "height.bgwt" "IKLeg_L_Lenght1_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_Lenght1_height.wb";
+connectAttr "IKLeg_L_Lenght1.o" "IKLeg_L_Lenght1_height.ia";
+connectAttr "IKLeg_L_Lenght1_height_inputB.o" "IKLeg_L_Lenght1_height.ib";
+connectAttr "height.bgwt" "IKLeg_L_Lenght2_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_Lenght2_height.wb";
+connectAttr "IKLeg_L_Lenght2.o" "IKLeg_L_Lenght2_height.ia";
+connectAttr "IKLeg_L_Lenght2_height_inputB.o" "IKLeg_L_Lenght2_height.ib";
+connectAttr "height.bgwt" "IKLeg_L_Fatness1_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_Fatness1_height.wb";
+connectAttr "IKLeg_L_Fatness1.o" "IKLeg_L_Fatness1_height.ia";
+connectAttr "IKLeg_L_Fatness1_height_inputB.o" "IKLeg_L_Fatness1_height.ib";
+connectAttr "height.bgwt" "IKLeg_L_Fatness2_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_Fatness2_height.wb";
+connectAttr "IKLeg_L_Fatness2.o" "IKLeg_L_Fatness2_height.ia";
+connectAttr "IKLeg_L_Fatness2_height_inputB.o" "IKLeg_L_Fatness2_height.ib";
+connectAttr "height.bgwt" "IKLeg_L_volume_height.wa";
+connectAttr "height.fgwt" "IKLeg_L_volume_height.wb";
+connectAttr "IKLeg_L_volume.o" "IKLeg_L_volume_height.ia";
+connectAttr "IKLeg_L_volume_height_inputB.o" "IKLeg_L_volume_height.ib";
+connectAttr "height.bgwt" "RootX_M_visibility_height.wa";
+connectAttr "height.fgwt" "RootX_M_visibility_height.wb";
+connectAttr "RootX_M_visibility.o" "RootX_M_visibility_height.ia";
+connectAttr "RootX_M_visibility_height_inputB.o" "RootX_M_visibility_height.ib";
+connectAttr "height.bgwt" "RootX_M_translateX_height.wa";
+connectAttr "height.fgwt" "RootX_M_translateX_height.wb";
+connectAttr "RootX_M_translateX.o" "RootX_M_translateX_height.ia";
+connectAttr "RootX_M_translateX_height_inputB.o" "RootX_M_translateX_height.ib";
+connectAttr "height.bgwt" "RootX_M_translateY_height.wa";
+connectAttr "height.fgwt" "RootX_M_translateY_height.wb";
+connectAttr "RootX_M_translateY.o" "RootX_M_translateY_height.ia";
+connectAttr "RootX_M_translateY_height_inputB.o" "RootX_M_translateY_height.ib";
+connectAttr "height.bgwt" "RootX_M_translateZ_height.wa";
+connectAttr "height.fgwt" "RootX_M_translateZ_height.wb";
+connectAttr "RootX_M_translateZ.o" "RootX_M_translateZ_height.ia";
+connectAttr "RootX_M_translateZ_height_inputB.o" "RootX_M_translateZ_height.ib";
+connectAttr "RootX_M_rotateX.o" "RootX_M_rotate_height.iax";
+connectAttr "RootX_M_rotateY.o" "RootX_M_rotate_height.iay";
+connectAttr "RootX_M_rotateZ.o" "RootX_M_rotate_height.iaz";
+connectAttr "height.oram" "RootX_M_rotate_height.acm";
+connectAttr "height.bgwt" "RootX_M_rotate_height.wa";
+connectAttr "height.fgwt" "RootX_M_rotate_height.wb";
+connectAttr "RootX_M_rotate_height_inputBX.o" "RootX_M_rotate_height.ibx";
+connectAttr "RootX_M_rotate_height_inputBY.o" "RootX_M_rotate_height.iby";
+connectAttr "RootX_M_rotate_height_inputBZ.o" "RootX_M_rotate_height.ibz";
+connectAttr "height.bgwt" "RootX_M_CenterBtwFeet_height.wa";
+connectAttr "height.fgwt" "RootX_M_CenterBtwFeet_height.wb";
+connectAttr "RootX_M_CenterBtwFeet.o" "RootX_M_CenterBtwFeet_height.ia";
+connectAttr "RootX_M_CenterBtwFeet_height_inputB.o" "RootX_M_CenterBtwFeet_height.ib"
+		;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of FL_StartStop_Run_90_R.ma
