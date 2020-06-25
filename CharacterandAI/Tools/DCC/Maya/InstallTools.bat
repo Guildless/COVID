@@ -29,7 +29,7 @@ goto setpath
 :setpath
 echo _________________________________________________________
 echo Source Path:
-set sourcePath=%cd%
+set sourcePath=%cd%\
 echo %sourcePath%
 
 echo Target Path:
@@ -37,14 +37,15 @@ set targetPath=%UserProfile%\Documents\maya\%model%\
 echo %targetPath%
 echo _________________________________________________________
 echo Validate both paths as they will be used to copy the tools.
-goto end
+pause
+goto copyfiles
 
 :copyfiles
-xcopy /s /e /d /y sourcePath targetPath 
+xcopy /s /e /d /y "%sourcePath%*.*" "%targetPath%"
 goto end
 
 :badentry
-echo Bad entry.
+echo Bad entry. Click on any key to exit.
 pause
 
 :end
