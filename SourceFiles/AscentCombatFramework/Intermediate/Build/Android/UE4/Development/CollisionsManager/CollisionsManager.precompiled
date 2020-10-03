@@ -1,0 +1,8 @@
+{
+	"OutputFiles": [
+		"Module.CollisionsManager.cppa7.o",
+		"Module.CollisionsManager.cppa8.o",
+		"Module.CollisionsManager.gen.cppa7.o",
+		"Module.CollisionsManager.gen.cppa8.o"
+	]
+}

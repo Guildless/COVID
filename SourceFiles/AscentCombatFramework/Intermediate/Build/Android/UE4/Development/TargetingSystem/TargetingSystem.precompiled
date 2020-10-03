@@ -1,0 +1,8 @@
+{
+	"OutputFiles": [
+		"Module.TargetingSystem.cppa7.o",
+		"Module.TargetingSystem.cppa8.o",
+		"Module.TargetingSystem.gen.cppa7.o",
+		"Module.TargetingSystem.gen.cppa8.o"
+	]
+}

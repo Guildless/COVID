@@ -1,0 +1,8 @@
+{
+	"OutputFiles": [
+		"Module.MusicManager.cppa7.o",
+		"Module.MusicManager.cppa8.o",
+		"Module.MusicManager.gen.cppa7.o",
+		"Module.MusicManager.gen.cppa8.o"
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"BuildId": "13144385",
+	"Modules": 
+	{
+		"AbilitySystem": "UE4Editor-AbilitySystem.dll",
+		"AdvancedRPGSystem": "UE4Editor-AdvancedRPGSystem.dll",
+		"AscentCombatFramework": "UE4Editor-AscentCombatFramework.dll",
+		"CinematicCameraManager": "UE4Editor-CinematicCameraManager.dll",
+		"CollisionsManager": "UE4Editor-CollisionsManager.dll",
+		"CombinedAnimationsSystem": "UE4Editor-CombinedAnimationsSystem.dll",
+		"CraftingSystem": "UE4Editor-CraftingSystem.dll",
+		"ExecutionsSystem": "UE4Editor-ExecutionsSystem.dll",
+		"LevelStreamer": "UE4Editor-LevelStreamer.dll",
+		"MountSystem": "UE4Editor-MountSystem.dll",
+		"MusicManager": "UE4Editor-MusicManager.dll",
+		"SpellActions": "UE4Editor-SpellActions.dll",
+		"TargetingSystem": "UE4Editor-TargetingSystem.dll"
+	}
+}

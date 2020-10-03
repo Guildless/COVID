@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"D:\\Projects\\Proto\\Guildless\\Source\\Guildless\\Guildless.Build.cs",
-		"D:\\Projects\\Proto\\Guildless\\Source\\Guildless.Target.cs",
-		"D:\\Projects\\Proto\\Guildless\\Source\\GuildlessEditor.Target.cs"
+		"D:\\Projects\\COVID\\Guildless\\Source\\Guildless\\Guildless.Build.cs",
+		"D:\\Projects\\COVID\\Guildless\\Source\\Guildless.Target.cs",
+		"D:\\Projects\\COVID\\Guildless\\Source\\GuildlessEditor.Target.cs"
 	],
 	"EngineVersion": "4.25.3"
 }

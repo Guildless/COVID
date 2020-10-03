@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "Guildless",
-			"Path": "D:\\Projects\\Proto\\Guildless\\Source\\Guildless.Target.cs",
+			"Path": "D:\\Projects\\COVID\\Guildless\\Source\\Guildless.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "GuildlessEditor",
-			"Path": "D:\\Projects\\Proto\\Guildless\\Source\\GuildlessEditor.Target.cs",
+			"Path": "D:\\Projects\\COVID\\Guildless\\Source\\GuildlessEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

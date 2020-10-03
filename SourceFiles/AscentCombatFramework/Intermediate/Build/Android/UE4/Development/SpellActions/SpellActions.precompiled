@@ -1,0 +1,8 @@
+{
+	"OutputFiles": [
+		"Module.SpellActions.cppa7.o",
+		"Module.SpellActions.cppa8.o",
+		"Module.SpellActions.gen.cppa7.o",
+		"Module.SpellActions.gen.cppa8.o"
+	]
+}

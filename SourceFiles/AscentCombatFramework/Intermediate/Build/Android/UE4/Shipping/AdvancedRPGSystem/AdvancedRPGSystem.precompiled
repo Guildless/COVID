@@ -1,0 +1,8 @@
+{
+	"OutputFiles": [
+		"Module.AdvancedRPGSystem.cppa7.o",
+		"Module.AdvancedRPGSystem.cppa8.o",
+		"Module.AdvancedRPGSystem.gen.cppa7.o",
+		"Module.AdvancedRPGSystem.gen.cppa8.o"
+	]
+}

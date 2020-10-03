@@ -1,0 +1,420 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AACFAIController;
+#ifdef ASCENTCOMBATFRAMEWORK_ACFActionCondition_generated_h
+#error "ACFActionCondition.generated.h already included, missing '#pragma once' in ACFActionCondition.h"
+#endif
+#define ASCENTCOMBATFRAMEWORK_ACFActionCondition_generated_h
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_SPARSE_DATA
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_RPC_WRAPPERS \
+	virtual bool IsConditionMet_Implementation(const AACFAIController* controller); \
+ \
+	DECLARE_FUNCTION(execIsConditionMet);
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execIsConditionMet);
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_EVENT_PARMS \
+	struct ACFActionCondition_eventIsConditionMet_Parms \
+	{ \
+		const AACFAIController* controller; \
+		bool ReturnValue; \
+ \
+		/** Constructor, initializes return property only **/ \
+		ACFActionCondition_eventIsConditionMet_Parms() \
+			: ReturnValue(false) \
+		{ \
+		} \
+	};
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_CALLBACK_WRAPPERS
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUACFActionCondition(); \
+	friend struct Z_Construct_UClass_UACFActionCondition_Statics; \
+public: \
+	DECLARE_CLASS(UACFActionCondition, UObject, COMPILED_IN_FLAGS(CLASS_Abstract), CASTCLASS_None, TEXT("/Script/AscentCombatFramework"), NO_API) \
+	DECLARE_SERIALIZER(UACFActionCondition)
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_INCLASS \
+private: \
+	static void StaticRegisterNativesUACFActionCondition(); \
+	friend struct Z_Construct_UClass_UACFActionCondition_Statics; \
+public: \
+	DECLARE_CLASS(UACFActionCondition, UObject, COMPILED_IN_FLAGS(CLASS_Abstract), CASTCLASS_None, TEXT("/Script/AscentCombatFramework"), NO_API) \
+	DECLARE_SERIALIZER(UACFActionCondition)
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UACFActionCondition(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UACFActionCondition) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UACFActionCondition); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UACFActionCondition); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UACFActionCondition(UACFActionCondition&&); \
+	NO_API UACFActionCondition(const UACFActionCondition&); \
+public:
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UACFActionCondition(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UACFActionCondition(UACFActionCondition&&); \
+	NO_API UACFActionCondition(const UACFActionCondition&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UACFActionCondition); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UACFActionCondition); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UACFActionCondition)
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_PRIVATE_PROPERTY_OFFSET
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_12_PROLOG \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_EVENT_PARMS
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_SPARSE_DATA \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_RPC_WRAPPERS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_CALLBACK_WRAPPERS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_INCLASS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_SPARSE_DATA \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_CALLBACK_WRAPPERS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_INCLASS_NO_PURE_DECLS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_15_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> ASCENTCOMBATFRAMEWORK_API UClass* StaticClass<class UACFActionCondition>();
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_SPARSE_DATA
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_RPC_WRAPPERS
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_RPC_WRAPPERS_NO_PURE_DECLS
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUACFORActionCondition(); \
+	friend struct Z_Construct_UClass_UACFORActionCondition_Statics; \
+public: \
+	DECLARE_CLASS(UACFORActionCondition, UACFActionCondition, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/AscentCombatFramework"), NO_API) \
+	DECLARE_SERIALIZER(UACFORActionCondition)
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_INCLASS \
+private: \
+	static void StaticRegisterNativesUACFORActionCondition(); \
+	friend struct Z_Construct_UClass_UACFORActionCondition_Statics; \
+public: \
+	DECLARE_CLASS(UACFORActionCondition, UACFActionCondition, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/AscentCombatFramework"), NO_API) \
+	DECLARE_SERIALIZER(UACFORActionCondition)
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UACFORActionCondition(const FObjectInitializer& ObjectInitializer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UACFORActionCondition) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UACFORActionCondition); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UACFORActionCondition); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UACFORActionCondition(UACFORActionCondition&&); \
+	NO_API UACFORActionCondition(const UACFORActionCondition&); \
+public:
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_ENHANCED_CONSTRUCTORS \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UACFORActionCondition(UACFORActionCondition&&); \
+	NO_API UACFORActionCondition(const UACFORActionCondition&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UACFORActionCondition); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UACFORActionCondition); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UACFORActionCondition)
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__OrConditions() { return STRUCT_OFFSET(UACFORActionCondition, OrConditions); }
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_24_PROLOG
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_SPARSE_DATA \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_RPC_WRAPPERS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_INCLASS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_SPARSE_DATA \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_INCLASS_NO_PURE_DECLS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_27_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> ASCENTCOMBATFRAMEWORK_API UClass* StaticClass<class UACFORActionCondition>();
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_SPARSE_DATA
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_RPC_WRAPPERS
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_RPC_WRAPPERS_NO_PURE_DECLS
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUACFANDActionCondition(); \
+	friend struct Z_Construct_UClass_UACFANDActionCondition_Statics; \
+public: \
+	DECLARE_CLASS(UACFANDActionCondition, UACFActionCondition, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/AscentCombatFramework"), NO_API) \
+	DECLARE_SERIALIZER(UACFANDActionCondition)
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_INCLASS \
+private: \
+	static void StaticRegisterNativesUACFANDActionCondition(); \
+	friend struct Z_Construct_UClass_UACFANDActionCondition_Statics; \
+public: \
+	DECLARE_CLASS(UACFANDActionCondition, UACFActionCondition, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/AscentCombatFramework"), NO_API) \
+	DECLARE_SERIALIZER(UACFANDActionCondition)
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UACFANDActionCondition(const FObjectInitializer& ObjectInitializer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UACFANDActionCondition) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UACFANDActionCondition); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UACFANDActionCondition); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UACFANDActionCondition(UACFANDActionCondition&&); \
+	NO_API UACFANDActionCondition(const UACFANDActionCondition&); \
+public:
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_ENHANCED_CONSTRUCTORS \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UACFANDActionCondition(UACFANDActionCondition&&); \
+	NO_API UACFANDActionCondition(const UACFANDActionCondition&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UACFANDActionCondition); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UACFANDActionCondition); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UACFANDActionCondition)
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_PRIVATE_PROPERTY_OFFSET
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_46_PROLOG
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_SPARSE_DATA \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_RPC_WRAPPERS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_INCLASS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_SPARSE_DATA \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_RPC_WRAPPERS_NO_PURE_DECLS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_INCLASS_NO_PURE_DECLS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_49_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> ASCENTCOMBATFRAMEWORK_API UClass* StaticClass<class UACFANDActionCondition>();
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_SPARSE_DATA
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_RPC_WRAPPERS
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_RPC_WRAPPERS_NO_PURE_DECLS
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUACFDistanceActionCondition(); \
+	friend struct Z_Construct_UClass_UACFDistanceActionCondition_Statics; \
+public: \
+	DECLARE_CLASS(UACFDistanceActionCondition, UACFActionCondition, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/AscentCombatFramework"), NO_API) \
+	DECLARE_SERIALIZER(UACFDistanceActionCondition)
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_INCLASS \
+private: \
+	static void StaticRegisterNativesUACFDistanceActionCondition(); \
+	friend struct Z_Construct_UClass_UACFDistanceActionCondition_Statics; \
+public: \
+	DECLARE_CLASS(UACFDistanceActionCondition, UACFActionCondition, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/AscentCombatFramework"), NO_API) \
+	DECLARE_SERIALIZER(UACFDistanceActionCondition)
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UACFDistanceActionCondition(const FObjectInitializer& ObjectInitializer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UACFDistanceActionCondition) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UACFDistanceActionCondition); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UACFDistanceActionCondition); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UACFDistanceActionCondition(UACFDistanceActionCondition&&); \
+	NO_API UACFDistanceActionCondition(const UACFDistanceActionCondition&); \
+public:
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_ENHANCED_CONSTRUCTORS \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UACFDistanceActionCondition(UACFDistanceActionCondition&&); \
+	NO_API UACFDistanceActionCondition(const UACFDistanceActionCondition&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UACFDistanceActionCondition); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UACFDistanceActionCondition); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UACFDistanceActionCondition)
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_PRIVATE_PROPERTY_OFFSET
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_68_PROLOG
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_SPARSE_DATA \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_RPC_WRAPPERS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_INCLASS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_SPARSE_DATA \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_RPC_WRAPPERS_NO_PURE_DECLS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_INCLASS_NO_PURE_DECLS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_71_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> ASCENTCOMBATFRAMEWORK_API UClass* StaticClass<class UACFDistanceActionCondition>();
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_SPARSE_DATA
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_RPC_WRAPPERS
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_RPC_WRAPPERS_NO_PURE_DECLS
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUACFStatisticActionCondition(); \
+	friend struct Z_Construct_UClass_UACFStatisticActionCondition_Statics; \
+public: \
+	DECLARE_CLASS(UACFStatisticActionCondition, UACFActionCondition, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/AscentCombatFramework"), NO_API) \
+	DECLARE_SERIALIZER(UACFStatisticActionCondition)
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_INCLASS \
+private: \
+	static void StaticRegisterNativesUACFStatisticActionCondition(); \
+	friend struct Z_Construct_UClass_UACFStatisticActionCondition_Statics; \
+public: \
+	DECLARE_CLASS(UACFStatisticActionCondition, UACFActionCondition, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/AscentCombatFramework"), NO_API) \
+	DECLARE_SERIALIZER(UACFStatisticActionCondition)
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UACFStatisticActionCondition(const FObjectInitializer& ObjectInitializer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UACFStatisticActionCondition) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UACFStatisticActionCondition); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UACFStatisticActionCondition); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UACFStatisticActionCondition(UACFStatisticActionCondition&&); \
+	NO_API UACFStatisticActionCondition(const UACFStatisticActionCondition&); \
+public:
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_ENHANCED_CONSTRUCTORS \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API UACFStatisticActionCondition(UACFStatisticActionCondition&&); \
+	NO_API UACFStatisticActionCondition(const UACFStatisticActionCondition&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UACFStatisticActionCondition); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UACFStatisticActionCondition); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UACFStatisticActionCondition)
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_PRIVATE_PROPERTY_OFFSET
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_88_PROLOG
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_SPARSE_DATA \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_RPC_WRAPPERS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_INCLASS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_PRIVATE_PROPERTY_OFFSET \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_SPARSE_DATA \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_RPC_WRAPPERS_NO_PURE_DECLS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_INCLASS_NO_PURE_DECLS \
+	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h_91_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> ASCENTCOMBATFRAMEWORK_API UClass* StaticClass<class UACFStatisticActionCondition>();
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_AI_ACFActionCondition_h
+
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
