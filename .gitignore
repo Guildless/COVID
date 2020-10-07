@@ -1,4 +1,5 @@
 CharacterandAI/Saved/Autosaves
+CharacterandAI/Saved/Screenshots
 CharacterandAI/Saved/Backup
 CharacterandAI/Saved/Collections
 CharacterandAI/Saved/Crashes
@@ -9,6 +10,7 @@ CharacterandAI/Saved/Logs/CharacterandAI.log
 CharacterandAI/Intermediate/CachedAssetRegistry.bin
 CharacterandAI/Saved/Logs/CharacterandAI.log
 CharacterandAI/Saved/Logs/CharacterandAI.log
+CrashReportClient.ini
 *.log
 CharacterandAI/Intermediate/CachedAssetRegistry.bin
 *.bin
@@ -27,3 +29,5 @@ CharacterandAI/Saved/Logs/CharacterandAI.log
 CharacterandAI/Saved/Config/Windows/EditorPerProjectUserSettings.ini
 CharacterandAI/Saved/Config/CrashReportClient/UE4CC-Windows-DFDDBE5B48910655CF03C59897B64237/CrashReportClient.ini
 CharacterandAI/Saved/Config/CrashReportClient/UE4CC-Windows-6C359C894C4577CA3D3D3D9CA57B8140/CrashReportClient.ini
+Guildless/Saved/AutoScreenshot.png
+Guildless/Saved/AutoScreenshot.png
