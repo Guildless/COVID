@@ -1,17 +1,18 @@
 # https://github.com/github/gitignore/blob/master/UnrealEngine.gitignore#L72
 
-*/Saved/Autosaves/*
-*/Saved/Screenshots/*
-*/Saved/Backup/*
-*/Saved/Collections/*
-*/Saved/Crashes/*
-*/Saved/Logs/*
-*/Saved/Config/CrashReportClient/*
+#*/Saved/Autosaves/*
+#*/Saved/Screenshots/*
+#*/Saved/Backup/*
+#*/Saved/Collections/*
+#*/Saved/Crashes/*
+#*/Saved/Logs/*
+#*/Saved/Config/CrashReportClient/*
+
+#*/Saved/AutoScreenshot.png
+#*/Saved/Config/Windows/EditorPerProjectUserSettings.ini
+
+*/Saved/*
 */Intermediate/*
-
-*/Saved/AutoScreenshot.png
-
-*/Saved/Config/Windows/EditorPerProjectUserSettings.ini
 
 *.log
 *.bin
