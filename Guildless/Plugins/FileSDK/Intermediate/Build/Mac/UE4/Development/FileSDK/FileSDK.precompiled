@@ -1,0 +1,6 @@
+{
+	"OutputFiles": [
+		"Module.FileSDK.cpp.o",
+		"Module.FileSDK.gen.cpp.o"
+	]
+}
