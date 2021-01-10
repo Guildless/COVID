@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Guildless.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{B96DD39D-1AD6-4860-955C-4660070C235D}</UniqueIdentifier>
+      <UniqueIdentifier>{1F46233A-9C4E-4D1E-B7EB-2CB6399218D8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Guildless.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,9 @@
     <None Include="..\..\Source\GuildlessEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\Guildless.png" />
     <Filter Include="Config">
-      <UniqueIdentifier>{9F11EDA3-2E16-478C-A853-614E14069008}</UniqueIdentifier>
+      <UniqueIdentifier>{6BCE948B-704C-48E6-918F-099168AF5590}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -23,8 +24,1196 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultPlugins.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Plugins">
+      <UniqueIdentifier>{0409FF04-F05E-4197-938B-65ED858B9074}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\AscentCombatFramework">
+      <UniqueIdentifier>{16597A1F-E8FE-4715-A1AA-F8FA0A4A2718}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\AscentCombatFramework\Source">
+      <UniqueIdentifier>{7DE5455C-01E3-420C-8336-F18A1F34B680}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AbilitySystem">
+      <UniqueIdentifier>{3ACEECB3-9524-4EB3-B69D-919E1F75FC35}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\AbilitySystem.Build.cs">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem</Filter>
+    </None>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AbilitySystem\Private">
+      <UniqueIdentifier>{E16F2B34-7F27-4380-A524-B423DE5670EF}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\Private\AbilitySystem.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\Private\ACFAbilityFunctionLibrary.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\Private\ACFAbilityManagerComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\Private\ACFAbilitySystemComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\Private\ACFAbilityTypes.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AbilitySystem\Private\Abilities">
+      <UniqueIdentifier>{8076A289-6576-4F24-B26C-22110CE05AAF}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\Private\Abilities\ACFAbility.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem\Private\Abilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\Private\Abilities\ACFActionAbility.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem\Private\Abilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\Private\Abilities\ACFPassiveAbility.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem\Private\Abilities</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AbilitySystem\Public">
+      <UniqueIdentifier>{5A59BFEC-5A1E-403E-A1A5-DFB9A2B1570E}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\Public\AbilitySystem.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\Public\ACFAbilityFunctionLibrary.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\Public\ACFAbilityManagerComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\Public\ACFAbilitySystemComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\Public\ACFAbilityTypes.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AbilitySystem\Public\Abilities">
+      <UniqueIdentifier>{9D6AC4D3-4155-4159-B253-24A600EB8FF6}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\Public\Abilities\ACFAbility.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem\Public\Abilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\Public\Abilities\ACFActionAbility.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem\Public\Abilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AbilitySystem\Public\Abilities\ACFPassiveAbility.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AbilitySystem\Public\Abilities</Filter>
+    </ClInclude>
+    <None Include="..\..\Plugins\AscentCombatFramework\AscentCombatFramework.uplugin">
+      <Filter>Plugins\AscentCombatFramework</Filter>
+    </None>
+    <Filter Include="Plugins\AscentCombatFramework\Resources">
+      <UniqueIdentifier>{F40A560F-8591-417F-9493-B16429CD687E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AscentCombatFramework\Resources\Icon128.png">
+      <Filter>Plugins\AscentCombatFramework\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\ColorWheelPlugin">
+      <UniqueIdentifier>{F4E69D0E-AC6F-4A9A-BD0F-E733BBACC6F0}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\ColorWheelPlugin\ColorWheelPlugin.uplugin">
+      <Filter>Plugins\ColorWheelPlugin</Filter>
+    </None>
+    <Filter Include="Plugins\ColorWheelPlugin\Resources">
+      <UniqueIdentifier>{E798E60F-D818-4430-8340-4BA097FC126A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\ColorWheelPlugin\Resources\Icon128.png">
+      <Filter>Plugins\ColorWheelPlugin\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\FileSDK">
+      <UniqueIdentifier>{D60AA415-2007-45C9-88F8-EBA3345237EF}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\FileSDK\FileSDK.uplugin">
+      <Filter>Plugins\FileSDK</Filter>
+    </None>
+    <Filter Include="Plugins\FileSDK\Resources">
+      <UniqueIdentifier>{8FB8D185-227D-4AF0-991B-FB9217143D08}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\FileSDK\Resources\banner.png">
+      <Filter>Plugins\FileSDK\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\FileSDK\Resources\banner.psd">
+      <Filter>Plugins\FileSDK\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\FileSDK\Resources\ExistenceFunctions.png">
+      <Filter>Plugins\FileSDK\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\FileSDK\Resources\FileDirInfo_FileIO.png">
+      <Filter>Plugins\FileSDK\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\FileSDK\Resources\icon.psd">
+      <Filter>Plugins\FileSDK\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\FileSDK\Resources\Icon128.png">
+      <Filter>Plugins\FileSDK\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\FileSDK\Resources\Icon284.png">
+      <Filter>Plugins\FileSDK\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\FileSDK\Resources\main-image.png">
+      <Filter>Plugins\FileSDK\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\FileSDK\Resources\main-image.psd">
+      <Filter>Plugins\FileSDK\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AdvancedRPGSystem">
+      <UniqueIdentifier>{53209917-4887-4E05-BEF8-05C79546FAA0}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\AdvancedRPGSystem.Build.cs">
+      <Filter>Plugins\AscentCombatFramework\Source\AdvancedRPGSystem</Filter>
+    </None>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Private">
+      <UniqueIdentifier>{C848F212-29DB-4338-9F0F-943020B30728}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Private\AdvancedRPGSystem.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Private\ARSDeveloperSettings.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Private\ARSFunctionLibrary.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Private\ARSStatisticsComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Private\ARSStatisticsData.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Public">
+      <UniqueIdentifier>{08862E6B-F3B1-4771-8B9E-35529AF2C018}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Public\AdvancedRPGSystem.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Public\ARSDeveloperSettings.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Public\ARSFunctionLibrary.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Public\ARSStatisticsComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Public\ARSStatisticsData.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework">
+      <UniqueIdentifier>{22FE28E8-F53A-473A-B841-FD45270765AC}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\AscentCombatFramework.Build.cs">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework</Filter>
+    </None>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private">
+      <UniqueIdentifier>{C69C6BBF-6401-4C6B-84F7-FE55B5ED0C4D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\ACFDeveloperSettings.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AscentCombatFramework.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Actions">
+      <UniqueIdentifier>{066705FE-1311-4C55-8DBB-42742C780F4D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Actions\ACFAttackAction.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Actions\ACFBaseAction.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Actions\ACFHitAction.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Actions\ACFShootAction.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Actions\ACFUseItemAction.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Actions</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Actors">
+      <UniqueIdentifier>{C83008B4-3A78-47B3-9147-CD51F84875C9}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Actors\ACFActor.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Actors\ACFCharacter.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Actors</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI">
+      <UniqueIdentifier>{71D1578C-CD33-4F33-94B7-7332F2D79586}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\ACFActionCondition.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\ACFAIController.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\ACFAIGroupSpawner.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\ACFGroupAIController.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\BehavioralThree">
+      <UniqueIdentifier>{9FA33E70-6B92-47BE-91C6-5876348330C9}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\BehavioralThree\ACFCheckActionsBTService.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\BehavioralThree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\BehavioralThree\ACFUpdateCombatBTService.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\BehavioralThree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\BehavioralThree\ACFUpdatePatrolBTService.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\BehavioralThree</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\BehavioralThree\ACFUpdateStateBTService.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\BehavioralThree</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\Commands">
+      <UniqueIdentifier>{D6F582AE-37BF-48DB-90AA-F7973177664F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\Commands\ACFBaseCommand.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\Commands\ACFGoThereCommand.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\Commands</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\Components">
+      <UniqueIdentifier>{CE42F201-86A9-41A1-B686-FAB69EB8B697}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\Components\ACFCombatBehaviourComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\Components\ACFCommandsManagerComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\Components\ACFCompanionGroupAIComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\Components\ACFGroupAIComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\Components\ACFThreatManagerComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\AI\Components</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation">
+      <UniqueIdentifier>{B97CA64C-EA0D-443A-85AB-C850E499E141}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation\ACFActionSubState.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation\ACFActivateDamageNotifyState.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation\ACFAnimInstance.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation\ACFAnimset.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation\ACFNotifyAction.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation\ACFNotifyExitAction.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation\ACFNotifyFX.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation\ACFOverrideSpeedNotifyState.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation\ACFPlayImpactFXNotify.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation\ACFSlowAnimNotifyState.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Animation</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components">
+      <UniqueIdentifier>{BA7CE9E1-D9FB-48FD-A363-AE04872B02D3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components\ACFActionsManagerComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components\ACFDamageHandlerComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components\ACFEffectsDispatcherComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components\ACFEffectsManagerComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components\ACFEquipmentComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components\ACFFrontTracerComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components\ACFInteractionComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components\ACFLocomotionComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components\ACFRagdollComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components\ACFRagdollMasterComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components\ACFShootingComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components\ACFTeamManagerComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Components</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game">
+      <UniqueIdentifier>{8BD2819B-AD30-4FA2-8CC8-E64EC2E8B197}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game\ACFDamageCalculation.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game\ACFDamageType.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game\ACFData.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game\ACFFunctionLibrary.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game\ACFGameInstance.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game\ACFGameMode.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game\ACFGameState.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game\ACFPlayerController.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Game</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Interfaces">
+      <UniqueIdentifier>{9528F12F-1FB8-4476-8013-80C2391B909E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Interfaces\ACFEntityInterface.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Interfaces\ACFInteractableInterface.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Interfaces\ACFSavableInterface.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Interfaces</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items">
+      <UniqueIdentifier>{650A002D-A52A-4F29-A1D7-DDD6DCD34CA6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items\ACFAccessory.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items\ACFArmor.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items\ACFConsumable.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items\ACFEquippableItem.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items\ACFItem.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items\ACFItemTypes.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items\ACFMaterial.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items\ACFMeleeWeapon.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items\ACFProjectile.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items\ACFRangedWeapon.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items\ACFWeapon.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items\ACFWorldItem.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\Items</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\UI">
+      <UniqueIdentifier>{142B02AD-A7A4-45A2-88AF-EE68C6264873}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\UI\ACFDamageWidget.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\UI\ACFHUD.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\UI\ACFHUDUserWidget.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Private\UI</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public">
+      <UniqueIdentifier>{9B039EBB-EE5F-4AE9-8297-A49FD1D652B5}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\ACFDeveloperSettings.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AscentCombatFramework.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actions">
+      <UniqueIdentifier>{0459BCD3-F932-4AFD-880C-4343F003D113}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actions\ACFAttackAction.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actions\ACFBaseAction.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actions\ACFHitAction.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actions\ACFShootAction.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actions\ACFUseItemAction.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actions</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actors">
+      <UniqueIdentifier>{17BC6EEC-53CD-4299-922D-2F32927D85DC}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actors\ACFActor.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actors\ACFCharacter.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actors</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI">
+      <UniqueIdentifier>{BD8EBA82-DDED-49F7-9A29-3035C82F2AA7}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\ACFActionCondition.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\ACFAIController.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\ACFAIGroupSpawner.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\ACFGroupAIController.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\BehavioralThree">
+      <UniqueIdentifier>{913EA7EB-1E90-48E0-81C0-02D1E12724BB}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\BehavioralThree\ACFCheckActionsBTService.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\BehavioralThree</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\BehavioralThree\ACFUpdateCombatBTService.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\BehavioralThree</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\BehavioralThree\ACFUpdatePatrolBTService.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\BehavioralThree</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\BehavioralThree\ACFUpdateStateBTService.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\BehavioralThree</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\Commands">
+      <UniqueIdentifier>{8F2520F3-1093-450D-856A-EC0BAE0D7206}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\Commands\ACFBaseCommand.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\Commands\ACFGoThereCommand.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\Commands</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\Components">
+      <UniqueIdentifier>{F2C25875-C5B7-4DD8-9298-9E261E00FFF8}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\Components\ACFCombatBehaviourComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\Components\ACFCommandsManagerComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\Components\ACFCompanionGroupAIComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\Components\ACFGroupAIComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\Components\ACFThreatManagerComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI\Components</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation">
+      <UniqueIdentifier>{A9324A59-B984-44B7-B7E0-67AB92996581}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation\ACFActionSubState.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation\ACFActivateDamageNotifyState.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation\ACFAnimInstance.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation\ACFAnimset.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation\ACFNotifyAction.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation\ACFNotifyExitAction.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation\ACFNotifyFX.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation\ACFOverrideSpeedNotifyState.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation\ACFPlayImpactFXNotify.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation\ACFSlowAnimNotifyState.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components">
+      <UniqueIdentifier>{EEBEA94D-450E-45B1-A490-500D96F30282}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components\ACFActionsManagerComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components\ACFDamageHandlerComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components\ACFEffectsDispatcherComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components\ACFEffectsManagerComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components\ACFEquipmentComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components\ACFFrontTracerComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components\ACFInteractionComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components\ACFLocomotionComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components\ACFRagdollComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components\ACFRagdollMasterComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components\ACFShootingComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components\ACFTeamManagerComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game">
+      <UniqueIdentifier>{93F3AC0C-EF7E-420B-982F-6D59DE0F0E21}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game\ACFDamageCalculation.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game\ACFDamageType.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game\ACFData.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game\ACFFunctionLibrary.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game\ACFGameInstance.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game\ACFGameMode.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game\ACFGameState.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game\ACFPlayerController.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Interfaces">
+      <UniqueIdentifier>{B19389AB-EE0F-4B2D-AC1E-62769C77C51E}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Interfaces\ACFEntityInterface.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Interfaces\ACFInteractableInterface.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Interfaces\ACFSavableInterface.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Interfaces</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items">
+      <UniqueIdentifier>{FF7BAE25-4405-4780-9CD6-13095C1207A8}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items\ACFAccessory.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items\ACFArmor.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items\ACFConsumable.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items\ACFEquippableItem.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items\ACFItem.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items\ACFItemTypes.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items\ACFMaterial.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items\ACFMeleeWeapon.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items\ACFProjectile.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items\ACFRangedWeapon.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items\ACFWeapon.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items\ACFWorldItem.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\UI">
+      <UniqueIdentifier>{0F7D917C-611C-4C4C-BA11-CB675A62EEF5}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\UI\ACFDamageWidget.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\UI\ACFHUD.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\UI\ACFHUDUserWidget.h">
+      <Filter>Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\UI</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\CinematicCameraManager">
+      <UniqueIdentifier>{0563D869-41CD-43CE-B62E-0B8A22301B93}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AscentCombatFramework\Source\CinematicCameraManager\CinematicCameraManager.Build.cs">
+      <Filter>Plugins\AscentCombatFramework\Source\CinematicCameraManager</Filter>
+    </None>
+    <Filter Include="Plugins\AscentCombatFramework\Source\CinematicCameraManager\Private">
+      <UniqueIdentifier>{5FDBFC88-7401-4D65-872F-43FC15153458}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Private\CCMCameraFunctionLibrary.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CinematicCameraManager\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Private\CCMCameraSplineComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CinematicCameraManager\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Private\CCMLookAtPointComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CinematicCameraManager\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Private\CCMPlayerCameraManager.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CinematicCameraManager\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Private\CCMSequenceNotifyState.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CinematicCameraManager\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Private\CCMStartSequenceNotify.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CinematicCameraManager\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Private\CinematicCameraManager.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CinematicCameraManager\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public">
+      <UniqueIdentifier>{D1DBE00F-734B-41D9-A15F-92D126DBA9A9}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public\CCMCameraFunctionLibrary.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public\CCMCameraSplineComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public\CCMData.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public\CCMLookAtPointComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public\CCMPlayerCameraManager.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public\CCMSequenceNotifyState.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public\CCMStartSequenceNotify.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public\CinematicCameraManager.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\CollisionsManager">
+      <UniqueIdentifier>{A3D0E473-D921-4569-80DF-414EB7DDA1C7}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AscentCombatFramework\Source\CollisionsManager\CollisionsManager.Build.cs">
+      <Filter>Plugins\AscentCombatFramework\Source\CollisionsManager</Filter>
+    </None>
+    <Filter Include="Plugins\AscentCombatFramework\Source\CollisionsManager\Private">
+      <UniqueIdentifier>{D935C91D-B068-4AC6-A135-45AEF41809CF}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CollisionsManager\Private\ACMActivateCollisionANS.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CollisionsManager\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CollisionsManager\Private\ACMCollisionManagerComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CollisionsManager\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CollisionsManager\Private\ACMCollisionsMasterComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CollisionsManager\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CollisionsManager\Private\ACMTypes.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CollisionsManager\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CollisionsManager\Private\CollisionsManager.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CollisionsManager\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\CollisionsManager\Public">
+      <UniqueIdentifier>{2F6A4E22-98FB-482C-B655-FFD8DFF83C1F}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CollisionsManager\Public\ACMActivateCollisionANS.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CollisionsManager\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CollisionsManager\Public\ACMCollisionManagerComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CollisionsManager\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CollisionsManager\Public\ACMCollisionsMasterComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CollisionsManager\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CollisionsManager\Public\ACMTypes.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CollisionsManager\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CollisionsManager\Public\CollisionsManager.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CollisionsManager\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem">
+      <UniqueIdentifier>{0544536E-3C57-49DD-8ED2-D6040104F397}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\CombinedAnimationsSystem.Build.cs">
+      <Filter>Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem</Filter>
+    </None>
+    <Filter Include="Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Private">
+      <UniqueIdentifier>{C877359D-5FBD-4C4E-913F-0EBDCD357EF6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Private\CASAnimCondition.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Private\CASAnimMasterComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Private\CASAnimSlaveComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Private\CASSnapperComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Private\CASTypes.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Private\CombinedAnimationsSystem.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Public">
+      <UniqueIdentifier>{9510835B-E047-46A8-8CE7-150EB76868BF}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Public\CASAnimCondition.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Public\CASAnimMasterComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Public\CASAnimSlaveComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Public\CASSnapperComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Public\CASTypes.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Public\CombinedAnimationsSystem.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\CraftingSystem">
+      <UniqueIdentifier>{B9E28DDD-1FD7-48FD-91D7-7CD5765C90AF}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AscentCombatFramework\Source\CraftingSystem\CraftingSystem.Build.cs">
+      <Filter>Plugins\AscentCombatFramework\Source\CraftingSystem</Filter>
+    </None>
+    <Filter Include="Plugins\AscentCombatFramework\Source\CraftingSystem\Private">
+      <UniqueIdentifier>{6CB6767A-9333-444E-8B10-CBB576CD8EEA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CraftingSystem\Private\ACFCraftingComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CraftingSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CraftingSystem\Private\ACFCurrencyComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CraftingSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\CraftingSystem\Private\CraftingSystem.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\CraftingSystem\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\CraftingSystem\Public">
+      <UniqueIdentifier>{9A083049-6982-44FB-97D3-E41A817CF3C5}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CraftingSystem\Public\ACFCraftingComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CraftingSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CraftingSystem\Public\ACFCurrencyComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CraftingSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\CraftingSystem\Public\CraftingSystem.h">
+      <Filter>Plugins\AscentCombatFramework\Source\CraftingSystem\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\ExecutionsSystem">
+      <UniqueIdentifier>{7C193798-9262-412A-8B6A-877AFF2B5168}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AscentCombatFramework\Source\ExecutionsSystem\ExecutionsSystem.Build.cs">
+      <Filter>Plugins\AscentCombatFramework\Source\ExecutionsSystem</Filter>
+    </None>
+    <Filter Include="Plugins\AscentCombatFramework\Source\ExecutionsSystem\Private">
+      <UniqueIdentifier>{AC830524-FDAA-4EBC-9DD0-0EBB7FD28218}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\ExecutionsSystem\Private\ACFExecutionCondition.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\ExecutionsSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\ExecutionsSystem\Private\ACFExecutorComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\ExecutionsSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\ExecutionsSystem\Private\ExecutionsSystem.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\ExecutionsSystem\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\ExecutionsSystem\Public">
+      <UniqueIdentifier>{90208F25-09F5-4FEC-9DB7-135E247F2E7C}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\ExecutionsSystem\Public\ACFExecutionCondition.h">
+      <Filter>Plugins\AscentCombatFramework\Source\ExecutionsSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\ExecutionsSystem\Public\ACFExecutorComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\ExecutionsSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\ExecutionsSystem\Public\ExecutionsSystem.h">
+      <Filter>Plugins\AscentCombatFramework\Source\ExecutionsSystem\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\LevelStreamer">
+      <UniqueIdentifier>{B0B0BB9F-63C8-4C6C-B794-0C8E6CCEB2D7}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AscentCombatFramework\Source\LevelStreamer\LevelStreamer.Build.cs">
+      <Filter>Plugins\AscentCombatFramework\Source\LevelStreamer</Filter>
+    </None>
+    <Filter Include="Plugins\AscentCombatFramework\Source\LevelStreamer\Private">
+      <UniqueIdentifier>{DBDC718D-BD0E-4055-83A7-8B9AC826B7D1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\LevelStreamer\Private\ACFLevelStreamerActor.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\LevelStreamer\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\LevelStreamer\Private\ACFLevelStreamerFunctionLibrary.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\LevelStreamer\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\LevelStreamer\Private\LevelStreamer.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\LevelStreamer\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\LevelStreamer\Public">
+      <UniqueIdentifier>{C98AA0D0-F420-40F3-805A-F3DC86ACEADD}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\LevelStreamer\Public\ACFLevelStreamerActor.h">
+      <Filter>Plugins\AscentCombatFramework\Source\LevelStreamer\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\LevelStreamer\Public\ACFLevelStreamerFunctionLibrary.h">
+      <Filter>Plugins\AscentCombatFramework\Source\LevelStreamer\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\LevelStreamer\Public\LevelStreamer.h">
+      <Filter>Plugins\AscentCombatFramework\Source\LevelStreamer\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\MountSystem">
+      <UniqueIdentifier>{7359CB04-8346-43A7-85EA-FC2D5F2E5BF8}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AscentCombatFramework\Source\MountSystem\MountSystem.Build.cs">
+      <Filter>Plugins\AscentCombatFramework\Source\MountSystem</Filter>
+    </None>
+    <Filter Include="Plugins\AscentCombatFramework\Source\MountSystem\Private">
+      <UniqueIdentifier>{8B2FF7C9-4B9C-42B2-97E1-16FB550D4494}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\MountSystem\Private\ACFAnimationPointComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\MountSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\MountSystem\Private\ACFAnimPointsManagerComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\MountSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\MountSystem\Private\ACFMountComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\MountSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\MountSystem\Private\ACFRiderAnimInstance.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\MountSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\MountSystem\Private\ACFRiderComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\MountSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\MountSystem\Private\MountSystem.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\MountSystem\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\MountSystem\Public">
+      <UniqueIdentifier>{B9B8D581-6F24-45A8-B3DD-E4A93B6A63CB}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\MountSystem\Public\ACFAnimationPointComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\MountSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\MountSystem\Public\ACFAnimPointsManagerComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\MountSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\MountSystem\Public\ACFMountComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\MountSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\MountSystem\Public\ACFRiderAnimInstance.h">
+      <Filter>Plugins\AscentCombatFramework\Source\MountSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\MountSystem\Public\ACFRiderComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\MountSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\MountSystem\Public\MountSystem.h">
+      <Filter>Plugins\AscentCombatFramework\Source\MountSystem\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\MusicManager">
+      <UniqueIdentifier>{2A761C3F-BABB-4137-8AB2-0956FEF7ECF0}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AscentCombatFramework\Source\MusicManager\MusicManager.Build.cs">
+      <Filter>Plugins\AscentCombatFramework\Source\MusicManager</Filter>
+    </None>
+    <Filter Include="Plugins\AscentCombatFramework\Source\MusicManager\Private">
+      <UniqueIdentifier>{2CE44AF1-9445-42DA-8494-917DB0FDCFF0}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\MusicManager\Private\ACFMusicComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\MusicManager\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\MusicManager\Private\Logging.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\MusicManager\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\MusicManager\Private\Logging.h">
+      <Filter>Plugins\AscentCombatFramework\Source\MusicManager\Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\MusicManager\Private\MusicManager.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\MusicManager\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\MusicManager\Public">
+      <UniqueIdentifier>{D18797D4-BEC6-484D-8281-937910C5BCF1}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\MusicManager\Public\ACFMusicComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\MusicManager\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\MusicManager\Public\MusicManager.h">
+      <Filter>Plugins\AscentCombatFramework\Source\MusicManager\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\SpellActions">
+      <UniqueIdentifier>{52C51008-699D-4F12-9486-7B090F528CA9}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AscentCombatFramework\Source\SpellActions\SpellActions.Build.cs">
+      <Filter>Plugins\AscentCombatFramework\Source\SpellActions</Filter>
+    </None>
+    <Filter Include="Plugins\AscentCombatFramework\Source\SpellActions\Private">
+      <UniqueIdentifier>{1F9DD552-15C2-4118-AD55-23686FEC0841}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\SpellActions\Private\ACFBuffAction.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\SpellActions\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\SpellActions\Private\ACFCureAction.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\SpellActions\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\SpellActions\Private\ACFSpellProjectileAction.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\SpellActions\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\SpellActions\Private\ACFSummonAction.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\SpellActions\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\SpellActions\Private\Logging.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\SpellActions\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\SpellActions\Private\Logging.h">
+      <Filter>Plugins\AscentCombatFramework\Source\SpellActions\Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\SpellActions\Private\SpellActions.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\SpellActions\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\SpellActions\Public">
+      <UniqueIdentifier>{FE6B9119-0ABE-4A73-93E6-CC0B593E1E0E}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\SpellActions\Public\ACFBuffAction.h">
+      <Filter>Plugins\AscentCombatFramework\Source\SpellActions\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\SpellActions\Public\ACFCureAction.h">
+      <Filter>Plugins\AscentCombatFramework\Source\SpellActions\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\SpellActions\Public\ACFSpellProjectileAction.h">
+      <Filter>Plugins\AscentCombatFramework\Source\SpellActions\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\SpellActions\Public\ACFSummonAction.h">
+      <Filter>Plugins\AscentCombatFramework\Source\SpellActions\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\SpellActions\Public\SpellActions.h">
+      <Filter>Plugins\AscentCombatFramework\Source\SpellActions\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\AscentCombatFramework\Source\TargetingSystem">
+      <UniqueIdentifier>{BD9B8F66-15D1-4227-BFD6-8C6C12464803}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AscentCombatFramework\Source\TargetingSystem\TargetingSystem.Build.cs">
+      <Filter>Plugins\AscentCombatFramework\Source\TargetingSystem</Filter>
+    </None>
+    <Filter Include="Plugins\AscentCombatFramework\Source\TargetingSystem\Private">
+      <UniqueIdentifier>{C9FB0976-DC3C-48EB-BCF5-3EA9FD03AA19}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\TargetingSystem\Private\ATSAITargetComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\TargetingSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\TargetingSystem\Private\ATSBaseTargetComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\TargetingSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\TargetingSystem\Private\ATSTargetableInterface.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\TargetingSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\TargetingSystem\Private\ATSTargetingComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\TargetingSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\TargetingSystem\Private\ATSTargetingFilter.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\TargetingSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\TargetingSystem\Private\ATSTargetPointComponent.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\TargetingSystem\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AscentCombatFramework\Source\TargetingSystem\Private\TargetingSystem.cpp">
+      <Filter>Plugins\AscentCombatFramework\Source\TargetingSystem\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AscentCombatFramework\Source\TargetingSystem\Public">
+      <UniqueIdentifier>{D7912520-F6CD-4215-8BB5-2CEF50D28556}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\TargetingSystem\Public\ATSAITargetComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\TargetingSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\TargetingSystem\Public\ATSBaseTargetComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\TargetingSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\TargetingSystem\Public\ATSTargetableInterface.h">
+      <Filter>Plugins\AscentCombatFramework\Source\TargetingSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\TargetingSystem\Public\ATSTargetingComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\TargetingSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\TargetingSystem\Public\ATSTargetingFilter.h">
+      <Filter>Plugins\AscentCombatFramework\Source\TargetingSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\TargetingSystem\Public\ATSTargetPointComponent.h">
+      <Filter>Plugins\AscentCombatFramework\Source\TargetingSystem\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\AscentCombatFramework\Source\TargetingSystem\Public\TargetingSystem.h">
+      <Filter>Plugins\AscentCombatFramework\Source\TargetingSystem\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\ColorWheelPlugin\Source">
+      <UniqueIdentifier>{00D50D38-DD4D-405C-A738-424F9F51EF32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\ColorWheelPlugin\Source\ColorWheelPlugin">
+      <UniqueIdentifier>{D7F37057-8BEE-4B92-B4B3-6F39AFFF21DF}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\ColorWheelPlugin.Build.cs">
+      <Filter>Plugins\ColorWheelPlugin\Source\ColorWheelPlugin</Filter>
+    </None>
+    <Filter Include="Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Private">
+      <UniqueIdentifier>{51A841D8-17B5-4CD1-B3DA-4B3AC9A7C30D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Private\ColorWheelHelper.cpp">
+      <Filter>Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Private\ColorWheelPlugin.cpp">
+      <Filter>Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Private\ColorWidget.cpp">
+      <Filter>Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Private\SWColorWheel.cpp">
+      <Filter>Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Public">
+      <UniqueIdentifier>{2330790B-9AC1-4AE1-AC3C-370DF9308661}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Public\ColorWheelHelper.h">
+      <Filter>Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Public\ColorWheelPlugin.h">
+      <Filter>Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Public\ColorWidget.h">
+      <Filter>Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Public\SWColorWheel.h">
+      <Filter>Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Public</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\FileSDK\Source">
+      <UniqueIdentifier>{6061F2B9-5F9C-4FC1-B71C-5193AF1EB610}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\FileSDK\Source\FileSDK">
+      <UniqueIdentifier>{0FC3110E-1A3A-4B2D-9763-9DE67EB459D5}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\FileSDK\Source\FileSDK\FileSDK.Build.cs">
+      <Filter>Plugins\FileSDK\Source\FileSDK</Filter>
+    </None>
+    <Filter Include="Plugins\FileSDK\Source\FileSDK\Private">
+      <UniqueIdentifier>{FE3A1CF2-362B-4F8F-8BB1-F9B6E75D53EC}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\FileSDK\Source\FileSDK\Private\FileSDK.cpp">
+      <Filter>Plugins\FileSDK\Source\FileSDK\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\FileSDK\Source\FileSDK\Private\FileSDKBPLibrary.cpp">
+      <Filter>Plugins\FileSDK\Source\FileSDK\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\FileSDK\Source\FileSDK\Public">
+      <UniqueIdentifier>{1B9512D7-2809-4C79-B175-5F334DABC27C}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\FileSDK\Source\FileSDK\Public\FileSDK.h">
+      <Filter>Plugins\FileSDK\Source\FileSDK\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\FileSDK\Source\FileSDK\Public\FileSDKBPLibrary.h">
+      <Filter>Plugins\FileSDK\Source\FileSDK\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\FileSDK\Source\FileSDK\Public\FileSDKFileInfo.h">
+      <Filter>Plugins\FileSDK\Source\FileSDK\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\FileSDK\Source\FileSDK\Public\FileSDKFileType.h">
+      <Filter>Plugins\FileSDK\Source\FileSDK\Public</Filter>
+    </ClInclude>
     <Filter Include="Source\Guildless">
-      <UniqueIdentifier>{12F38A00-1CAB-410D-81C8-C3D62BB5A730}</UniqueIdentifier>
+      <UniqueIdentifier>{F35DADE8-7656-4512-836B-7A25F4C806A9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Guildless\Guildless.Build.cs">
       <Filter>Source\Guildless</Filter>

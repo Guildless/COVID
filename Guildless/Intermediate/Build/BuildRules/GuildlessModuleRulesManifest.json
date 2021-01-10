@@ -1,8 +1,23 @@
 {
 	"SourceFiles": [
 		"D:\\Projects\\COVID\\Guildless\\Source\\Guildless\\Guildless.Build.cs",
+		"D:\\Projects\\COVID\\Guildless\\Plugins\\AscentCombatFramework\\Source\\AbilitySystem\\AbilitySystem.Build.cs",
+		"D:\\Projects\\COVID\\Guildless\\Plugins\\AscentCombatFramework\\Source\\AdvancedRPGSystem\\AdvancedRPGSystem.Build.cs",
+		"D:\\Projects\\COVID\\Guildless\\Plugins\\AscentCombatFramework\\Source\\AscentCombatFramework\\AscentCombatFramework.Build.cs",
+		"D:\\Projects\\COVID\\Guildless\\Plugins\\AscentCombatFramework\\Source\\CinematicCameraManager\\CinematicCameraManager.Build.cs",
+		"D:\\Projects\\COVID\\Guildless\\Plugins\\AscentCombatFramework\\Source\\CollisionsManager\\CollisionsManager.Build.cs",
+		"D:\\Projects\\COVID\\Guildless\\Plugins\\AscentCombatFramework\\Source\\CombinedAnimationsSystem\\CombinedAnimationsSystem.Build.cs",
+		"D:\\Projects\\COVID\\Guildless\\Plugins\\AscentCombatFramework\\Source\\CraftingSystem\\CraftingSystem.Build.cs",
+		"D:\\Projects\\COVID\\Guildless\\Plugins\\AscentCombatFramework\\Source\\ExecutionsSystem\\ExecutionsSystem.Build.cs",
+		"D:\\Projects\\COVID\\Guildless\\Plugins\\AscentCombatFramework\\Source\\LevelStreamer\\LevelStreamer.Build.cs",
+		"D:\\Projects\\COVID\\Guildless\\Plugins\\AscentCombatFramework\\Source\\MountSystem\\MountSystem.Build.cs",
+		"D:\\Projects\\COVID\\Guildless\\Plugins\\AscentCombatFramework\\Source\\MusicManager\\MusicManager.Build.cs",
+		"D:\\Projects\\COVID\\Guildless\\Plugins\\AscentCombatFramework\\Source\\SpellActions\\SpellActions.Build.cs",
+		"D:\\Projects\\COVID\\Guildless\\Plugins\\AscentCombatFramework\\Source\\TargetingSystem\\TargetingSystem.Build.cs",
+		"D:\\Projects\\COVID\\Guildless\\Plugins\\ColorWheelPlugin\\Source\\ColorWheelPlugin\\ColorWheelPlugin.Build.cs",
+		"D:\\Projects\\COVID\\Guildless\\Plugins\\FileSDK\\Source\\FileSDK\\FileSDK.Build.cs",
 		"D:\\Projects\\COVID\\Guildless\\Source\\Guildless.Target.cs",
 		"D:\\Projects\\COVID\\Guildless\\Source\\GuildlessEditor.Target.cs"
 	],
-	"EngineVersion": "4.25.3"
+	"EngineVersion": "4.25.4"
 }
