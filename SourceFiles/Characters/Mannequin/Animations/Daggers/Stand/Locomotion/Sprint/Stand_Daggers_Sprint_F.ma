@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Stand_Daggers_Sprint_F.ma
-//Last modified: Sat, Jan 23, 2021 08:45:30 AM
+//Last modified: Fri, Jan 29, 2021 01:30:12 PM
 //Codeset: 1252
 file -rdi 1 -ns "Mannequin" -rfn "MannequinRN" -op "VERS|2019|UVER|undef|MADE|undef|CHNG|Sun, May 24, 2020 11:24:34 AM|ICON|undef|INFO|undef|OBJN|4406|INCL|D:/Animation/ARTv1/MayaTools/General/ART/Projects/Sample/ExportFiles/Mannequin_Export.mb(|LUNI|cm|TUNI|ntsc|AUNI|deg|TDUR|141120000|"
 		 -typ "mayaBinary" "D:/Animation/ARTv1/MayaTools/General/ART/Projects/Sample/AnimRigs/Mannequin.mb";
@@ -28,15 +28,15 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "BD6C46DC-458A-B09C-00C1-55BC801AE8F4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2879.6005854494692 3166.5338375712195 1222.6566835129945 ;
-	setAttr ".r" -type "double3" 85.907527933652958 -3.1805546814635164e-15 -11426.392250725574 ;
+	setAttr ".t" -type "double3" 2618.0773874085598 2979.4279555857224 1285.5938294232712 ;
+	setAttr ".r" -type "double3" 77.507527933663425 0 -12522.792250724571 ;
 	setAttr ".rp" -type "double3" 3.4246573215818041e-14 3.2847660856859906e-14 -4.5474735088646412e-13 ;
 	setAttr ".rpt" -type "double3" -1980.1483204172237 -3187.2841166349231 -1061.1575726055376 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "CE1CC4DC-4869-435C-815B-3BB996FB49FB";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 898.28151894486166;
+	setAttr ".coi" 663.06843267517661;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -259,7 +259,7 @@ createNode parentConstraint -n "group1_parentConstraint1" -p "group1";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -67.688234558977513 -69.905533130222665 -1.3449687031078899 ;
 	setAttr ".tg[0].tor" -type "double3" -95.134642031106154 14.300648222242872 -68.795382953751556 ;
-	setAttr ".lr" -type "double3" 18.183853542061129 1.4867820343636498 15.484378074631374 ;
+	setAttr ".lr" -type "double3" 18.868431813477113 14.393464263898149 13.934987520257206 ;
 	setAttr ".rst" -type "double3" 7.1054273576010019e-15 -2.2204460492503131e-16 -1.4210854715202004e-14 ;
 	setAttr ".rsrr" -type "double3" -6.3611093629270351e-15 6.3611093629270351e-15 6.3611093629270351e-15 ;
 	setAttr -k on ".w0";
@@ -282,29 +282,29 @@ createNode parentConstraint -n "group2_parentConstraint1" -p "group2";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 66.434558489638718 73.102604846151166 3.1170092710584099 ;
 	setAttr ".tg[0].tor" -type "double3" 94.740116539737585 5.8141634212449791 -56.226213772433454 ;
-	setAttr ".lr" -type "double3" -50.9596937547119 -56.810029584756698 -99.678661211043774 ;
+	setAttr ".lr" -type "double3" -43.670110451466094 -63.604359227622552 -136.79402287164473 ;
 	setAttr ".rst" -type "double3" -7.1054273576010019e-15 -8.8817841970012523e-16 2.8421709430404007e-14 ;
 	setAttr ".rsrr" -type "double3" 7.0622500768802538e-31 6.3611093629270335e-15 1.2722218725854067e-14 ;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "2271A698-4050-2DF2-A6DA-02AFEB8B80E4";
+	rename -uid "CCB2C75C-4C69-2138-63E4-1AB528442AEA";
 	setAttr -s 14 ".lnk";
 	setAttr -s 14 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "6A3BC6AE-48C4-5039-80C9-EF9D4C7E3F4D";
+	rename -uid "D93B3002-4115-170C-5718-D09C8BE82127";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 23 0 1 2 3 4
 		 5 6 7 8 9 10 11 12 13 14 15 16
 		 17 18 19 20 21 22 ;
 	setAttr -s 23 ".bspr";
 	setAttr -s 23 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "0F277AE2-4BA0-0DD4-A466-329F4DB16B53";
+	rename -uid "6F03F41F-47E0-A95A-9023-12A81FCF8FF1";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "3D9F8B3A-419E-C3F9-D5D7-2DBE8171CE97";
+	rename -uid "BD058BA6-4FF5-3BF2-F189-1FA11A1E7350";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "0922BB91-4F88-D9F1-94E2-F98637793933";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "137CB17E-44F0-F9D3-EA50-A5B9E8B325C7";
+	rename -uid "2253A178-4853-6439-FC28-7394DA9FB61D";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "3CC8EFE4-4BE4-B4DD-B2C8-29822C19E3F6";
 	setAttr ".g" yes;
@@ -1251,10 +1251,10 @@ createNode reference -n "MannequinRN";
 		1 |Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:root_anim 
 		"buttonName" "buttonName" " -ci 1 -dt \"string\""
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button193\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button325\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button194\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button326\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_l|Mannequin:fk_orient_master_loc_l|Mannequin:fk_arm_l_anim_grp|Mannequin:fk_arm_l_anim" 
 		"rotate" " -type \"double3\" -16.1944576199024759 48.97602897587187698 -21.33111641810009473"
@@ -1266,7 +1266,7 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_l|Mannequin:fk_orient_master_loc_l|Mannequin:fk_arm_l_anim_grp|Mannequin:fk_arm_l_anim" 
 		"rotateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_l|Mannequin:fk_orient_master_loc_l|Mannequin:fk_arm_l_anim_grp|Mannequin:fk_arm_l_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button167\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button299\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_l|Mannequin:fk_orient_master_loc_l|Mannequin:fk_arm_l_anim_grp|Mannequin:fk_arm_l_anim|Mannequin:fk_elbow_l_anim_grp|Mannequin:fk_elbow_l_anim" 
 		"rotate" " -type \"double3\" 0 0 -105.36364526706105949"
@@ -1277,10 +1277,10 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_l|Mannequin:fk_orient_master_loc_l|Mannequin:fk_arm_l_anim_grp|Mannequin:fk_arm_l_anim|Mannequin:fk_elbow_l_anim_grp|Mannequin:fk_elbow_l_anim" 
 		"rotateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_l|Mannequin:fk_orient_master_loc_l|Mannequin:fk_arm_l_anim_grp|Mannequin:fk_arm_l_anim|Mannequin:fk_elbow_l_anim_grp|Mannequin:fk_elbow_l_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button169\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button301\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_l|Mannequin:fk_orient_master_loc_l|Mannequin:fk_arm_l_anim_grp|Mannequin:fk_arm_l_anim|Mannequin:fk_elbow_l_anim_grp|Mannequin:fk_elbow_l_anim|Mannequin:fk_wrist_l_anim_grp|Mannequin:fk_wrist_l_anim" 
-		"rotate" " -type \"double3\" 1.7039000809716951 13.26078751509025366 -0.68819447801150735"
+		"rotate" " -type \"double3\" 1.70390008097169532 13.26078751509025366 -0.68819447801150735"
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_l|Mannequin:fk_orient_master_loc_l|Mannequin:fk_arm_l_anim_grp|Mannequin:fk_arm_l_anim|Mannequin:fk_elbow_l_anim_grp|Mannequin:fk_elbow_l_anim|Mannequin:fk_wrist_l_anim_grp|Mannequin:fk_wrist_l_anim" 
 		"rotateX" " -av"
@@ -1289,10 +1289,10 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_l|Mannequin:fk_orient_master_loc_l|Mannequin:fk_arm_l_anim_grp|Mannequin:fk_arm_l_anim|Mannequin:fk_elbow_l_anim_grp|Mannequin:fk_elbow_l_anim|Mannequin:fk_wrist_l_anim_grp|Mannequin:fk_wrist_l_anim" 
 		"rotateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_l|Mannequin:fk_orient_master_loc_l|Mannequin:fk_arm_l_anim_grp|Mannequin:fk_arm_l_anim|Mannequin:fk_elbow_l_anim_grp|Mannequin:fk_elbow_l_anim|Mannequin:fk_wrist_l_anim_grp|Mannequin:fk_wrist_l_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button171\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button303\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_l|Mannequin:auto_clav_world_grp_l|Mannequin:clavicle_l_anim_grp|Mannequin:clavicle_l_anim" 
-		"rotate" " -type \"double3\" -93.1484903875655732 -31.37988431178702697 20.92047572284826629"
+		"rotate" " -type \"double3\" -106.67403849329606658 -40.1530695271663447 26.90750236554175956"
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_l|Mannequin:auto_clav_world_grp_l|Mannequin:clavicle_l_anim_grp|Mannequin:clavicle_l_anim" 
 		"rotateX" " -av"
@@ -1307,40 +1307,40 @@ createNode reference -n "MannequinRN";
 		"scalePivot" " -type \"double3\" 17.70021628639828037 9.66074435227269745 149.56894553472622533"
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_l|Mannequin:auto_clav_world_grp_l|Mannequin:clavicle_l_anim_grp|Mannequin:clavicle_l_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button165\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button297\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_l|Mannequin:fk_clavicle_l_anim_grp|Mannequin:fk_clavicle_l_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button165\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button297\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:ik_wrist_l_anim_space_switcher_follow|Mannequin:ik_wrist_l_anim_space_switcher|Mannequin:ik_wrist_l_anim_grp|Mannequin:ik_wrist_l_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button175\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button307\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:ik_wrist_l_anim_space_switcher_follow|Mannequin:ik_wrist_l_anim_space_switcher|Mannequin:ik_wrist_l_anim_grp|Mannequin:ik_wrist_l_anim|Mannequin:l_global_ik_anim_space_switcher_follow|Mannequin:l_global_ik_anim_space_switcher|Mannequin:l_global_ik_anim_grp|Mannequin:l_global_ik_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button248\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button380\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:ik_wrist_l_anim_space_switcher_follow|Mannequin:ik_wrist_l_anim_space_switcher|Mannequin:ik_wrist_l_anim_grp|Mannequin:ik_wrist_l_anim|Mannequin:l_global_ik_anim_space_switcher_follow|Mannequin:l_global_ik_anim_space_switcher|Mannequin:l_global_ik_anim_grp|Mannequin:l_global_ik_anim|Mannequin:index_l_ik_anim_grp|Mannequin:index_l_ik_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button236\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button368\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:ik_wrist_l_anim_space_switcher_follow|Mannequin:ik_wrist_l_anim_space_switcher|Mannequin:ik_wrist_l_anim_grp|Mannequin:ik_wrist_l_anim|Mannequin:l_global_ik_anim_space_switcher_follow|Mannequin:l_global_ik_anim_space_switcher|Mannequin:l_global_ik_anim_grp|Mannequin:l_global_ik_anim|Mannequin:middle_l_ik_anim_grp|Mannequin:middle_l_ik_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button237\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button369\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:ik_wrist_l_anim_space_switcher_follow|Mannequin:ik_wrist_l_anim_space_switcher|Mannequin:ik_wrist_l_anim_grp|Mannequin:ik_wrist_l_anim|Mannequin:l_global_ik_anim_space_switcher_follow|Mannequin:l_global_ik_anim_space_switcher|Mannequin:l_global_ik_anim_grp|Mannequin:l_global_ik_anim|Mannequin:ring_l_ik_anim_grp|Mannequin:ring_l_ik_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button238\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button370\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:ik_wrist_l_anim_space_switcher_follow|Mannequin:ik_wrist_l_anim_space_switcher|Mannequin:ik_wrist_l_anim_grp|Mannequin:ik_wrist_l_anim|Mannequin:l_global_ik_anim_space_switcher_follow|Mannequin:l_global_ik_anim_space_switcher|Mannequin:l_global_ik_anim_grp|Mannequin:l_global_ik_anim|Mannequin:pinky_l_ik_anim_grp|Mannequin:pinky_l_ik_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button239\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button371\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:ik_wrist_l_anim_space_switcher_follow|Mannequin:ik_wrist_l_anim_space_switcher|Mannequin:ik_wrist_l_anim_grp|Mannequin:ik_wrist_l_anim|Mannequin:l_global_ik_anim_space_switcher_follow|Mannequin:l_global_ik_anim_space_switcher|Mannequin:l_global_ik_anim_grp|Mannequin:l_global_ik_anim|Mannequin:thumb_l_ik_anim_grp|Mannequin:thumb_l_ik_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button240\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button372\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:ik_elbow_l_anim_space_switcher_follow|Mannequin:ik_elbow_l_anim_space_switcher|Mannequin:ik_elbow_l_anim_grp|Mannequin:ik_elbow_l_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button173\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button305\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:upperarm_twist_grp_l|Mannequin:upperarm_l_twist_anim_grp|Mannequin:upperarm_l_twist_driven_grp|Mannequin:upperarm_l_twist_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button204\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button336\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:lowerarm_l_roll_grp|Mannequin:lowerarm_l_twist_joint|Mannequin:lowerarm_l_twist_mod|Mannequin:lowerarm_l_twist_anim_grp|Mannequin:lowerarm_l_twist_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button206\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button338\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_r|Mannequin:fk_orient_master_loc_r|Mannequin:fk_arm_r_anim_grp|Mannequin:fk_arm_r_anim" 
 		"rotate" " -type \"double3\" 10.80103411505903388 6.21235768689067758 16.7298162830072954"
@@ -1352,7 +1352,7 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_r|Mannequin:fk_orient_master_loc_r|Mannequin:fk_arm_r_anim_grp|Mannequin:fk_arm_r_anim" 
 		"rotateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_r|Mannequin:fk_orient_master_loc_r|Mannequin:fk_arm_r_anim_grp|Mannequin:fk_arm_r_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button168\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button300\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_r|Mannequin:fk_orient_master_loc_r|Mannequin:fk_arm_r_anim_grp|Mannequin:fk_arm_r_anim|Mannequin:fk_elbow_r_anim_grp|Mannequin:fk_elbow_r_anim" 
 		"rotate" " -type \"double3\" -1.6345341273327703e-05 1.868519692337042e-07 -36.11161370255440062"
@@ -1364,7 +1364,7 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_r|Mannequin:fk_orient_master_loc_r|Mannequin:fk_arm_r_anim_grp|Mannequin:fk_arm_r_anim|Mannequin:fk_elbow_r_anim_grp|Mannequin:fk_elbow_r_anim" 
 		"rotateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_r|Mannequin:fk_orient_master_loc_r|Mannequin:fk_arm_r_anim_grp|Mannequin:fk_arm_r_anim|Mannequin:fk_elbow_r_anim_grp|Mannequin:fk_elbow_r_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button170\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button302\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_r|Mannequin:fk_orient_master_loc_r|Mannequin:fk_arm_r_anim_grp|Mannequin:fk_arm_r_anim|Mannequin:fk_elbow_r_anim_grp|Mannequin:fk_elbow_r_anim|Mannequin:fk_wrist_r_anim_grp|Mannequin:fk_wrist_r_anim" 
 		"rotate" " -type \"double3\" -13.91192242611397312 33.07399331803486575 -18.01286449440421933"
@@ -1376,10 +1376,10 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_r|Mannequin:fk_orient_master_loc_r|Mannequin:fk_arm_r_anim_grp|Mannequin:fk_arm_r_anim|Mannequin:fk_elbow_r_anim_grp|Mannequin:fk_elbow_r_anim|Mannequin:fk_wrist_r_anim_grp|Mannequin:fk_wrist_r_anim" 
 		"rotateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_r|Mannequin:fk_orient_master_loc_r|Mannequin:fk_arm_r_anim_grp|Mannequin:fk_arm_r_anim|Mannequin:fk_elbow_r_anim_grp|Mannequin:fk_elbow_r_anim|Mannequin:fk_wrist_r_anim_grp|Mannequin:fk_wrist_r_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button172\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button304\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_r|Mannequin:auto_clav_world_grp_r|Mannequin:clavicle_r_anim_grp|Mannequin:clavicle_r_anim" 
-		"rotate" " -type \"double3\" -35.3090424050218914 -53.41265617058625281 -1.73358304204065528"
+		"rotate" " -type \"double3\" -74.15320612962307223 -75.36695524292831294 54.01657310915636856"
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_r|Mannequin:auto_clav_world_grp_r|Mannequin:clavicle_r_anim_grp|Mannequin:clavicle_r_anim" 
 		"rotateX" " -av"
@@ -1388,43 +1388,43 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_r|Mannequin:auto_clav_world_grp_r|Mannequin:clavicle_r_anim_grp|Mannequin:clavicle_r_anim" 
 		"rotateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_r|Mannequin:auto_clav_world_grp_r|Mannequin:clavicle_r_anim_grp|Mannequin:clavicle_r_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button166\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button298\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:arm_rig_master_grp_r|Mannequin:fk_clavicle_r_anim_grp|Mannequin:fk_clavicle_r_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button166\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button298\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:ik_wrist_r_anim_space_switcher_follow|Mannequin:ik_wrist_r_anim_space_switcher|Mannequin:ik_wrist_r_anim_grp|Mannequin:ik_wrist_r_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button176\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button308\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:ik_wrist_r_anim_space_switcher_follow|Mannequin:ik_wrist_r_anim_space_switcher|Mannequin:ik_wrist_r_anim_grp|Mannequin:ik_wrist_r_anim|Mannequin:r_global_ik_anim_space_switcher_follow|Mannequin:r_global_ik_anim_space_switcher|Mannequin:r_global_ik_anim_grp|Mannequin:r_global_ik_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button285\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button417\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:ik_wrist_r_anim_space_switcher_follow|Mannequin:ik_wrist_r_anim_space_switcher|Mannequin:ik_wrist_r_anim_grp|Mannequin:ik_wrist_r_anim|Mannequin:r_global_ik_anim_space_switcher_follow|Mannequin:r_global_ik_anim_space_switcher|Mannequin:r_global_ik_anim_grp|Mannequin:r_global_ik_anim|Mannequin:index_r_ik_anim_grp|Mannequin:index_r_ik_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button273\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button405\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:ik_wrist_r_anim_space_switcher_follow|Mannequin:ik_wrist_r_anim_space_switcher|Mannequin:ik_wrist_r_anim_grp|Mannequin:ik_wrist_r_anim|Mannequin:r_global_ik_anim_space_switcher_follow|Mannequin:r_global_ik_anim_space_switcher|Mannequin:r_global_ik_anim_grp|Mannequin:r_global_ik_anim|Mannequin:middle_r_ik_anim_grp|Mannequin:middle_r_ik_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button274\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button406\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:ik_wrist_r_anim_space_switcher_follow|Mannequin:ik_wrist_r_anim_space_switcher|Mannequin:ik_wrist_r_anim_grp|Mannequin:ik_wrist_r_anim|Mannequin:r_global_ik_anim_space_switcher_follow|Mannequin:r_global_ik_anim_space_switcher|Mannequin:r_global_ik_anim_grp|Mannequin:r_global_ik_anim|Mannequin:ring_r_ik_anim_grp|Mannequin:ring_r_ik_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button275\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button407\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:ik_wrist_r_anim_space_switcher_follow|Mannequin:ik_wrist_r_anim_space_switcher|Mannequin:ik_wrist_r_anim_grp|Mannequin:ik_wrist_r_anim|Mannequin:r_global_ik_anim_space_switcher_follow|Mannequin:r_global_ik_anim_space_switcher|Mannequin:r_global_ik_anim_grp|Mannequin:r_global_ik_anim|Mannequin:pinky_r_ik_anim_grp|Mannequin:pinky_r_ik_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button276\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button408\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:ik_wrist_r_anim_space_switcher_follow|Mannequin:ik_wrist_r_anim_space_switcher|Mannequin:ik_wrist_r_anim_grp|Mannequin:ik_wrist_r_anim|Mannequin:r_global_ik_anim_space_switcher_follow|Mannequin:r_global_ik_anim_space_switcher|Mannequin:r_global_ik_anim_grp|Mannequin:r_global_ik_anim|Mannequin:thumb_r_ik_anim_grp|Mannequin:thumb_r_ik_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button277\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button409\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:ik_elbow_r_anim_space_switcher_follow|Mannequin:ik_elbow_r_anim_space_switcher|Mannequin:ik_elbow_r_anim_grp|Mannequin:ik_elbow_r_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button174\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button306\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:upperarm_twist_grp_r|Mannequin:upperarm_r_twist_anim_grp|Mannequin:upperarm_r_twist_driven_grp|Mannequin:upperarm_r_twist_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button205\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button337\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:arm_sys_grp|Mannequin:lowerarm_r_roll_grp|Mannequin:lowerarm_r_twist_joint|Mannequin:lowerarm_r_twist_mod|Mannequin:lowerarm_r_twist_anim_grp|Mannequin:lowerarm_r_twist_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button207\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button339\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim" 
-		"translate" " -type \"double3\" -23.41246403270054444 -31.49270898762413395 -4.00887563645478284"
+		"translate" " -type \"double3\" -20.58103340676747095 -28.81702567056752429 2.20416516025019771"
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim" 
 		"translateX" " -av"
@@ -1433,7 +1433,7 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim" 
 		"translateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim" 
-		"rotate" " -type \"double3\" 15.94209776414862567 0.86945972535878879 -44.03202338456156184"
+		"rotate" " -type \"double3\" -8.91145660599303646 -0.8230293631699892 -31.21414797184741019"
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim" 
 		"rotateX" " -av"
@@ -1444,7 +1444,7 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim" 
 		"rotateOrder" " 5"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button163\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button295\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim" 
 		"translate" " -type \"double3\" 0 0 0"
@@ -1455,7 +1455,7 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim" 
 		"translateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim" 
-		"rotate" " -type \"double3\" -5.83841855618869765 -9.37450042818794316 -10.30583542462177604"
+		"rotate" " -type \"double3\" 2.82701328073505387 3.33194342718755365 -21.21603889692952905"
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim" 
 		"rotateX" " -av"
@@ -1464,10 +1464,10 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim" 
 		"rotateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button160\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button292\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim|Mannequin:spine_02_anim_grp|Mannequin:spine_02_anim_offset_grp|Mannequin:spine_02_anim" 
-		"translate" " -type \"double3\" -0.11740895234248054 0 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim|Mannequin:spine_02_anim_grp|Mannequin:spine_02_anim_offset_grp|Mannequin:spine_02_anim" 
 		"translateX" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim|Mannequin:spine_02_anim_grp|Mannequin:spine_02_anim_offset_grp|Mannequin:spine_02_anim" 
@@ -1475,7 +1475,7 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim|Mannequin:spine_02_anim_grp|Mannequin:spine_02_anim_offset_grp|Mannequin:spine_02_anim" 
 		"translateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim|Mannequin:spine_02_anim_grp|Mannequin:spine_02_anim_offset_grp|Mannequin:spine_02_anim" 
-		"rotate" " -type \"double3\" -3.97790844415858436 -9.2703719757174543 -19.35728627775840138"
+		"rotate" " -type \"double3\" 4.26620330924008062 4.479271165589779 -22.96895524610843964"
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim|Mannequin:spine_02_anim_grp|Mannequin:spine_02_anim_offset_grp|Mannequin:spine_02_anim" 
 		"rotateX" " -av"
@@ -1484,10 +1484,10 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim|Mannequin:spine_02_anim_grp|Mannequin:spine_02_anim_offset_grp|Mannequin:spine_02_anim" 
 		"rotateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim|Mannequin:spine_02_anim_grp|Mannequin:spine_02_anim_offset_grp|Mannequin:spine_02_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button161\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button293\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim|Mannequin:spine_02_anim_grp|Mannequin:spine_02_anim_offset_grp|Mannequin:spine_02_anim|Mannequin:spine_03_anim_grp|Mannequin:spine_03_anim_offset_grp|Mannequin:spine_03_anim" 
-		"translate" " -type \"double3\" -0.11740895234248054 0 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim|Mannequin:spine_02_anim_grp|Mannequin:spine_02_anim_offset_grp|Mannequin:spine_02_anim|Mannequin:spine_03_anim_grp|Mannequin:spine_03_anim_offset_grp|Mannequin:spine_03_anim" 
 		"translateX" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim|Mannequin:spine_02_anim_grp|Mannequin:spine_02_anim_offset_grp|Mannequin:spine_02_anim|Mannequin:spine_03_anim_grp|Mannequin:spine_03_anim_offset_grp|Mannequin:spine_03_anim" 
@@ -1495,7 +1495,7 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim|Mannequin:spine_02_anim_grp|Mannequin:spine_02_anim_offset_grp|Mannequin:spine_02_anim|Mannequin:spine_03_anim_grp|Mannequin:spine_03_anim_offset_grp|Mannequin:spine_03_anim" 
 		"translateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim|Mannequin:spine_02_anim_grp|Mannequin:spine_02_anim_offset_grp|Mannequin:spine_02_anim|Mannequin:spine_03_anim_grp|Mannequin:spine_03_anim_offset_grp|Mannequin:spine_03_anim" 
-		"rotate" " -type \"double3\" -5.96328851447726471 -12.53064103312935273 -13.28035219329342453"
+		"rotate" " -type \"double3\" 4.88036293678408217 4.30632218152446811 -23.01258393985129302"
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim|Mannequin:spine_02_anim_grp|Mannequin:spine_02_anim_offset_grp|Mannequin:spine_02_anim|Mannequin:spine_03_anim_grp|Mannequin:spine_03_anim_offset_grp|Mannequin:spine_03_anim" 
 		"rotateX" " -av"
@@ -1504,7 +1504,7 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim|Mannequin:spine_02_anim_grp|Mannequin:spine_02_anim_offset_grp|Mannequin:spine_02_anim|Mannequin:spine_03_anim_grp|Mannequin:spine_03_anim_offset_grp|Mannequin:spine_03_anim" 
 		"rotateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:spine_01_space_switcher_follow|Mannequin:spine_01_space_switcher|Mannequin:spine_01_anim_grp|Mannequin:spine_01_anim_offset_grp|Mannequin:spine_01_anim|Mannequin:spine_02_anim_grp|Mannequin:spine_02_anim_offset_grp|Mannequin:spine_02_anim|Mannequin:spine_03_anim_grp|Mannequin:spine_03_anim_offset_grp|Mannequin:spine_03_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button162\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button294\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:mid_ik_anim_grp|Mannequin:mid_ik_anim_translate_driver_grp|Mannequin:mid_ik_anim_driver_grp|Mannequin:mid_ik_anim" 
 		"rotateOrder" " 5"
@@ -1513,7 +1513,7 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:mid_ik_anim_grp|Mannequin:mid_ik_anim_translate_driver_grp|Mannequin:mid_ik_anim_driver_grp|Mannequin:mid_ik_anim" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:mid_ik_anim_grp|Mannequin:mid_ik_anim_translate_driver_grp|Mannequin:mid_ik_anim_driver_grp|Mannequin:mid_ik_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button158\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button290\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:chest_ik_anim_space_switcher_follow|Mannequin:chest_ik_anim_space_switcher|Mannequin:chest_ik_anim_grp|Mannequin:chest_ik_anim_driver_grp|Mannequin:chest_ik_anim" 
 		"rotateOrder" " 5"
@@ -1522,13 +1522,13 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:chest_ik_anim_space_switcher_follow|Mannequin:chest_ik_anim_space_switcher|Mannequin:chest_ik_anim_grp|Mannequin:chest_ik_anim_driver_grp|Mannequin:chest_ik_anim" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:chest_ik_anim_space_switcher_follow|Mannequin:chest_ik_anim_space_switcher|Mannequin:chest_ik_anim_grp|Mannequin:chest_ik_anim_driver_grp|Mannequin:chest_ik_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button159\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button291\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:body_grp|Mannequin:body_anim_space_switcher_follow|Mannequin:body_anim_space_switcher|Mannequin:body_anim_grp|Mannequin:body_anim|Mannequin:auto_hip_world|Mannequin:hip_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button164\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button296\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l" 
-		"translate" " -type \"double3\" -11.05310446437695582 49.7353497931937838 -4.01223912911478031"
+		"translate" " -type \"double3\" -5.0937694634529489 -29.48104576385942011 24.89764361383739555"
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l" 
 		"translateX" " -av"
@@ -1537,7 +1537,8 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l" 
 		"translateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l" 
-		"rotate" " -type \"double3\" 0 0 8.96836172428390377"
+		"rotate" " -type \"double3\" 90.20674715234218866 -1.93962057496289764 -3.07933621591153228"
+		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l" 
 		"rotateX" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l" 
@@ -1545,12 +1546,12 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l" 
 		"rotateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l" 
-		"knee_twist" " -av -k 1 12.1"
+		"knee_twist" " -av -k 1 0.20000000000000107"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button185\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button317\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l|Mannequin:master_foot_ball_pivot_l_grp|Mannequin:master_foot_ball_pivot_l|Mannequin:ik_foot_toe_tip_pivot_l_grp|Mannequin:ik_foot_toe_tip_pivot_l|Mannequin:ik_foot_inside_pivot_l_grp|Mannequin:ik_foot_inside_pivot_l|Mannequin:ik_foot_outside_pivot_l_grp|Mannequin:ik_foot_outside_pivot_l|Mannequin:ik_foot_heel_pivot_l_grp|Mannequin:ik_foot_heel_pivot_l|Mannequin:ik_foot_toe_pivot_l_grp|Mannequin:ik_foot_toe_pivot_l|Mannequin:toe_wiggle_ctrl_l_grp|Mannequin:toe_wiggle_ctrl_l" 
-		"rotate" " -type \"double3\" 0 0 41.28599093817593513"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l|Mannequin:master_foot_ball_pivot_l_grp|Mannequin:master_foot_ball_pivot_l|Mannequin:ik_foot_toe_tip_pivot_l_grp|Mannequin:ik_foot_toe_tip_pivot_l|Mannequin:ik_foot_inside_pivot_l_grp|Mannequin:ik_foot_inside_pivot_l|Mannequin:ik_foot_outside_pivot_l_grp|Mannequin:ik_foot_outside_pivot_l|Mannequin:ik_foot_heel_pivot_l_grp|Mannequin:ik_foot_heel_pivot_l|Mannequin:ik_foot_toe_pivot_l_grp|Mannequin:ik_foot_toe_pivot_l|Mannequin:toe_wiggle_ctrl_l_grp|Mannequin:toe_wiggle_ctrl_l" 
 		"rotateX" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l|Mannequin:master_foot_ball_pivot_l_grp|Mannequin:master_foot_ball_pivot_l|Mannequin:ik_foot_toe_tip_pivot_l_grp|Mannequin:ik_foot_toe_tip_pivot_l|Mannequin:ik_foot_inside_pivot_l_grp|Mannequin:ik_foot_inside_pivot_l|Mannequin:ik_foot_outside_pivot_l_grp|Mannequin:ik_foot_outside_pivot_l|Mannequin:ik_foot_heel_pivot_l_grp|Mannequin:ik_foot_heel_pivot_l|Mannequin:ik_foot_toe_pivot_l_grp|Mannequin:ik_foot_toe_pivot_l|Mannequin:toe_wiggle_ctrl_l_grp|Mannequin:toe_wiggle_ctrl_l" 
@@ -1558,13 +1559,13 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l|Mannequin:master_foot_ball_pivot_l_grp|Mannequin:master_foot_ball_pivot_l|Mannequin:ik_foot_toe_tip_pivot_l_grp|Mannequin:ik_foot_toe_tip_pivot_l|Mannequin:ik_foot_inside_pivot_l_grp|Mannequin:ik_foot_inside_pivot_l|Mannequin:ik_foot_outside_pivot_l_grp|Mannequin:ik_foot_outside_pivot_l|Mannequin:ik_foot_heel_pivot_l_grp|Mannequin:ik_foot_heel_pivot_l|Mannequin:ik_foot_toe_pivot_l_grp|Mannequin:ik_foot_toe_pivot_l|Mannequin:toe_wiggle_ctrl_l_grp|Mannequin:toe_wiggle_ctrl_l" 
 		"rotateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l|Mannequin:master_foot_ball_pivot_l_grp|Mannequin:master_foot_ball_pivot_l|Mannequin:ik_foot_toe_tip_pivot_l_grp|Mannequin:ik_foot_toe_tip_pivot_l|Mannequin:ik_foot_inside_pivot_l_grp|Mannequin:ik_foot_inside_pivot_l|Mannequin:ik_foot_outside_pivot_l_grp|Mannequin:ik_foot_outside_pivot_l|Mannequin:ik_foot_heel_pivot_l_grp|Mannequin:ik_foot_heel_pivot_l|Mannequin:ik_foot_toe_pivot_l_grp|Mannequin:ik_foot_toe_pivot_l|Mannequin:toe_wiggle_ctrl_l_grp|Mannequin:toe_wiggle_ctrl_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button189\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button321\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l|Mannequin:master_foot_ball_pivot_l_grp|Mannequin:master_foot_ball_pivot_l|Mannequin:heel_ctrl_l_grp|Mannequin:heel_ctrl_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button187\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button319\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l|Mannequin:master_foot_ball_pivot_l_grp|Mannequin:master_foot_ball_pivot_l|Mannequin:toe_tip_ctrl_l_grp|Mannequin:toe_tip_ctrl_l" 
-		"rotate" " -type \"double3\" 0 0 -58.10431096030630727"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l|Mannequin:master_foot_ball_pivot_l_grp|Mannequin:master_foot_ball_pivot_l|Mannequin:toe_tip_ctrl_l_grp|Mannequin:toe_tip_ctrl_l" 
 		"rotateY" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l|Mannequin:master_foot_ball_pivot_l_grp|Mannequin:master_foot_ball_pivot_l|Mannequin:toe_tip_ctrl_l_grp|Mannequin:toe_tip_ctrl_l" 
@@ -1572,28 +1573,28 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l|Mannequin:master_foot_ball_pivot_l_grp|Mannequin:master_foot_ball_pivot_l|Mannequin:toe_tip_ctrl_l_grp|Mannequin:toe_tip_ctrl_l" 
 		"rotateX" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:ik_leg_grp_l|Mannequin:ik_foot_anim_l_space_switcher_follow|Mannequin:ik_foot_anim_l_space_switcher|Mannequin:ik_foot_anim_grp_l|Mannequin:ik_foot_anim_l|Mannequin:master_foot_ball_pivot_l_grp|Mannequin:master_foot_ball_pivot_l|Mannequin:toe_tip_ctrl_l_grp|Mannequin:toe_tip_ctrl_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button191\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button323\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:leg_joints_grp_l|Mannequin:fk_thigh_l_orient_grp|Mannequin:fk_thigh_l_anim_grp|Mannequin:fk_thigh_l_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button177\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button309\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:leg_joints_grp_l|Mannequin:fk_thigh_l_orient_grp|Mannequin:fk_thigh_l_anim_grp|Mannequin:fk_thigh_l_anim|Mannequin:fk_calf_l_anim_grp|Mannequin:fk_calf_l_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button179\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button311\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:leg_joints_grp_l|Mannequin:fk_thigh_l_orient_grp|Mannequin:fk_thigh_l_anim_grp|Mannequin:fk_thigh_l_anim|Mannequin:fk_calf_l_anim_grp|Mannequin:fk_calf_l_anim|Mannequin:fk_foot_l_anim_grp|Mannequin:fk_foot_l_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button181\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button313\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:leg_joints_grp_l|Mannequin:fk_thigh_l_orient_grp|Mannequin:fk_thigh_l_anim_grp|Mannequin:fk_thigh_l_anim|Mannequin:fk_calf_l_anim_grp|Mannequin:fk_calf_l_anim|Mannequin:fk_foot_l_anim_grp|Mannequin:fk_foot_l_anim|Mannequin:fk_ball_l_anim_grp|Mannequin:fk_ball_l_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button183\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button315\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:thigh_twist_grp_l|Mannequin:l_thigh_twist_01_anim_grp|Mannequin:l_thigh_twist_01_driven_grp|Mannequin:l_thigh_twist_01_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button208\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button340\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_l|Mannequin:calf_l_roll_grp|Mannequin:calf_l_twist_joint|Mannequin:calf_l_twist_mod|Mannequin:calf_l_twist_anim_grp|Mannequin:calf_l_twist_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button210\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button342\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r" 
-		"translate" " -type \"double3\" 9.23444263607941629 -37.44420946901439606 15.32338753289292299"
+		"translate" " -type \"double3\" 10.28165460140004228 23.1840552666671158 -3.64340026606090595"
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r" 
 		"translateX" " -av"
@@ -1602,8 +1603,7 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r" 
 		"translateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r" 
-		"rotate" " -type \"double3\" 83.41566047630458058 11.6893909875008184 0.16558506818442192"
-		
+		"rotate" " -type \"double3\" 0 0 -2.85295749878295801"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r" 
 		"rotateX" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r" 
@@ -1611,12 +1611,12 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r" 
 		"rotateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r" 
-		"knee_twist" " -av -k 1 -2.8"
+		"knee_twist" " -av -k 1 1.89999999999999947"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button186\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button318\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r|Mannequin:master_foot_ball_pivot_r_grp|Mannequin:master_foot_ball_pivot_r|Mannequin:ik_foot_toe_tip_pivot_r_grp|Mannequin:ik_foot_toe_tip_pivot_r|Mannequin:ik_foot_inside_pivot_r_grp|Mannequin:ik_foot_inside_pivot_r|Mannequin:ik_foot_outside_pivot_r_grp|Mannequin:ik_foot_outside_pivot_r|Mannequin:ik_foot_heel_pivot_r_grp|Mannequin:ik_foot_heel_pivot_r|Mannequin:ik_foot_toe_pivot_r_grp|Mannequin:ik_foot_toe_pivot_r|Mannequin:toe_wiggle_ctrl_r_grp|Mannequin:toe_wiggle_ctrl_r" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 28.2266186645469439"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r|Mannequin:master_foot_ball_pivot_r_grp|Mannequin:master_foot_ball_pivot_r|Mannequin:ik_foot_toe_tip_pivot_r_grp|Mannequin:ik_foot_toe_tip_pivot_r|Mannequin:ik_foot_inside_pivot_r_grp|Mannequin:ik_foot_inside_pivot_r|Mannequin:ik_foot_outside_pivot_r_grp|Mannequin:ik_foot_outside_pivot_r|Mannequin:ik_foot_heel_pivot_r_grp|Mannequin:ik_foot_heel_pivot_r|Mannequin:ik_foot_toe_pivot_r_grp|Mannequin:ik_foot_toe_pivot_r|Mannequin:toe_wiggle_ctrl_r_grp|Mannequin:toe_wiggle_ctrl_r" 
 		"rotateX" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r|Mannequin:master_foot_ball_pivot_r_grp|Mannequin:master_foot_ball_pivot_r|Mannequin:ik_foot_toe_tip_pivot_r_grp|Mannequin:ik_foot_toe_tip_pivot_r|Mannequin:ik_foot_inside_pivot_r_grp|Mannequin:ik_foot_inside_pivot_r|Mannequin:ik_foot_outside_pivot_r_grp|Mannequin:ik_foot_outside_pivot_r|Mannequin:ik_foot_heel_pivot_r_grp|Mannequin:ik_foot_heel_pivot_r|Mannequin:ik_foot_toe_pivot_r_grp|Mannequin:ik_foot_toe_pivot_r|Mannequin:toe_wiggle_ctrl_r_grp|Mannequin:toe_wiggle_ctrl_r" 
@@ -1624,13 +1624,13 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r|Mannequin:master_foot_ball_pivot_r_grp|Mannequin:master_foot_ball_pivot_r|Mannequin:ik_foot_toe_tip_pivot_r_grp|Mannequin:ik_foot_toe_tip_pivot_r|Mannequin:ik_foot_inside_pivot_r_grp|Mannequin:ik_foot_inside_pivot_r|Mannequin:ik_foot_outside_pivot_r_grp|Mannequin:ik_foot_outside_pivot_r|Mannequin:ik_foot_heel_pivot_r_grp|Mannequin:ik_foot_heel_pivot_r|Mannequin:ik_foot_toe_pivot_r_grp|Mannequin:ik_foot_toe_pivot_r|Mannequin:toe_wiggle_ctrl_r_grp|Mannequin:toe_wiggle_ctrl_r" 
 		"rotateZ" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r|Mannequin:master_foot_ball_pivot_r_grp|Mannequin:master_foot_ball_pivot_r|Mannequin:ik_foot_toe_tip_pivot_r_grp|Mannequin:ik_foot_toe_tip_pivot_r|Mannequin:ik_foot_inside_pivot_r_grp|Mannequin:ik_foot_inside_pivot_r|Mannequin:ik_foot_outside_pivot_r_grp|Mannequin:ik_foot_outside_pivot_r|Mannequin:ik_foot_heel_pivot_r_grp|Mannequin:ik_foot_heel_pivot_r|Mannequin:ik_foot_toe_pivot_r_grp|Mannequin:ik_foot_toe_pivot_r|Mannequin:toe_wiggle_ctrl_r_grp|Mannequin:toe_wiggle_ctrl_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button190\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button322\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r|Mannequin:master_foot_ball_pivot_r_grp|Mannequin:master_foot_ball_pivot_r|Mannequin:heel_ctrl_r_grp|Mannequin:heel_ctrl_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button188\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button320\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r|Mannequin:master_foot_ball_pivot_r_grp|Mannequin:master_foot_ball_pivot_r|Mannequin:toe_tip_ctrl_r_grp|Mannequin:toe_tip_ctrl_r" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 -39.39804059535655512"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r|Mannequin:master_foot_ball_pivot_r_grp|Mannequin:master_foot_ball_pivot_r|Mannequin:toe_tip_ctrl_r_grp|Mannequin:toe_tip_ctrl_r" 
 		"rotateY" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r|Mannequin:master_foot_ball_pivot_r_grp|Mannequin:master_foot_ball_pivot_r|Mannequin:toe_tip_ctrl_r_grp|Mannequin:toe_tip_ctrl_r" 
@@ -1638,28 +1638,28 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r|Mannequin:master_foot_ball_pivot_r_grp|Mannequin:master_foot_ball_pivot_r|Mannequin:toe_tip_ctrl_r_grp|Mannequin:toe_tip_ctrl_r" 
 		"rotateX" " -av"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:ik_leg_grp_r|Mannequin:ik_foot_anim_r_space_switcher_follow|Mannequin:ik_foot_anim_r_space_switcher|Mannequin:ik_foot_anim_grp_r|Mannequin:ik_foot_anim_r|Mannequin:master_foot_ball_pivot_r_grp|Mannequin:master_foot_ball_pivot_r|Mannequin:toe_tip_ctrl_r_grp|Mannequin:toe_tip_ctrl_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button192\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button324\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:leg_joints_grp_r|Mannequin:fk_thigh_r_orient_grp|Mannequin:fk_thigh_r_anim_grp|Mannequin:fk_thigh_r_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button178\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button310\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:leg_joints_grp_r|Mannequin:fk_thigh_r_orient_grp|Mannequin:fk_thigh_r_anim_grp|Mannequin:fk_thigh_r_anim|Mannequin:fk_calf_r_anim_grp|Mannequin:fk_calf_r_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button180\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button312\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:leg_joints_grp_r|Mannequin:fk_thigh_r_orient_grp|Mannequin:fk_thigh_r_anim_grp|Mannequin:fk_thigh_r_anim|Mannequin:fk_calf_r_anim_grp|Mannequin:fk_calf_r_anim|Mannequin:fk_foot_r_anim_grp|Mannequin:fk_foot_r_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button182\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button314\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:leg_joints_grp_r|Mannequin:fk_thigh_r_orient_grp|Mannequin:fk_thigh_r_anim_grp|Mannequin:fk_thigh_r_anim|Mannequin:fk_calf_r_anim_grp|Mannequin:fk_calf_r_anim|Mannequin:fk_foot_r_anim_grp|Mannequin:fk_foot_r_anim|Mannequin:fk_ball_r_anim_grp|Mannequin:fk_ball_r_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button184\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button316\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:thigh_twist_grp_r|Mannequin:r_thigh_twist_01_anim_grp|Mannequin:r_thigh_twist_01_driven_grp|Mannequin:r_thigh_twist_01_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button209\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button341\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:leg_sys_grp|Mannequin:leg_group_r|Mannequin:calf_r_roll_grp|Mannequin:calf_r_twist_joint|Mannequin:calf_r_twist_mod|Mannequin:calf_r_twist_anim_grp|Mannequin:calf_r_twist_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button211\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button343\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:neck_01_fk_anim_grp|Mannequin:neck_fk_orient_master|Mannequin:neck_01_fk_anim" 
-		"rotate" " -type \"double3\" -1.07835122304523967 14.02331301017973075 28.82303968135990502"
+		"rotate" " -type \"double3\" -2.26930325728903437 -3.56807591890227238 34.81559286542998422"
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:neck_01_fk_anim_grp|Mannequin:neck_fk_orient_master|Mannequin:neck_01_fk_anim" 
 		"rotateX" " -av"
@@ -1674,10 +1674,10 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:neck_01_fk_anim_grp|Mannequin:neck_fk_orient_master|Mannequin:neck_01_fk_anim" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:neck_01_fk_anim_grp|Mannequin:neck_fk_orient_master|Mannequin:neck_01_fk_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button157\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button289\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:neck_01_fk_anim_grp|Mannequin:neck_fk_orient_master|Mannequin:neck_01_fk_anim|Mannequin:head_fk_orient_master|Mannequin:head_fk_anim_grp|Mannequin:head_fk_anim" 
-		"rotate" " -type \"double3\" 5.50399040007279261 11.61508517458243084 24.79995877817345118"
+		"rotate" " -type \"double3\" -2.26930325728903437 -3.56807591890227238 34.81559286542998422"
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:neck_01_fk_anim_grp|Mannequin:neck_fk_orient_master|Mannequin:neck_01_fk_anim|Mannequin:head_fk_orient_master|Mannequin:head_fk_anim_grp|Mannequin:head_fk_anim" 
 		"rotateX" " -av"
@@ -1692,250 +1692,250 @@ createNode reference -n "MannequinRN";
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:neck_01_fk_anim_grp|Mannequin:neck_fk_orient_master|Mannequin:neck_01_fk_anim|Mannequin:head_fk_orient_master|Mannequin:head_fk_anim_grp|Mannequin:head_fk_anim" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:neck_01_fk_anim_grp|Mannequin:neck_fk_orient_master|Mannequin:neck_01_fk_anim|Mannequin:head_fk_orient_master|Mannequin:head_fk_anim_grp|Mannequin:head_fk_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button156\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button288\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:fingers_l_poleVectors_grp|Mannequin:index_l_poleVector_grp|Mannequin:index_l_poleVector" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button242\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button374\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:fingers_l_poleVectors_grp|Mannequin:middle_l_poleVector_grp|Mannequin:middle_l_poleVector" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button243\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button375\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:fingers_l_poleVectors_grp|Mannequin:ring_l_poleVector_grp|Mannequin:ring_l_poleVector" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button244\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button376\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:fingers_l_poleVectors_grp|Mannequin:pinky_l_poleVector_grp|Mannequin:pinky_l_poleVector" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button245\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button377\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:fingers_l_poleVectors_grp|Mannequin:thumb_l_poleVector_grp|Mannequin:thumb_l_poleVector" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button246\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button378\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:index_finger_fk_ctrl_1_l_grp|Mannequin:index_finger_fk_ctrl_1_l_driven_grp|Mannequin:index_finger_fk_ctrl_1_l" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:index_finger_fk_ctrl_1_l_grp|Mannequin:index_finger_fk_ctrl_1_l_driven_grp|Mannequin:index_finger_fk_ctrl_1_l" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:index_finger_fk_ctrl_1_l_grp|Mannequin:index_finger_fk_ctrl_1_l_driven_grp|Mannequin:index_finger_fk_ctrl_1_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button221\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button353\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:index_finger_fk_ctrl_1_l_grp|Mannequin:index_finger_fk_ctrl_1_l_driven_grp|Mannequin:index_finger_fk_ctrl_1_l|Mannequin:index_finger_fk_ctrl_2_l_grp|Mannequin:index_finger_fk_ctrl_2_l_driven_grp|Mannequin:index_finger_fk_ctrl_2_l" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:index_finger_fk_ctrl_1_l_grp|Mannequin:index_finger_fk_ctrl_1_l_driven_grp|Mannequin:index_finger_fk_ctrl_1_l|Mannequin:index_finger_fk_ctrl_2_l_grp|Mannequin:index_finger_fk_ctrl_2_l_driven_grp|Mannequin:index_finger_fk_ctrl_2_l" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:index_finger_fk_ctrl_1_l_grp|Mannequin:index_finger_fk_ctrl_1_l_driven_grp|Mannequin:index_finger_fk_ctrl_1_l|Mannequin:index_finger_fk_ctrl_2_l_grp|Mannequin:index_finger_fk_ctrl_2_l_driven_grp|Mannequin:index_finger_fk_ctrl_2_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button222\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button354\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:index_finger_fk_ctrl_1_l_grp|Mannequin:index_finger_fk_ctrl_1_l_driven_grp|Mannequin:index_finger_fk_ctrl_1_l|Mannequin:index_finger_fk_ctrl_2_l_grp|Mannequin:index_finger_fk_ctrl_2_l_driven_grp|Mannequin:index_finger_fk_ctrl_2_l|Mannequin:index_finger_fk_ctrl_3_l_grp|Mannequin:index_finger_fk_ctrl_3_l_driven_grp|Mannequin:index_finger_fk_ctrl_3_l" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:index_finger_fk_ctrl_1_l_grp|Mannequin:index_finger_fk_ctrl_1_l_driven_grp|Mannequin:index_finger_fk_ctrl_1_l|Mannequin:index_finger_fk_ctrl_2_l_grp|Mannequin:index_finger_fk_ctrl_2_l_driven_grp|Mannequin:index_finger_fk_ctrl_2_l|Mannequin:index_finger_fk_ctrl_3_l_grp|Mannequin:index_finger_fk_ctrl_3_l_driven_grp|Mannequin:index_finger_fk_ctrl_3_l" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:index_finger_fk_ctrl_1_l_grp|Mannequin:index_finger_fk_ctrl_1_l_driven_grp|Mannequin:index_finger_fk_ctrl_1_l|Mannequin:index_finger_fk_ctrl_2_l_grp|Mannequin:index_finger_fk_ctrl_2_l_driven_grp|Mannequin:index_finger_fk_ctrl_2_l|Mannequin:index_finger_fk_ctrl_3_l_grp|Mannequin:index_finger_fk_ctrl_3_l_driven_grp|Mannequin:index_finger_fk_ctrl_3_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button223\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button355\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_driven_grp|Mannequin:middle_finger_fk_ctrl_1_l" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_driven_grp|Mannequin:middle_finger_fk_ctrl_1_l" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_driven_grp|Mannequin:middle_finger_fk_ctrl_1_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button218\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button350\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_driven_grp|Mannequin:middle_finger_fk_ctrl_1_l|Mannequin:middle_finger_fk_ctrl_2_l_grp|Mannequin:middle_finger_fk_ctrl_2_l_driven_grp|Mannequin:middle_finger_fk_ctrl_2_l" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_driven_grp|Mannequin:middle_finger_fk_ctrl_1_l|Mannequin:middle_finger_fk_ctrl_2_l_grp|Mannequin:middle_finger_fk_ctrl_2_l_driven_grp|Mannequin:middle_finger_fk_ctrl_2_l" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_driven_grp|Mannequin:middle_finger_fk_ctrl_1_l|Mannequin:middle_finger_fk_ctrl_2_l_grp|Mannequin:middle_finger_fk_ctrl_2_l_driven_grp|Mannequin:middle_finger_fk_ctrl_2_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button219\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button351\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_driven_grp|Mannequin:middle_finger_fk_ctrl_1_l|Mannequin:middle_finger_fk_ctrl_2_l_grp|Mannequin:middle_finger_fk_ctrl_2_l_driven_grp|Mannequin:middle_finger_fk_ctrl_2_l|Mannequin:middle_finger_fk_ctrl_3_l_grp|Mannequin:middle_finger_fk_ctrl_3_l_driven_grp|Mannequin:middle_finger_fk_ctrl_3_l" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_driven_grp|Mannequin:middle_finger_fk_ctrl_1_l|Mannequin:middle_finger_fk_ctrl_2_l_grp|Mannequin:middle_finger_fk_ctrl_2_l_driven_grp|Mannequin:middle_finger_fk_ctrl_2_l|Mannequin:middle_finger_fk_ctrl_3_l_grp|Mannequin:middle_finger_fk_ctrl_3_l_driven_grp|Mannequin:middle_finger_fk_ctrl_3_l" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_grp|Mannequin:middle_finger_fk_ctrl_1_l_driven_grp|Mannequin:middle_finger_fk_ctrl_1_l|Mannequin:middle_finger_fk_ctrl_2_l_grp|Mannequin:middle_finger_fk_ctrl_2_l_driven_grp|Mannequin:middle_finger_fk_ctrl_2_l|Mannequin:middle_finger_fk_ctrl_3_l_grp|Mannequin:middle_finger_fk_ctrl_3_l_driven_grp|Mannequin:middle_finger_fk_ctrl_3_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button220\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button352\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_driven_grp|Mannequin:ring_finger_fk_ctrl_1_l" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_driven_grp|Mannequin:ring_finger_fk_ctrl_1_l" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_driven_grp|Mannequin:ring_finger_fk_ctrl_1_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button215\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button347\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_driven_grp|Mannequin:ring_finger_fk_ctrl_1_l|Mannequin:ring_finger_fk_ctrl_2_l_grp|Mannequin:ring_finger_fk_ctrl_2_l_driven_grp|Mannequin:ring_finger_fk_ctrl_2_l" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_driven_grp|Mannequin:ring_finger_fk_ctrl_1_l|Mannequin:ring_finger_fk_ctrl_2_l_grp|Mannequin:ring_finger_fk_ctrl_2_l_driven_grp|Mannequin:ring_finger_fk_ctrl_2_l" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_driven_grp|Mannequin:ring_finger_fk_ctrl_1_l|Mannequin:ring_finger_fk_ctrl_2_l_grp|Mannequin:ring_finger_fk_ctrl_2_l_driven_grp|Mannequin:ring_finger_fk_ctrl_2_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button216\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button348\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_driven_grp|Mannequin:ring_finger_fk_ctrl_1_l|Mannequin:ring_finger_fk_ctrl_2_l_grp|Mannequin:ring_finger_fk_ctrl_2_l_driven_grp|Mannequin:ring_finger_fk_ctrl_2_l|Mannequin:ring_finger_fk_ctrl_3_l_grp|Mannequin:ring_finger_fk_ctrl_3_l_driven_grp|Mannequin:ring_finger_fk_ctrl_3_l" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_driven_grp|Mannequin:ring_finger_fk_ctrl_1_l|Mannequin:ring_finger_fk_ctrl_2_l_grp|Mannequin:ring_finger_fk_ctrl_2_l_driven_grp|Mannequin:ring_finger_fk_ctrl_2_l|Mannequin:ring_finger_fk_ctrl_3_l_grp|Mannequin:ring_finger_fk_ctrl_3_l_driven_grp|Mannequin:ring_finger_fk_ctrl_3_l" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_grp|Mannequin:ring_finger_fk_ctrl_1_l_driven_grp|Mannequin:ring_finger_fk_ctrl_1_l|Mannequin:ring_finger_fk_ctrl_2_l_grp|Mannequin:ring_finger_fk_ctrl_2_l_driven_grp|Mannequin:ring_finger_fk_ctrl_2_l|Mannequin:ring_finger_fk_ctrl_3_l_grp|Mannequin:ring_finger_fk_ctrl_3_l_driven_grp|Mannequin:ring_finger_fk_ctrl_3_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button217\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button349\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_l" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_l" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button212\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button344\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_l|Mannequin:pinky_finger_fk_ctrl_2_l_grp|Mannequin:pinky_finger_fk_ctrl_2_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_2_l" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_l|Mannequin:pinky_finger_fk_ctrl_2_l_grp|Mannequin:pinky_finger_fk_ctrl_2_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_2_l" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_l|Mannequin:pinky_finger_fk_ctrl_2_l_grp|Mannequin:pinky_finger_fk_ctrl_2_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_2_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button213\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button345\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_l|Mannequin:pinky_finger_fk_ctrl_2_l_grp|Mannequin:pinky_finger_fk_ctrl_2_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_2_l|Mannequin:pinky_finger_fk_ctrl_3_l_grp|Mannequin:pinky_finger_fk_ctrl_3_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_3_l" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_l|Mannequin:pinky_finger_fk_ctrl_2_l_grp|Mannequin:pinky_finger_fk_ctrl_2_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_2_l|Mannequin:pinky_finger_fk_ctrl_3_l_grp|Mannequin:pinky_finger_fk_ctrl_3_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_3_l" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_grp|Mannequin:pinky_finger_fk_ctrl_1_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_l|Mannequin:pinky_finger_fk_ctrl_2_l_grp|Mannequin:pinky_finger_fk_ctrl_2_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_2_l|Mannequin:pinky_finger_fk_ctrl_3_l_grp|Mannequin:pinky_finger_fk_ctrl_3_l_driven_grp|Mannequin:pinky_finger_fk_ctrl_3_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button214\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button346\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_l" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_l" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button224\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button356\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_l|Mannequin:thumb_finger_fk_ctrl_2_l_grp|Mannequin:thumb_finger_fk_ctrl_2_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_2_l" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_l|Mannequin:thumb_finger_fk_ctrl_2_l_grp|Mannequin:thumb_finger_fk_ctrl_2_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_2_l" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_l|Mannequin:thumb_finger_fk_ctrl_2_l_grp|Mannequin:thumb_finger_fk_ctrl_2_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_2_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button225\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button357\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_l|Mannequin:thumb_finger_fk_ctrl_2_l_grp|Mannequin:thumb_finger_fk_ctrl_2_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_2_l|Mannequin:thumb_finger_fk_ctrl_3_l_grp|Mannequin:thumb_finger_fk_ctrl_3_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_3_l" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_l|Mannequin:thumb_finger_fk_ctrl_2_l_grp|Mannequin:thumb_finger_fk_ctrl_2_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_2_l|Mannequin:thumb_finger_fk_ctrl_3_l_grp|Mannequin:thumb_finger_fk_ctrl_3_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_3_l" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_l|Mannequin:hand_driven_grp_master_l|Mannequin:hand_driven_grp_l|Mannequin:fk_finger_controls_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_grp|Mannequin:thumb_finger_fk_ctrl_1_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_l|Mannequin:thumb_finger_fk_ctrl_2_l_grp|Mannequin:thumb_finger_fk_ctrl_2_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_2_l|Mannequin:thumb_finger_fk_ctrl_3_l_grp|Mannequin:thumb_finger_fk_ctrl_3_l_driven_grp|Mannequin:thumb_finger_fk_ctrl_3_l" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button226\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button358\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:fingers_r_poleVectors_grp|Mannequin:index_r_poleVector_grp|Mannequin:index_r_poleVector" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button279\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button411\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:fingers_r_poleVectors_grp|Mannequin:middle_r_poleVector_grp|Mannequin:middle_r_poleVector" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button280\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button412\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:fingers_r_poleVectors_grp|Mannequin:ring_r_poleVector_grp|Mannequin:ring_r_poleVector" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button281\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button413\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:fingers_r_poleVectors_grp|Mannequin:pinky_r_poleVector_grp|Mannequin:pinky_r_poleVector" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button282\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button414\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:fingers_r_poleVectors_grp|Mannequin:thumb_r_poleVector_grp|Mannequin:thumb_r_poleVector" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button283\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button415\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:index_finger_fk_ctrl_1_r_grp|Mannequin:index_finger_fk_ctrl_1_r_driven_grp|Mannequin:index_finger_fk_ctrl_1_r" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:index_finger_fk_ctrl_1_r_grp|Mannequin:index_finger_fk_ctrl_1_r_driven_grp|Mannequin:index_finger_fk_ctrl_1_r" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:index_finger_fk_ctrl_1_r_grp|Mannequin:index_finger_fk_ctrl_1_r_driven_grp|Mannequin:index_finger_fk_ctrl_1_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button258\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button390\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:index_finger_fk_ctrl_1_r_grp|Mannequin:index_finger_fk_ctrl_1_r_driven_grp|Mannequin:index_finger_fk_ctrl_1_r|Mannequin:index_finger_fk_ctrl_2_r_grp|Mannequin:index_finger_fk_ctrl_2_r_driven_grp|Mannequin:index_finger_fk_ctrl_2_r" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:index_finger_fk_ctrl_1_r_grp|Mannequin:index_finger_fk_ctrl_1_r_driven_grp|Mannequin:index_finger_fk_ctrl_1_r|Mannequin:index_finger_fk_ctrl_2_r_grp|Mannequin:index_finger_fk_ctrl_2_r_driven_grp|Mannequin:index_finger_fk_ctrl_2_r" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:index_finger_fk_ctrl_1_r_grp|Mannequin:index_finger_fk_ctrl_1_r_driven_grp|Mannequin:index_finger_fk_ctrl_1_r|Mannequin:index_finger_fk_ctrl_2_r_grp|Mannequin:index_finger_fk_ctrl_2_r_driven_grp|Mannequin:index_finger_fk_ctrl_2_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button259\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button391\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:index_finger_fk_ctrl_1_r_grp|Mannequin:index_finger_fk_ctrl_1_r_driven_grp|Mannequin:index_finger_fk_ctrl_1_r|Mannequin:index_finger_fk_ctrl_2_r_grp|Mannequin:index_finger_fk_ctrl_2_r_driven_grp|Mannequin:index_finger_fk_ctrl_2_r|Mannequin:index_finger_fk_ctrl_3_r_grp|Mannequin:index_finger_fk_ctrl_3_r_driven_grp|Mannequin:index_finger_fk_ctrl_3_r" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:index_finger_fk_ctrl_1_r_grp|Mannequin:index_finger_fk_ctrl_1_r_driven_grp|Mannequin:index_finger_fk_ctrl_1_r|Mannequin:index_finger_fk_ctrl_2_r_grp|Mannequin:index_finger_fk_ctrl_2_r_driven_grp|Mannequin:index_finger_fk_ctrl_2_r|Mannequin:index_finger_fk_ctrl_3_r_grp|Mannequin:index_finger_fk_ctrl_3_r_driven_grp|Mannequin:index_finger_fk_ctrl_3_r" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:index_finger_fk_ctrl_1_r_grp|Mannequin:index_finger_fk_ctrl_1_r_driven_grp|Mannequin:index_finger_fk_ctrl_1_r|Mannequin:index_finger_fk_ctrl_2_r_grp|Mannequin:index_finger_fk_ctrl_2_r_driven_grp|Mannequin:index_finger_fk_ctrl_2_r|Mannequin:index_finger_fk_ctrl_3_r_grp|Mannequin:index_finger_fk_ctrl_3_r_driven_grp|Mannequin:index_finger_fk_ctrl_3_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button260\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button392\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_driven_grp|Mannequin:middle_finger_fk_ctrl_1_r" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_driven_grp|Mannequin:middle_finger_fk_ctrl_1_r" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_driven_grp|Mannequin:middle_finger_fk_ctrl_1_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button255\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button387\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_driven_grp|Mannequin:middle_finger_fk_ctrl_1_r|Mannequin:middle_finger_fk_ctrl_2_r_grp|Mannequin:middle_finger_fk_ctrl_2_r_driven_grp|Mannequin:middle_finger_fk_ctrl_2_r" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_driven_grp|Mannequin:middle_finger_fk_ctrl_1_r|Mannequin:middle_finger_fk_ctrl_2_r_grp|Mannequin:middle_finger_fk_ctrl_2_r_driven_grp|Mannequin:middle_finger_fk_ctrl_2_r" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_driven_grp|Mannequin:middle_finger_fk_ctrl_1_r|Mannequin:middle_finger_fk_ctrl_2_r_grp|Mannequin:middle_finger_fk_ctrl_2_r_driven_grp|Mannequin:middle_finger_fk_ctrl_2_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button256\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button388\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_driven_grp|Mannequin:middle_finger_fk_ctrl_1_r|Mannequin:middle_finger_fk_ctrl_2_r_grp|Mannequin:middle_finger_fk_ctrl_2_r_driven_grp|Mannequin:middle_finger_fk_ctrl_2_r|Mannequin:middle_finger_fk_ctrl_3_r_grp|Mannequin:middle_finger_fk_ctrl_3_r_driven_grp|Mannequin:middle_finger_fk_ctrl_3_r" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_driven_grp|Mannequin:middle_finger_fk_ctrl_1_r|Mannequin:middle_finger_fk_ctrl_2_r_grp|Mannequin:middle_finger_fk_ctrl_2_r_driven_grp|Mannequin:middle_finger_fk_ctrl_2_r|Mannequin:middle_finger_fk_ctrl_3_r_grp|Mannequin:middle_finger_fk_ctrl_3_r_driven_grp|Mannequin:middle_finger_fk_ctrl_3_r" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_grp|Mannequin:middle_finger_fk_ctrl_1_r_driven_grp|Mannequin:middle_finger_fk_ctrl_1_r|Mannequin:middle_finger_fk_ctrl_2_r_grp|Mannequin:middle_finger_fk_ctrl_2_r_driven_grp|Mannequin:middle_finger_fk_ctrl_2_r|Mannequin:middle_finger_fk_ctrl_3_r_grp|Mannequin:middle_finger_fk_ctrl_3_r_driven_grp|Mannequin:middle_finger_fk_ctrl_3_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button257\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button389\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_driven_grp|Mannequin:ring_finger_fk_ctrl_1_r" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_driven_grp|Mannequin:ring_finger_fk_ctrl_1_r" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_driven_grp|Mannequin:ring_finger_fk_ctrl_1_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button252\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button384\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_driven_grp|Mannequin:ring_finger_fk_ctrl_1_r|Mannequin:ring_finger_fk_ctrl_2_r_grp|Mannequin:ring_finger_fk_ctrl_2_r_driven_grp|Mannequin:ring_finger_fk_ctrl_2_r" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_driven_grp|Mannequin:ring_finger_fk_ctrl_1_r|Mannequin:ring_finger_fk_ctrl_2_r_grp|Mannequin:ring_finger_fk_ctrl_2_r_driven_grp|Mannequin:ring_finger_fk_ctrl_2_r" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_driven_grp|Mannequin:ring_finger_fk_ctrl_1_r|Mannequin:ring_finger_fk_ctrl_2_r_grp|Mannequin:ring_finger_fk_ctrl_2_r_driven_grp|Mannequin:ring_finger_fk_ctrl_2_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button253\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button385\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_driven_grp|Mannequin:ring_finger_fk_ctrl_1_r|Mannequin:ring_finger_fk_ctrl_2_r_grp|Mannequin:ring_finger_fk_ctrl_2_r_driven_grp|Mannequin:ring_finger_fk_ctrl_2_r|Mannequin:ring_finger_fk_ctrl_3_r_grp|Mannequin:ring_finger_fk_ctrl_3_r_driven_grp|Mannequin:ring_finger_fk_ctrl_3_r" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_driven_grp|Mannequin:ring_finger_fk_ctrl_1_r|Mannequin:ring_finger_fk_ctrl_2_r_grp|Mannequin:ring_finger_fk_ctrl_2_r_driven_grp|Mannequin:ring_finger_fk_ctrl_2_r|Mannequin:ring_finger_fk_ctrl_3_r_grp|Mannequin:ring_finger_fk_ctrl_3_r_driven_grp|Mannequin:ring_finger_fk_ctrl_3_r" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_grp|Mannequin:ring_finger_fk_ctrl_1_r_driven_grp|Mannequin:ring_finger_fk_ctrl_1_r|Mannequin:ring_finger_fk_ctrl_2_r_grp|Mannequin:ring_finger_fk_ctrl_2_r_driven_grp|Mannequin:ring_finger_fk_ctrl_2_r|Mannequin:ring_finger_fk_ctrl_3_r_grp|Mannequin:ring_finger_fk_ctrl_3_r_driven_grp|Mannequin:ring_finger_fk_ctrl_3_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button254\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button386\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_r" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_r" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button249\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button381\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_r|Mannequin:pinky_finger_fk_ctrl_2_r_grp|Mannequin:pinky_finger_fk_ctrl_2_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_2_r" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_r|Mannequin:pinky_finger_fk_ctrl_2_r_grp|Mannequin:pinky_finger_fk_ctrl_2_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_2_r" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_r|Mannequin:pinky_finger_fk_ctrl_2_r_grp|Mannequin:pinky_finger_fk_ctrl_2_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_2_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button250\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button382\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_r|Mannequin:pinky_finger_fk_ctrl_2_r_grp|Mannequin:pinky_finger_fk_ctrl_2_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_2_r|Mannequin:pinky_finger_fk_ctrl_3_r_grp|Mannequin:pinky_finger_fk_ctrl_3_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_3_r" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_r|Mannequin:pinky_finger_fk_ctrl_2_r_grp|Mannequin:pinky_finger_fk_ctrl_2_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_2_r|Mannequin:pinky_finger_fk_ctrl_3_r_grp|Mannequin:pinky_finger_fk_ctrl_3_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_3_r" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_grp|Mannequin:pinky_finger_fk_ctrl_1_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_1_r|Mannequin:pinky_finger_fk_ctrl_2_r_grp|Mannequin:pinky_finger_fk_ctrl_2_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_2_r|Mannequin:pinky_finger_fk_ctrl_3_r_grp|Mannequin:pinky_finger_fk_ctrl_3_r_driven_grp|Mannequin:pinky_finger_fk_ctrl_3_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button251\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button383\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_r" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_r" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button261\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button393\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_r|Mannequin:thumb_finger_fk_ctrl_2_r_grp|Mannequin:thumb_finger_fk_ctrl_2_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_2_r" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_r|Mannequin:thumb_finger_fk_ctrl_2_r_grp|Mannequin:thumb_finger_fk_ctrl_2_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_2_r" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_r|Mannequin:thumb_finger_fk_ctrl_2_r_grp|Mannequin:thumb_finger_fk_ctrl_2_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_2_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button262\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button394\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_r|Mannequin:thumb_finger_fk_ctrl_2_r_grp|Mannequin:thumb_finger_fk_ctrl_2_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_2_r|Mannequin:thumb_finger_fk_ctrl_3_r_grp|Mannequin:thumb_finger_fk_ctrl_3_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_3_r" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_r|Mannequin:thumb_finger_fk_ctrl_2_r_grp|Mannequin:thumb_finger_fk_ctrl_2_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_2_r|Mannequin:thumb_finger_fk_ctrl_3_r_grp|Mannequin:thumb_finger_fk_ctrl_3_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_3_r" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:offset_anim|Mannequin:ctrl_rig|Mannequin:finger_sys_grp_r|Mannequin:hand_driven_grp_master_r|Mannequin:hand_driven_grp_r|Mannequin:fk_finger_controls_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_grp|Mannequin:thumb_finger_fk_ctrl_1_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_1_r|Mannequin:thumb_finger_fk_ctrl_2_r_grp|Mannequin:thumb_finger_fk_ctrl_2_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_2_r|Mannequin:thumb_finger_fk_ctrl_3_r_grp|Mannequin:thumb_finger_fk_ctrl_3_r_driven_grp|Mannequin:thumb_finger_fk_ctrl_3_r" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout70|formLayout138|button263\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout96|formLayout173|button395\""
 		
 		2 "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim|Mannequin:root_anim" 
-		"buttonName" " -type \"string\" \"artAnimUI|columnLayout14|rowColumnLayout8|tabLayout3|formLayout136|scrollLayout7|columnLayout16|frameLayout69|formLayout137|button195\""
+		"buttonName" " -type \"string\" \"artAnimUI|columnLayout26|rowColumnLayout11|tabLayout4|formLayout171|scrollLayout13|columnLayout28|frameLayout95|formLayout172|button327\""
 		
 		5 4 "MannequinRN" "|Mannequin:rig_grp|Mannequin:master_anim_space_switcher_follow|Mannequin:master_anim_space_switcher|Mannequin:master_anim.translateX" 
 		"MannequinRN.placeHolderList[11]" ""
@@ -3343,7 +3343,7 @@ createNode ikSpringSolver -s -n "ikSpringSolver";
 	rename -uid "AB7BC5F8-4211-C4B1-7EFE-84843174089C";
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "5EB0AC56-4FA2-4FA1-E9FD-11A66C067D5F";
-	setAttr ".b" -type "string" "playbackOptions -min 10 -max 26 -ast 0 -aet 26 ";
+	setAttr ".b" -type "string" "playbackOptions -min 10 -max 26 -ast 10 -aet 26 ";
 	setAttr ".st" 6;
 createNode unknown -s -n "mentalrayItemsList";
 	rename -uid "BE365EB4-4D51-E3D5-228B-CE84CD925E3E";
@@ -3549,12 +3549,6 @@ createNode animCurveTU -n "mannequin_geo_calf_l_MaxHandle";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 39;
-createNode unknown -n "ExportAnimationSettings";
-	rename -uid "1BFC3D78-45FA-E332-F933-4D92530240BD";
-	addAttr -ci true -sn "settings" -ln "settings" -dt "string";
-	addAttr -ci true -sn "sequence0" -ln "sequence0" -dt "string";
-	setAttr ".settings" -type "string" "[false, true, false, null, null]";
-	setAttr ".sequence0" -type "string" "D:/Projects/COVID/SourceFiles/Characters/Mannequin/Animations/Exports/Unarmed_Stand_Walk_F.fbx::1::39::30 FPS::Independent Euler Angle::Mannequin";
 createNode animCurveTL -n "head_fk_anim_translateX";
 	rename -uid "D3C408A7-41C3-1953-2AA7-17AFDC98A8D7";
 	setAttr ".tan" 18;
@@ -3563,6 +3557,12 @@ createNode animCurveTL -n "head_fk_anim_translateX";
 		 22 0 24 0 26 0;
 	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
 		yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTL -n "head_fk_anim_translateY";
 	rename -uid "AE43C54F-4EAD-1744-80A5-4384546BCC58";
 	setAttr ".tan" 18;
@@ -3571,6 +3571,12 @@ createNode animCurveTL -n "head_fk_anim_translateY";
 		 22 0 24 0 26 0;
 	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
 		yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTL -n "head_fk_anim_translateZ";
 	rename -uid "70C5A0C9-439F-9ABF-F3AF-53816144096A";
 	setAttr ".tan" 18;
@@ -3579,36 +3585,57 @@ createNode animCurveTL -n "head_fk_anim_translateZ";
 		 22 0 24 0 26 0;
 	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
 		yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTA -n "head_fk_anim_rotateX";
 	rename -uid "6460018E-4B00-F3A4-BBF0-32825CC53816";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 3.2613332685279568 3 -2.1042602122880467
-		 7 7.7062229001264093 10 5.5039904000727926 12 5.5039904000727926 14 3.7356211238482206
-		 16 0.76647187680908624 18 -1.945326917499868 20 -1.945326917499868 22 -1.945326917499868
-		 24 1.7793317412864615 26 5.5039904000727926;
-	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
-		yes;
+		 7 7.7062229001264093 10 5.5039904000727926 12 2.5515946177707969 14 3.9365186385379713
+		 16 -0.24774999318652477 18 -3.3767037258438202 20 -2.8991840701524878 22 -0.98021337982992485
+		 24 1.3787379031112021 26 5.5039904000727926;
+	setAttr -s 12 ".kyts[0:11]" yes no no yes no no no no no no no yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  0.87998212763366235;
+	setAttr -s 12 ".kiy[11]"  -0.47500679473596236;
+	setAttr -s 12 ".kox[11]"  0.87998212763366235;
+	setAttr -s 12 ".koy[11]"  -0.47500679473596236;
 createNode animCurveTA -n "head_fk_anim_rotateY";
 	rename -uid "896F21DD-4478-CCD0-6470-1DB62AEAB6D5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 2.599606223307557 3 -0.65853619614128767
-		 7 2.9617912965795048 10 11.615085174582431 12 11.615085174582431 14 5.7710216840558655
-		 16 -4.585676357067145 18 -8.3385906842366069 20 -8.3385906842366069 22 -8.3385906842366069
-		 24 1.6382472451729118 26 11.615085174582431;
-	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
-		yes;
+		 7 2.9617912965795048 10 11.615085174582431 12 8.781378758164454 14 8.8787565288016452
+		 16 -0.67162183987539092 18 -5.6913316195383095 20 -9.0561229610885885 22 -2.5751424400011227
+		 24 2.3621707232089939 26 11.615085174582431;
+	setAttr -s 12 ".kyts[0:11]" yes no no yes no no no no no no no yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTA -n "head_fk_anim_rotateZ";
 	rename -uid "C5B847CC-481E-5BDE-9450-87BEE7DBC024";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 1.3929681748434837 3 20.017306489761189
-		 7 36.670261522686936 10 24.799958778173451 12 24.799958778173451 14 31.715560517882288
-		 16 31.829526886845194 18 34.518069260843163 20 34.518069260843163 22 34.518069260843163
-		 24 29.659014019508309 26 24.799958778173451;
-	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
-		yes;
+		 7 36.670261522686936 10 24.799958778173451 12 31.899937293297462 14 37.400303817905915
+		 16 35.294692785094981 18 34.287150005234245 20 31.786795448177411 22 39.291427516545035
+		 24 29.822947547262238 26 24.799958778173451;
+	setAttr -s 12 ".kyts[0:11]" yes no no yes no no no no no no no yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTU -n "head_fk_anim_scaleX";
 	rename -uid "AB4097FC-48D5-4CD0-B587-B6906F2535B4";
 	setAttr ".tan" 18;
@@ -3617,6 +3644,12 @@ createNode animCurveTU -n "head_fk_anim_scaleX";
 		 22 1 24 1 26 1;
 	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
 		yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTU -n "head_fk_anim_scaleY";
 	rename -uid "782DF489-4D3A-1A57-77B8-30A22C4943B6";
 	setAttr ".tan" 18;
@@ -3625,6 +3658,12 @@ createNode animCurveTU -n "head_fk_anim_scaleY";
 		 22 1 24 1 26 1;
 	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
 		yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTU -n "head_fk_anim_scaleZ";
 	rename -uid "97B650AC-4F7E-59AE-432F-E3A1B260F057";
 	setAttr ".tan" 18;
@@ -3633,6 +3672,12 @@ createNode animCurveTU -n "head_fk_anim_scaleZ";
 		 22 1 24 1 26 1;
 	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
 		yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTU -n "head_fk_anim_fkOrientation";
 	rename -uid "90EB0C86-421C-2FF1-EB07-0F909106D04F";
 	setAttr ".tan" 18;
@@ -3641,6 +3686,12 @@ createNode animCurveTU -n "head_fk_anim_fkOrientation";
 		 22 0 24 0 26 0;
 	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
 		yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTL -n "neck_01_fk_anim_translateX";
 	rename -uid "F8B373E6-41FA-162D-BC0A-21887BCFAB78";
 	setAttr ".tan" 18;
@@ -3649,6 +3700,12 @@ createNode animCurveTL -n "neck_01_fk_anim_translateX";
 		 22 0 24 0 26 0;
 	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
 		yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTL -n "neck_01_fk_anim_translateY";
 	rename -uid "73BB5ADC-45F7-F987-F2D8-A8980378505D";
 	setAttr ".tan" 18;
@@ -3657,6 +3714,12 @@ createNode animCurveTL -n "neck_01_fk_anim_translateY";
 		 22 0 24 0 26 0;
 	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
 		yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTL -n "neck_01_fk_anim_translateZ";
 	rename -uid "829BB2FF-43F3-53FB-4EB3-0496D0F061A3";
 	setAttr ".tan" 18;
@@ -3665,36 +3728,57 @@ createNode animCurveTL -n "neck_01_fk_anim_translateZ";
 		 22 0 24 0 26 0;
 	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
 		yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTA -n "neck_01_fk_anim_rotateX";
 	rename -uid "36295D2B-42CA-E812-6515-539A5D17E8B7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 4.4849373156746006 3 -0.49503980761277011
-		 7 1.7334318425224369 10 -1.0783512230452397 12 -1.0783512230452397 14 3.7356211238482206
-		 16 0.76647187680908624 18 -1.945326917499868 20 -1.945326917499868 22 -1.945326917499868
-		 24 -1.5118390702725539 26 -1.0783512230452397;
-	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
-		yes;
+		 7 1.7334318425224369 10 -1.0783512230452397 12 -3.8417355857461795 14 3.9365186385379713
+		 16 -0.24774999318652477 18 -3.3767037258438202 20 -2.8991840701524878 22 -0.98021337982992485
+		 24 -1.9380762375711746 26 -1.0783512230452397;
+	setAttr -s 12 ".kyts[0:11]" yes no no yes no no no no no no no yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  0.86359209941154702;
+	setAttr -s 12 ".kiy[11]"  -0.50419112034421709;
+	setAttr -s 12 ".kox[11]"  0.86359209941154691;
+	setAttr -s 12 ".koy[11]"  -0.50419112034421709;
 createNode animCurveTA -n "neck_01_fk_anim_rotateY";
 	rename -uid "6A6E2DC2-4597-DA3F-5442-C9BF68FF68E5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 7.6766957841651244 3 3.8234481654432133
-		 7 5.5392614386824901 10 14.023313010179731 12 14.023313010179731 14 5.7710216840558655
-		 16 -4.585676357067145 18 -8.3385906842366069 20 -8.3385906842366069 22 -8.3385906842366069
-		 24 2.8423611629715624 26 14.023313010179731;
-	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
-		yes;
+		 7 5.5392614386824901 10 14.023313010179731 12 10.990955842577167 14 8.8787565288016452
+		 16 -0.67162183987539092 18 -5.6913316195383095 20 -9.0561229610885885 22 -2.5751424400011227
+		 24 3.5517498291565159 26 14.023313010179731;
+	setAttr -s 12 ".kyts[0:11]" yes no no yes no no no no no no no yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTA -n "neck_01_fk_anim_rotateZ";
 	rename -uid "DD090CC1-45BB-3995-B321-E584FEDCBD86";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 7.7878246520468988 3 26.820710169169342
-		 7 40.494467038847851 10 28.823039681359905 12 28.823039681359905 14 31.715560517882288
-		 16 31.829526886845194 18 34.518069260843163 20 34.518069260843163 22 34.518069260843163
-		 24 31.670554471101536 26 28.823039681359905;
-	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
-		yes;
+		 7 40.494467038847851 10 28.823039681359905 12 35.998773645160313 14 37.400303817905915
+		 16 35.294692785094981 18 34.287150005234245 20 31.786795448177411 22 39.291427516545035
+		 24 31.844277573562856 26 28.823039681359905;
+	setAttr -s 12 ".kyts[0:11]" yes no no yes no no no no no no no yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTU -n "neck_01_fk_anim_scaleX";
 	rename -uid "9A0B2AD9-47D9-B89B-2C9D-AFA1B73F41D4";
 	setAttr ".tan" 18;
@@ -3705,6 +3789,12 @@ createNode animCurveTU -n "neck_01_fk_anim_scaleX";
 		 24 0.99999999999999978 26 0.99999999999999978;
 	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
 		yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTU -n "neck_01_fk_anim_scaleY";
 	rename -uid "EC660F69-4DA8-51BD-EF48-3CA3E16B5CDC";
 	setAttr ".tan" 18;
@@ -3715,6 +3805,12 @@ createNode animCurveTU -n "neck_01_fk_anim_scaleY";
 		 24 0.99999999999999989 26 0.99999999999999989;
 	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
 		yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTU -n "neck_01_fk_anim_scaleZ";
 	rename -uid "85BDC4EF-48F9-F6D8-4A47-0082EDB20804";
 	setAttr ".tan" 18;
@@ -3723,6 +3819,12 @@ createNode animCurveTU -n "neck_01_fk_anim_scaleZ";
 		 22 1 24 1 26 1;
 	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
 		yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTU -n "neck_01_fk_anim_fkOrientation";
 	rename -uid "1EBAB834-4A5B-5971-D900-F6BF1940D9E8";
 	setAttr ".tan" 18;
@@ -3731,6 +3833,12 @@ createNode animCurveTU -n "neck_01_fk_anim_fkOrientation";
 		 22 0 24 0 26 0;
 	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
 		yes;
+	setAttr -s 12 ".kit[11]"  1;
+	setAttr -s 12 ".kot[11]"  1;
+	setAttr -s 12 ".kix[11]"  1;
+	setAttr -s 12 ".kiy[11]"  0;
+	setAttr -s 12 ".kox[11]"  1;
+	setAttr -s 12 ".koy[11]"  0;
 createNode animCurveTL -n "spine_01_anim_length";
 	rename -uid "457F0AA2-4002-5FFC-1202-35AF0F93396F";
 	setAttr ".tan" 18;
@@ -4035,17 +4143,21 @@ createNode animCurveTL -n "body_anim_translateX";
 	rename -uid "39600CE2-4D58-779F-E815-EDB7A709443F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  0 -2.8129074271902028 3 -18.464831604698492
-		 7 -24.749846493544258 10 -23.412464032700544 12 -12.791953988148325 14 -17.326087111555228
+	setAttr -s 11 ".ktv[0:10]"  0 -2.8129074271902028 3 -18.464831604698492
+		 7 -24.749846493544258 10 -23.412464032700544 12 -16.410418164041776 14 -17.326087111555228
 		 16 -20.292703574717695 18 -20.622223382774582 20 -16.406538165276888 22 -20.492594347509513
-		 24 -22.340780948334682 26 -23.412464032700544;
-	setAttr -s 12 ".kyts[0:11]" yes no no no no no no no no no no no;
-	setAttr -s 12 ".kit[11]"  1;
-	setAttr -s 12 ".kot[11]"  1;
-	setAttr -s 12 ".kix[11]"  0.02491657057299369;
-	setAttr -s 12 ".kiy[11]"  0.99968953406089078;
-	setAttr -s 12 ".kox[11]"  0.024916570572993693;
-	setAttr -s 12 ".koy[11]"  0.99968953406089078;
+		 26 -23.412464032700544;
+	setAttr -s 11 ".kyts[0:10]" yes no no no no no no no no no no;
+	setAttr -s 11 ".kit[4:10]"  1 1 18 18 18 1 1;
+	setAttr -s 11 ".kot[4:10]"  1 1 18 18 18 1 1;
+	setAttr -s 11 ".kix[4:10]"  0.015050756903965186 0.019271237021990319 
+		0.067285368137850993 1 1 0.019523549596666367 0.024916570572993693;
+	setAttr -s 11 ".kiy[4:10]"  0.99988673094336933 -0.99981429246817743 
+		-0.99773377172197286 0 0 -0.99980939734088647 0.99968953406089089;
+	setAttr -s 11 ".kox[4:10]"  0.015050756157954103 0.019271238918616252 
+		0.067285368137850993 1 1 0.019523545015436867 0.024916570572993697;
+	setAttr -s 11 ".koy[4:10]"  0.99988673095459868 -0.99981429243162034 
+		-0.99773377172197286 0 0 -0.99980939743034547 0.99968953406089089;
 createNode animCurveTL -n "body_anim_translateY";
 	rename -uid "B3B06850-4EDE-8728-52E6-07AC6911359D";
 	setAttr ".tan" 18;
@@ -4113,7 +4225,7 @@ createNode animCurveTA -n "body_anim_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 -1.1356193779874495 3 -16.73552210734211
 		 7 -36.84989452606748 10 -44.032023384561562 12 -38.464177518059635 14 -37.220866243054211
-		 16 -34.7056065466777 18 -28.778042379910122 20 -31.60273886889032 22 -29.726110356906695
+		 16 -34.705606546677707 18 -28.778042379910122 20 -31.60273886889032 22 -29.726110356906695
 		 24 -37.543010300804902 26 -44.032023384561562;
 	setAttr -s 12 ".kyts[0:11]" yes no no no no no no no no no no no;
 	setAttr -s 12 ".kit[11]"  1;
@@ -4250,11 +4362,10 @@ createNode animCurveTA -n "clavicle_l_anim_rotateX";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 29.394593567332137 3 0.5398426038636025
-		 7 -67.31253373282037 10 -93.148490387565573 12 -93.148490387565573 14 -93.148490387565573
-		 16 -93.148490387565573 18 -93.148490387565573 20 -93.148490387565573 22 -93.148490387565573
-		 24 -93.148490387565573 26 -93.148490387565573;
-	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
-		yes;
+		 7 -67.31253373282037 10 -93.148490387565573 12 -100.59131066540758 14 -106.22222016005672
+		 16 -108.53596018476651 18 -104.8121168018256 20 -103.86775824757144 22 -111.84271998260245
+		 24 -96.806935221171273 26 -93.148490387565573;
+	setAttr -s 12 ".kyts[0:11]" yes no no yes no no no no no no no yes;
 	setAttr -s 12 ".kit[0:11]"  18 18 18 18 1 1 1 1 
 		1 1 1 1;
 	setAttr -s 12 ".kot[0:11]"  18 18 18 18 1 1 1 1 
@@ -4268,11 +4379,10 @@ createNode animCurveTA -n "clavicle_l_anim_rotateY";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 27.331691166550318 3 12.023812766507589
-		 7 -12.632276663809582 10 -31.379884311787027 12 -31.379884311787027 14 -31.379884311787027
-		 16 -31.379884311787027 18 -31.379884311787027 20 -31.379884311787027 22 -31.379884311787027
-		 24 -31.379884311787027 26 -31.379884311787027;
-	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
-		yes;
+		 7 -12.632276663809582 10 -31.379884311787027 12 -25.608744850526147 14 -28.989727806649338
+		 16 -36.771524019475336 18 -43.534615034857346 20 -40.757057153724432 22 -29.175289491742323
+		 24 -29.894146470846668 26 -31.379884311787027;
+	setAttr -s 12 ".kyts[0:11]" yes no no yes no no no no no no no yes;
 	setAttr -s 12 ".kit[0:11]"  18 18 18 18 1 1 1 1 
 		1 1 1 1;
 	setAttr -s 12 ".kot[0:11]"  18 18 18 18 1 1 1 1 
@@ -4286,11 +4396,10 @@ createNode animCurveTA -n "clavicle_l_anim_rotateZ";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 20.939770635830214 3 -1.3063831246310071
-		 7 -5.2061473161973808 10 20.920475722848266 12 20.920475722848266 14 20.920475722848266
-		 16 20.920475722848266 18 20.920475722848266 20 20.920475722848266 22 20.920475722848266
-		 24 20.920475722848266 26 20.920475722848266;
-	setAttr -s 12 ".kyts[0:11]" yes no no yes yes yes yes yes yes yes yes 
-		yes;
+		 7 -5.2061473161973808 10 20.920475722848266 12 23.602129666736339 14 35.595682048013245
+		 16 30.270821657717839 18 23.544183073365673 20 23.264282567234122 22 32.934420421193167
+		 24 23.833646677943982 26 20.920475722848266;
+	setAttr -s 12 ".kyts[0:11]" yes no no yes no no no no no no no yes;
 	setAttr -s 12 ".kit[0:11]"  18 18 18 18 1 1 1 1 
 		1 1 1 1;
 	setAttr -s 12 ".kot[0:11]"  18 18 18 18 1 1 1 1 
@@ -4343,16 +4452,17 @@ createNode animCurveTA -n "clavicle_r_anim_rotateX";
 	rename -uid "DABA24A2-4431-05BB-3CD3-22A1BC82FD59";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  0 -29.803256466952426 3 -39.424568485815996
-		 7 -56.709330327659046 10 -35.309042405021891 14 -35.21690887325336 18 -80.932512636611051
-		 20 -97.398171744804586 22 -78.199918606916611 24 -47.037320676686015 26 -35.309042405021891;
-	setAttr -s 10 ".kyts[0:9]" yes no no yes no no no no no yes;
+	setAttr -s 12 ".ktv[0:11]"  0 -29.803256466952426 3 -39.424568485815996
+		 7 -56.709330327659046 10 -35.309042405021891 12 -52.864917106081585 14 -51.456021779426884
+		 16 -67.434764207633464 18 -80.932512636611051 20 -97.398171744804586 22 -78.199918606916611
+		 24 -47.037320676686015 26 -35.309042405021891;
+	setAttr -s 12 ".kyts[0:11]" yes no no yes no no no no no no no yes;
 createNode animCurveTA -n "clavicle_r_anim_rotateY";
 	rename -uid "7B84C3B8-4C72-580E-F273-03B0946775E6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 -56.105659631171939 3 -55.218847785268458
-		 7 -61.303066516120147 10 -53.412656170586253 12 -58.199232158655491 14 -64.689962459011866
+		 7 -61.303066516120147 10 -53.412656170586253 12 -53.916575357275285 14 -60.324934767581269
 		 16 -72.926352252765497 18 -75.86504451470114 20 -73.206311476068464 24 -61.650012290017635
 		 26 -53.412656170586253;
 	setAttr -s 11 ".kyts[0:10]" yes no no yes no no no no no no yes;
@@ -4361,8 +4471,8 @@ createNode animCurveTA -n "clavicle_r_anim_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  0 29.63426020494974 3 20.323876896483227
-		 7 18.287879352579434 10 -1.7335830420406553 12 9.6201406376643224 14 16.311157651281619
-		 20 69.78362422861548 24 10.167330920372857 26 -1.7335830420406553;
+		 7 18.287879352579434 10 -1.7335830420406553 12 18.843202734006322 14 28.69819295945803
+		 20 69.78362422861548 24 10.167330920372859 26 -1.7335830420406553;
 	setAttr -s 9 ".kyts[0:8]" yes no no yes no no no no yes;
 createNode animCurveTU -n "clavicle_r_anim_autoShoulders";
 	rename -uid "FB1722ED-4088-13A9-97FD-CF84DCF4B297";
@@ -9806,9 +9916,15 @@ createNode reference -n "modelRN1";
 		2 "|group1|model1:nurbsCircle1" "scale" " -type \"double3\" 3.43961821115512478 3.43961821115512478 3.43961821115512478";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode unknown -n "ExportAnimationSettings";
+	rename -uid "5C14CDA4-409D-FAB3-6931-ABA474A541F7";
+	addAttr -ci true -sn "settings" -ln "settings" -dt "string";
+	addAttr -ci true -sn "sequence0" -ln "sequence0" -dt "string";
+	setAttr ".settings" -type "string" "[false, true, false, null, null]";
+	setAttr ".sequence0" -type "string" "D:/Projects/COVID/SourceFiles/Characters/Mannequin/Animations/Daggers/Exports/Daggers_Stand_Sprint_F.fbx::10::26::30 FPS::Independent Euler Angle::Mannequin";
 select -ne :time1;
-	setAttr ".o" 26;
-	setAttr ".unw" 26;
+	setAttr ".o" 17;
+	setAttr ".unw" 17;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
