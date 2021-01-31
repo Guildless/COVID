@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ADVANCEDRPGSYSTEM_ARSStatisticsData_generated_h
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_356_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_356_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FTimedAttributeSetModifier_Statics; \
 	ADVANCEDRPGSYSTEM_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FTimedAttributeSetModifier>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_344_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_344_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAttributesByLevel_Statics; \
 	ADVANCEDRPGSYSTEM_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -29,7 +29,7 @@ template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FTimedAttrib
 
 template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FAttributesByLevel>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_329_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_329_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FGenerationRule_Statics; \
 	ADVANCEDRPGSYSTEM_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -37,7 +37,7 @@ template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FAttributesB
 
 template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FGenerationRule>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_313_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_313_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FStatInfluence_Statics; \
 	ADVANCEDRPGSYSTEM_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -45,7 +45,7 @@ template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FGenerationR
 
 template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FStatInfluence>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_300_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_300_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAttributeInfluence_Statics; \
 	ADVANCEDRPGSYSTEM_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -53,7 +53,7 @@ template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FStatInfluen
 
 template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FAttributeInfluence>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_278_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_278_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FStatisticModifier_Statics; \
 	ADVANCEDRPGSYSTEM_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -61,7 +61,7 @@ template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FAttributeIn
 
 template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FStatisticModifier>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_245_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_245_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAttributesSetModifier_Statics; \
 	ADVANCEDRPGSYSTEM_API static class UScriptStruct* StaticStruct(); \
 	typedef FAttributesSet Super;
@@ -69,7 +69,7 @@ template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FStatisticMo
 
 template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FAttributesSetModifier>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_221_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_221_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAttributesSet_Statics; \
 	ADVANCEDRPGSYSTEM_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -77,7 +77,7 @@ template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FAttributesS
 
 template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FAttributesSet>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_150_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_150_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAttribute_Statics; \
 	ADVANCEDRPGSYSTEM_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -85,7 +85,7 @@ template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FAttributesS
 
 template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FAttribute>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_53_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_53_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FStatistic_Statics; \
 	ADVANCEDRPGSYSTEM_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -93,10 +93,10 @@ template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FAttribute>(
 
 template<> ADVANCEDRPGSYSTEM_API UScriptStruct* StaticStruct<struct FStatistic>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_SPARSE_DATA
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_RPC_WRAPPERS
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_RPC_WRAPPERS_NO_PURE_DECLS
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_INCLASS_NO_PURE_DECLS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_SPARSE_DATA
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_RPC_WRAPPERS
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_RPC_WRAPPERS_NO_PURE_DECLS
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUARSStatisticsData(); \
 	friend struct Z_Construct_UClass_UARSStatisticsData_Statics; \
@@ -105,7 +105,7 @@ public: \
 	DECLARE_SERIALIZER(UARSStatisticsData)
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_INCLASS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_INCLASS \
 private: \
 	static void StaticRegisterNativesUARSStatisticsData(); \
 	friend struct Z_Construct_UClass_UARSStatisticsData_Statics; \
@@ -114,7 +114,7 @@ public: \
 	DECLARE_SERIALIZER(UARSStatisticsData)
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_STANDARD_CONSTRUCTORS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UARSStatisticsData(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UARSStatisticsData) \
@@ -127,7 +127,7 @@ private: \
 public:
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_ENHANCED_CONSTRUCTORS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UARSStatisticsData(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -140,28 +140,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UARSStatisticsData); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UARSStatisticsData)
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_PRIVATE_PROPERTY_OFFSET
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_370_PROLOG
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_GENERATED_BODY_LEGACY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_PRIVATE_PROPERTY_OFFSET
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_370_PROLOG
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_PRIVATE_PROPERTY_OFFSET \
-	HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_SPARSE_DATA \
-	HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_RPC_WRAPPERS \
-	HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_INCLASS \
-	HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_STANDARD_CONSTRUCTORS \
+	Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_PRIVATE_PROPERTY_OFFSET \
+	Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_SPARSE_DATA \
+	Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_RPC_WRAPPERS \
+	Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_INCLASS \
+	Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_PRIVATE_PROPERTY_OFFSET \
-	HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_SPARSE_DATA \
-	HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_RPC_WRAPPERS_NO_PURE_DECLS \
-	HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_INCLASS_NO_PURE_DECLS \
-	HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_ENHANCED_CONSTRUCTORS \
+	Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_PRIVATE_PROPERTY_OFFSET \
+	Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_SPARSE_DATA \
+	Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_RPC_WRAPPERS_NO_PURE_DECLS \
+	Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_INCLASS_NO_PURE_DECLS \
+	Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h_373_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -169,7 +169,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> ADVANCEDRPGSYSTEM_API UClass* StaticClass<class UARSStatisticsData>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID HostProject_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h
+#define CURRENT_FILE_ID Guildless_Plugins_AscentCombatFramework_Source_AdvancedRPGSystem_Public_ARSStatisticsData_h
 
 
 #define FOREACH_ENUM_ESTATISTICSTYPE(op) \

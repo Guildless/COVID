@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define CINEMATICCAMERAMANAGER_CCMData_generated_h
 
-#define HostProject_Plugins_AscentCombatFramework_Source_CinematicCameraManager_Public_CCMData_h_148_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_CinematicCameraManager_Public_CCMData_h_148_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FCCMCameraSequenceSettings_Statics; \
 	CINEMATICCAMERAMANAGER_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -21,21 +21,21 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> CINEMATICCAMERAMANAGER_API UScriptStruct* StaticStruct<struct FCCMCameraSequenceSettings>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_CinematicCameraManager_Public_CCMData_h_109_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_CinematicCameraManager_Public_CCMData_h_109_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FCCMSequenceEvent_Statics; \
 	CINEMATICCAMERAMANAGER_API static class UScriptStruct* StaticStruct();
 
 
 template<> CINEMATICCAMERAMANAGER_API UScriptStruct* StaticStruct<struct FCCMSequenceEvent>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_CinematicCameraManager_Public_CCMData_h_85_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_CinematicCameraManager_Public_CCMData_h_85_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FCurrentSequence_Statics; \
 	CINEMATICCAMERAMANAGER_API static class UScriptStruct* StaticStruct();
 
 
 template<> CINEMATICCAMERAMANAGER_API UScriptStruct* StaticStruct<struct FCurrentSequence>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_CinematicCameraManager_Public_CCMData_h_18_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_CinematicCameraManager_Public_CCMData_h_18_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FCCMCameraMovementSettings_Statics; \
 	CINEMATICCAMERAMANAGER_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -44,7 +44,7 @@ template<> CINEMATICCAMERAMANAGER_API UScriptStruct* StaticStruct<struct FCurren
 template<> CINEMATICCAMERAMANAGER_API UScriptStruct* StaticStruct<struct FCCMCameraMovementSettings>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID HostProject_Plugins_AscentCombatFramework_Source_CinematicCameraManager_Public_CCMData_h
+#define CURRENT_FILE_ID Guildless_Plugins_AscentCombatFramework_Source_CinematicCameraManager_Public_CCMData_h
 
 
 #define FOREACH_ENUM_ETARGETLOCKTYPE(op) \

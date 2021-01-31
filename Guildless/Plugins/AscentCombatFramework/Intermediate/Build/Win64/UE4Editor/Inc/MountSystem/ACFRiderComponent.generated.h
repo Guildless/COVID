@@ -15,7 +15,7 @@ class UACFMountComponent;
 #endif
 #define MOUNTSYSTEM_ACFRiderComponent_generated_h
 
-#define HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_10_DELEGATE \
+#define Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_10_DELEGATE \
 struct _Script_MountSystem_eventOnRidingStateChanged_Parms \
 { \
 	bool bIsRiding; \
@@ -28,8 +28,8 @@ static inline void FOnRidingStateChanged_DelegateWrapper(const FMulticastScriptD
 }
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_SPARSE_DATA
-#define HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_RPC_WRAPPERS \
+#define Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_SPARSE_DATA
+#define Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_RPC_WRAPPERS \
 	virtual bool StartDismount_Validate(FName const& ); \
 	virtual void StartDismount_Implementation(FName const& dismountPoint); \
 	virtual bool StartMount_Validate(UACFMountComponent* ); \
@@ -43,7 +43,7 @@ static inline void FOnRidingStateChanged_DelegateWrapper(const FMulticastScriptD
 	DECLARE_FUNCTION(execIsRiding);
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual bool StartDismount_Validate(FName const& ); \
 	virtual void StartDismount_Implementation(FName const& dismountPoint); \
 	virtual bool StartMount_Validate(UACFMountComponent* ); \
@@ -57,7 +57,7 @@ static inline void FOnRidingStateChanged_DelegateWrapper(const FMulticastScriptD
 	DECLARE_FUNCTION(execIsRiding);
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_EVENT_PARMS \
+#define Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_EVENT_PARMS \
 	struct ACFRiderComponent_eventStartDismount_Parms \
 	{ \
 		FName dismountPoint; \
@@ -68,8 +68,8 @@ static inline void FOnRidingStateChanged_DelegateWrapper(const FMulticastScriptD
 	};
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_CALLBACK_WRAPPERS
-#define HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_INCLASS_NO_PURE_DECLS \
+#define Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_CALLBACK_WRAPPERS
+#define Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUACFRiderComponent(); \
 	friend struct Z_Construct_UClass_UACFRiderComponent_Statics; \
@@ -86,7 +86,7 @@ public: \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_INCLASS \
+#define Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_INCLASS \
 private: \
 	static void StaticRegisterNativesUACFRiderComponent(); \
 	friend struct Z_Construct_UClass_UACFRiderComponent_Statics; \
@@ -103,7 +103,7 @@ public: \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_STANDARD_CONSTRUCTORS \
+#define Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UACFRiderComponent(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UACFRiderComponent) \
@@ -116,7 +116,7 @@ private: \
 public:
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_ENHANCED_CONSTRUCTORS \
+#define Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UACFRiderComponent(UACFRiderComponent&&); \
@@ -127,39 +127,39 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UACFRiderComponent); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UACFRiderComponent)
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_PRIVATE_PROPERTY_OFFSET \
+#define Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__bPossessMount() { return STRUCT_OFFSET(UACFRiderComponent, bPossessMount); } \
 	FORCEINLINE static uint32 __PPO__bIsRiding() { return STRUCT_OFFSET(UACFRiderComponent, bIsRiding); } \
 	FORCEINLINE static uint32 __PPO__Mount() { return STRUCT_OFFSET(UACFRiderComponent, Mount); } \
 	FORCEINLINE static uint32 __PPO__charOwner() { return STRUCT_OFFSET(UACFRiderComponent, charOwner); }
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_12_PROLOG \
-	HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_EVENT_PARMS
+#define Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_12_PROLOG \
+	Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_EVENT_PARMS
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_GENERATED_BODY_LEGACY \
+#define Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_PRIVATE_PROPERTY_OFFSET \
-	HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_SPARSE_DATA \
-	HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_RPC_WRAPPERS \
-	HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_CALLBACK_WRAPPERS \
-	HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_INCLASS \
-	HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_STANDARD_CONSTRUCTORS \
+	Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_PRIVATE_PROPERTY_OFFSET \
+	Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_SPARSE_DATA \
+	Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_RPC_WRAPPERS \
+	Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_CALLBACK_WRAPPERS \
+	Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_INCLASS \
+	Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_PRIVATE_PROPERTY_OFFSET \
-	HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_SPARSE_DATA \
-	HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_CALLBACK_WRAPPERS \
-	HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_INCLASS_NO_PURE_DECLS \
-	HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_ENHANCED_CONSTRUCTORS \
+	Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_PRIVATE_PROPERTY_OFFSET \
+	Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_SPARSE_DATA \
+	Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_CALLBACK_WRAPPERS \
+	Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_INCLASS_NO_PURE_DECLS \
+	Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -167,7 +167,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> MOUNTSYSTEM_API UClass* StaticClass<class UACFRiderComponent>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID HostProject_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h
+#define CURRENT_FILE_ID Guildless_Plugins_AscentCombatFramework_Source_MountSystem_Public_ACFRiderComponent_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

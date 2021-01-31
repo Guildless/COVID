@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ASCENTCOMBATFRAMEWORK_ACFData_generated_h
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_517_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_517_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FTeamInfo_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FTeamInfo>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_494_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_494_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FEffectByDamageType_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -29,7 +29,7 @@ template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FTeamInf
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FEffectByDamageType>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_482_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_482_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FConditions_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct(); \
 	typedef FActionChances Super;
@@ -37,7 +37,7 @@ template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FEffectB
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FConditions>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_468_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_468_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FOnHitActionChances_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct(); \
 	typedef FActionChances Super;
@@ -45,14 +45,14 @@ template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FConditi
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FOnHitActionChances>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_454_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_454_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FActionsChances_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct();
 
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FActionsChances>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_429_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_429_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FActionChances_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -60,14 +60,14 @@ template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FActions
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FActionChances>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_402_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_402_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAICombatStateConfig_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct();
 
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FAICombatStateConfig>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_386_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_386_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FCommandChances_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -75,21 +75,21 @@ template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FAIComba
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FCommandChances>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_339_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_339_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FActionConfig_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct();
 
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FActionConfig>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_307_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_307_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FImpactEffect_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct();
 
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FImpactEffect>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_283_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_283_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FEffect_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -97,35 +97,35 @@ template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FImpactE
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FEffect>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_262_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_262_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FSnapConfiguration_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct();
 
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FSnapConfiguration>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_218_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_218_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAIAgentsInfo_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct();
 
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FAIAgentsInfo>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_189_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_189_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAISpawnInfo_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct();
 
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FAISpawnInfo>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_55_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_55_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FRagdollImpulse_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct();
 
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FRagdollImpulse>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_41_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_41_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FActionState_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -133,10 +133,10 @@ template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FRagdoll
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FActionState>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_SPARSE_DATA
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_RPC_WRAPPERS
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_RPC_WRAPPERS_NO_PURE_DECLS
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_INCLASS_NO_PURE_DECLS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_SPARSE_DATA
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_RPC_WRAPPERS
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_RPC_WRAPPERS_NO_PURE_DECLS
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUACFData(); \
 	friend struct Z_Construct_UClass_UACFData_Statics; \
@@ -145,7 +145,7 @@ public: \
 	DECLARE_SERIALIZER(UACFData)
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_INCLASS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_INCLASS \
 private: \
 	static void StaticRegisterNativesUACFData(); \
 	friend struct Z_Construct_UClass_UACFData_Statics; \
@@ -154,7 +154,7 @@ public: \
 	DECLARE_SERIALIZER(UACFData)
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_STANDARD_CONSTRUCTORS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UACFData(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UACFData) \
@@ -167,7 +167,7 @@ private: \
 public:
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_ENHANCED_CONSTRUCTORS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UACFData(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -180,28 +180,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UACFData); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UACFData)
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_PRIVATE_PROPERTY_OFFSET
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_544_PROLOG
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_GENERATED_BODY_LEGACY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_PRIVATE_PROPERTY_OFFSET
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_544_PROLOG
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_PRIVATE_PROPERTY_OFFSET \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_SPARSE_DATA \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_RPC_WRAPPERS \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_INCLASS \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_STANDARD_CONSTRUCTORS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_PRIVATE_PROPERTY_OFFSET \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_SPARSE_DATA \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_RPC_WRAPPERS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_INCLASS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_PRIVATE_PROPERTY_OFFSET \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_SPARSE_DATA \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_RPC_WRAPPERS_NO_PURE_DECLS \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_INCLASS_NO_PURE_DECLS \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_ENHANCED_CONSTRUCTORS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_PRIVATE_PROPERTY_OFFSET \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_SPARSE_DATA \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_RPC_WRAPPERS_NO_PURE_DECLS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_INCLASS_NO_PURE_DECLS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h_547_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -209,7 +209,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> ASCENTCOMBATFRAMEWORK_API UClass* StaticClass<class UACFData>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h
+#define CURRENT_FILE_ID Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Game_ACFData_h
 
 
 #define FOREACH_ENUM_ECOMBATBEHAVIORTYPE(op) \

@@ -69,7 +69,7 @@ void EmptyLinkFunctionForGeneratedCodeAscentCombatFramework_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x50E622FE,
+				0xF3DB2E53,
 				0x871A4E41,
 				METADATA_PARAMS(nullptr, 0)
 			};

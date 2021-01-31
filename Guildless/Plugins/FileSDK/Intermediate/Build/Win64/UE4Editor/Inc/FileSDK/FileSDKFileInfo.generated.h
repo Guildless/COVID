@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FILESDK_FileSDKFileInfo_generated_h
 
-#define HostProject_Plugins_FileSDK_Source_FileSDK_Public_FileSDKFileInfo_h_9_GENERATED_BODY \
+#define Guildless_Plugins_FileSDK_Source_FileSDK_Public_FileSDKFileInfo_h_9_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FFileSDKFileInfo_Statics; \
 	FILESDK_API static class UScriptStruct* StaticStruct();
 
@@ -21,7 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 template<> FILESDK_API UScriptStruct* StaticStruct<struct FFileSDKFileInfo>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID HostProject_Plugins_FileSDK_Source_FileSDK_Public_FileSDKFileInfo_h
+#define CURRENT_FILE_ID Guildless_Plugins_FileSDK_Source_FileSDK_Public_FileSDKFileInfo_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

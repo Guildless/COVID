@@ -82,6 +82,7 @@ AACFCharacter::AACFCharacter(const FObjectInitializer &ObjectInitializer)
   CharacterName = FText::FromString("Dude");
 
   bIsImmortal = false;
+  bIsReeling = false;
 
   PrimaryActorTick.bStartWithTickEnabled = false;
 

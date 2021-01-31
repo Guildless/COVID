@@ -3032,6 +3032,11 @@ void EmptyLinkFunctionForGeneratedCodeACFCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsReeling_MetaData[];
+#endif
+		static void NewProp_bIsReeling_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsReeling;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsImmortal_MetaData[];
 #endif
 		static void NewProp_bIsImmortal_SetBit(void* Obj);
@@ -3213,6 +3218,17 @@ void EmptyLinkFunctionForGeneratedCodeACFCharacter() {}
 		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AACFCharacter_Statics::NewProp_bIsReeling_MetaData[] = {
+		{ "Category", "ACF" },
+		{ "ModuleRelativePath", "Public/Actors/ACFCharacter.h" },
+	};
+#endif
+	void Z_Construct_UClass_AACFCharacter_Statics::NewProp_bIsReeling_SetBit(void* Obj)
+	{
+		((AACFCharacter*)Obj)->bIsReeling = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AACFCharacter_Statics::NewProp_bIsReeling = { "bIsReeling", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AACFCharacter), &Z_Construct_UClass_AACFCharacter_Statics::NewProp_bIsReeling_SetBit, METADATA_PARAMS(Z_Construct_UClass_AACFCharacter_Statics::NewProp_bIsReeling_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AACFCharacter_Statics::NewProp_bIsReeling_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AACFCharacter_Statics::NewProp_bIsImmortal_MetaData[] = {
 		{ "Category", "ACF" },
@@ -3402,6 +3418,7 @@ void EmptyLinkFunctionForGeneratedCodeACFCharacter() {}
 #endif
 	const UE4CodeGen_Private::FTextPropertyParams Z_Construct_UClass_AACFCharacter_Statics::NewProp_CharacterName = { "CharacterName", nullptr, (EPropertyFlags)0x0020080000010001, UE4CodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AACFCharacter, CharacterName), METADATA_PARAMS(Z_Construct_UClass_AACFCharacter_Statics::NewProp_CharacterName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AACFCharacter_Statics::NewProp_CharacterName_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AACFCharacter_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AACFCharacter_Statics::NewProp_bIsReeling,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AACFCharacter_Statics::NewProp_bIsImmortal,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AACFCharacter_Statics::NewProp_OnTeamChanged,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AACFCharacter_Statics::NewProp_OnCharacterFullyInitialized,
@@ -3465,7 +3482,7 @@ void EmptyLinkFunctionForGeneratedCodeACFCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AACFCharacter, 4166773107);
+	IMPLEMENT_CLASS(AACFCharacter, 2745584879);
 	template<> ASCENTCOMBATFRAMEWORK_API UClass* StaticClass<AACFCharacter>()
 	{
 		return AACFCharacter::StaticClass();

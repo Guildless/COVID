@@ -14,7 +14,7 @@ struct FGameplayTag;
 #endif
 #define ASCENTCOMBATFRAMEWORK_ACFWeapon_generated_h
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_16_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_16_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FWeaponEffects_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -22,8 +22,8 @@ struct FGameplayTag;
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FWeaponEffects>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_SPARSE_DATA
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_RPC_WRAPPERS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_SPARSE_DATA
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execGetEquippedSocketName); \
 	DECLARE_FUNCTION(execGetOnBodySocketName); \
@@ -33,7 +33,7 @@ template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FWeaponE
 	DECLARE_FUNCTION(execGetWeaponType);
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetEquippedSocketName); \
 	DECLARE_FUNCTION(execGetOnBodySocketName); \
@@ -43,7 +43,7 @@ template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FWeaponE
 	DECLARE_FUNCTION(execGetWeaponType);
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_INCLASS_NO_PURE_DECLS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAACFWeapon(); \
 	friend struct Z_Construct_UClass_AACFWeapon_Statics; \
@@ -52,7 +52,7 @@ public: \
 	DECLARE_SERIALIZER(AACFWeapon)
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_INCLASS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_INCLASS \
 private: \
 	static void StaticRegisterNativesAACFWeapon(); \
 	friend struct Z_Construct_UClass_AACFWeapon_Statics; \
@@ -61,7 +61,7 @@ public: \
 	DECLARE_SERIALIZER(AACFWeapon)
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_STANDARD_CONSTRUCTORS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AACFWeapon(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AACFWeapon) \
@@ -74,7 +74,7 @@ private: \
 public:
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_ENHANCED_CONSTRUCTORS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AACFWeapon(AACFWeapon&&); \
@@ -85,7 +85,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AACFWeapon); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AACFWeapon)
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_PRIVATE_PROPERTY_OFFSET \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__HandlePos() { return STRUCT_OFFSET(AACFWeapon, HandlePos); } \
 	FORCEINLINE static uint32 __PPO__LeftHandWeaponClass() { return STRUCT_OFFSET(AACFWeapon, LeftHandWeaponClass); } \
 	FORCEINLINE static uint32 __PPO__AttachmentOffset() { return STRUCT_OFFSET(AACFWeapon, AttachmentOffset); } \
@@ -99,27 +99,27 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AACFWeapon); \
 	FORCEINLINE static uint32 __PPO__LeftHandWeapon() { return STRUCT_OFFSET(AACFWeapon, LeftHandWeapon); }
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_28_PROLOG
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_GENERATED_BODY_LEGACY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_28_PROLOG
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_PRIVATE_PROPERTY_OFFSET \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_SPARSE_DATA \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_RPC_WRAPPERS \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_INCLASS \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_STANDARD_CONSTRUCTORS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_PRIVATE_PROPERTY_OFFSET \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_SPARSE_DATA \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_RPC_WRAPPERS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_INCLASS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_PRIVATE_PROPERTY_OFFSET \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_SPARSE_DATA \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_RPC_WRAPPERS_NO_PURE_DECLS \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_INCLASS_NO_PURE_DECLS \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_ENHANCED_CONSTRUCTORS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_PRIVATE_PROPERTY_OFFSET \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_SPARSE_DATA \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_RPC_WRAPPERS_NO_PURE_DECLS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_INCLASS_NO_PURE_DECLS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h_31_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -127,7 +127,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> ASCENTCOMBATFRAMEWORK_API UClass* StaticClass<class AACFWeapon>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h
+#define CURRENT_FILE_ID Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFWeapon_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

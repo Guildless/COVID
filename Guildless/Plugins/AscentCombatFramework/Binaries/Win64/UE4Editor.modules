@@ -2,18 +2,18 @@
 	"BuildId": "13144385",
 	"Modules": 
 	{
-		"AbilitySystem": "UE4Editor-AbilitySystem.dll",
-		"AdvancedRPGSystem": "UE4Editor-AdvancedRPGSystem.dll",
-		"AscentCombatFramework": "UE4Editor-AscentCombatFramework.dll",
-		"CinematicCameraManager": "UE4Editor-CinematicCameraManager.dll",
-		"CollisionsManager": "UE4Editor-CollisionsManager.dll",
-		"CombinedAnimationsSystem": "UE4Editor-CombinedAnimationsSystem.dll",
-		"CraftingSystem": "UE4Editor-CraftingSystem.dll",
-		"ExecutionsSystem": "UE4Editor-ExecutionsSystem.dll",
-		"LevelStreamer": "UE4Editor-LevelStreamer.dll",
-		"MountSystem": "UE4Editor-MountSystem.dll",
-		"MusicManager": "UE4Editor-MusicManager.dll",
-		"SpellActions": "UE4Editor-SpellActions.dll",
-		"TargetingSystem": "UE4Editor-TargetingSystem.dll"
+		"AbilitySystem": "UE4Editor-AbilitySystem-0004.dll",
+		"AdvancedRPGSystem": "UE4Editor-AdvancedRPGSystem-0004.dll",
+		"AscentCombatFramework": "UE4Editor-AscentCombatFramework-0004.dll",
+		"CinematicCameraManager": "UE4Editor-CinematicCameraManager-0004.dll",
+		"CollisionsManager": "UE4Editor-CollisionsManager-0004.dll",
+		"CombinedAnimationsSystem": "UE4Editor-CombinedAnimationsSystem-0004.dll",
+		"CraftingSystem": "UE4Editor-CraftingSystem-0004.dll",
+		"ExecutionsSystem": "UE4Editor-ExecutionsSystem-0004.dll",
+		"LevelStreamer": "UE4Editor-LevelStreamer-0004.dll",
+		"MountSystem": "UE4Editor-MountSystem-0004.dll",
+		"MusicManager": "UE4Editor-MusicManager-0004.dll",
+		"SpellActions": "UE4Editor-SpellActions-0004.dll",
+		"TargetingSystem": "UE4Editor-TargetingSystem-0004.dll"
 	}
 }

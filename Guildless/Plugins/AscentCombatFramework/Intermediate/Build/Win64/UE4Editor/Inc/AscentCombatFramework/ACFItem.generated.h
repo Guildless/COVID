@@ -18,7 +18,7 @@ class UTexture2D;
 #endif
 #define ASCENTCOMBATFRAMEWORK_ACFItem_generated_h
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_60_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_60_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FItemDescriptor_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -26,7 +26,7 @@ class UTexture2D;
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FItemDescriptor>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_15_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_15_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FBaseItem_Statics; \
 	ASCENTCOMBATFRAMEWORK_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -34,8 +34,8 @@ template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FItemDes
 
 template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FBaseItem>();
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_SPARSE_DATA
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_RPC_WRAPPERS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_SPARSE_DATA
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execGetItemSlot); \
 	DECLARE_FUNCTION(execGetItemInfo); \
@@ -47,7 +47,7 @@ template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FBaseIte
 	DECLARE_FUNCTION(execGetThumbnailImage);
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetItemSlot); \
 	DECLARE_FUNCTION(execGetItemInfo); \
@@ -59,7 +59,7 @@ template<> ASCENTCOMBATFRAMEWORK_API UScriptStruct* StaticStruct<struct FBaseIte
 	DECLARE_FUNCTION(execGetThumbnailImage);
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_INCLASS_NO_PURE_DECLS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAACFItem(); \
 	friend struct Z_Construct_UClass_AACFItem_Statics; \
@@ -68,7 +68,7 @@ public: \
 	DECLARE_SERIALIZER(AACFItem)
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_INCLASS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_INCLASS \
 private: \
 	static void StaticRegisterNativesAACFItem(); \
 	friend struct Z_Construct_UClass_AACFItem_Statics; \
@@ -77,7 +77,7 @@ public: \
 	DECLARE_SERIALIZER(AACFItem)
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_STANDARD_CONSTRUCTORS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AACFItem(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AACFItem) \
@@ -90,7 +90,7 @@ private: \
 public:
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_ENHANCED_CONSTRUCTORS \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AACFItem(AACFItem&&); \
@@ -101,32 +101,32 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AACFItem); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AACFItem)
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_PRIVATE_PROPERTY_OFFSET \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__ItemOwner() { return STRUCT_OFFSET(AACFItem, ItemOwner); } \
 	FORCEINLINE static uint32 __PPO__ItemInfo() { return STRUCT_OFFSET(AACFItem, ItemInfo); }
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_134_PROLOG
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_GENERATED_BODY_LEGACY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_134_PROLOG
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_PRIVATE_PROPERTY_OFFSET \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_SPARSE_DATA \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_RPC_WRAPPERS \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_INCLASS \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_STANDARD_CONSTRUCTORS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_PRIVATE_PROPERTY_OFFSET \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_SPARSE_DATA \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_RPC_WRAPPERS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_INCLASS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_GENERATED_BODY \
+#define Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_PRIVATE_PROPERTY_OFFSET \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_SPARSE_DATA \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_RPC_WRAPPERS_NO_PURE_DECLS \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_INCLASS_NO_PURE_DECLS \
-	HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_ENHANCED_CONSTRUCTORS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_PRIVATE_PROPERTY_OFFSET \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_SPARSE_DATA \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_RPC_WRAPPERS_NO_PURE_DECLS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_INCLASS_NO_PURE_DECLS \
+	Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h_137_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -134,7 +134,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> ASCENTCOMBATFRAMEWORK_API UClass* StaticClass<class AACFItem>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID HostProject_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h
+#define CURRENT_FILE_ID Guildless_Plugins_AscentCombatFramework_Source_AscentCombatFramework_Public_Items_ACFItem_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

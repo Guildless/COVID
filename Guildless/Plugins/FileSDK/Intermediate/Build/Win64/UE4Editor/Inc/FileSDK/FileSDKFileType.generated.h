@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FILESDK_FileSDKFileType_generated_h
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID HostProject_Plugins_FileSDK_Source_FileSDK_Public_FileSDKFileType_h
+#define CURRENT_FILE_ID Guildless_Plugins_FileSDK_Source_FileSDK_Public_FileSDKFileType_h
 
 
 #define FOREACH_ENUM_EFILESDKFILETYPE(op) \

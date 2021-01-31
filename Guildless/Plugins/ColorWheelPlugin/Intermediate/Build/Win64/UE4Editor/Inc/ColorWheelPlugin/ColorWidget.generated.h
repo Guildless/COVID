@@ -14,21 +14,21 @@ struct FLinearColor;
 #endif
 #define COLORWHEELPLUGIN_ColorWidget_generated_h
 
-#define HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_28_DELEGATE \
+#define Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_28_DELEGATE \
 static inline void FMouseUpEvent_DelegateWrapper(const FMulticastScriptDelegate& MouseUpEvent) \
 { \
 	MouseUpEvent.ProcessMulticastDelegate<UObject>(NULL); \
 }
 
 
-#define HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_25_DELEGATE \
+#define Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_25_DELEGATE \
 static inline void FMouseDownEvent_DelegateWrapper(const FMulticastScriptDelegate& MouseDownEvent) \
 { \
 	MouseDownEvent.ProcessMulticastDelegate<UObject>(NULL); \
 }
 
 
-#define HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_22_DELEGATE \
+#define Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_22_DELEGATE \
 struct _Script_ColorWheelPlugin_eventColorChangedEvent_Parms \
 { \
 	FLinearColor NewColor; \
@@ -41,20 +41,20 @@ static inline void FColorChangedEvent_DelegateWrapper(const FMulticastScriptDele
 }
 
 
-#define HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_SPARSE_DATA
-#define HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_RPC_WRAPPERS \
+#define Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_SPARSE_DATA
+#define Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execGetCurrentColor); \
 	DECLARE_FUNCTION(execSetColor);
 
 
-#define HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetCurrentColor); \
 	DECLARE_FUNCTION(execSetColor);
 
 
-#define HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_INCLASS_NO_PURE_DECLS \
+#define Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUColorWidget(); \
 	friend struct Z_Construct_UClass_UColorWidget_Statics; \
@@ -63,7 +63,7 @@ public: \
 	DECLARE_SERIALIZER(UColorWidget)
 
 
-#define HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_INCLASS \
+#define Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_INCLASS \
 private: \
 	static void StaticRegisterNativesUColorWidget(); \
 	friend struct Z_Construct_UClass_UColorWidget_Statics; \
@@ -72,7 +72,7 @@ public: \
 	DECLARE_SERIALIZER(UColorWidget)
 
 
-#define HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_STANDARD_CONSTRUCTORS \
+#define Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UColorWidget(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UColorWidget) \
@@ -85,7 +85,7 @@ private: \
 public:
 
 
-#define HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_ENHANCED_CONSTRUCTORS \
+#define Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UColorWidget(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -98,28 +98,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UColorWidget); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UColorWidget)
 
 
-#define HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_PRIVATE_PROPERTY_OFFSET
-#define HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_35_PROLOG
-#define HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_GENERATED_BODY_LEGACY \
+#define Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_PRIVATE_PROPERTY_OFFSET
+#define Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_35_PROLOG
+#define Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_PRIVATE_PROPERTY_OFFSET \
-	HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_SPARSE_DATA \
-	HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_RPC_WRAPPERS \
-	HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_INCLASS \
-	HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_STANDARD_CONSTRUCTORS \
+	Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_PRIVATE_PROPERTY_OFFSET \
+	Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_SPARSE_DATA \
+	Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_RPC_WRAPPERS \
+	Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_INCLASS \
+	Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_GENERATED_BODY \
+#define Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_PRIVATE_PROPERTY_OFFSET \
-	HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_SPARSE_DATA \
-	HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
-	HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_INCLASS_NO_PURE_DECLS \
-	HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_ENHANCED_CONSTRUCTORS \
+	Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_PRIVATE_PROPERTY_OFFSET \
+	Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_SPARSE_DATA \
+	Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_RPC_WRAPPERS_NO_PURE_DECLS \
+	Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_INCLASS_NO_PURE_DECLS \
+	Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h_38_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -127,7 +127,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> COLORWHEELPLUGIN_API UClass* StaticClass<class UColorWidget>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID HostProject_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h
+#define CURRENT_FILE_ID Guildless_Plugins_ColorWheelPlugin_Source_ColorWheelPlugin_Public_ColorWidget_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -273,6 +273,9 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = ACF)
 	bool bIsImmortal = false;
 
+	UPROPERTY(BlueprintReadWrite, Category = ACF)
+	bool bIsReeling = false;
+
 	UFUNCTION(BlueprintCallable, Category = ACF)
 	EDamageZone GetDamageZoneByBoneName(FName BoneName) const;
 
