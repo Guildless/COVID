@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.FileSDK.cpp.obj": [
+			"FileSDK.cpp.obj",
+			"FileSDKBPLibrary.cpp.obj"
+		],
+		"Module.FileSDK.gen.cpp.obj": [
+			"FileSDK.init.gen.cpp.obj",
+			"FileSDKBPLibrary.gen.cpp.obj",
+			"FileSDKFileInfo.gen.cpp.obj",
+			"FileSDKFileType.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,4 @@
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\AscentCombatFramework\Definitions.AscentCombatFramework.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/AscentCombatFramework/AscentCombatFramework.init.gen.cpp
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h

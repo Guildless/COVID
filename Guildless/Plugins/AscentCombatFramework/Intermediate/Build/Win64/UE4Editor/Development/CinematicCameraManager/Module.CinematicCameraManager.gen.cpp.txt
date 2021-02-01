@@ -1,0 +1,34 @@
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\CinematicCameraManager\Definitions.CinematicCameraManager.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/CinematicCameraManager/CCMCameraFunctionLibrary.gen.cpp
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\CinematicCameraManager/Public/CCMCameraFunctionLibrary.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/DataTable.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Public\DataTableUtils.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DataTable.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public\CCMData.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\GameplayTags\Classes\GameplayTagContainer.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTags\GameplayTagContainer.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\CinematicCameraManager\CCMData.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\CinematicCameraManager\CCMCameraFunctionLibrary.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/CinematicCameraManager/CCMCameraSplineComponent.gen.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\CinematicCameraManager/Public/CCMCameraSplineComponent.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/SplineComponent.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SplineComponent.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\CinematicCameraManager\CCMCameraSplineComponent.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/CinematicCameraManager/CCMData.gen.cpp
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/CinematicCameraManager/CCMLookAtPointComponent.gen.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\CinematicCameraManager/Public/CCMLookAtPointComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\CinematicCameraManager\CCMLookAtPointComponent.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/CinematicCameraManager/CCMPlayerCameraManager.gen.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\CinematicCameraManager/Public/CCMPlayerCameraManager.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\CinematicCameraManager\CCMPlayerCameraManager.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/CinematicCameraManager/CCMSequenceNotifyState.gen.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\CinematicCameraManager/Public/CCMSequenceNotifyState.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\Animation/AnimNotifies/AnimNotifyState.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimNotifyState.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\CinematicCameraManager\CCMSequenceNotifyState.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/CinematicCameraManager/CCMStartSequenceNotify.gen.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\CinematicCameraManager/Public/CCMStartSequenceNotify.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\CinematicCameraManager\CCMStartSequenceNotify.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/CinematicCameraManager/CinematicCameraManager.init.gen.cpp

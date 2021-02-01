@@ -1,0 +1,25 @@
+D:\Projects\COVID\Guildless\Plugins\ColorWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\ColorWheelPlugin\Definitions.ColorWheelPlugin.h
+D:/Projects/COVID/Guildless/Plugins/ColorWheelPlugin/Source/ColorWheelPlugin/Private/ColorWheelHelper.cpp
+D:\Projects\COVID\Guildless\Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Public\ColorWheelHelper.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\ApplicationCore\Public\HAL/PlatformApplicationMisc.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\ApplicationCore\Public\Windows/WindowsPlatformApplicationMisc.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\ApplicationCore\Public\GenericPlatform/GenericPlatformApplicationMisc.h
+D:\Projects\COVID\Guildless\Plugins\ColorWheelPlugin\Intermediate\Build\Win64\UE4Editor\Inc\ColorWheelPlugin\ColorWheelHelper.generated.h
+D:/Projects/COVID/Guildless/Plugins/ColorWheelPlugin/Source/ColorWheelPlugin/Private/ColorWheelPlugin.cpp
+D:\Projects\COVID\Guildless\Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Public\ColorWheelPlugin.h
+D:/Projects/COVID/Guildless/Plugins/ColorWheelPlugin/Source/ColorWheelPlugin/Private/ColorWidget.cpp
+D:\Projects\COVID\Guildless\Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Public\ColorWidget.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\UMG\Public\Components/Widget.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\UMG\Public\Components/Visual.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\Visual.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\UMG\Public\Components/SlateWrapperTypes.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\SlateWrapperTypes.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\UMG\Public\Slate/WidgetTransform.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetTransform.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\UMG\Public\Blueprint/WidgetNavigation.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\SlateCore\Public\Types/NavigationMetaData.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetNavigation.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\Widget.generated.h
+D:\Projects\COVID\Guildless\Plugins\ColorWheelPlugin\Source\ColorWheelPlugin\Public\SWColorWheel.h
+D:\Projects\COVID\Guildless\Plugins\ColorWheelPlugin\Intermediate\Build\Win64\UE4Editor\Inc\ColorWheelPlugin\ColorWidget.generated.h
+D:/Projects/COVID/Guildless/Plugins/ColorWheelPlugin/Source/ColorWheelPlugin/Private/SWColorWheel.cpp

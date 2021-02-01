@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-CombinedAnimationsSystem.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Projects\COVID\Guildless\Intermediate\Build\Win64\GuildlessEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\CombinedAnimationsSystem\Module.CombinedAnimationsSystem.cpp.obj"
+"D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\CombinedAnimationsSystem\Module.CombinedAnimationsSystem.gen.cpp.obj"
+"D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\CombinedAnimationsSystem\Default.rc2.res"
+/OUT:"D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\CombinedAnimationsSystem\UE4Editor-CombinedAnimationsSystem.lib"
+/INCLUDE:IMPLEMENT_MODULE_CombinedAnimationsSystem

@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-FileSDK.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Projects\COVID\Guildless\Intermediate\Build\Win64\GuildlessEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Projects\COVID\Guildless\Plugins\FileSDK\Intermediate\Build\Win64\UE4Editor\Development\FileSDK\Module.FileSDK.cpp.obj"
+"D:\Projects\COVID\Guildless\Plugins\FileSDK\Intermediate\Build\Win64\UE4Editor\Development\FileSDK\Module.FileSDK.gen.cpp.obj"
+"D:\Projects\COVID\Guildless\Plugins\FileSDK\Intermediate\Build\Win64\UE4Editor\Development\FileSDK\Default.rc2.res"
+/OUT:"D:\Projects\COVID\Guildless\Plugins\FileSDK\Intermediate\Build\Win64\UE4Editor\Development\FileSDK\UE4Editor-FileSDK.lib"
+/INCLUDE:IMPLEMENT_MODULE_FileSDK

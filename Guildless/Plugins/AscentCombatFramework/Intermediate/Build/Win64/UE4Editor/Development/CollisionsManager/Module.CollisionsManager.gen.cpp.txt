@@ -1,0 +1,23 @@
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\CollisionsManager\Definitions.CollisionsManager.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/CollisionsManager/ACMActivateCollisionANS.gen.cpp
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\CollisionsManager/Public/ACMActivateCollisionANS.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\Animation/AnimNotifies/AnimNotifyState.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimNotifyState.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\CollisionsManager\ACMActivateCollisionANS.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/CollisionsManager/ACMCollisionManagerComponent.gen.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\CollisionsManager/Public/ACMCollisionManagerComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\CollisionsManager\Public\ACMTypes.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/NoExportTypes.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Core\Public\Math/UnitConversion.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Core\Public\Math/UnitConversion.inl
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Core\Public\Internationalization/PolyglotTextData.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\CollisionsManager\ACMTypes.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\CollisionsManager\ACMCollisionManagerComponent.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/CollisionsManager/ACMCollisionsMasterComponent.gen.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\CollisionsManager/Public/ACMCollisionsMasterComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\CollisionsManager\ACMCollisionsMasterComponent.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/CollisionsManager/ACMTypes.gen.cpp
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/CollisionsManager/CollisionsManager.init.gen.cpp

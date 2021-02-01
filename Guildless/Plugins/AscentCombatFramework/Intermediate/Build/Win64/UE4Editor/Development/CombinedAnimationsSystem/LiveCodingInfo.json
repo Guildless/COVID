@@ -1,0 +1,21 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CombinedAnimationsSystem.cpp.obj": [
+			"CASAnimCondition.cpp.obj",
+			"CASAnimMasterComponent.cpp.obj",
+			"CASAnimSlaveComponent.cpp.obj",
+			"CASSnapperComponent.cpp.obj",
+			"CASTypes.cpp.obj",
+			"CombinedAnimationsSystem.cpp.obj"
+		],
+		"Module.CombinedAnimationsSystem.gen.cpp.obj": [
+			"CASAnimCondition.gen.cpp.obj",
+			"CASAnimMasterComponent.gen.cpp.obj",
+			"CASAnimSlaveComponent.gen.cpp.obj",
+			"CASSnapperComponent.gen.cpp.obj",
+			"CASTypes.gen.cpp.obj",
+			"CombinedAnimationsSystem.init.gen.cpp.obj"
+		]
+	}
+}

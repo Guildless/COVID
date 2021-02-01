@@ -1,0 +1,14 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MusicManager.cpp.obj": [
+			"ACFMusicComponent.cpp.obj",
+			"Logging.cpp.obj",
+			"MusicManager.cpp.obj"
+		],
+		"Module.MusicManager.gen.cpp.obj": [
+			"ACFMusicComponent.gen.cpp.obj",
+			"MusicManager.init.gen.cpp.obj"
+		]
+	}
+}

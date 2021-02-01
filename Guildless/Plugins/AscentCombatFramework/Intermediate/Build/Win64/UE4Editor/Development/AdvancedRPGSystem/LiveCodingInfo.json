@@ -1,0 +1,19 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AdvancedRPGSystem.cpp.obj": [
+			"AdvancedRPGSystem.cpp.obj",
+			"ARSDeveloperSettings.cpp.obj",
+			"ARSFunctionLibrary.cpp.obj",
+			"ARSStatisticsComponent.cpp.obj",
+			"ARSStatisticsData.cpp.obj"
+		],
+		"Module.AdvancedRPGSystem.gen.cpp.obj": [
+			"AdvancedRPGSystem.init.gen.cpp.obj",
+			"ARSDeveloperSettings.gen.cpp.obj",
+			"ARSFunctionLibrary.gen.cpp.obj",
+			"ARSStatisticsComponent.gen.cpp.obj",
+			"ARSStatisticsData.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.LevelStreamer.cpp.obj": [
+			"ACFLevelStreamerActor.cpp.obj",
+			"ACFLevelStreamerFunctionLibrary.cpp.obj",
+			"LevelStreamer.cpp.obj"
+		],
+		"Module.LevelStreamer.gen.cpp.obj": [
+			"ACFLevelStreamerActor.gen.cpp.obj",
+			"ACFLevelStreamerFunctionLibrary.gen.cpp.obj",
+			"LevelStreamer.init.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-CollisionsManager.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Projects\COVID\Guildless\Intermediate\Build\Win64\GuildlessEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\CollisionsManager\Module.CollisionsManager.cpp.obj"
+"D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\CollisionsManager\Module.CollisionsManager.gen.cpp.obj"
+"D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\CollisionsManager\Default.rc2.res"
+/OUT:"D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\CollisionsManager\UE4Editor-CollisionsManager.lib"
+/INCLUDE:IMPLEMENT_MODULE_CollisionsManager

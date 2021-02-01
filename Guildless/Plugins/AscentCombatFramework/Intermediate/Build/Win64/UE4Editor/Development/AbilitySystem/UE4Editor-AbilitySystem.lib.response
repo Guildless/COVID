@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-AbilitySystem.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Projects\COVID\Guildless\Intermediate\Build\Win64\GuildlessEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\AbilitySystem\Module.AbilitySystem.cpp.obj"
+"D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\AbilitySystem\Module.AbilitySystem.gen.cpp.obj"
+"D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\AbilitySystem\Default.rc2.res"
+/OUT:"D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\AbilitySystem\UE4Editor-AbilitySystem.lib"
+/INCLUDE:IMPLEMENT_MODULE_AbilitySystem

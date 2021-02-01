@@ -1,0 +1,24 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CinematicCameraManager.cpp.obj": [
+			"CCMCameraFunctionLibrary.cpp.obj",
+			"CCMCameraSplineComponent.cpp.obj",
+			"CCMLookAtPointComponent.cpp.obj",
+			"CCMPlayerCameraManager.cpp.obj",
+			"CCMSequenceNotifyState.cpp.obj",
+			"CCMStartSequenceNotify.cpp.obj",
+			"CinematicCameraManager.cpp.obj"
+		],
+		"Module.CinematicCameraManager.gen.cpp.obj": [
+			"CCMCameraFunctionLibrary.gen.cpp.obj",
+			"CCMCameraSplineComponent.gen.cpp.obj",
+			"CCMData.gen.cpp.obj",
+			"CCMLookAtPointComponent.gen.cpp.obj",
+			"CCMPlayerCameraManager.gen.cpp.obj",
+			"CCMSequenceNotifyState.gen.cpp.obj",
+			"CCMStartSequenceNotify.gen.cpp.obj",
+			"CinematicCameraManager.init.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CollisionsManager.cpp.obj": [
+			"ACMActivateCollisionANS.cpp.obj",
+			"ACMCollisionManagerComponent.cpp.obj",
+			"ACMCollisionsMasterComponent.cpp.obj",
+			"ACMTypes.cpp.obj",
+			"CollisionsManager.cpp.obj"
+		],
+		"Module.CollisionsManager.gen.cpp.obj": [
+			"ACMActivateCollisionANS.gen.cpp.obj",
+			"ACMCollisionManagerComponent.gen.cpp.obj",
+			"ACMCollisionsMasterComponent.gen.cpp.obj",
+			"ACMTypes.gen.cpp.obj",
+			"CollisionsManager.init.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,97 @@
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\MountSystem\Definitions.MountSystem.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Source/MountSystem/Private/ACFAnimationPointComponent.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\MountSystem\Public\ACFAnimationPointComponent.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\GameplayTags\Classes\GameplayTagContainer.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTags\GameplayTagContainer.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\MountSystem\ACFAnimationPointComponent.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Source/MountSystem/Private/ACFAnimPointsManagerComponent.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\MountSystem\Public\ACFAnimPointsManagerComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\MountSystem\ACFAnimPointsManagerComponent.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Source/MountSystem/Private/ACFMountComponent.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\MountSystem\Public\ACFMountComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\MountSystem\ACFMountComponent.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\MountSystem\Public\ACFRiderComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\MountSystem\ACFRiderComponent.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actors/ACFCharacter.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components/ACFActionsManagerComponent.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/DataTable.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Public\DataTableUtils.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DataTable.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components\ACFEquipmentComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items/ACFItemTypes.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFItemTypes.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items/ACFItem.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFItem.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFEquipmentComponent.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Public\ARSStatisticsData.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/NoExportTypes.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Core\Public\Math/UnitConversion.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Core\Public\Math/UnitConversion.inl
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Core\Public\Internationalization/PolyglotTextData.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AdvancedRPGSystem\ARSStatisticsData.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Public\ARSStatisticsComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AdvancedRPGSystem\ARSStatisticsComponent.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game/ACFData.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\AIModule\Classes\GenericTeamAgentInterface.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\GenericTeamAgentInterface.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFData.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFActionsManagerComponent.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game/ACFDamageType.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFDamageType.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Interfaces/ACFInteractableInterface.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFInteractableInterface.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation/ACFAnimset.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFAnimset.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Interfaces/ACFSavableInterface.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFSavableInterface.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Interfaces/ACFEntityInterface.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFEntityInterface.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFCharacter.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game/ACFFunctionLibrary.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFFunctionLibrary.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game/ACFPlayerController.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFPlayerController.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI/Components/ACFCompanionGroupAIComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\AI/Components/ACFGroupAIComponent.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/SplineComponent.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SplineComponent.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFGroupAIComponent.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFCompanionGroupAIComponent.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Public\Net/UnrealNetwork.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Source/MountSystem/Private/ACFRiderAnimInstance.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\MountSystem\Public\ACFRiderAnimInstance.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Animation/ACFAnimInstance.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Actions/ACFBaseAction.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFBaseAction.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFAnimInstance.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\MountSystem\ACFRiderAnimInstance.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Source/MountSystem/Private/ACFRiderComponent.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\CombinedAnimationsSystem\Public\CASSnapperComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\CombinedAnimationsSystem\CASSnapperComponent.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CapsuleComponent.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementComponent.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\AI/Navigation/NavigationAvoidanceTypes.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavigationAvoidanceTypes.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Public\AI/RVOAvoidanceInterface.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RVOAvoidanceInterface.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/PawnMovementComponent.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/NavMovementComponent.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\AI/Navigation/PathFollowingAgentInterface.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PathFollowingAgentInterface.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavMovementComponent.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PawnMovementComponent.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\Interfaces/NetworkPredictionInterface.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NetworkPredictionInterface.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementComponent.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Source/MountSystem/Private/MountSystem.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\MountSystem\Public\MountSystem.h

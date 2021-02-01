@@ -1,0 +1,20 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SpellActions.cpp.obj": [
+			"ACFBuffAction.cpp.obj",
+			"ACFCureAction.cpp.obj",
+			"ACFSpellProjectileAction.cpp.obj",
+			"ACFSummonAction.cpp.obj",
+			"Logging.cpp.obj",
+			"SpellActions.cpp.obj"
+		],
+		"Module.SpellActions.gen.cpp.obj": [
+			"ACFBuffAction.gen.cpp.obj",
+			"ACFCureAction.gen.cpp.obj",
+			"ACFSpellProjectileAction.gen.cpp.obj",
+			"ACFSummonAction.gen.cpp.obj",
+			"SpellActions.init.gen.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,52 @@
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\AscentCombatFramework\Definitions.AscentCombatFramework.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/AscentCombatFramework/ACFEffectsDispatcherComponent.gen.cpp
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework/Public/Components/ACFEffectsDispatcherComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game/ACFData.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/DataTable.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Public\DataTableUtils.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DataTable.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Public\ARSStatisticsData.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/NoExportTypes.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Core\Public\Math/UnitConversion.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Core\Public\Math/UnitConversion.inl
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Core\Public\Internationalization/PolyglotTextData.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\GameplayTags\Classes\GameplayTagContainer.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTags\GameplayTagContainer.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AdvancedRPGSystem\ARSStatisticsData.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\AIModule\Classes\GenericTeamAgentInterface.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\GenericTeamAgentInterface.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFData.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFEffectsDispatcherComponent.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/AscentCombatFramework/ACFEffectsManagerComponent.gen.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework/Public/Components/ACFEffectsManagerComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components/ACFActionsManagerComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components\ACFEquipmentComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items/ACFItemTypes.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFItemTypes.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Items/ACFItem.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFItem.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFEquipmentComponent.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AdvancedRPGSystem\Public\ARSStatisticsComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AdvancedRPGSystem\ARSStatisticsComponent.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFActionsManagerComponent.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Game/ACFDamageType.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFDamageType.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework\Public\Components/ACFLocomotionComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFLocomotionComponent.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFEffectsManagerComponent.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/AscentCombatFramework/ACFEntityInterface.gen.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework/Public/Interfaces/ACFEntityInterface.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFEntityInterface.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/AscentCombatFramework/ACFEquipmentComponent.gen.cpp
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/AscentCombatFramework/ACFEquippableItem.gen.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework/Public/Items/ACFEquippableItem.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFEquippableItem.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/AscentCombatFramework/ACFFrontTracerComponent.gen.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework/Public/Components/ACFFrontTracerComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFFrontTracerComponent.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/AscentCombatFramework/ACFFunctionLibrary.gen.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\AscentCombatFramework/Public/Game/ACFFunctionLibrary.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\AscentCombatFramework\ACFFunctionLibrary.generated.h

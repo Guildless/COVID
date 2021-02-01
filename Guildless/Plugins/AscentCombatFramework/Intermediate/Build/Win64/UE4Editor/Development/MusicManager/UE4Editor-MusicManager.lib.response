@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-MusicManager.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Projects\COVID\Guildless\Intermediate\Build\Win64\GuildlessEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\MusicManager\Module.MusicManager.cpp.obj"
+"D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\MusicManager\Module.MusicManager.gen.cpp.obj"
+"D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\MusicManager\Default.rc2.res"
+/OUT:"D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\MusicManager\UE4Editor-MusicManager.lib"
+/INCLUDE:IMPLEMENT_MODULE_MusicManager

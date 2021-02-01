@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ExecutionsSystem.cpp.obj": [
+			"ACFExecutionCondition.cpp.obj",
+			"ACFExecutorComponent.cpp.obj",
+			"ExecutionsSystem.cpp.obj"
+		],
+		"Module.ExecutionsSystem.gen.cpp.obj": [
+			"ACFExecutionCondition.gen.cpp.obj",
+			"ACFExecutorComponent.gen.cpp.obj",
+			"ExecutionsSystem.init.gen.cpp.obj"
+		]
+	}
+}

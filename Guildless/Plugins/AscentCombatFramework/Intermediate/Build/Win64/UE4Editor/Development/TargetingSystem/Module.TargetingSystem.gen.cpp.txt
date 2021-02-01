@@ -1,0 +1,40 @@
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Development\TargetingSystem\Definitions.TargetingSystem.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/TargetingSystem/ATSAITargetComponent.gen.cpp
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\TargetingSystem/Public/ATSAITargetComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\TargetingSystem\Public\ATSBaseTargetComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\TargetingSystem\ATSBaseTargetComponent.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\TargetingSystem\ATSAITargetComponent.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/TargetingSystem/ATSBaseTargetComponent.gen.cpp
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/TargetingSystem/ATSTargetableInterface.gen.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\TargetingSystem/Public/ATSTargetableInterface.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\TargetingSystem\ATSTargetableInterface.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/TargetingSystem/ATSTargetingComponent.gen.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\TargetingSystem/Public/ATSTargetingComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\TargetingSystem\Public\ATSTargetingFilter.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/NoExportTypes.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Core\Public\Math/UnitConversion.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Core\Public\Math/UnitConversion.inl
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Core\Public\Internationalization/PolyglotTextData.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\TargetingSystem\ATSTargetingFilter.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/SphereComponent.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SphereComponent.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public\CCMData.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/DataTable.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\Engine\Public\DataTableUtils.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DataTable.generated.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\GameplayTags\Classes\GameplayTagContainer.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTags\GameplayTagContainer.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\CinematicCameraManager\CCMData.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\TargetingSystem\ATSTargetingComponent.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/TargetingSystem/ATSTargetingFilter.gen.cpp
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/TargetingSystem/ATSTargetPointComponent.gen.cpp
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\TargetingSystem/Public/ATSTargetPointComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Source\CinematicCameraManager\Public\CCMLookAtPointComponent.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\CinematicCameraManager\CCMLookAtPointComponent.generated.h
+D:\Projects\COVID\Guildless\Plugins\AscentCombatFramework\Intermediate\Build\Win64\UE4Editor\Inc\TargetingSystem\ATSTargetPointComponent.generated.h
+D:/Projects/COVID/Guildless/Plugins/AscentCombatFramework/Intermediate/Build/Win64/UE4Editor/Inc/TargetingSystem/TargetingSystem.init.gen.cpp

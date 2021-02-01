@@ -1,0 +1,16 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ColorWheelPlugin.cpp.obj": [
+			"ColorWheelHelper.cpp.obj",
+			"ColorWheelPlugin.cpp.obj",
+			"ColorWidget.cpp.obj",
+			"SWColorWheel.cpp.obj"
+		],
+		"Module.ColorWheelPlugin.gen.cpp.obj": [
+			"ColorWheelHelper.gen.cpp.obj",
+			"ColorWheelPlugin.init.gen.cpp.obj",
+			"ColorWidget.gen.cpp.obj"
+		]
+	}
+}

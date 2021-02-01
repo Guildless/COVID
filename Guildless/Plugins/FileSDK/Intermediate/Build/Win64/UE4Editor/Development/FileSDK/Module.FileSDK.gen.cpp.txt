@@ -1,0 +1,12 @@
+D:\Projects\COVID\Guildless\Plugins\FileSDK\Intermediate\Build\Win64\UE4Editor\Development\FileSDK\Definitions.FileSDK.h
+D:/Projects/COVID/Guildless/Plugins/FileSDK/Intermediate/Build/Win64/UE4Editor/Inc/FileSDK/FileSDK.init.gen.cpp
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\Program Files (x86)\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:/Projects/COVID/Guildless/Plugins/FileSDK/Intermediate/Build/Win64/UE4Editor/Inc/FileSDK/FileSDKBPLibrary.gen.cpp
+D:\Projects\COVID\Guildless\Plugins\FileSDK\Source\FileSDK/Public/FileSDKBPLibrary.h
+D:\Projects\COVID\Guildless\Plugins\FileSDK\Source\FileSDK\Public\FileSDKFileInfo.h
+D:\Projects\COVID\Guildless\Plugins\FileSDK\Intermediate\Build\Win64\UE4Editor\Inc\FileSDK\FileSDKFileInfo.generated.h
+D:\Projects\COVID\Guildless\Plugins\FileSDK\Source\FileSDK\Public\FileSDKFileType.h
+D:\Projects\COVID\Guildless\Plugins\FileSDK\Intermediate\Build\Win64\UE4Editor\Inc\FileSDK\FileSDKBPLibrary.generated.h
+D:/Projects/COVID/Guildless/Plugins/FileSDK/Intermediate/Build/Win64/UE4Editor/Inc/FileSDK/FileSDKFileInfo.gen.cpp
+D:/Projects/COVID/Guildless/Plugins/FileSDK/Intermediate/Build/Win64/UE4Editor/Inc/FileSDK/FileSDKFileType.gen.cpp

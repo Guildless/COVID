@@ -1,0 +1,25 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AbilitySystem.cpp.obj": [
+			"ACFAbility.cpp.obj",
+			"ACFActionAbility.cpp.obj",
+			"ACFPassiveAbility.cpp.obj",
+			"AbilitySystem.cpp.obj",
+			"ACFAbilityFunctionLibrary.cpp.obj",
+			"ACFAbilityManagerComponent.cpp.obj",
+			"ACFAbilitySystemComponent.cpp.obj",
+			"ACFAbilityTypes.cpp.obj"
+		],
+		"Module.AbilitySystem.gen.cpp.obj": [
+			"AbilitySystem.init.gen.cpp.obj",
+			"ACFAbility.gen.cpp.obj",
+			"ACFAbilityFunctionLibrary.gen.cpp.obj",
+			"ACFAbilityManagerComponent.gen.cpp.obj",
+			"ACFAbilitySystemComponent.gen.cpp.obj",
+			"ACFAbilityTypes.gen.cpp.obj",
+			"ACFActionAbility.gen.cpp.obj",
+			"ACFPassiveAbility.gen.cpp.obj"
+		]
+	}
+}

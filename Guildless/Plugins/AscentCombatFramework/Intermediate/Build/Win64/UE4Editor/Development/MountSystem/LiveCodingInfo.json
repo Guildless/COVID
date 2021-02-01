@@ -1,0 +1,21 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MountSystem.cpp.obj": [
+			"ACFAnimationPointComponent.cpp.obj",
+			"ACFAnimPointsManagerComponent.cpp.obj",
+			"ACFMountComponent.cpp.obj",
+			"ACFRiderAnimInstance.cpp.obj",
+			"ACFRiderComponent.cpp.obj",
+			"MountSystem.cpp.obj"
+		],
+		"Module.MountSystem.gen.cpp.obj": [
+			"ACFAnimationPointComponent.gen.cpp.obj",
+			"ACFAnimPointsManagerComponent.gen.cpp.obj",
+			"ACFMountComponent.gen.cpp.obj",
+			"ACFRiderAnimInstance.gen.cpp.obj",
+			"ACFRiderComponent.gen.cpp.obj",
+			"MountSystem.init.gen.cpp.obj"
+		]
+	}
+}

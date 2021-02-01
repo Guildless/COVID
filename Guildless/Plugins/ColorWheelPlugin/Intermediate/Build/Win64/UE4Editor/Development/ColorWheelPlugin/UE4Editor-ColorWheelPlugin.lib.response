@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-ColorWheelPlugin.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Projects\COVID\Guildless\Intermediate\Build\Win64\GuildlessEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Projects\COVID\Guildless\Plugins\ColorWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\ColorWheelPlugin\Module.ColorWheelPlugin.cpp.obj"
+"D:\Projects\COVID\Guildless\Plugins\ColorWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\ColorWheelPlugin\Module.ColorWheelPlugin.gen.cpp.obj"
+"D:\Projects\COVID\Guildless\Plugins\ColorWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\ColorWheelPlugin\Default.rc2.res"
+/OUT:"D:\Projects\COVID\Guildless\Plugins\ColorWheelPlugin\Intermediate\Build\Win64\UE4Editor\Development\ColorWheelPlugin\UE4Editor-ColorWheelPlugin.lib"
+/INCLUDE:IMPLEMENT_MODULE_ColorWheelPlugin

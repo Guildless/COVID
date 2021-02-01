@@ -2,6 +2,6 @@
 	"BuildId": "13144385",
 	"Modules": 
 	{
-		"ColorWheelPlugin": "UE4Editor-ColorWheelPlugin-0004.dll"
+		"ColorWheelPlugin": "UE4Editor-ColorWheelPlugin.dll"
 	}
 }

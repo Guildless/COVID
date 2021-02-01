@@ -1,0 +1,15 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CraftingSystem.cpp.obj": [
+			"ACFCraftingComponent.cpp.obj",
+			"ACFCurrencyComponent.cpp.obj",
+			"CraftingSystem.cpp.obj"
+		],
+		"Module.CraftingSystem.gen.cpp.obj": [
+			"ACFCraftingComponent.gen.cpp.obj",
+			"ACFCurrencyComponent.gen.cpp.obj",
+			"CraftingSystem.init.gen.cpp.obj"
+		]
+	}
+}
